@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */; };
+		1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */; };
+		1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */; };
+		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
+		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; };
+		1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC819CC7DFD00B894EC /* FlippedView.m */; };
+		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; };
+		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
+		1ACA9A6419C92479003AA564 /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterControlBehavior.h */; };
+		1ACA9A6519C92479003AA564 /* EmitterControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterControlBehavior.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
 		1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ViewController.m */; };
 		1AD94CFF19BBA3AF001A2015 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFE19BBA3AF001A2015 /* AppDelegate.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
 		1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0219BBA3AF001A2015 /* Main.storyboard */; };
 		1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */; };
+		1AD94D5519BBC4B1001A2015 /* IterateOSXFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */; };
+		1AD94D6419BBC4B1001A2015 /* IterateOSXFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; };
+		1AD94D6519BBC4B1001A2015 /* IterateOSXFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,9 +37,54 @@
 			remoteGlobalIDString = 1AD94CF219BBA3AF001A2015;
 			remoteInfo = IterateOSX;
 		};
+		1AD94D5B19BBC4B1001A2015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD94CEB19BBA3AE001A2015 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD94CF219BBA3AF001A2015;
+			remoteInfo = IterateOSX;
+		};
+		1AD94D6219BBC4B1001A2015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD94CEB19BBA3AE001A2015 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD94D4F19BBC4B1001A2015;
+			remoteInfo = IterateOSXFramework;
+		};
+		1AD94D6619BBC4B1001A2015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD94CEB19BBA3AE001A2015 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD94D4F19BBC4B1001A2015;
+			remoteInfo = IterateOSXFramework;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1AD94D6B19BBC4B1001A2015 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AD94D6519BBC4B1001A2015 /* IterateOSXFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryControlBehavior.h; sourceTree = "<group>"; };
+		1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryControlBehavior.m; sourceTree = "<group>"; };
+		1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalValueFormatter.h; sourceTree = "<group>"; };
+		1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalValueFormatter.m; sourceTree = "<group>"; };
+		1A74ADC719CC7DFD00B894EC /* FlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedView.h; sourceTree = "<group>"; };
+		1A74ADC819CC7DFD00B894EC /* FlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedView.m; sourceTree = "<group>"; };
+		1A76654919C49E7800FD1F29 /* CustomBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBehaviors.h; sourceTree = "<group>"; };
+		1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehaviors.m; sourceTree = "<group>"; };
+		1ACA9A6219C92479003AA564 /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
+		1ACA9A6319C92479003AA564 /* EmitterControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehavior.m; sourceTree = "<group>"; };
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94CF719BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,6 +97,12 @@
 		1AD94D0919BBA3AF001A2015 /* IterateOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94D0E19BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateOSXTests.m; sourceTree = "<group>"; };
+		1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IterateOSXFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD94D5319BBC4B1001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateOSXFramework.h; sourceTree = "<group>"; };
+		1AD94D5A19BBC4B1001A2015 /* IterateOSXFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateOSXFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD94D5F19BBC4B1001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateOSXFrameworkTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD94D6419BBC4B1001A2015 /* IterateOSXFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,14 +121,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AD94D4C19BBC4B1001A2015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD94D5719BBC4B1001A2015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A74ADC219CC71CD00B894EC /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */,
+				1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
+		1A76654819C49E4A00FD1F29 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				1A76654919C49E7800FD1F29 /* CustomBehaviors.h */,
+				1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */,
+				1ACA9A6219C92479003AA564 /* EmitterControlBehavior.h */,
+				1ACA9A6319C92479003AA564 /* EmitterControlBehavior.m */,
+				1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */,
+				1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */,
+			);
+			name = Behaviors;
+			sourceTree = "<group>";
+		};
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
 				1AD94CF519BBA3AF001A2015 /* IterateOSX */,
 				1AD94D0C19BBA3AF001A2015 /* IterateOSXTests */,
+				1AD94D5119BBC4B1001A2015 /* IterateOSXFramework */,
+				1AD94D5D19BBC4B1001A2015 /* IterateOSXFrameworkTests */,
 				1AD94CF419BBA3AF001A2015 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +176,8 @@
 			children = (
 				1AD94CF319BBA3AF001A2015 /* IterateOSX.app */,
 				1AD94D0919BBA3AF001A2015 /* IterateOSXTests.xctest */,
+				1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */,
+				1AD94D5A19BBC4B1001A2015 /* IterateOSXFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +222,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1AD94D5119BBC4B1001A2015 /* IterateOSXFramework */ = {
+			isa = PBXGroup;
+			children = (
+				1A74ADC219CC71CD00B894EC /* Formatters */,
+				1A76654819C49E4A00FD1F29 /* Behaviors */,
+				1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */,
+				1AD94D5219BBC4B1001A2015 /* Supporting Files */,
+				1A74ADC719CC7DFD00B894EC /* FlippedView.h */,
+				1A74ADC819CC7DFD00B894EC /* FlippedView.m */,
+			);
+			path = IterateOSXFramework;
+			sourceTree = "<group>";
+		};
+		1AD94D5219BBC4B1001A2015 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AD94D5319BBC4B1001A2015 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AD94D5D19BBC4B1001A2015 /* IterateOSXFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */,
+				1AD94D5E19BBC4B1001A2015 /* Supporting Files */,
+			);
+			path = IterateOSXFrameworkTests;
+			sourceTree = "<group>";
+		};
+		1AD94D5E19BBC4B1001A2015 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AD94D5F19BBC4B1001A2015 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1AD94D4D19BBC4B1001A2015 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD94D5519BBC4B1001A2015 /* IterateOSXFramework.h in Headers */,
+				1ACA9A6419C92479003AA564 /* EmitterControlBehavior.h in Headers */,
+				1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */,
+				1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */,
+				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
+				1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1AD94CF219BBA3AF001A2015 /* IterateOSX */ = {
@@ -126,10 +286,13 @@
 				1AD94CEF19BBA3AF001A2015 /* Sources */,
 				1AD94CF019BBA3AF001A2015 /* Frameworks */,
 				1AD94CF119BBA3AF001A2015 /* Resources */,
+				1AD94D6B19BBC4B1001A2015 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1AD94D6319BBC4B1001A2015 /* PBXTargetDependency */,
+				1AD94D6719BBC4B1001A2015 /* PBXTargetDependency */,
 			);
 			name = IterateOSX;
 			productName = IterateOSX;
@@ -154,6 +317,42 @@
 			productReference = 1AD94D0919BBA3AF001A2015 /* IterateOSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1AD94D4F19BBC4B1001A2015 /* IterateOSXFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD94D6819BBC4B1001A2015 /* Build configuration list for PBXNativeTarget "IterateOSXFramework" */;
+			buildPhases = (
+				1AD94D4B19BBC4B1001A2015 /* Sources */,
+				1AD94D4C19BBC4B1001A2015 /* Frameworks */,
+				1AD94D4D19BBC4B1001A2015 /* Headers */,
+				1AD94D4E19BBC4B1001A2015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IterateOSXFramework;
+			productName = IterateOSXFramework;
+			productReference = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1AD94D5919BBC4B1001A2015 /* IterateOSXFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD94D6C19BBC4B1001A2015 /* Build configuration list for PBXNativeTarget "IterateOSXFrameworkTests" */;
+			buildPhases = (
+				1AD94D5619BBC4B1001A2015 /* Sources */,
+				1AD94D5719BBC4B1001A2015 /* Frameworks */,
+				1AD94D5819BBC4B1001A2015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AD94D5C19BBC4B1001A2015 /* PBXTargetDependency */,
+			);
+			name = IterateOSXFrameworkTests;
+			productName = IterateOSXFrameworkTests;
+			productReference = 1AD94D5A19BBC4B1001A2015 /* IterateOSXFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,8 +364,16 @@
 				TargetAttributes = {
 					1AD94CF219BBA3AF001A2015 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = FK2T357YV2;
 					};
 					1AD94D0819BBA3AF001A2015 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 1AD94CF219BBA3AF001A2015;
+					};
+					1AD94D4F19BBC4B1001A2015 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					1AD94D5919BBC4B1001A2015 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 1AD94CF219BBA3AF001A2015;
 					};
@@ -187,6 +394,8 @@
 			targets = (
 				1AD94CF219BBA3AF001A2015 /* IterateOSX */,
 				1AD94D0819BBA3AF001A2015 /* IterateOSXTests */,
+				1AD94D4F19BBC4B1001A2015 /* IterateOSXFramework */,
+				1AD94D5919BBC4B1001A2015 /* IterateOSXFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +411,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1AD94D0719BBA3AF001A2015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD94D4E19BBC4B1001A2015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD94D5819BBC4B1001A2015 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +452,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AD94D4B19BBC4B1001A2015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */,
+				1ACA9A6519C92479003AA564 /* EmitterControlBehavior.m in Sources */,
+				1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */,
+				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
+				1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD94D5619BBC4B1001A2015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +479,21 @@
 			isa = PBXTargetDependency;
 			target = 1AD94CF219BBA3AF001A2015 /* IterateOSX */;
 			targetProxy = 1AD94D0A19BBA3AF001A2015 /* PBXContainerItemProxy */;
+		};
+		1AD94D5C19BBC4B1001A2015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AD94CF219BBA3AF001A2015 /* IterateOSX */;
+			targetProxy = 1AD94D5B19BBC4B1001A2015 /* PBXContainerItemProxy */;
+		};
+		1AD94D6319BBC4B1001A2015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AD94D4F19BBC4B1001A2015 /* IterateOSXFramework */;
+			targetProxy = 1AD94D6219BBC4B1001A2015 /* PBXContainerItemProxy */;
+		};
+		1AD94D6719BBC4B1001A2015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AD94D4F19BBC4B1001A2015 /* IterateOSXFramework */;
+			targetProxy = 1AD94D6619BBC4B1001A2015 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -331,10 +589,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = IterateOSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -342,10 +604,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = IterateOSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -385,6 +651,84 @@
 			};
 			name = Release;
 		};
+		1AD94D6919BBC4B1001A2015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IterateOSXFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1AD94D6A19BBC4B1001A2015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = IterateOSXFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1AD94D6D19BBC4B1001A2015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IterateOSXFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IterateOSX.app/Contents/MacOS/IterateOSX";
+			};
+			name = Debug;
+		};
+		1AD94D6E19BBC4B1001A2015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IterateOSXFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IterateOSX.app/Contents/MacOS/IterateOSX";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,6 +748,7 @@
 				1AD94D1519BBA3AF001A2015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AD94D1619BBA3AF001A2015 /* Build configuration list for PBXNativeTarget "IterateOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +757,25 @@
 				1AD94D1819BBA3AF001A2015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD94D6819BBC4B1001A2015 /* Build configuration list for PBXNativeTarget "IterateOSXFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD94D6919BBC4B1001A2015 /* Debug */,
+				1AD94D6A19BBC4B1001A2015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD94D6C19BBC4B1001A2015 /* Build configuration list for PBXNativeTarget "IterateOSXFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD94D6D19BBC4B1001A2015 /* Debug */,
+				1AD94D6E19BBC4B1001A2015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,7 @@
 
 @interface ViewController : NSViewController
 
+- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(NSNumber*)number;
 
 @end
 
