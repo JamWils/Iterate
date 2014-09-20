@@ -1,14 +1,14 @@
 //
-//  EmitterCellView.m
+//  ContainerLayoutView.m
 //  IterateOSX
 //
-//  Created by James Wilson on 9/19/14.
+//  Created by James Wilson on 9/20/14.
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "EmitterCellView.h"
+#import "ContainerLayoutView.h"
 
-@implementation EmitterCellView
+@implementation ContainerLayoutView
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];

@@ -27,25 +27,23 @@
     _slider.maxValue = _maxValue;
     
     _textField.floatValue = _defaultValue;
+    if ([_textField.formatter isKindOfClass:[NSNumberFormatter class]]) {
+        NSNumberFormatter *formatter = (NSNumberFormatter*)_textField.formatter;
+        formatter.minimum = [NSNumber numberWithFloat:_minValue];
+        formatter.maximum = [NSNumber numberWithFloat:_maxValue];
+    }
     
     _stepper.floatValue = _defaultValue;
     _stepper.minValue = _minValue;
     _stepper.maxValue = _maxValue;
     
-    _textFieldNumberFormatter.minimum = [NSNumber numberWithFloat:_minValue];
-    _textFieldNumberFormatter.maximum = [NSNumber numberWithFloat:_maxValue];
+    
     
     [self updateValues:_defaultValue];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
-
-- (IBAction)sliderValueChanged:(id)sender {
-    [self updateValues:_slider.floatValue];
+- (IBAction)sliderValueChanged:(NSSlider*)sender {
+    [self updateValues:sender.floatValue];
 }
 
 - (IBAction)stepperValueChanged:(NSStepper *)sender {
