@@ -13,6 +13,12 @@
 		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
 		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; };
 		1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC819CC7DFD00B894EC /* FlippedView.m */; };
+		1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */; };
+		1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */; };
+		1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCF19CCB44300B894EC /* FlippedClipView.h */; };
+		1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADD019CCB44300B894EC /* FlippedClipView.m */; };
+		1A74ADD619CD0BA100B894EC /* EmitterCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADD419CD0BA100B894EC /* EmitterCellView.h */; };
+		1A74ADD719CD0BA100B894EC /* EmitterCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADD519CD0BA100B894EC /* EmitterCellView.m */; };
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
 		1ACA9A6419C92479003AA564 /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterControlBehavior.h */; };
@@ -81,6 +87,12 @@
 		1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalValueFormatter.m; sourceTree = "<group>"; };
 		1A74ADC719CC7DFD00B894EC /* FlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedView.h; sourceTree = "<group>"; };
 		1A74ADC819CC7DFD00B894EC /* FlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedView.m; sourceTree = "<group>"; };
+		1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightResizingBehavior.h; sourceTree = "<group>"; };
+		1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightResizingBehavior.m; sourceTree = "<group>"; };
+		1A74ADCF19CCB44300B894EC /* FlippedClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedClipView.h; sourceTree = "<group>"; };
+		1A74ADD019CCB44300B894EC /* FlippedClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedClipView.m; sourceTree = "<group>"; };
+		1A74ADD419CD0BA100B894EC /* EmitterCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterCellView.h; sourceTree = "<group>"; };
+		1A74ADD519CD0BA100B894EC /* EmitterCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCellView.m; sourceTree = "<group>"; };
 		1A76654919C49E7800FD1F29 /* CustomBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBehaviors.h; sourceTree = "<group>"; };
 		1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehaviors.m; sourceTree = "<group>"; };
 		1ACA9A6219C92479003AA564 /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -147,6 +159,15 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		1A74ADD319CD0B8900B894EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A74ADD419CD0BA100B894EC /* EmitterCellView.h */,
+				1A74ADD519CD0BA100B894EC /* EmitterCellView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		1A76654819C49E4A00FD1F29 /* Behaviors */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +177,8 @@
 				1ACA9A6319C92479003AA564 /* EmitterControlBehavior.m */,
 				1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */,
 				1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */,
+				1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */,
+				1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -225,12 +248,15 @@
 		1AD94D5119BBC4B1001A2015 /* IterateOSXFramework */ = {
 			isa = PBXGroup;
 			children = (
+				1A74ADD319CD0B8900B894EC /* Views */,
 				1A74ADC219CC71CD00B894EC /* Formatters */,
 				1A76654819C49E4A00FD1F29 /* Behaviors */,
 				1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */,
 				1AD94D5219BBC4B1001A2015 /* Supporting Files */,
 				1A74ADC719CC7DFD00B894EC /* FlippedView.h */,
 				1A74ADC819CC7DFD00B894EC /* FlippedView.m */,
+				1A74ADCF19CCB44300B894EC /* FlippedClipView.h */,
+				1A74ADD019CCB44300B894EC /* FlippedClipView.m */,
 			);
 			path = IterateOSXFramework;
 			sourceTree = "<group>";
@@ -272,6 +298,9 @@
 				1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */,
 				1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */,
 				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
+				1A74ADD619CD0BA100B894EC /* EmitterCellView.h in Headers */,
+				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
+				1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */,
 				1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +486,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */,
+				1A74ADD719CD0BA100B894EC /* EmitterCellView.m in Sources */,
+				1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */,
 				1ACA9A6519C92479003AA564 /* EmitterControlBehavior.m in Sources */,
+				1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */,
 				1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */,
 				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
 				1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */,

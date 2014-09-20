@@ -8,6 +8,12 @@
 
 #import "CustomBehaviors.h"
 
+IB_DESIGNABLE
 @interface CategoryControlBehavior : CustomBehaviors
+
+@property (nonatomic, weak) IBOutlet NSTextField *categoryLabel;
+
+@property (nonatomic) IBInspectable NSString *categoryName;
+@property (nonatomic) IBInspectable int defaultHeight;
 
 @end
