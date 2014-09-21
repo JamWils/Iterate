@@ -685,7 +685,7 @@
                 </splitViewController>
                 <customObject id="W9X-2D-zbF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="672"/>
+            <point key="canvasLocation" x="15" y="689"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sRD-fd-h9I">
@@ -787,19 +787,19 @@
             </objects>
             <point key="canvasLocation" x="701" y="838.5"/>
         </scene>
-        <!--Visual View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="Fv4-VW-xaV">
             <objects>
-                <viewController id="Ydt-gB-E7j" userLabel="Visual View Controller" sceneMemberID="viewController">
-                    <view key="view" id="tJW-sX-3Un">
-                        <rect key="frame" x="0.0" y="0.0" width="252" height="320"/>
+                <viewController id="Ydt-gB-E7j" userLabel="Color View Controller" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="tJW-sX-3Un">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="309"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-2F-fGq" userLabel="Color View">
-                                <rect key="frame" x="0.0" y="0.0" width="252" height="320"/>
+                                <rect key="frame" x="0.0" y="-11" width="250" height="320"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wdx-d1-diZ">
-                                        <rect key="frame" x="0.0" y="306" width="252" height="5"/>
+                                        <rect key="frame" x="0.0" y="306" width="250" height="5"/>
                                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <font key="titleFont" metaFont="system"/>
@@ -813,7 +813,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="m3i-SL-wAr">
-                                        <rect key="frame" x="213" y="281" width="29" height="19"/>
+                                        <rect key="frame" x="214" y="281" width="29" height="19"/>
                                         <buttonCell key="cell" type="recessed" title="Hide" bezelStyle="recessed" alignment="right" transparent="YES" imageScaling="proportionallyDown" inset="2" id="ara-Lv-ESC">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
@@ -1108,15 +1108,15 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-sc-sHf" userLabel="Color View">
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-sc-sHf" userLabel="Color View">
                                         <rect key="frame" x="7" y="216" width="236" height="56"/>
                                         <subviews>
                                             <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKc-wB-QUU">
-                                                <rect key="frame" x="7" y="29" width="223" height="23"/>
+                                                <rect key="frame" x="16" y="12" width="37" height="32"/>
                                                 <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </colorWell>
                                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yA0-CZ-Ts3">
-                                                <rect key="frame" x="85" y="2" width="31" height="22"/>
+                                                <rect key="frame" x="85" y="17" width="30" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="000" drawsBackground="YES" id="Cx8-C1-pK6">
                                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="aJs-lo-dpv"/>
                                                     <font key="font" metaFont="system"/>
@@ -1125,7 +1125,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBB-wr-XQi">
-                                                <rect key="frame" x="142" y="2" width="31" height="22"/>
+                                                <rect key="frame" x="142" y="17" width="31" height="22"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="000" drawsBackground="YES" id="tQo-fy-RR9">
                                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="HNa-Sk-ZJj"/>
                                                     <font key="font" metaFont="system"/>
@@ -1133,17 +1133,8 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkh-gY-bA2">
-                                                <rect key="frame" x="199" y="2" width="31" height="22"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="000" drawsBackground="YES" id="bNU-Ci-Gzz">
-                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="JWF-3T-AXW"/>
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kE1-3K-fnI">
-                                                <rect key="frame" x="117" y="5" width="24" height="17"/>
+                                                <rect key="frame" x="117" y="20" width="24" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="G" id="kds-sc-rn5">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1151,7 +1142,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-S1-BiR">
-                                                <rect key="frame" x="174" y="5" width="24" height="17"/>
+                                                <rect key="frame" x="174" y="20" width="24" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="B" id="HZ5-t1-TSF">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1159,11 +1150,20 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2M-U1-wsR">
-                                                <rect key="frame" x="59" y="5" width="24" height="17"/>
+                                                <rect key="frame" x="59" y="20" width="24" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="R" id="tOI-b4-TFb">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkh-gY-bA2">
+                                                <rect key="frame" x="200" y="17" width="31" height="22"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="000" drawsBackground="YES" id="bNU-Ci-Gzz">
+                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="JWF-3T-AXW"/>
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                         </subviews>
@@ -1194,7 +1194,7 @@
                                     <constraint firstItem="pU9-Cx-XDd" firstAttribute="leading" secondItem="eLe-oE-Zgy" secondAttribute="leading" id="PDX-fs-GdA"/>
                                     <constraint firstItem="wdx-d1-diZ" firstAttribute="leading" secondItem="wEp-2F-fGq" secondAttribute="leading" id="R3B-6G-g0W"/>
                                     <constraint firstItem="pU9-Cx-XDd" firstAttribute="height" secondItem="eLe-oE-Zgy" secondAttribute="height" id="Rb0-14-MA0"/>
-                                    <constraint firstItem="0d5-sc-sHf" firstAttribute="leading" secondItem="Wxa-oP-krm" secondAttribute="leading" constant="-1" id="TCP-pu-fvP"/>
+                                    <constraint firstItem="0d5-sc-sHf" firstAttribute="leading" secondItem="Wxa-oP-krm" secondAttribute="leading" id="TCP-pu-fvP"/>
                                     <constraint firstItem="pU9-Cx-XDd" firstAttribute="trailing" secondItem="Fbo-Wr-kPI" secondAttribute="trailing" id="TFO-Ka-sla"/>
                                     <constraint firstItem="XGN-OP-koM" firstAttribute="baseline" secondItem="fyA-hF-lLC" secondAttribute="baseline" id="XAg-zV-kIl"/>
                                     <constraint firstItem="pU9-Cx-XDd" firstAttribute="width" secondItem="Fbo-Wr-kPI" secondAttribute="width" id="XE4-t9-YKw"/>
@@ -1210,6 +1210,7 @@
                                     <constraint firstItem="eLe-oE-Zgy" firstAttribute="height" secondItem="1b7-Ud-BqK" secondAttribute="height" id="kTS-SU-Jij"/>
                                     <constraint firstItem="m3i-SL-wAr" firstAttribute="trailing" secondItem="0d5-sc-sHf" secondAttribute="trailing" id="m8C-Ec-Zkl"/>
                                     <constraint firstAttribute="height" constant="320" id="oti-Zi-Iz5"/>
+                                    <constraint firstItem="0d5-sc-sHf" firstAttribute="leading" secondItem="wEp-2F-fGq" secondAttribute="leading" constant="7" id="p00-oo-Q71"/>
                                     <constraint firstItem="eLe-oE-Zgy" firstAttribute="top" secondItem="1b7-Ud-BqK" secondAttribute="top" id="pzb-6x-qEh"/>
                                     <constraint firstItem="pU9-Cx-XDd" firstAttribute="height" secondItem="Fbo-Wr-kPI" secondAttribute="height" id="qzT-Wt-hsA"/>
                                     <constraint firstItem="IBY-mS-NIm" firstAttribute="trailing" secondItem="1b7-Ud-BqK" secondAttribute="trailing" id="r3H-cn-Fgw"/>
@@ -1245,7 +1246,7 @@
                 </customObject>
                 <customObject id="zTt-R2-Jcz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="350"/>
+            <point key="canvasLocation" x="1066" y="344.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9dc-4E-U9G">
@@ -1258,13 +1259,13 @@
                 </viewController>
                 <customObject id="LHI-lX-sOy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74.5" y="1165"/>
+            <point key="canvasLocation" x="15.5" y="1296"/>
         </scene>
         <!--Motion View Controller-->
         <scene sceneID="7PM-Gr-QAR">
             <objects>
                 <viewController id="AG8-rX-BbB" userLabel="Motion View Controller" sceneMemberID="viewController">
-                    <view key="view" id="hiX-67-Bel">
+                    <view key="view" wantsLayer="YES" id="hiX-67-Bel">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1673,7 +1674,6 @@
                         <outlet property="owner" destination="HBg-OW-edP" id="EMo-o3-hWC"/>
                     </connections>
                 </customObject>
-                <customObject id="tmR-Ud-36n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="ord-ef-DPL" userLabel="Motion Category" customClass="CategoryControlBehavior">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="Motion"/>
@@ -1688,6 +1688,7 @@
                         <outlet property="owner" destination="hiX-67-Bel" id="7FD-VD-rhs"/>
                     </connections>
                 </customObject>
+                <customObject id="tmR-Ud-36n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1065" y="744"/>
         </scene>
@@ -1695,7 +1696,7 @@
         <scene sceneID="MO9-I5-C7m">
             <objects>
                 <viewController id="6QR-0Z-P9Z" userLabel="Temporal View Controller" sceneMemberID="viewController">
-                    <view key="view" id="adK-vp-Jfa">
+                    <view key="view" wantsLayer="YES" id="adK-vp-Jfa">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="566"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1744,6 +1745,9 @@
                                                     <constraint firstAttribute="width" constant="216" id="64k-fS-off"/>
                                                 </constraints>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="fHd-fi-Vdr"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" target="Rmk-XH-96q" id="Ri7-7Q-vgV"/>
+                                                </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-jM-tic">
                                                 <rect key="frame" x="46" y="30" width="158" height="17"/>
@@ -1753,10 +1757,16 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="textFieldValueChanged:" target="Rmk-XH-96q" id="T18-GZ-vUB"/>
+                                                </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="GzH-Mx-gHG">
                                                 <rect key="frame" x="209" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="pZR-Yi-asb"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" target="Rmk-XH-96q" id="vpQ-kR-lnQ"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -1792,6 +1802,9 @@
                                                     <constraint firstAttribute="width" secondItem="3m7-Zh-K1O" secondAttribute="height" multiplier="27:2" id="ir2-5s-r1d"/>
                                                 </constraints>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="fLs-Of-UND"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" target="HD8-pY-m6h" id="QDf-ZE-wqt"/>
+                                                </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XeV-6a-YwF">
                                                 <rect key="frame" x="46" y="30" width="158" height="17"/>
@@ -1801,10 +1814,16 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="textFieldValueChanged:" target="HD8-pY-m6h" id="XHx-FQ-A3h"/>
+                                                </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="l4f-kL-fx3">
                                                 <rect key="frame" x="209" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="FFj-Kh-S3P"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" target="HD8-pY-m6h" id="oJD-MG-7Bs"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -2205,6 +2224,104 @@
                         </constraints>
                     </view>
                 </viewController>
+                <customObject id="Rmk-XH-96q" userLabel="Emitter Birthrate Control" customClass="EmitterControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Birth Rate"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="birthRate"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="yc8-TQ-ifG" id="sqQ-J6-Bxl"/>
+                        <outlet property="owner" destination="6QR-0Z-P9Z" id="P90-UO-5rX"/>
+                        <outlet property="slider" destination="XOl-zG-8Po" id="rzI-zB-WNM"/>
+                        <outlet property="stepper" destination="GzH-Mx-gHG" id="dL8-nx-36Z"/>
+                        <outlet property="textField" destination="izQ-jM-tic" id="f0h-T6-WyP"/>
+                    </connections>
+                </customObject>
+                <customObject id="HD8-pY-m6h" userLabel="Emitter Lifetime Control" customClass="EmitterControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Lifetime"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="lifetime"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="J9W-S1-b8H" id="7dc-M8-dbz"/>
+                        <outlet property="owner" destination="6QR-0Z-P9Z" id="Gqq-A7-MAN"/>
+                        <outlet property="slider" destination="3m7-Zh-K1O" id="GV5-hB-m4r"/>
+                        <outlet property="stepper" destination="l4f-kL-fx3" id="QbZ-E2-PrE"/>
+                        <outlet property="textField" destination="XeV-6a-YwF" id="Anq-dZ-gcR"/>
+                    </connections>
+                </customObject>
+                <customObject id="Enw-3B-UJA" userLabel="Emitter Lifetime Range Control" customClass="EmitterControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Lifetime Range"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="lifetimeRange"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="owner" destination="HBg-OW-edP" id="kgT-bP-dOJ"/>
+                    </connections>
+                </customObject>
+                <customObject id="6ou-79-a4k" userLabel="Emitter Scale Speed Control" customClass="EmitterControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Scale Speed"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="scaleSpeed"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="owner" destination="HBg-OW-edP" id="Yvv-bX-fS1"/>
+                    </connections>
+                </customObject>
+                <customObject id="kXN-zx-bb0" userLabel="Emitter Velocity Control" customClass="EmitterControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Velocity"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="velocity"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="owner" destination="HBg-OW-edP" id="wZ4-GD-MzA"/>
+                    </connections>
+                </customObject>
                 <customObject id="ckE-iA-vQB" userLabel="Emitter Velocity Range Control" customClass="EmitterControlBehavior">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="name" value="Velocity Range"/>
@@ -2241,42 +2358,6 @@
                         <outlet property="owner" destination="HBg-OW-edP" id="IOr-Hq-Z57"/>
                     </connections>
                 </customObject>
-                <customObject id="Enw-3B-UJA" userLabel="Emitter Lifetime Range Control" customClass="EmitterControlBehavior">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Lifetime Range"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="lifetimeRange"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                            <real key="value" value="1000"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="owner" destination="HBg-OW-edP" id="kgT-bP-dOJ"/>
-                    </connections>
-                </customObject>
-                <customObject id="kXN-zx-bb0" userLabel="Emitter Velocity Control" customClass="EmitterControlBehavior">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Velocity"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="velocity"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                            <real key="value" value="1000"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="owner" destination="HBg-OW-edP" id="wZ4-GD-MzA"/>
-                    </connections>
-                </customObject>
                 <customObject id="e5L-R9-NWq" userLabel="Emitter Y-Acceleration Control" customClass="EmitterControlBehavior">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="name" value="Y-Acceleration"/>
@@ -2311,60 +2392,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="owner" destination="HBg-OW-edP" id="AOA-h5-xtj"/>
-                    </connections>
-                </customObject>
-                <customObject id="6ou-79-a4k" userLabel="Emitter Scale Speed Control" customClass="EmitterControlBehavior">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Scale Speed"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="scaleSpeed"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                            <real key="value" value="1000"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="owner" destination="HBg-OW-edP" id="Yvv-bX-fS1"/>
-                    </connections>
-                </customObject>
-                <customObject id="Rmk-XH-96q" userLabel="Emitter Birthrate Control" customClass="EmitterControlBehavior">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Birth Rate"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                            <real key="value" value="1000"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="birthRate"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="owner" destination="HBg-OW-edP" id="PXD-K6-kEB"/>
-                    </connections>
-                </customObject>
-                <customObject id="HD8-pY-m6h" userLabel="Emitter Lifetime Control" customClass="EmitterControlBehavior">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Lifetime"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="lifetime"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                            <real key="value" value="60"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="owner" destination="HBg-OW-edP" id="Vkr-d7-UR9"/>
                     </connections>
                 </customObject>
                 <customObject id="RgC-ni-5OL" userLabel="Temporal Category" customClass="CategoryControlBehavior">

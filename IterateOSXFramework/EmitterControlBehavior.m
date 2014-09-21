@@ -61,15 +61,20 @@
     
     if ([self.owner isKindOfClass:[NSViewController class]]) {
         NSViewController *viewController = (NSViewController*)self.owner;
-        if ([viewController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
-            NSSplitViewController *splitViewController = (NSSplitViewController*)viewController.parentViewController;
-            NSViewController *detailViewController = (NSViewController*)splitViewController.childViewControllers[1];
+        if ([viewController.parentViewController isKindOfClass:[NSViewController class]]) {
+            NSViewController *containerViewController = (NSViewController*)viewController.parentViewController;
             
-            if ([detailViewController respondsToSelector:@selector(updateEmitterCellProperty:withValue:)]) {
-                [detailViewController performSelector:@selector(updateEmitterCellProperty:withValue:) withObject:_emitterCellProperty withObject:[NSNumber numberWithFloat:value]];
+            if ([containerViewController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
+                NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
+                NSViewController *detailViewController = (NSViewController*)splitViewController.childViewControllers[1];
+                
+                if ([detailViewController respondsToSelector:@selector(updateEmitterCellProperty:withValue:)]) {
+                    [detailViewController performSelector:@selector(updateEmitterCellProperty:withValue:) withObject:_emitterCellProperty withObject:[NSNumber numberWithFloat:value]];
+                }
+                
             }
-            
         }
+        
     }
 }
 
