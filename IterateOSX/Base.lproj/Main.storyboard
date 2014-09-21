@@ -693,31 +693,20 @@
             <objects>
                 <viewController id="HBg-OW-edP" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="YHa-TG-G3N">
-                        <rect key="frame" x="0.0" y="0.0" width="252" height="1225"/>
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="1610"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Pz-E7y">
-                                <rect key="frame" x="0.0" y="-45" width="252" height="1270"/>
-                                <clipView key="contentView" wantsLayer="YES" id="mxc-M1-nIb" customClass="FlippedClipView">
+                            <scrollView wantsLayer="YES" misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIE-Pz-E7y">
+                                <rect key="frame" x="0.0" y="0.0" width="252" height="1610"/>
+                                <clipView key="contentView" wantsLayer="YES" misplaced="YES" id="mxc-M1-nIb" customClass="FlippedClipView">
                                     <rect key="frame" x="1" y="1" width="166" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgN-fL-URW">
-                                            <rect key="frame" x="0.0" y="-587" width="252" height="1270"/>
+                                            <rect key="frame" x="0.0" y="-247" width="252" height="1610"/>
                                             <subviews>
-                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-Bd-kq6" userLabel="Visual Container View" customClass="ContainerLayoutView">
-                                                    <rect key="frame" x="0.0" y="950" width="250" height="320"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="320" id="wqK-LY-TWx"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <outlet property="containerHeight" destination="wqK-LY-TWx" id="qrR-Nd-TC6"/>
-                                                        <outlet property="scrollViewHeight" destination="DxE-ES-8Mq" id="pHL-m9-py4"/>
-                                                        <segue destination="Ydt-gB-E7j" kind="embed" id="9fk-tT-oKZ"/>
-                                                    </connections>
-                                                </containerView>
-                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="BEC-yl-fD6" userLabel="Motion Container View" customClass="ContainerLayoutView">
-                                                    <rect key="frame" x="0.0" y="609" width="250" height="341"/>
+                                                <containerView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEC-yl-fD6" userLabel="Motion Container View" customClass="ContainerLayoutView">
+                                                    <rect key="frame" x="0.0" y="567" width="250" height="341"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="341" id="G4h-qU-nIs"/>
                                                     </constraints>
@@ -727,8 +716,8 @@
                                                         <segue destination="AG8-rX-BbB" kind="embed" id="lBN-Qv-xLn"/>
                                                     </connections>
                                                 </containerView>
-                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="QGc-0e-VzR" userLabel="Temporal Container View" customClass="ContainerLayoutView">
-                                                    <rect key="frame" x="0.0" y="42" width="250" height="567"/>
+                                                <containerView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-0e-VzR" userLabel="Temporal Container View" customClass="ContainerLayoutView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="567"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="567" id="cDR-9h-oE9"/>
                                                     </constraints>
@@ -738,17 +727,42 @@
                                                         <segue destination="6QR-0Z-P9Z" kind="embed" id="Kph-27-qcH"/>
                                                     </connections>
                                                 </containerView>
+                                                <containerView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hd0-b8-Z6U" userLabel="Visual Container View" customClass="ContainerLayoutView">
+                                                    <rect key="frame" x="0.0" y="908" width="250" height="340"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="340" id="Ql5-YW-Li0"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="containerHeight" destination="Ql5-YW-Li0" id="SqD-If-JJ8"/>
+                                                        <outlet property="scrollViewHeight" destination="DxE-ES-8Mq" id="Klb-MZ-d9b"/>
+                                                        <segue destination="ZSG-ys-Jkb" kind="embed" id="2WT-j4-cx9"/>
+                                                    </connections>
+                                                </containerView>
+                                                <containerView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-Bd-kq6" userLabel="Color Container View" customClass="ContainerLayoutView">
+                                                    <rect key="frame" x="0.0" y="1248" width="250" height="320"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="320" id="wqK-LY-TWx"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="containerHeight" destination="wqK-LY-TWx" id="qrR-Nd-TC6"/>
+                                                        <outlet property="scrollViewHeight" destination="DxE-ES-8Mq" id="pHL-m9-py4"/>
+                                                        <segue destination="Ydt-gB-E7j" kind="embed" id="9fk-tT-oKZ"/>
+                                                    </connections>
+                                                </containerView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gAQ-Bd-kq6" firstAttribute="leading" secondItem="MgN-fL-URW" secondAttribute="leading" id="4ZG-n8-LHE"/>
                                                 <constraint firstItem="QGc-0e-VzR" firstAttribute="top" secondItem="BEC-yl-fD6" secondAttribute="bottom" id="BBB-B9-PqL"/>
-                                                <constraint firstAttribute="height" constant="1270" id="DxE-ES-8Mq"/>
-                                                <constraint firstItem="BEC-yl-fD6" firstAttribute="leading" secondItem="gAQ-Bd-kq6" secondAttribute="leading" id="H6z-f2-iUx"/>
+                                                <constraint firstAttribute="height" constant="1610" id="DxE-ES-8Mq"/>
+                                                <constraint firstItem="BEC-yl-fD6" firstAttribute="top" secondItem="hd0-b8-Z6U" secondAttribute="bottom" id="Ebq-Zn-Fva"/>
                                                 <constraint firstItem="gAQ-Bd-kq6" firstAttribute="top" secondItem="MgN-fL-URW" secondAttribute="top" id="ITk-NG-5Bs"/>
+                                                <constraint firstItem="hd0-b8-Z6U" firstAttribute="trailing" secondItem="gAQ-Bd-kq6" secondAttribute="trailing" id="Ir1-Ns-8iI"/>
                                                 <constraint firstItem="QGc-0e-VzR" firstAttribute="trailing" secondItem="BEC-yl-fD6" secondAttribute="trailing" id="OsF-Nr-cjD"/>
-                                                <constraint firstItem="BEC-yl-fD6" firstAttribute="top" secondItem="gAQ-Bd-kq6" secondAttribute="bottom" id="VlY-b4-9j2"/>
+                                                <constraint firstItem="hd0-b8-Z6U" firstAttribute="top" secondItem="gAQ-Bd-kq6" secondAttribute="bottom" id="XaD-DP-R6Z"/>
+                                                <constraint firstItem="hd0-b8-Z6U" firstAttribute="leading" secondItem="gAQ-Bd-kq6" secondAttribute="leading" id="aRy-44-gZn"/>
+                                                <constraint firstItem="BEC-yl-fD6" firstAttribute="trailing" secondItem="hd0-b8-Z6U" secondAttribute="trailing" id="dqa-kE-xup"/>
                                                 <constraint firstItem="QGc-0e-VzR" firstAttribute="leading" secondItem="BEC-yl-fD6" secondAttribute="leading" id="i3u-b4-Omb"/>
-                                                <constraint firstItem="BEC-yl-fD6" firstAttribute="trailing" secondItem="gAQ-Bd-kq6" secondAttribute="trailing" id="qI3-sp-uUW"/>
+                                                <constraint firstItem="BEC-yl-fD6" firstAttribute="leading" secondItem="hd0-b8-Z6U" secondAttribute="leading" id="oBb-63-Div"/>
                                                 <constraint firstAttribute="trailing" secondItem="gAQ-Bd-kq6" secondAttribute="trailing" constant="2" id="tht-oJ-80F"/>
                                             </constraints>
                                         </customView>
@@ -1257,7 +1271,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-Lu-0mS" userLabel="Color View">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-Lu-0mS" userLabel="Visual View">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-eX-LIR">
@@ -1281,11 +1295,11 @@
                                             <font key="font" metaFont="smallSystem"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="toggleHiddenClicked:" target="Xqy-bW-oMY" id="3cz-Fk-5ST"/>
+                                            <action selector="toggleHiddenClicked:" target="YML-xy-tRL" id="u6C-QO-KSh"/>
                                         </connections>
                                     </button>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-yJ-8Sr" userLabel="Magnification Filter View">
-                                        <rect key="frame" x="7" y="259" width="236" height="28"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-yJ-8Sr" userLabel="Magnification Filter View">
+                                        <rect key="frame" x="7" y="262" width="236" height="28"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aSp-sU-ITF">
                                                 <rect key="frame" x="0.0" y="7" width="33" height="14"/>
@@ -1320,8 +1334,8 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="zxZ-2f-pII"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-zW-1N0" userLabel="Minification Filter View">
-                                        <rect key="frame" x="7" y="223" width="236" height="28"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-zW-1N0" userLabel="Minification Filter View">
+                                        <rect key="frame" x="7" y="226" width="236" height="28"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hEr-2T-lDc">
                                                 <rect key="frame" x="0.0" y="7" width="33" height="14"/>
@@ -1356,8 +1370,8 @@
                                             <constraint firstAttribute="centerY" secondItem="kRT-zt-hb1" secondAttribute="centerY" constant="0.5" id="mdD-Uv-i5c"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTL-pw-K4E" userLabel="Minification Filter Bias View">
-                                        <rect key="frame" x="7" y="187" width="236" height="28"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTL-pw-K4E" userLabel="Minification Filter Bias View">
+                                        <rect key="frame" x="7" y="190" width="236" height="28"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-rF-DlK">
                                                 <rect key="frame" x="0.0" y="7" width="33" height="14"/>
@@ -1392,8 +1406,8 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="v2I-ad-aCj"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mb-JU-zM7" userLabel="Scale View">
-                                        <rect key="frame" x="7" y="123" width="236" height="56"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mb-JU-zM7" userLabel="Scale View">
+                                        <rect key="frame" x="7" y="126" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zok-Bz-gXS">
                                                 <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -1435,8 +1449,8 @@
                                             <constraint firstItem="F0u-zb-uPf" firstAttribute="top" secondItem="nBy-SE-bmv" secondAttribute="top" id="zYq-NU-sFu"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-Vc-rpg" userLabel="Scale View">
-                                        <rect key="frame" x="7" y="66" width="236" height="56"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-Vc-rpg" userLabel="Scale View">
+                                        <rect key="frame" x="7" y="69" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-Nk-cs3">
                                                 <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -1478,8 +1492,8 @@
                                             <constraint firstItem="ILr-ak-O4n" firstAttribute="leading" secondItem="6bG-Nk-cs3" secondAttribute="leading" id="so4-56-UFA"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBl-D8-rYD" userLabel="Scale View">
-                                        <rect key="frame" x="7" y="9" width="236" height="56"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBl-D8-rYD" userLabel="Scale View">
+                                        <rect key="frame" x="7" y="12" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RMg-xm-1MX">
                                                 <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -1566,6 +1580,20 @@
                     </view>
                 </viewController>
                 <customObject id="5cM-6I-4Xc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="YML-xy-tRL" customClass="CategoryControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="Visual"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultHeight">
+                            <integer key="value" value="340"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="categoryLabel" destination="Oox-dR-Y9i" id="2Zv-e8-uRH"/>
+                        <outlet property="containerHeight" destination="KuJ-aG-0iV" id="agC-l7-mtT"/>
+                        <outlet property="emitterCellPropertyControlHeight" destination="hD0-Qy-zpg" id="ZLV-nL-eXb"/>
+                        <outlet property="owner" destination="WFY-3T-KfI" id="ccw-UI-mCc"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1352" y="258"/>
         </scene>
@@ -2011,7 +2039,7 @@
                 </customObject>
                 <customObject id="tmR-Ud-36n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="744"/>
+            <point key="canvasLocation" x="1065" y="978"/>
         </scene>
         <!--Temporal View Controller-->
         <scene sceneID="MO9-I5-C7m">
@@ -2731,7 +2759,7 @@
                 </customObject>
                 <customObject id="I4t-ar-2cs" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352" y="857"/>
+            <point key="canvasLocation" x="1352" y="1091"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PC6-lU-x6y">
