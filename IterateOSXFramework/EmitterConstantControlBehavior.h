@@ -7,11 +7,15 @@
 //
 
 #import "EmitterControlBehavior.h"
+@class CategoryControlBehavior;
 
 IB_DESIGNABLE
 @interface EmitterConstantControlBehavior : EmitterControlBehavior
 
 @property (weak) IBOutlet NSTextField *label;
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
+@property (weak) IBOutlet NSLayoutConstraint *specialViewHeight;
+@property (weak) IBOutlet CategoryControlBehavior *categoryBehavior;
+
 
 @end

@@ -37,6 +37,9 @@
     _stepper.floatValue = _defaultValue;
     _stepper.minValue = _minValue;
     _stepper.maxValue = _maxValue;
+
+    _stepper.increment = _increment == 0 ? 1.0 : _increment;
+    
     
     
     

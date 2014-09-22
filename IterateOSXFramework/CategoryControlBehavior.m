@@ -54,16 +54,6 @@
     } completionHandler:^{
         
     }];
-    
-//    if ([self.owner isKindOfClass:[NSScrollView class]]) {
-//        NSScrollView *scrollView = (NSScrollView*)self.owner;
-//        NSView *documentView = (NSView*)scrollView.documentView;
-//        documentView.frame = NSRectFromCGRect(CGRectMake(0, 0, 250.0, 5000.0));
-////        scrollView.documentView.frame = NSRectFromCGRect(CGRectMake(0, 0, 250, 5000));
-//    }
-    
-//    NSScrollView *scrollView = [[NSScrollView alloc] init];
-//    scrollView.translatesAutoresizingMaskIntoConstraints
 }
 
 - (ContainerLayoutView*)retrieveContainerView {
@@ -76,6 +66,33 @@
     }
     
     return containerView;
+}
+
+-(void)changeConstraint:(NSLayoutConstraint*)constraint toConstant:(int)newConstant {
+    int oldConstant = constraint.constant;
+    
+    if (oldConstant != newConstant) {
+        constraint.animator.constant = newConstant;
+        
+        ContainerLayoutView *containerLayoutView = [self retrieveContainerView];
+        if (containerLayoutView != nil) {
+            if (oldConstant < newConstant) {
+                containerLayoutView.containerHeight.animator.constant += newConstant;
+                containerLayoutView.scrollViewHeight.animator.constant += newConstant;
+            } else {
+                containerLayoutView.containerHeight.animator.constant -= oldConstant;
+                containerLayoutView.scrollViewHeight.animator.constant -= oldConstant;
+            }
+            
+        }
+        
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+            [self.window layoutIfNeeded];
+        } completionHandler:^{
+            
+        }];
+    }
+    
 }
 
 @end

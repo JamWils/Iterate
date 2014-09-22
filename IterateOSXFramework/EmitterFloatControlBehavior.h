@@ -16,9 +16,9 @@ IB_DESIGNABLE
 @property (nonatomic, weak) IBOutlet NSTextField *textField;
 @property (nonatomic, weak) IBOutlet NSStepper *stepper;
 
-@property (nonatomic) IBInspectable NSString *name;
 @property (nonatomic) IBInspectable float defaultValue;
 @property (nonatomic) IBInspectable float minValue;
 @property (nonatomic) IBInspectable float maxValue;
+@property (nonatomic) IBInspectable float increment;
 
 @end

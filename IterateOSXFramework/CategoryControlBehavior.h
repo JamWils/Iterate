@@ -16,4 +16,6 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString *categoryName;
 @property (nonatomic) IBInspectable int defaultHeight;
 
+-(void)changeConstraint:(NSLayoutConstraint*)constraint toConstant:(int)newConstant;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "EmitterConstantControlBehavior.h"
+#import "CategoryControlBehavior.h"
 
 @implementation EmitterConstantControlBehavior
 
@@ -20,6 +21,12 @@
 
 - (IBAction)updateSelected:(NSPopUpButton *)sender {
     [self updateValues:[[sender titleOfSelectedItem] lowercaseString]];
+    
+    if ([[[sender titleOfSelectedItem] lowercaseString] isEqualToString:kCAFilterTrilinear]) {
+        [_categoryBehavior changeConstraint:_specialViewHeight toConstant:56.0];
+    } else {
+        [_categoryBehavior changeConstraint:_specialViewHeight toConstant:0.0];
+    }
 }
 
 

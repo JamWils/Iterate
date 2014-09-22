@@ -1271,6 +1271,11 @@
                         <outlet property="owner" destination="Ydt-gB-E7j" id="c0c-kk-AUC"/>
                     </connections>
                 </customObject>
+                <customObject id="Jyl-2y-c7U" customClass="EmitterFloatControlBehavior">
+                    <connections>
+                        <outlet property="owner" destination="Ydt-gB-E7j" id="cl1-p6-dsq"/>
+                    </connections>
+                </customObject>
                 <customObject id="zTt-R2-Jcz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1065" y="242.5"/>
@@ -1349,46 +1354,8 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="zxZ-2f-pII"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-zW-1N0" userLabel="Minification Filter View">
-                                        <rect key="frame" x="7" y="226" width="236" height="28"/>
-                                        <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hEr-2T-lDc">
-                                                <rect key="frame" x="2" y="7" width="33" height="14"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="XcN-IH-YjR">
-                                                    <font key="font" metaFont="smallSystem"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kRT-zt-hb1">
-                                                <rect key="frame" x="39" y="1" width="196" height="26"/>
-                                                <popUpButtonCell key="cell" type="push" title="Linear" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="nUY-Be-8LZ" id="h2D-aq-xBa">
-                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="menu"/>
-                                                    <menu key="menu" id="q9O-JE-ToH">
-                                                        <items>
-                                                            <menuItem title="Linear" state="on" id="nUY-Be-8LZ">
-                                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                                            </menuItem>
-                                                            <menuItem title="Nearest" id="EI3-Sn-xf9"/>
-                                                            <menuItem title="Trilinear" id="kGH-9m-fTk"/>
-                                                        </items>
-                                                    </menu>
-                                                </popUpButtonCell>
-                                            </popUpButton>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="28" id="LkB-CX-G2x"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="au2-ee-NXm"/>
-                                            <constraint firstItem="kRT-zt-hb1" firstAttribute="centerY" secondItem="hEr-2T-lDc" secondAttribute="centerY" constant="-0.5" id="bJY-WD-DDf"/>
-                                            <constraint firstItem="hEr-2T-lDc" firstAttribute="leading" secondItem="qXv-zW-1N0" secondAttribute="leading" constant="4" id="fHh-Lz-k0d"/>
-                                            <constraint firstItem="kRT-zt-hb1" firstAttribute="leading" secondItem="hEr-2T-lDc" secondAttribute="trailing" constant="8" id="geG-DI-9o2"/>
-                                            <constraint firstAttribute="trailing" secondItem="kRT-zt-hb1" secondAttribute="trailing" constant="4" id="kz5-Yp-f0n"/>
-                                            <constraint firstAttribute="centerY" secondItem="kRT-zt-hb1" secondAttribute="centerY" constant="0.5" id="mdD-Uv-i5c"/>
-                                        </constraints>
-                                    </customView>
-                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTL-pw-K4E" userLabel="Minification Filter Bias View">
-                                        <rect key="frame" x="7" y="190" width="236" height="28"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTL-pw-K4E" userLabel="Minification Filter View">
+                                        <rect key="frame" x="7" y="233" width="236" height="28"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-rF-DlK">
                                                 <rect key="frame" x="2" y="7" width="33" height="14"/>
@@ -1400,17 +1367,20 @@
                                             </textField>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-h6-k5d">
                                                 <rect key="frame" x="39" y="1" width="196" height="26"/>
-                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="eYR-Ih-Rzx" id="MY8-Wm-TC4">
+                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="MY8-Wm-TC4">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
                                                     <menu key="menu" id="nFT-Fb-Z2v">
                                                         <items>
-                                                            <menuItem title="Item 1" state="on" id="eYR-Ih-Rzx"/>
-                                                            <menuItem title="Item 2" id="8AF-7o-vOI"/>
-                                                            <menuItem title="Item 3" id="2bx-Sl-Zbe"/>
+                                                            <menuItem title="Linear" id="eYR-Ih-Rzx"/>
+                                                            <menuItem title="Nearby" id="8AF-7o-vOI"/>
+                                                            <menuItem title="Trilinear" id="2bx-Sl-Zbe"/>
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
+                                                <connections>
+                                                    <action selector="updateSelected:" target="rPa-ZR-3Pu" id="aZ1-Sw-V3K"/>
+                                                </connections>
                                             </popUpButton>
                                         </subviews>
                                         <constraints>
@@ -1423,8 +1393,61 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="v2I-ad-aCj"/>
                                         </constraints>
                                     </customView>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7f8-Q1-zhQ" userLabel="Minification Filter Bias View">
+                                        <rect key="frame" x="7" y="176" width="236" height="56"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OGX-j4-FFX">
+                                                <rect key="frame" x="2" y="31" width="33" height="14"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="gbM-vP-4U8">
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ztU-Kq-r23">
+                                                <rect key="frame" x="2" y="3" width="232" height="20"/>
+                                                <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="IuU-jZ-W3F"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" target="cqL-As-kUb" id="G0l-ad-L2X"/>
+                                                </connections>
+                                            </slider>
+                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-5W-p6K">
+                                                <rect key="frame" x="41" y="30" width="170" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="f4M-pR-jZR">
+                                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="pPo-9w-IA4"/>
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <action selector="textFieldValueChanged:" target="cqL-As-kUb" id="ECF-El-8Tq"/>
+                                                </connections>
+                                            </textField>
+                                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-uX-XwD">
+                                                <rect key="frame" x="216" y="27" width="19" height="22"/>
+                                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="xaO-Qp-5tI"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" target="cqL-As-kUb" id="etV-3f-s30"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dvx-5W-p6K" firstAttribute="leading" secondItem="OGX-j4-FFX" secondAttribute="trailing" constant="8" id="47D-si-E1g"/>
+                                            <constraint firstItem="OGX-j4-FFX" firstAttribute="top" secondItem="7f8-Q1-zhQ" secondAttribute="top" constant="11" id="BHG-Mj-ODM"/>
+                                            <constraint firstAttribute="height" constant="56" id="DW2-83-X8M"/>
+                                            <constraint firstItem="ztU-Kq-r23" firstAttribute="leading" secondItem="7f8-Q1-zhQ" secondAttribute="leading" constant="4" id="IKG-HM-lP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="ztU-Kq-r23" secondAttribute="trailing" constant="4" id="QPh-bo-xr2"/>
+                                            <constraint firstItem="ztU-Kq-r23" firstAttribute="top" secondItem="OGX-j4-FFX" secondAttribute="bottom" constant="10" id="UOG-Su-2Hn"/>
+                                            <constraint firstItem="dvx-5W-p6K" firstAttribute="baseline" secondItem="OGX-j4-FFX" secondAttribute="baseline" constant="1" id="WIV-5y-avJ"/>
+                                            <constraint firstItem="YLk-uX-XwD" firstAttribute="leading" secondItem="dvx-5W-p6K" secondAttribute="trailing" constant="8" id="YBE-js-5FK"/>
+                                            <constraint firstItem="YLk-uX-XwD" firstAttribute="height" secondItem="dvx-5W-p6K" secondAttribute="height" id="dOX-wg-JRU"/>
+                                            <constraint firstItem="YLk-uX-XwD" firstAttribute="top" secondItem="dvx-5W-p6K" secondAttribute="top" id="hir-x2-f57"/>
+                                            <constraint firstItem="YLk-uX-XwD" firstAttribute="trailing" secondItem="ztU-Kq-r23" secondAttribute="trailing" id="r0S-o1-u3f"/>
+                                            <constraint firstItem="ztU-Kq-r23" firstAttribute="leading" secondItem="OGX-j4-FFX" secondAttribute="leading" id="t7z-eA-foI"/>
+                                        </constraints>
+                                    </customView>
                                     <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mb-JU-zM7" userLabel="Scale View">
-                                        <rect key="frame" x="7" y="126" width="236" height="56"/>
+                                        <rect key="frame" x="7" y="119" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zok-Bz-gXS">
                                                 <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -1437,6 +1460,9 @@
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xFf-nO-YkX">
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="Acx-If-ewb"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" target="Y53-fW-UiM" id="r8m-SX-UZw"/>
+                                                </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nBy-SE-bmv">
                                                 <rect key="frame" x="41" y="30" width="170" height="17"/>
@@ -1446,10 +1472,16 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="textFieldValueChanged:" target="Y53-fW-UiM" id="b1I-r7-eTh"/>
+                                                </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="F0u-zb-uPf">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="9yX-mw-CDO"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" target="Y53-fW-UiM" id="zBj-4C-8jK"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -1466,8 +1498,8 @@
                                             <constraint firstItem="F0u-zb-uPf" firstAttribute="top" secondItem="nBy-SE-bmv" secondAttribute="top" id="zYq-NU-sFu"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-Vc-rpg" userLabel="Scale View">
-                                        <rect key="frame" x="7" y="69" width="236" height="56"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GT5-Vc-rpg" userLabel="Scale Range View">
+                                        <rect key="frame" x="7" y="62" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-Nk-cs3">
                                                 <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -1480,6 +1512,9 @@
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-ak-O4n">
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="3dy-5Q-fSE"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" target="Ywc-TM-nIq" id="AP7-Y1-tsv"/>
+                                                </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mN8-Ap-vYW">
                                                 <rect key="frame" x="41" y="30" width="170" height="17"/>
@@ -1489,10 +1524,16 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="textFieldValueChanged:" target="Ywc-TM-nIq" id="TH8-9Y-1ke"/>
+                                                </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="46z-oQ-xiA">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="KEr-nx-P4l"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" target="Ywc-TM-nIq" id="6WM-aX-6kE"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -1509,8 +1550,8 @@
                                             <constraint firstItem="ILr-ak-O4n" firstAttribute="leading" secondItem="6bG-Nk-cs3" secondAttribute="leading" id="so4-56-UFA"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBl-D8-rYD" userLabel="Scale View">
-                                        <rect key="frame" x="7" y="12" width="236" height="56"/>
+                                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBl-D8-rYD" userLabel="Scale Speed View">
+                                        <rect key="frame" x="7" y="5" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RMg-xm-1MX">
                                                 <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -1523,6 +1564,9 @@
                                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-EV-Zee">
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="ZFc-fD-8rE"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" target="rmU-sB-HLV" id="nXi-48-aqq"/>
+                                                </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bv0-dh-yit">
                                                 <rect key="frame" x="41" y="30" width="170" height="17"/>
@@ -1532,10 +1576,16 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="textFieldValueChanged:" target="rmU-sB-HLV" id="NAy-fJ-vQX"/>
+                                                </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ucf-GG-qqz">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="4pt-eZ-82L"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" target="rmU-sB-HLV" id="QAK-eM-sYU"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <constraints>
@@ -1555,37 +1605,37 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NTL-pw-K4E" firstAttribute="trailing" secondItem="5mb-JU-zM7" secondAttribute="trailing" id="12E-BO-FBi"/>
-                                    <constraint firstItem="qXv-zW-1N0" firstAttribute="height" secondItem="gyb-yJ-8Sr" secondAttribute="height" id="5mF-Sb-pg8"/>
-                                    <constraint firstItem="NTL-pw-K4E" firstAttribute="trailing" secondItem="qXv-zW-1N0" secondAttribute="trailing" id="601-aS-gfB"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="trailing" secondItem="5mb-JU-zM7" secondAttribute="trailing" id="6VR-tJ-wHS"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="height" secondItem="HBl-D8-rYD" secondAttribute="height" id="7ju-A2-zz0"/>
                                     <constraint firstItem="Oox-dR-Y9i" firstAttribute="leading" secondItem="gyb-yJ-8Sr" secondAttribute="leading" id="85u-CU-R5c"/>
                                     <constraint firstItem="Mp9-eX-LIR" firstAttribute="top" secondItem="Rfs-Lu-0mS" secondAttribute="top" constant="11" id="8L2-jY-X70"/>
-                                    <constraint firstItem="qXv-zW-1N0" firstAttribute="top" secondItem="gyb-yJ-8Sr" secondAttribute="bottom" constant="8" id="8ac-9p-SIj"/>
                                     <constraint firstItem="NTL-pw-K4E" firstAttribute="leading" secondItem="5mb-JU-zM7" secondAttribute="leading" id="8k5-YR-FlN"/>
-                                    <constraint firstItem="NTL-pw-K4E" firstAttribute="leading" secondItem="qXv-zW-1N0" secondAttribute="leading" id="Bdi-mb-jim"/>
+                                    <constraint firstItem="7f8-Q1-zhQ" firstAttribute="trailing" secondItem="NTL-pw-K4E" secondAttribute="trailing" id="8zs-iw-S1b"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="height" secondItem="5mb-JU-zM7" secondAttribute="height" id="DBL-JD-xCQ"/>
-                                    <constraint firstItem="5mb-JU-zM7" firstAttribute="top" secondItem="NTL-pw-K4E" secondAttribute="bottom" constant="8" id="DwE-2r-KTI"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="top" secondItem="5mb-JU-zM7" secondAttribute="bottom" constant="1" id="F5r-rT-toC"/>
                                     <constraint firstItem="Oox-dR-Y9i" firstAttribute="top" secondItem="Mp9-eX-LIR" secondAttribute="bottom" constant="8" id="H27-3f-Pol"/>
                                     <constraint firstItem="gyb-yJ-8Sr" firstAttribute="trailing" secondItem="Drj-JT-bvK" secondAttribute="trailing" id="KtT-fQ-sjC"/>
                                     <constraint firstAttribute="height" constant="340" id="KuJ-aG-0iV"/>
-                                    <constraint firstItem="qXv-zW-1N0" firstAttribute="trailing" secondItem="gyb-yJ-8Sr" secondAttribute="trailing" id="LO2-U8-2e4"/>
                                     <constraint firstItem="gyb-yJ-8Sr" firstAttribute="leading" secondItem="Rfs-Lu-0mS" secondAttribute="leading" constant="7" id="MCu-Le-TpV"/>
-                                    <constraint firstItem="qXv-zW-1N0" firstAttribute="leading" secondItem="gyb-yJ-8Sr" secondAttribute="leading" id="Pe4-7T-ASw"/>
+                                    <constraint firstItem="7f8-Q1-zhQ" firstAttribute="top" secondItem="NTL-pw-K4E" secondAttribute="bottom" constant="1" id="PQZ-YI-8fW"/>
                                     <constraint firstItem="Mp9-eX-LIR" firstAttribute="leading" secondItem="Rfs-Lu-0mS" secondAttribute="leading" id="QK5-fY-wvS"/>
-                                    <constraint firstItem="NTL-pw-K4E" firstAttribute="top" secondItem="qXv-zW-1N0" secondAttribute="bottom" constant="8" id="Ssd-ta-pVk"/>
+                                    <constraint firstItem="7f8-Q1-zhQ" firstAttribute="trailing" secondItem="5mb-JU-zM7" secondAttribute="trailing" id="VPv-wb-VWT"/>
+                                    <constraint firstItem="gyb-yJ-8Sr" firstAttribute="trailing" secondItem="NTL-pw-K4E" secondAttribute="trailing" id="VbR-5F-Js0"/>
                                     <constraint firstAttribute="trailing" secondItem="Mp9-eX-LIR" secondAttribute="trailing" id="Vj4-4a-P1b"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="trailing" secondItem="HBl-D8-rYD" secondAttribute="trailing" id="ZSC-SC-8OI"/>
                                     <constraint firstItem="Oox-dR-Y9i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rfs-Lu-0mS" secondAttribute="leading" constant="6" id="aBD-l7-O26"/>
+                                    <constraint firstItem="7f8-Q1-zhQ" firstAttribute="leading" secondItem="NTL-pw-K4E" secondAttribute="leading" id="b6r-ga-fxa"/>
                                     <constraint firstItem="Drj-JT-bvK" firstAttribute="top" secondItem="Oox-dR-Y9i" secondAttribute="top" id="cxF-HQ-ztv"/>
                                     <constraint firstItem="5mb-JU-zM7" firstAttribute="height" secondItem="NTL-pw-K4E" secondAttribute="height" multiplier="0.5" constant="42" id="dBD-hU-1Eq"/>
                                     <constraint firstAttribute="trailing" secondItem="gyb-yJ-8Sr" secondAttribute="trailing" constant="7" id="fdv-jf-TRH"/>
                                     <constraint firstItem="gyb-yJ-8Sr" firstAttribute="top" secondItem="Mp9-eX-LIR" secondAttribute="bottom" constant="38" id="fxF-bm-vAv"/>
+                                    <constraint firstItem="5mb-JU-zM7" firstAttribute="top" secondItem="7f8-Q1-zhQ" secondAttribute="bottom" constant="1" id="huO-PC-agQ"/>
                                     <constraint firstItem="HBl-D8-rYD" firstAttribute="top" secondItem="GT5-Vc-rpg" secondAttribute="bottom" constant="1" id="nXx-ZI-R0l"/>
-                                    <constraint firstItem="NTL-pw-K4E" firstAttribute="height" secondItem="qXv-zW-1N0" secondAttribute="height" id="oGi-C7-Drs"/>
+                                    <constraint firstItem="7f8-Q1-zhQ" firstAttribute="leading" secondItem="5mb-JU-zM7" secondAttribute="leading" id="oqF-4d-YFb"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="leading" secondItem="5mb-JU-zM7" secondAttribute="leading" id="szC-IT-8c1"/>
                                     <constraint firstItem="GT5-Vc-rpg" firstAttribute="leading" secondItem="HBl-D8-rYD" secondAttribute="leading" id="uEG-ND-0iC"/>
+                                    <constraint firstItem="NTL-pw-K4E" firstAttribute="top" secondItem="gyb-yJ-8Sr" secondAttribute="bottom" constant="1" id="uyT-FL-raM"/>
+                                    <constraint firstItem="gyb-yJ-8Sr" firstAttribute="leading" secondItem="NTL-pw-K4E" secondAttribute="leading" id="wx7-qs-LwR"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -1601,8 +1651,6 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="name" value="Magnification Filter"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="magnificationFilter"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="buttonContents" value="Linear,Nearest,Trilinear"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="buttonValues" value="kCAFilterLinear,kCAFilterNearest,kCAFilterTrilinear"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="label" destination="aSp-sU-ITF" id="Mqd-nr-ObS"/>
@@ -1610,7 +1658,111 @@
                         <outlet property="popUpButton" destination="oEa-0T-Sue" id="UNT-lS-iWg"/>
                     </connections>
                 </customObject>
-                <customObject id="YML-xy-tRL" customClass="CategoryControlBehavior">
+                <customObject id="rPa-ZR-3Pu" userLabel="Minification Filter View" customClass="EmitterConstantControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Minification Filter"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="minificationFilter"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="categoryBehavior" destination="YML-xy-tRL" id="8Ba-Y9-ikO"/>
+                        <outlet property="label" destination="E5M-rF-DlK" id="CAr-uK-4DH"/>
+                        <outlet property="owner" destination="ZSG-ys-Jkb" id="gLp-aT-ClD"/>
+                        <outlet property="popUpButton" destination="mpS-h6-k5d" id="1x1-hG-pfE"/>
+                        <outlet property="specialViewHeight" destination="DW2-83-X8M" id="elS-M5-8yn"/>
+                    </connections>
+                </customObject>
+                <customObject id="cqL-As-kUb" userLabel="Minification Filter Bias Control Behavior" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Bias"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="minificationFilterBias"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="OGX-j4-FFX" id="kT5-X4-p1I"/>
+                        <outlet property="owner" destination="ZSG-ys-Jkb" id="VEf-o5-3lx"/>
+                        <outlet property="slider" destination="ztU-Kq-r23" id="ott-my-0Iz"/>
+                        <outlet property="stepper" destination="YLk-uX-XwD" id="S1C-gu-Is3"/>
+                        <outlet property="textField" destination="dvx-5W-p6K" id="qje-pJ-9Fw"/>
+                    </connections>
+                </customObject>
+                <customObject id="Y53-fW-UiM" userLabel="Scale Control Behavior" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Scale"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="scale"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                            <real key="value" value="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="zok-Bz-gXS" id="OuF-fD-A4U"/>
+                        <outlet property="owner" destination="ZSG-ys-Jkb" id="PCv-Ow-hHe"/>
+                        <outlet property="slider" destination="xFf-nO-YkX" id="v0t-jM-qK2"/>
+                        <outlet property="stepper" destination="F0u-zb-uPf" id="Das-cX-ouB"/>
+                        <outlet property="textField" destination="nBy-SE-bmv" id="rkf-xh-aSt"/>
+                    </connections>
+                </customObject>
+                <customObject id="Ywc-TM-nIq" userLabel="Scale Range Control Behavior" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Scale Range"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="scaleRange"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="6bG-Nk-cs3" id="eXj-VE-zql"/>
+                        <outlet property="owner" destination="ZSG-ys-Jkb" id="u45-QK-uUP"/>
+                        <outlet property="slider" destination="ILr-ak-O4n" id="ZFg-OY-ZEu"/>
+                        <outlet property="stepper" destination="46z-oQ-xiA" id="mns-Qs-hrJ"/>
+                        <outlet property="textField" destination="mN8-Ap-vYW" id="idw-La-etY"/>
+                    </connections>
+                </customObject>
+                <customObject id="rmU-sB-HLV" userLabel="Scale Speed Control Behavior" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Scale Speed"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="-1000"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1000"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterCellProperty" value="scaleSpeed"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="RMg-xm-1MX" id="AKD-PC-ylX"/>
+                        <outlet property="owner" destination="ZSG-ys-Jkb" id="IwQ-bL-4ZU"/>
+                        <outlet property="slider" destination="cQW-EV-Zee" id="Ea3-eL-tAa"/>
+                        <outlet property="stepper" destination="ucf-GG-qqz" id="XQw-2Y-30s"/>
+                        <outlet property="textField" destination="Bv0-dh-yit" id="33h-Un-AKi"/>
+                    </connections>
+                </customObject>
+                <customObject id="YML-xy-tRL" userLabel="Visual Category" customClass="CategoryControlBehavior">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="Visual"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultHeight">
@@ -2719,7 +2871,7 @@
                             <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                            <real key="value" value="0.0"/>
+                            <real key="value" value="-1000"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                             <real key="value" value="1000"/>
