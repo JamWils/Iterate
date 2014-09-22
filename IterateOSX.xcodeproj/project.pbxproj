@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */; };
 		1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */; };
+		1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */; };
+		1A6F5CA219D068960000B1B2 /* EmitterImageControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */; };
 		1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */; };
 		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
 		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; };
@@ -93,6 +95,8 @@
 /* Begin PBXFileReference section */
 		1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryControlBehavior.h; sourceTree = "<group>"; };
 		1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryControlBehavior.m; sourceTree = "<group>"; };
+		1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterImageControlBehavior.h; sourceTree = "<group>"; };
+		1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterImageControlBehavior.m; sourceTree = "<group>"; };
 		1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalValueFormatter.h; sourceTree = "<group>"; };
 		1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalValueFormatter.m; sourceTree = "<group>"; };
 		1A74ADC719CC7DFD00B894EC /* FlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedView.h; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 				1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */,
 				1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */,
 				1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */,
+				1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */,
+				1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */,
 				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
+				1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */,
 				1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */,
 				1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */,
 			);
@@ -524,6 +531,7 @@
 				1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */,
 				1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */,
 				1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */,
+				1A6F5CA219D068960000B1B2 /* EmitterImageControlBehavior.m in Sources */,
 				1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */,
 				1AAE096A19CF89CE00C95D7C /* EmitterControlBehavior.m in Sources */,
 				1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */,

@@ -28,7 +28,7 @@
     
     if ([sender.title isEqualToString:@"Hide"]) {
         sender.title = @"Show";
-        _emitterCellPropertyControlHeight.animator.constant = 0;
+//        _emitterCellPropertyControlHeight.animator.constant = 0;
         _containerHeight.animator.constant = 40;
         
         containerLayoutView = [self retrieveContainerView];
@@ -39,7 +39,7 @@
         
     } else {
         sender.title = @"Hide";
-        _emitterCellPropertyControlHeight.animator.constant = 56;
+//        _emitterCellPropertyControlHeight.animator.constant = 56;
         _containerHeight.animator.constant = _defaultHeight;
         
         containerLayoutView = [self retrieveContainerView];
@@ -79,9 +79,13 @@
             if (oldConstant < newConstant) {
                 containerLayoutView.containerHeight.animator.constant += newConstant;
                 containerLayoutView.scrollViewHeight.animator.constant += newConstant;
+                _defaultHeight += newConstant;
+                _containerHeight.animator.constant = _defaultHeight;
             } else {
                 containerLayoutView.containerHeight.animator.constant -= oldConstant;
                 containerLayoutView.scrollViewHeight.animator.constant -= oldConstant;
+                _defaultHeight -= oldConstant;
+                _containerHeight.animator.constant = _defaultHeight;
             }
             
         }

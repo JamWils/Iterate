@@ -28,6 +28,7 @@
     _slider.maxValue = _maxValue;
     
     _textField.floatValue = _defaultValue;
+    _textField.backgroundColor = [NSColor clearColor];
     if ([_textField.formatter isKindOfClass:[NSNumberFormatter class]]) {
         NSNumberFormatter *formatter = (NSNumberFormatter*)_textField.formatter;
         formatter.minimum = [NSNumber numberWithFloat:_minValue];
