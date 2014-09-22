@@ -21,6 +21,8 @@
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
 		1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A96FED319CF99BE00A4627D /* EmitterColorControlBehavior.h */; };
 		1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A96FED419CF99BE00A4627D /* EmitterColorControlBehavior.m */; };
+		1A96FED919D010A300A4627D /* AlphaColorWell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A96FED719D010A300A4627D /* AlphaColorWell.h */; };
+		1A96FEDA19D010A300A4627D /* AlphaColorWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A96FED819D010A300A4627D /* AlphaColorWell.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
 		1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */; };
@@ -103,6 +105,8 @@
 		1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehaviors.m; sourceTree = "<group>"; };
 		1A96FED319CF99BE00A4627D /* EmitterColorControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterColorControlBehavior.h; sourceTree = "<group>"; };
 		1A96FED419CF99BE00A4627D /* EmitterColorControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterColorControlBehavior.m; sourceTree = "<group>"; };
+		1A96FED719D010A300A4627D /* AlphaColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaColorWell.h; sourceTree = "<group>"; };
+		1A96FED819D010A300A4627D /* AlphaColorWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaColorWell.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
 		1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */,
 				1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */,
 				1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */,
+				1A96FED719D010A300A4627D /* AlphaColorWell.h */,
+				1A96FED819D010A300A4627D /* AlphaColorWell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 				1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */,
 				1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */,
 				1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */,
+				1A96FED919D010A300A4627D /* AlphaColorWell.h in Headers */,
 				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
 				1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */,
 				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
@@ -521,6 +528,7 @@
 				1AAE096A19CF89CE00C95D7C /* EmitterControlBehavior.m in Sources */,
 				1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */,
 				1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */,
+				1A96FEDA19D010A300A4627D /* AlphaColorWell.m in Sources */,
 				1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */,
 				1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */,
 				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
