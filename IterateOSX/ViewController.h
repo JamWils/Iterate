@@ -10,7 +10,7 @@
 
 @interface ViewController : NSViewController
 
-- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(NSNumber*)number;
+- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value;
 
 @end
 

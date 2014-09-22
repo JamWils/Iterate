@@ -44,7 +44,7 @@
     
     CAEmitterLayer *emitter = [CAEmitterLayer layer];
 //    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
-    emitter.emitterPosition = CGPointMake(300, 300);
+    emitter.emitterPosition = CGPointMake(500, 300);
     emitter.emitterMode = kCAEmitterLayerOutline;
     emitter.emitterShape = kCAEmitterLayerCuboid;
     emitter.renderMode = kCAEmitterLayerAdditive;
@@ -155,12 +155,12 @@
         NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
-- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(NSNumber*)number {
+- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value {
     NSString *pathName = [NSString stringWithFormat:@"emitterCells.moonParticle.%@", propertyName];
     for (CALayer *layer in [self.view.layer sublayers]) {
         if ([layer.name isEqualToString:@"moonLayer"]) {
             CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
-            [emitterLayer setValue:number forKeyPath:pathName];
+            [emitterLayer setValue:value forKeyPath:pathName];
         }
     }
 }
