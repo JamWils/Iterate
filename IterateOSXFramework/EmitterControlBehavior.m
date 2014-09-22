@@ -19,10 +19,27 @@
             
             if ([containerViewController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
                 NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
-                NSViewController *detailViewController = (NSViewController*)splitViewController.childViewControllers[1];
+                NSViewController *detailViewController = nil;
+                
+                NSString *keyPath = nil;
+                if (_isCellProperty) {
+                    NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
+                    detailViewController = (NSViewController*)splitViewController.childViewControllers[1];
+                    
+                    keyPath = [NSString stringWithFormat:@"%@.%@.%@", @"emitterCells", @"moonParticle", _emitterProperty];
+                } else {
+                    NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
+                    NSViewController *leftBottomController = (NSViewController*)splitViewController.childViewControllers[1];
+                    if ([leftBottomController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
+                        NSSplitViewController *parentSplitViewController = (NSSplitViewController*)leftBottomController.parentViewController.parentViewController;
+                        detailViewController = (NSViewController*)parentSplitViewController.childViewControllers[1];
+                    }
+                    
+                    keyPath = _emitterProperty;
+                }
                 
                 if ([detailViewController respondsToSelector:@selector(updateEmitterCellProperty:withValue:)]) {
-                    [detailViewController performSelector:@selector(updateEmitterCellProperty:withValue:) withObject:_emitterCellProperty withObject:value];
+                    [detailViewController performSelector:@selector(updateEmitterCellProperty:withValue:) withObject:keyPath withObject:value];
                 }
                 
             }

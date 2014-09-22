@@ -20,6 +20,19 @@
 }
 
 - (IBAction)updateSelected:(NSPopUpButton *)sender {
+    NSString *newValue = [sender titleOfSelectedItem];
+    
+
+    NSUInteger stringLength = [newValue length];
+    newValue = [newValue stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    if (stringLength == [newValue length]) {
+        newValue = [newValue lowercaseString];
+    } else {
+        newValue = [newValue stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[newValue substringToIndex:1] lowercaseString]];
+        NSLog(@"%@", newValue);
+    }
+    
     [self updateValues:[[sender titleOfSelectedItem] lowercaseString]];
     
     if ([[[sender titleOfSelectedItem] lowercaseString] isEqualToString:kCAFilterTrilinear]) {

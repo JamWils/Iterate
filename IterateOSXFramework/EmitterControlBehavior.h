@@ -11,7 +11,8 @@
 IB_DESIGNABLE
 @interface EmitterControlBehavior : CustomBehaviors
 
-@property (nonatomic) IBInspectable NSString *emitterCellProperty;
+@property IBInspectable BOOL isCellProperty;
+@property (nonatomic) IBInspectable NSString *emitterProperty;
 @property (nonatomic) IBInspectable NSString *name;
 
 - (void)updateValues:(id)value NS_REQUIRES_SUPER;

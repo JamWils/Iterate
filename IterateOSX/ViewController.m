@@ -156,11 +156,13 @@
 }
 
 - (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value {
-    NSString *pathName = [NSString stringWithFormat:@"emitterCells.moonParticle.%@", propertyName];
+//    NSString *pathName = [NSString stringWithFormat:@"emitterCells.moonParticle.%@", propertyName];
     for (CALayer *layer in [self.view.layer sublayers]) {
         if ([layer.name isEqualToString:@"moonLayer"]) {
             CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
-            [emitterLayer setValue:value forKeyPath:pathName];
+            NSLog(@"Before %@", emitterLayer.renderMode);
+            [emitterLayer setValue:value forKeyPath:propertyName];
+            NSLog(@"After %@", emitterLayer.renderMode);
         }
     }
 }
