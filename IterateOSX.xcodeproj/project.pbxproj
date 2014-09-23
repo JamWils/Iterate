@@ -36,11 +36,11 @@
 		1AAE096D19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096B19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h */; };
 		1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096C19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m */; };
 		1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* Document.m */; };
+		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewController.m */; };
 		1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */; };
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
 		1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ViewController.m */; };
-		1AD94CFF19BBA3AF001A2015 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFE19BBA3AF001A2015 /* AppDelegate.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
 		1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0219BBA3AF001A2015 /* Main.storyboard */; };
 		1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */; };
@@ -128,6 +128,8 @@
 		1AAE096C19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterConstantControlBehavior.m; sourceTree = "<group>"; };
 		1AC0C6BB19D16EF6001FFC85 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		1AC0C6BC19D16EF6001FFC85 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		1AC85C7919D1B1F6003EA1F1 /* OutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewController.h; sourceTree = "<group>"; };
+		1AC85C7A19D1B1F6003EA1F1 /* OutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewController.m; sourceTree = "<group>"; };
 		1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterFloatControlBehavior.h; sourceTree = "<group>"; };
 		1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehavior.m; sourceTree = "<group>"; };
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,8 +137,6 @@
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AD94CFA19BBA3AF001A2015 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1AD94CFB19BBA3AF001A2015 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1AD94CFD19BBA3AF001A2015 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1AD94CFE19BBA3AF001A2015 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AD94D0019BBA3AF001A2015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AD94D0319BBA3AF001A2015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AD94D0919BBA3AF001A2015 /* IterateOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,13 +261,13 @@
 			children = (
 				1AD94CFA19BBA3AF001A2015 /* ViewController.h */,
 				1AD94CFB19BBA3AF001A2015 /* ViewController.m */,
-				1AD94CFD19BBA3AF001A2015 /* AppDelegate.h */,
-				1AD94CFE19BBA3AF001A2015 /* AppDelegate.m */,
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
 				1AD94D0219BBA3AF001A2015 /* Main.storyboard */,
 				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
 				1AC0C6BB19D16EF6001FFC85 /* Document.h */,
 				1AC0C6BC19D16EF6001FFC85 /* Document.m */,
+				1AC85C7919D1B1F6003EA1F1 /* OutlineViewController.h */,
+				1AC85C7A19D1B1F6003EA1F1 /* OutlineViewController.m */,
 			);
 			path = IterateOSX;
 			sourceTree = "<group>";
@@ -529,9 +529,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */,
+				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewController.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */,
 				1AD94CF919BBA3AF001A2015 /* main.m in Sources */,
-				1AD94CFF19BBA3AF001A2015 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
