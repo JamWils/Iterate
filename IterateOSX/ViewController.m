@@ -51,7 +51,7 @@
     emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
     emitter.name = @"moonLayer";
     _moon = emitter;
-    
+
     [view.layer addSublayer:_moon];
     
     //Create the emitter cell
@@ -73,7 +73,7 @@
     
     [self initializeOutputStream];
     //When your info is stale:
-//    self.userActivity.needsSave = YES;
+
     
 }
 
@@ -156,15 +156,13 @@
 }
 
 - (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value {
-//    NSString *pathName = [NSString stringWithFormat:@"emitterCells.moonParticle.%@", propertyName];
     for (CALayer *layer in [self.view.layer sublayers]) {
         if ([layer.name isEqualToString:@"moonLayer"]) {
             CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
-            NSLog(@"Before %@", emitterLayer.renderMode);
             [emitterLayer setValue:value forKeyPath:propertyName];
-            NSLog(@"After %@", emitterLayer.renderMode);
         }
     }
+    self.userActivity.needsSave = YES;
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {

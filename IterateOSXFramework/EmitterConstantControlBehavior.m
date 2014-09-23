@@ -33,7 +33,7 @@
         NSLog(@"%@", newValue);
     }
     
-    [self updateValues:[[sender titleOfSelectedItem] lowercaseString]];
+    [self updateValues:newValue];
     
     if ([[[sender titleOfSelectedItem] lowercaseString] isEqualToString:kCAFilterTrilinear]) {
         [_categoryBehavior changeConstraint:_specialViewHeight toConstant:56.0];
