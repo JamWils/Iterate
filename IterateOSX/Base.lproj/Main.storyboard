@@ -812,27 +812,49 @@
             </objects>
             <point key="canvasLocation" x="-1021" y="531"/>
         </scene>
-        <!--View Controller-->
+        <!--Bottom Left View Controller-->
         <scene sceneID="RFb-rA-TiH">
             <objects>
-                <viewController id="8R1-hd-M1Z" sceneMemberID="viewController">
+                <viewController id="8R1-hd-M1Z" userLabel="Bottom Left View Controller" sceneMemberID="viewController">
                     <view key="view" id="5v8-y3-W2s">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="767"/>
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="897"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-2X-aS3">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="767"/>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtG-2X-aS3">
+                                <rect key="frame" x="0.0" y="0.0" width="252" height="897"/>
                                 <clipView key="contentView" id="tPf-NG-mj6">
                                     <rect key="frame" x="1" y="1" width="166" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2j-PU-xMt">
-                                            <rect key="frame" x="0.0" y="0.0" width="166" height="79"/>
+                                        <view translatesAutoresizingMaskIntoConstraints="NO" id="q2j-PU-xMt">
+                                            <rect key="frame" x="0.0" y="816" width="250" height="897"/>
+                                            <subviews>
+                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Q1y-nP-SyM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="897"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="897" id="CpW-tY-zvj"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <segue destination="FoU-4q-nG8" kind="embed" id="Uu7-MS-JGz"/>
+                                                    </connections>
+                                                </containerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="897" id="3zm-nx-nkS"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q1y-nP-SyM" secondAttribute="trailing" id="L70-Ga-ecv"/>
+                                                <constraint firstItem="Q1y-nP-SyM" firstAttribute="top" secondItem="q2j-PU-xMt" secondAttribute="top" id="qFP-Mg-tr0"/>
+                                                <constraint firstItem="Q1y-nP-SyM" firstAttribute="leading" secondItem="q2j-PU-xMt" secondAttribute="leading" id="u2N-oD-IIT"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="q2j-PU-xMt" firstAttribute="leading" secondItem="tPf-NG-mj6" secondAttribute="leading" id="PPt-3X-KN0"/>
+                                        <constraint firstItem="q2j-PU-xMt" firstAttribute="top" secondItem="tPf-NG-mj6" secondAttribute="top" id="ePO-Vy-8iz"/>
+                                        <constraint firstAttribute="trailing" secondItem="q2j-PU-xMt" secondAttribute="trailing" constant="2" id="vQy-Us-FST"/>
+                                    </constraints>
                                 </clipView>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="2ev-Vl-Esd"/>
+                                    <constraint firstAttribute="width" constant="252" id="2ev-Vl-Esd"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="isC-Ge-cMM">
                                     <rect key="frame" x="1" y="80" width="166" height="15"/>
@@ -843,12 +865,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1y-nP-SyM">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="767"/>
-                                <connections>
-                                    <segue destination="FoU-4q-nG8" kind="embed" id="Uu7-MS-JGz"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="VtG-2X-aS3" firstAttribute="top" secondItem="5v8-y3-W2s" secondAttribute="top" id="44X-go-Eyf"/>
@@ -860,7 +876,7 @@
                 </viewController>
                 <customObject id="jWI-7h-plS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1021" y="869.5"/>
+            <point key="canvasLocation" x="-1021" y="1246.5"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="OZL-xo-58H">
@@ -3489,13 +3505,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="897"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" fixedFrame="YES" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="eUS-SG-ecV">
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="eUS-SG-ecV">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="897"/>
                                 <subviews>
-                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JP6-g0-1HL">
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="JP6-g0-1HL">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="897"/>
                                         <subviews>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ztg-nh-HKS" userLabel="Emitter Shape View">
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ztg-nh-HKS" userLabel="Emitter Shape View">
                                                 <rect key="frame" x="7" y="822" width="236" height="28"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xz6-M4-ZgU">
@@ -3548,7 +3564,7 @@ DQ
                                                     <constraint firstItem="Xz6-M4-ZgU" firstAttribute="leading" secondItem="Ztg-nh-HKS" secondAttribute="leading" constant="4" id="ymh-ci-wWz"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOd-zR-9i2" userLabel="Emitter X Position View">
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOd-zR-9i2" userLabel="Emitter X Position View">
                                                 <rect key="frame" x="7" y="766" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-DM-lHb">
@@ -3559,14 +3575,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61E-Rl-LG3">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="61E-Rl-LG3">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="lAm-TE-Avh"/>
                                                         <connections>
                                                             <action selector="xSliderUpdated:" target="yug-IC-TKZ" id="HS7-8c-nWR"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7he-k5-cIJ">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7he-k5-cIJ">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="3Uo-rT-tNI">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="sEI-vX-5Vh"/>
@@ -3578,7 +3594,7 @@ DQ
                                                             <action selector="xTextFieldUpdated:" target="yug-IC-TKZ" id="IgW-0l-Spa"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-yG-ctp">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-yG-ctp">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="ElA-We-vHs"/>
                                                         <connections>
@@ -3598,11 +3614,12 @@ DQ
                                                     <constraint firstItem="VUa-DM-lHb" firstAttribute="top" secondItem="ZOd-zR-9i2" secondAttribute="top" constant="11" id="d8Q-4h-3dx"/>
                                                     <constraint firstAttribute="trailing" secondItem="61E-Rl-LG3" secondAttribute="trailing" constant="4" id="p3K-IM-sBz"/>
                                                     <constraint firstItem="7he-k5-cIJ" firstAttribute="leading" secondItem="VUa-DM-lHb" secondAttribute="trailing" constant="8" id="tyk-nV-1kL"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="wVW-e6-OTG"/>
                                                     <constraint firstItem="JcG-yG-ctp" firstAttribute="height" secondItem="7he-k5-cIJ" secondAttribute="height" id="xsj-xd-HTP"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZ2-pd-MMo" userLabel="Emitter Y Position View">
-                                                <rect key="frame" x="7" y="710" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZ2-pd-MMo" userLabel="Emitter Y Position View">
+                                                <rect key="frame" x="7" y="709" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JI6-6p-ZKL">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -3612,14 +3629,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVO-e0-Vqj">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SVO-e0-Vqj">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="dPW-p0-A3S"/>
                                                         <connections>
                                                             <action selector="ySliderUpdated:" target="yug-IC-TKZ" id="ogM-Mu-eHc"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fr7-rt-cdR">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fr7-rt-cdR">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="HMA-kZ-Y9V">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="u5T-aJ-uzx"/>
@@ -3631,7 +3648,7 @@ DQ
                                                             <action selector="yTextFieldUpdated:" target="yug-IC-TKZ" id="ymR-0x-OTj"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-w1-4Vl">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-w1-4Vl">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="LMs-pu-ptg"/>
                                                         <connections>
@@ -3654,8 +3671,8 @@ DQ
                                                     <constraint firstItem="tT1-w1-4Vl" firstAttribute="top" secondItem="fr7-rt-cdR" secondAttribute="top" id="zul-J9-nkN"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gm6-zg-RRq" userLabel="Emitter Z Position View">
-                                                <rect key="frame" x="7" y="654" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gm6-zg-RRq" userLabel="Emitter Z Position View">
+                                                <rect key="frame" x="7" y="652" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ofS-0b-OB4">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -3665,14 +3682,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFk-ro-eqd">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wFk-ro-eqd">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="cW7-Q7-Hg9"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="Gz6-ig-4kj" id="h82-wK-Jtc"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JD-Cm-M2w">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8JD-Cm-M2w">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="BTp-fG-ywT">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="yUv-m0-FoI"/>
@@ -3681,7 +3698,7 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gvu-zu-HVq">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Gvu-zu-HVq">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="Dyd-MD-7Vw"/>
                                                         <connections>
@@ -3704,8 +3721,8 @@ DQ
                                                     <constraint firstItem="wFk-ro-eqd" firstAttribute="top" secondItem="ofS-0b-OB4" secondAttribute="bottom" constant="10" id="jsh-Em-cNJ"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epM-eZ-CP9" userLabel="Emitter Depth View">
-                                                <rect key="frame" x="7" y="598" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epM-eZ-CP9" userLabel="Emitter Depth View">
+                                                <rect key="frame" x="7" y="595" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-3n-x8P">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -3715,14 +3732,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAm-vK-qUk">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fAm-vK-qUk">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="5rY-A9-fzY"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="qOK-6q-hd4" id="Lux-yD-2RW"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-js-Rqo">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-js-Rqo">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="t11-Qt-PPM">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="y6b-lQ-P3x"/>
@@ -3734,7 +3751,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="qOK-6q-hd4" id="jPV-rQ-Oze"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-jQ-TDX">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-jQ-TDX">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="7F5-bs-o3e"/>
                                                         <connections>
@@ -3757,8 +3774,8 @@ DQ
                                                     <constraint firstItem="6K7-3n-x8P" firstAttribute="top" secondItem="epM-eZ-CP9" secondAttribute="top" constant="11" id="y3s-Zb-pDn"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t42-ES-kDa" userLabel="Emitter Width View">
-                                                <rect key="frame" x="7" y="542" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t42-ES-kDa" userLabel="Emitter Width View">
+                                                <rect key="frame" x="7" y="538" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tkz-P5-uzy">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -3768,14 +3785,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RD-ve-rCw">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6RD-ve-rCw">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="VFM-hy-V5y"/>
                                                         <connections>
                                                             <action selector="widthSliderUpdated:" target="3pO-rE-CjZ" id="rNo-aG-leJ"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-kp-LL1">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-kp-LL1">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="60O-19-8Gd">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="CgC-bw-uRc"/>
@@ -3787,7 +3804,7 @@ DQ
                                                             <action selector="widthTextFieldUpdated:" target="3pO-rE-CjZ" id="EDu-Sv-RuT"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-Np-XZB">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-Np-XZB">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="eg4-Tz-DDH"/>
                                                         <connections>
@@ -3810,8 +3827,8 @@ DQ
                                                     <constraint firstItem="Tkz-P5-uzy" firstAttribute="top" secondItem="t42-ES-kDa" secondAttribute="top" constant="11" id="vP5-Ko-TpC"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gc-hz-VNV" userLabel="Emitter Height View">
-                                                <rect key="frame" x="7" y="485" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gc-hz-VNV" userLabel="Emitter Height View">
+                                                <rect key="frame" x="7" y="481" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-TB-xZs">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -3821,14 +3838,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-eM-Pjf">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-eM-Pjf">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="Nf8-Ti-D20"/>
                                                         <connections>
                                                             <action selector="heightSliderUpdated:" target="3pO-rE-CjZ" id="Qfa-LL-qGE"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="09W-ep-1Ah">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="09W-ep-1Ah">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="Jjt-Jh-U2S">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Y13-1q-yHD"/>
@@ -3840,7 +3857,7 @@ DQ
                                                             <action selector="heightTextFieldUpdated:" target="3pO-rE-CjZ" id="uKw-hK-ciH"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l46-rE-xtE">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="l46-rE-xtE">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="PRA-Ha-yAF"/>
                                                         <connections>
@@ -3863,8 +3880,8 @@ DQ
                                                     <constraint firstItem="gg0-eM-Pjf" firstAttribute="leading" secondItem="aeF-TB-xZs" secondAttribute="leading" id="zaF-en-k14"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-Dt-qfL" userLabel="Emitter Render Order View">
-                                                <rect key="frame" x="7" y="453" width="236" height="28"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-Dt-qfL" userLabel="Emitter Render Order View">
+                                                <rect key="frame" x="7" y="450" width="236" height="28"/>
                                                 <subviews>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oRD-cM-KP5">
                                                         <rect key="frame" x="39" y="1" width="196" height="26"/>
@@ -3904,19 +3921,18 @@ DQ
                                                     <constraint firstItem="oRD-cM-KP5" firstAttribute="centerY" secondItem="fqo-Xo-rRO" secondAttribute="centerY" constant="-0.5" id="TPV-jm-EYQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="oRD-cM-KP5" secondAttribute="trailing" constant="4" id="c3j-eP-eoA"/>
                                                     <constraint firstAttribute="centerY" secondItem="oRD-cM-KP5" secondAttribute="centerY" constant="0.5" id="ltJ-LK-cFI"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="oV6-Fw-Nfi"/>
                                                     <constraint firstItem="fqo-Xo-rRO" firstAttribute="leading" secondItem="eDC-Dt-qfL" secondAttribute="leading" constant="4" id="ufF-L1-bbh"/>
                                                 </constraints>
                                             </customView>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-jI-ni9">
-                                                <rect key="frame" x="5" y="428" width="103" height="17"/>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-jI-ni9">
+                                                <rect key="frame" x="5" y="425" width="103" height="17"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mutlipliers" id="UaY-xE-fxM">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-IS-2IP" userLabel="Emitter Modes View">
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-IS-2IP" userLabel="Emitter Modes View">
                                                 <rect key="frame" x="7" y="392" width="236" height="28"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YKO-B3-1HU">
@@ -3958,10 +3974,10 @@ DQ
                                                     <constraint firstItem="FqN-wa-Nva" firstAttribute="leading" secondItem="YKO-B3-1HU" secondAttribute="trailing" constant="8" id="yux-GS-YNI"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58U-rs-8LB" userLabel="Preserves Depth View">
-                                                <rect key="frame" x="7" y="6" width="236" height="28"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58U-rs-8LB" userLabel="Preserves Depth View">
+                                                <rect key="frame" x="7" y="15" width="236" height="28"/>
                                                 <subviews>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H6Y-ri-Hwk">
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="H6Y-ri-Hwk">
                                                         <rect key="frame" x="4" y="5" width="228" height="18"/>
                                                         <buttonCell key="cell" type="check" title="Preserves Depth" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="j7C-5L-AgN">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -3971,11 +3987,14 @@ DQ
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="B6r-y9-Fqi"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="NIb-U3-Kar"/>
+                                                    <constraint firstItem="H6Y-ri-Hwk" firstAttribute="top" secondItem="58U-rs-8LB" secondAttribute="top" constant="7" id="Fr5-HZ-w9c"/>
+                                                    <constraint firstItem="H6Y-ri-Hwk" firstAttribute="leading" secondItem="58U-rs-8LB" secondAttribute="leading" constant="6" id="Rk2-AK-Bcs"/>
+                                                    <constraint firstAttribute="bottom" secondItem="H6Y-ri-Hwk" secondAttribute="bottom" constant="7" id="bSF-oc-cxb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H6Y-ri-Hwk" secondAttribute="trailing" constant="6" id="tE5-bU-y5H"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-AO-atd" userLabel="Emitter Birth Rate View">
-                                                <rect key="frame" x="7" y="333" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-AO-atd" userLabel="Emitter Birth Rate View">
+                                                <rect key="frame" x="7" y="335" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="voq-O1-HYX">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -3985,14 +4004,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbN-xh-g5A">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LbN-xh-g5A">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="zUh-AM-Rte"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="6Bb-Yv-rHj" id="Xpm-ld-vXa"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-C0-Noe">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-C0-Noe">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="HuF-g7-EIT">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="HYg-Hw-cvm"/>
@@ -4004,7 +4023,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="6Bb-Yv-rHj" id="wPr-E6-bqf"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7l-n4-lPI">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="u7l-n4-lPI">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="KoJ-Yk-3JV"/>
                                                         <connections>
@@ -4027,8 +4046,8 @@ DQ
                                                     <constraint firstItem="u7l-n4-lPI" firstAttribute="trailing" secondItem="LbN-xh-g5A" secondAttribute="trailing" id="rVI-qa-t9j"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6P-7w-JFN" userLabel="Emitter Scale View">
-                                                <rect key="frame" x="7" y="215" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6P-7w-JFN" userLabel="Emitter Scale View">
+                                                <rect key="frame" x="7" y="221" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FWB-sg-e8H">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -4038,14 +4057,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-a4-kAt">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-a4-kAt">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="KQq-hT-MNK"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="2pB-vX-PGC" id="ylq-Dm-tFO"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-F8-8Y9">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iEF-F8-8Y9">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="iam-R4-thd">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="8dI-uc-tDO"/>
@@ -4057,7 +4076,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="2pB-vX-PGC" id="5lM-Vk-hZV"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLr-29-QWU">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="jLr-29-QWU">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="BEs-Ho-9Cz"/>
                                                         <connections>
@@ -4070,7 +4089,6 @@ DQ
                                                     <constraint firstItem="iEF-F8-8Y9" firstAttribute="leading" secondItem="FWB-sg-e8H" secondAttribute="trailing" constant="8" id="KhU-eT-xyz"/>
                                                     <constraint firstItem="jLr-29-QWU" firstAttribute="height" secondItem="iEF-F8-8Y9" secondAttribute="height" id="UAm-K3-AM2"/>
                                                     <constraint firstItem="a5w-a4-kAt" firstAttribute="top" secondItem="FWB-sg-e8H" secondAttribute="bottom" constant="10" id="WTl-Hg-au2"/>
-                                                    <constraint firstAttribute="height" constant="56" id="Zhw-cq-Ikv"/>
                                                     <constraint firstItem="jLr-29-QWU" firstAttribute="trailing" secondItem="a5w-a4-kAt" secondAttribute="trailing" id="fBA-u2-DLc"/>
                                                     <constraint firstItem="jLr-29-QWU" firstAttribute="leading" secondItem="iEF-F8-8Y9" secondAttribute="trailing" constant="8" id="jKl-07-8cp"/>
                                                     <constraint firstItem="a5w-a4-kAt" firstAttribute="leading" secondItem="O6P-7w-JFN" secondAttribute="leading" constant="4" id="mCK-uJ-TsY"/>
@@ -4080,8 +4098,8 @@ DQ
                                                     <constraint firstItem="iEF-F8-8Y9" firstAttribute="baseline" secondItem="FWB-sg-e8H" secondAttribute="baseline" constant="1" id="yId-Ff-LZT"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfr-rc-lVG" userLabel="Emitter Seed View">
-                                                <rect key="frame" x="7" y="156" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfr-rc-lVG" userLabel="Emitter Seed View">
+                                                <rect key="frame" x="7" y="164" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tGe-NZ-Poi">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -4091,14 +4109,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-Us-dDl">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-Us-dDl">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="8ih-WK-pH5"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="iLO-Er-s8q" id="P7I-uS-sqR"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKN-fd-7nb">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UKN-fd-7nb">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="Nsl-bm-cIy">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="MAM-dp-Wd5"/>
@@ -4110,7 +4128,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="iLO-Er-s8q" id="LbK-og-4bI"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92B-bO-1og">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="92B-bO-1og">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="O6m-JB-QFJ"/>
                                                         <connections>
@@ -4123,7 +4141,6 @@ DQ
                                                     <constraint firstItem="92B-bO-1og" firstAttribute="top" secondItem="UKN-fd-7nb" secondAttribute="top" id="CmZ-cz-fhd"/>
                                                     <constraint firstItem="UKN-fd-7nb" firstAttribute="baseline" secondItem="tGe-NZ-Poi" secondAttribute="baseline" constant="1" id="KbF-X2-aeC"/>
                                                     <constraint firstAttribute="trailing" secondItem="vQb-Us-dDl" secondAttribute="trailing" constant="4" id="Lqu-pP-Auq"/>
-                                                    <constraint firstAttribute="height" constant="56" id="MvP-Qa-fIE"/>
                                                     <constraint firstItem="92B-bO-1og" firstAttribute="leading" secondItem="UKN-fd-7nb" secondAttribute="trailing" constant="8" id="Y7s-c7-MNV"/>
                                                     <constraint firstItem="vQb-Us-dDl" firstAttribute="top" secondItem="tGe-NZ-Poi" secondAttribute="bottom" constant="10" id="gnZ-Kb-LGD"/>
                                                     <constraint firstItem="92B-bO-1og" firstAttribute="trailing" secondItem="vQb-Us-dDl" secondAttribute="trailing" id="gpp-uc-xRb"/>
@@ -4133,8 +4150,8 @@ DQ
                                                     <constraint firstItem="vQb-Us-dDl" firstAttribute="leading" secondItem="Sfr-rc-lVG" secondAttribute="leading" constant="4" id="ww8-lw-TqB"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxB-iX-Wq9" userLabel="Emitter Spin View">
-                                                <rect key="frame" x="7" y="97" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxB-iX-Wq9" userLabel="Emitter Spin View">
+                                                <rect key="frame" x="7" y="105" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kiu-he-gEW">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -4144,14 +4161,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-Ky-7rf">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-Ky-7rf">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="YJ3-4U-7UR"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="KRg-MT-d9E" id="PwI-P4-mSQ"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-8h-GTL">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-8h-GTL">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="y22-mB-Bng">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="wfA-kx-UY1"/>
@@ -4163,7 +4180,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="KRg-MT-d9E" id="siC-L6-N4F"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-nr-ERS">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-nr-ERS">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="PW5-Yt-630"/>
                                                         <connections>
@@ -4180,14 +4197,13 @@ DQ
                                                     <constraint firstItem="i4Y-Ky-7rf" firstAttribute="leading" secondItem="qxB-iX-Wq9" secondAttribute="leading" constant="4" id="hwm-uc-Okp"/>
                                                     <constraint firstItem="4wn-nr-ERS" firstAttribute="height" secondItem="LvK-8h-GTL" secondAttribute="height" id="jxK-lh-x3j"/>
                                                     <constraint firstItem="LvK-8h-GTL" firstAttribute="baseline" secondItem="kiu-he-gEW" secondAttribute="baseline" constant="1" id="k43-Z6-1AM"/>
-                                                    <constraint firstAttribute="height" constant="56" id="keu-S3-1eN"/>
                                                     <constraint firstItem="i4Y-Ky-7rf" firstAttribute="top" secondItem="kiu-he-gEW" secondAttribute="bottom" constant="10" id="qIn-ct-zks"/>
                                                     <constraint firstItem="4wn-nr-ERS" firstAttribute="leading" secondItem="LvK-8h-GTL" secondAttribute="trailing" constant="8" id="spI-wH-tuH"/>
                                                     <constraint firstItem="4wn-nr-ERS" firstAttribute="trailing" secondItem="i4Y-Ky-7rf" secondAttribute="trailing" id="xGu-hd-OXK"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAc-En-Pb7" userLabel="Emitter Velocity View">
-                                                <rect key="frame" x="7" y="38" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAc-En-Pb7" userLabel="Emitter Velocity View">
+                                                <rect key="frame" x="7" y="48" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGL-MH-tQf">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -4197,14 +4213,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keB-70-3gK">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="keB-70-3gK">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="dzp-UZ-rRF"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="LmH-v6-23o" id="Nf6-iz-cQT"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-cD-vem">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-cD-vem">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="Occ-fM-Hqr">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="QKy-fa-KJv"/>
@@ -4216,7 +4232,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="LmH-v6-23o" id="p65-aw-B0Q"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-CG-8dJ">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-CG-8dJ">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="cRD-sV-Vb9"/>
                                                         <connections>
@@ -4232,15 +4248,14 @@ DQ
                                                     <constraint firstItem="Cqb-cD-vem" firstAttribute="leading" secondItem="SGL-MH-tQf" secondAttribute="trailing" constant="8" id="SsD-qx-8hP"/>
                                                     <constraint firstItem="o9Z-CG-8dJ" firstAttribute="top" secondItem="Cqb-cD-vem" secondAttribute="top" id="Wcn-3D-BGy"/>
                                                     <constraint firstAttribute="trailing" secondItem="keB-70-3gK" secondAttribute="trailing" constant="4" id="aJX-Kb-aZI"/>
-                                                    <constraint firstAttribute="height" constant="56" id="bae-0h-WdC"/>
                                                     <constraint firstItem="o9Z-CG-8dJ" firstAttribute="trailing" secondItem="keB-70-3gK" secondAttribute="trailing" id="eLK-HS-kra"/>
                                                     <constraint firstItem="Cqb-cD-vem" firstAttribute="baseline" secondItem="SGL-MH-tQf" secondAttribute="baseline" constant="1" id="gVI-oJ-gzz"/>
                                                     <constraint firstItem="o9Z-CG-8dJ" firstAttribute="leading" secondItem="Cqb-cD-vem" secondAttribute="trailing" constant="8" id="iLW-f7-Rh9"/>
                                                     <constraint firstItem="keB-70-3gK" firstAttribute="leading" secondItem="SGL-MH-tQf" secondAttribute="leading" id="slf-Om-WHC"/>
                                                 </constraints>
                                             </customView>
-                                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-dS-1C9" userLabel="Emitter Lifetime View">
-                                                <rect key="frame" x="7" y="274" width="236" height="56"/>
+                                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-dS-1C9" userLabel="Emitter Lifetime View">
+                                                <rect key="frame" x="7" y="278" width="236" height="56"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GO0-kO-yYT">
                                                         <rect key="frame" x="2" y="31" width="33" height="14"/>
@@ -4250,14 +4265,14 @@ DQ
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmn-YI-9GD">
+                                                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bmn-YI-9GD">
                                                         <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                         <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="ZT6-VJ-mg8"/>
                                                         <connections>
                                                             <action selector="sliderValueChanged:" target="vtz-w7-DGb" id="7K9-V4-Xg3"/>
                                                         </connections>
                                                     </slider>
-                                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P19-gl-JTO">
+                                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P19-gl-JTO">
                                                         <rect key="frame" x="41" y="30" width="170" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" drawsBackground="YES" id="yk8-65-lUe">
                                                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="M0D-h1-6Kk"/>
@@ -4269,7 +4284,7 @@ DQ
                                                             <action selector="textFieldValueChanged:" target="vtz-w7-DGb" id="fEb-AY-2fH"/>
                                                         </connections>
                                                     </textField>
-                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOB-Hp-LUE">
+                                                    <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="nOB-Hp-LUE">
                                                         <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="dwx-o5-kkG"/>
                                                         <connections>
@@ -4283,7 +4298,6 @@ DQ
                                                     <constraint firstItem="bmn-YI-9GD" firstAttribute="leading" secondItem="GO0-kO-yYT" secondAttribute="leading" id="Tmn-iQ-w58"/>
                                                     <constraint firstItem="bmn-YI-9GD" firstAttribute="top" secondItem="GO0-kO-yYT" secondAttribute="bottom" constant="10" id="UJ0-KF-iFF"/>
                                                     <constraint firstItem="nOB-Hp-LUE" firstAttribute="trailing" secondItem="bmn-YI-9GD" secondAttribute="trailing" id="Weh-p7-TYp"/>
-                                                    <constraint firstAttribute="height" constant="56" id="YCC-DK-lLn"/>
                                                     <constraint firstItem="GO0-kO-yYT" firstAttribute="top" secondItem="rxC-dS-1C9" secondAttribute="top" constant="11" id="ZIx-TX-PyP"/>
                                                     <constraint firstItem="nOB-Hp-LUE" firstAttribute="height" secondItem="P19-gl-JTO" secondAttribute="height" id="gSC-WJ-gPd"/>
                                                     <constraint firstItem="nOB-Hp-LUE" firstAttribute="leading" secondItem="P19-gl-JTO" secondAttribute="trailing" constant="8" id="h7O-oi-t1n"/>
@@ -4292,7 +4306,7 @@ DQ
                                                     <constraint firstItem="P19-gl-JTO" firstAttribute="baseline" secondItem="GO0-kO-yYT" secondAttribute="baseline" constant="1" id="sQ0-Ep-dgK"/>
                                                 </constraints>
                                             </customView>
-                                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8D-5a-YpT">
+                                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j8D-5a-YpT">
                                                 <rect key="frame" x="5" y="861" width="38" height="16"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="pIF-R7-6Ai">
                                                     <font key="font" metaFont="systemBold" size="12"/>
@@ -4300,13 +4314,13 @@ DQ
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="KuJ-Zg-znp">
+                                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="KuJ-Zg-znp">
                                                 <rect key="frame" x="0.0" y="883" width="250" height="5"/>
                                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <font key="titleFont" metaFont="system"/>
                                             </box>
-                                            <button wantsLayer="YES" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-GV-ctp">
+                                            <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-GV-ctp">
                                                 <rect key="frame" x="214" y="858" width="29" height="19"/>
                                                 <buttonCell key="cell" type="recessed" title="Hide" bezelStyle="recessed" alignment="right" transparent="YES" imageScaling="proportionallyDown" inset="2" id="5iz-nl-he2">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -4318,13 +4332,87 @@ DQ
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="sOC-IS-2IP" firstAttribute="top" secondItem="jhW-jI-ni9" secondAttribute="bottom" constant="5" id="0KX-Pt-iYj"/>
+                                            <constraint firstItem="epM-eZ-CP9" firstAttribute="top" secondItem="Gm6-zg-RRq" secondAttribute="bottom" constant="1" id="0gy-qE-uEI"/>
+                                            <constraint firstItem="jhW-jI-ni9" firstAttribute="leading" secondItem="eDC-Dt-qfL" secondAttribute="leading" id="2j8-Xg-YC2"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="leading" secondItem="O6P-7w-JFN" secondAttribute="leading" id="43w-iM-DOG"/>
+                                            <constraint firstItem="H6Y-ri-Hwk" firstAttribute="leading" secondItem="bAc-En-Pb7" secondAttribute="leading" constant="6" id="48Q-7d-lbJ"/>
+                                            <constraint firstItem="epM-eZ-CP9" firstAttribute="trailing" secondItem="Gm6-zg-RRq" secondAttribute="trailing" id="4FL-I8-HA2"/>
+                                            <constraint firstItem="eDC-Dt-qfL" firstAttribute="trailing" secondItem="sOC-IS-2IP" secondAttribute="trailing" id="56b-zH-Cln"/>
+                                            <constraint firstItem="qxB-iX-Wq9" firstAttribute="height" secondItem="bAc-En-Pb7" secondAttribute="height" id="7bk-Sy-Zvv"/>
+                                            <constraint firstItem="Hfs-AO-atd" firstAttribute="top" secondItem="sOC-IS-2IP" secondAttribute="bottom" constant="1" id="7u3-Al-ows"/>
+                                            <constraint firstAttribute="trailing" secondItem="KuJ-Zg-znp" secondAttribute="trailing" id="8VA-Zf-Sj3"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="leading" secondItem="qxB-iX-Wq9" secondAttribute="leading" id="9J6-xp-ME7"/>
+                                            <constraint firstItem="epM-eZ-CP9" firstAttribute="leading" secondItem="t42-ES-kDa" secondAttribute="leading" id="BtE-nO-61P"/>
+                                            <constraint firstItem="rxC-dS-1C9" firstAttribute="trailing" secondItem="Hfs-AO-atd" secondAttribute="trailing" id="ByB-SA-tnM"/>
+                                            <constraint firstItem="4gc-hz-VNV" firstAttribute="trailing" secondItem="t42-ES-kDa" secondAttribute="trailing" id="CHM-sD-jFI"/>
+                                            <constraint firstItem="H6Y-ri-Hwk" firstAttribute="top" secondItem="bAc-En-Pb7" secondAttribute="bottom" constant="12" id="COQ-fc-nZj"/>
+                                            <constraint firstItem="Gm6-zg-RRq" firstAttribute="top" secondItem="RZ2-pd-MMo" secondAttribute="bottom" constant="1" id="DUx-Uw-nHa"/>
+                                            <constraint firstAttribute="height" constant="897" id="Dhq-Ye-peq"/>
+                                            <constraint firstItem="O6P-7w-JFN" firstAttribute="trailing" secondItem="rxC-dS-1C9" secondAttribute="trailing" id="Ej7-6U-ucs"/>
+                                            <constraint firstItem="eDC-Dt-qfL" firstAttribute="leading" secondItem="sOC-IS-2IP" secondAttribute="leading" id="GJo-Db-0VV"/>
+                                            <constraint firstItem="Ztg-nh-HKS" firstAttribute="leading" secondItem="j8D-5a-YpT" secondAttribute="leading" id="GYb-QV-bS1"/>
+                                            <constraint firstItem="Gm6-zg-RRq" firstAttribute="trailing" secondItem="RZ2-pd-MMo" secondAttribute="trailing" id="HQU-ta-py8"/>
+                                            <constraint firstItem="rxC-dS-1C9" firstAttribute="top" secondItem="Hfs-AO-atd" secondAttribute="bottom" constant="1" id="Hdg-4r-3m9"/>
                                             <constraint firstItem="j8D-5a-YpT" firstAttribute="top" secondItem="KuJ-Zg-znp" secondAttribute="bottom" constant="8" id="Hea-n9-DfG"/>
+                                            <constraint firstItem="qxB-iX-Wq9" firstAttribute="top" secondItem="Sfr-rc-lVG" secondAttribute="bottom" constant="3" id="Ihw-B9-BWc"/>
+                                            <constraint firstItem="4gc-hz-VNV" firstAttribute="top" secondItem="t42-ES-kDa" secondAttribute="bottom" constant="1" id="LDD-ZH-oJN"/>
+                                            <constraint firstItem="rxC-dS-1C9" firstAttribute="leading" secondItem="Hfs-AO-atd" secondAttribute="leading" id="Lag-VC-WVx"/>
+                                            <constraint firstItem="sOC-IS-2IP" firstAttribute="trailing" secondItem="Hfs-AO-atd" secondAttribute="trailing" id="M46-Qv-ZEd"/>
+                                            <constraint firstItem="eDC-Dt-qfL" firstAttribute="trailing" secondItem="4gc-hz-VNV" secondAttribute="trailing" id="NOE-h6-q6C"/>
+                                            <constraint firstItem="ZOd-zR-9i2" firstAttribute="top" secondItem="Ztg-nh-HKS" secondAttribute="bottom" id="NkV-Xs-20p"/>
+                                            <constraint firstItem="jhW-jI-ni9" firstAttribute="top" secondItem="eDC-Dt-qfL" secondAttribute="bottom" constant="8" id="Nl7-C6-fD3"/>
+                                            <constraint firstItem="4ni-GV-ctp" firstAttribute="trailing" secondItem="Ztg-nh-HKS" secondAttribute="trailing" id="PWf-Un-xxp"/>
+                                            <constraint firstItem="O6P-7w-JFN" firstAttribute="height" secondItem="rxC-dS-1C9" secondAttribute="height" id="Qct-1F-sbx"/>
+                                            <constraint firstItem="qxB-iX-Wq9" firstAttribute="trailing" secondItem="bAc-En-Pb7" secondAttribute="trailing" id="RsG-Gd-Adt"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="height" secondItem="qxB-iX-Wq9" secondAttribute="height" id="RzT-qq-mux"/>
+                                            <constraint firstItem="Ztg-nh-HKS" firstAttribute="top" secondItem="JP6-g0-1HL" secondAttribute="top" constant="47" id="SAW-sE-beI"/>
+                                            <constraint firstItem="Ztg-nh-HKS" firstAttribute="leading" secondItem="JP6-g0-1HL" secondAttribute="leading" constant="7" id="Sph-Uf-qCW"/>
+                                            <constraint firstItem="RZ2-pd-MMo" firstAttribute="top" secondItem="ZOd-zR-9i2" secondAttribute="bottom" constant="1" id="V2u-DD-A77"/>
+                                            <constraint firstItem="jhW-jI-ni9" firstAttribute="trailing" secondItem="eDC-Dt-qfL" secondAttribute="trailing" constant="-137" id="V3I-RG-VMQ"/>
+                                            <constraint firstItem="epM-eZ-CP9" firstAttribute="trailing" secondItem="t42-ES-kDa" secondAttribute="trailing" id="Vla-b4-Jjb"/>
+                                            <constraint firstItem="H6Y-ri-Hwk" firstAttribute="trailing" secondItem="bAc-En-Pb7" secondAttribute="trailing" constant="-6" id="VwP-LM-9Yn"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZOd-zR-9i2" secondAttribute="trailing" constant="7" id="Xfb-Cj-JMn"/>
+                                            <constraint firstItem="O6P-7w-JFN" firstAttribute="top" secondItem="rxC-dS-1C9" secondAttribute="bottom" constant="1" id="Xna-Rj-kbp"/>
+                                            <constraint firstItem="KuJ-Zg-znp" firstAttribute="leading" secondItem="JP6-g0-1HL" secondAttribute="leading" id="Y3Z-lh-gEG"/>
+                                            <constraint firstItem="4gc-hz-VNV" firstAttribute="leading" secondItem="t42-ES-kDa" secondAttribute="leading" id="ZTd-RE-u9Y"/>
+                                            <constraint firstItem="Gm6-zg-RRq" firstAttribute="leading" secondItem="RZ2-pd-MMo" secondAttribute="leading" id="ZjD-HF-0IP"/>
+                                            <constraint firstItem="RZ2-pd-MMo" firstAttribute="leading" secondItem="ZOd-zR-9i2" secondAttribute="leading" id="aKw-dZ-Sh2"/>
+                                            <constraint firstItem="epM-eZ-CP9" firstAttribute="leading" secondItem="Gm6-zg-RRq" secondAttribute="leading" id="b4y-J8-brK"/>
+                                            <constraint firstItem="RZ2-pd-MMo" firstAttribute="height" secondItem="ZOd-zR-9i2" secondAttribute="height" id="bde-Zv-P33"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="top" secondItem="O6P-7w-JFN" secondAttribute="bottom" constant="1" id="d4Q-rs-xwd"/>
                                             <constraint firstItem="4ni-GV-ctp" firstAttribute="top" secondItem="j8D-5a-YpT" secondAttribute="top" id="dKt-dl-to0"/>
+                                            <constraint firstItem="eDC-Dt-qfL" firstAttribute="top" secondItem="4gc-hz-VNV" secondAttribute="bottom" constant="3" id="dZ5-8n-lA2"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="trailing" secondItem="qxB-iX-Wq9" secondAttribute="trailing" id="daD-PA-DCc"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="trailing" secondItem="O6P-7w-JFN" secondAttribute="trailing" id="ert-b9-aJ1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ztg-nh-HKS" secondAttribute="trailing" constant="7" id="iQP-6g-EOd"/>
+                                            <constraint firstItem="sOC-IS-2IP" firstAttribute="leading" secondItem="Hfs-AO-atd" secondAttribute="leading" id="jEu-oH-cTo"/>
+                                            <constraint firstItem="KuJ-Zg-znp" firstAttribute="top" secondItem="JP6-g0-1HL" secondAttribute="top" constant="11" id="kUI-Rq-EHv"/>
+                                            <constraint firstItem="rxC-dS-1C9" firstAttribute="height" secondItem="Hfs-AO-atd" secondAttribute="height" id="lHF-JG-C5N"/>
+                                            <constraint firstItem="t42-ES-kDa" firstAttribute="top" secondItem="epM-eZ-CP9" secondAttribute="bottom" constant="1" id="mAV-I1-6jF"/>
+                                            <constraint firstItem="eDC-Dt-qfL" firstAttribute="leading" secondItem="4gc-hz-VNV" secondAttribute="leading" id="pym-cw-ToV"/>
+                                            <constraint firstItem="Sfr-rc-lVG" firstAttribute="height" secondItem="O6P-7w-JFN" secondAttribute="height" id="u4q-M1-nyB"/>
+                                            <constraint firstItem="qxB-iX-Wq9" firstAttribute="leading" secondItem="bAc-En-Pb7" secondAttribute="leading" id="uWb-zl-G12"/>
+                                            <constraint firstItem="RZ2-pd-MMo" firstAttribute="trailing" secondItem="ZOd-zR-9i2" secondAttribute="trailing" id="w2h-vN-f2k"/>
+                                            <constraint firstItem="O6P-7w-JFN" firstAttribute="leading" secondItem="rxC-dS-1C9" secondAttribute="leading" id="xAj-sE-any"/>
+                                            <constraint firstItem="ZOd-zR-9i2" firstAttribute="leading" secondItem="JP6-g0-1HL" secondAttribute="leading" constant="7" id="yGa-Hg-8kL"/>
+                                            <constraint firstItem="bAc-En-Pb7" firstAttribute="top" secondItem="qxB-iX-Wq9" secondAttribute="bottom" constant="1" id="zHg-cd-E31"/>
                                         </constraints>
                                     </customView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="JP6-g0-1HL" firstAttribute="top" secondItem="eUS-SG-ecV" secondAttribute="top" id="0Ra-TP-tvp"/>
+                                    <constraint firstAttribute="trailing" secondItem="JP6-g0-1HL" secondAttribute="trailing" id="Av6-hU-sLo"/>
+                                    <constraint firstAttribute="height" constant="897" id="RXn-Qe-5AV"/>
+                                    <constraint firstItem="JP6-g0-1HL" firstAttribute="leading" secondItem="eUS-SG-ecV" secondAttribute="leading" id="bwr-n1-ztU"/>
+                                </constraints>
                             </visualEffectView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="eUS-SG-ecV" firstAttribute="leading" secondItem="afC-aa-Dq3" secondAttribute="leading" id="2Gi-eX-3aT"/>
+                            <constraint firstItem="eUS-SG-ecV" firstAttribute="top" secondItem="afC-aa-Dq3" secondAttribute="top" id="7MG-ik-JWs"/>
+                            <constraint firstAttribute="trailing" secondItem="eUS-SG-ecV" secondAttribute="trailing" id="mOm-W6-Ya6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="xhM-vr-53r" userLabel="Shape Layer Control" customClass="EmitterConstantControlBehavior">
@@ -4698,7 +4786,7 @@ DQ
                 </customObject>
                 <customObject id="Tq6-Nx-Ty4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1443" y="1099.5"/>
+            <point key="canvasLocation" x="-1327" y="1246.5"/>
         </scene>
     </scenes>
 </document>
