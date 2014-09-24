@@ -11,61 +11,50 @@
 
 @implementation CATransform3DControlBehavior
 
--(IBAction)xSliderUpdated:(NSSlider*)sender {
-    [self updateXValues:[sender floatValue]];
-}
-
--(IBAction)ySliderUpdated:(NSSlider*)sender {
-    [self updateYValues:[sender floatValue]];
-}
-
--(IBAction)zSliderUpdated:(NSSlider*)sender {
-    [self updateZValues:[sender floatValue]];
-}
-
--(IBAction)xTextFieldUpdated:(NSTextField*)sender {
-    [self updateXValues:[sender floatValue]];
-}
-
--(IBAction)yTextFieldUpdated:(NSTextField*)sender {
-    [self updateYValues:[sender floatValue]];
-}
-
--(IBAction)zTextFieldUpdated:(NSTextField*)sender {
-    [self updateZValues:[sender floatValue]];
-}
-
--(IBAction)xStepperUpdated:(NSStepper*)sender {
-    [self updateXValues:[sender floatValue]];
-}
-
--(IBAction)yStepperUpdated:(NSStepper*)sender {
-    [self updateYValues:[sender floatValue]];
-}
-
--(IBAction)zStepperUpdated:(NSStepper*)sender {
-    [self updateZValues:[sender floatValue]];
-}
-
-- (void)updateXValues:(float)value {
+- (IBAction)updateXValues:(id)sender {
+    float value = [self getFloatFromObject:sender];
+    
     _xDeltaControl.stepper.floatValue = value;
     _xDeltaControl.slider.floatValue = value;
     _xDeltaControl.textField.floatValue = value;
+    
+    [self rotateLayer:nil];
 }
 
-- (void)updateYValues:(float)value {
+- (IBAction)updateYValues:(id)sender {
+    float value = [self getFloatFromObject:sender];
+    
     _yDeltaControl.stepper.floatValue = value;
     _yDeltaControl.slider.floatValue = value;
     _yDeltaControl.textField.floatValue = value;
+    
+    [self rotateLayer:nil];
 }
 
-- (void)updateZValues:(float)value {
-    _yDeltaControl.stepper.floatValue = value;
-    _yDeltaControl.slider.floatValue = value;
-    _yDeltaControl.textField.floatValue = value;
+- (IBAction)updateZValues:(id)sender {
+    float value = [self getFloatFromObject:sender];
+    
+    _zDeltaControl.stepper.floatValue = value;
+    _zDeltaControl.slider.floatValue = value;
+    _zDeltaControl.textField.floatValue = value;
+    
+    [self rotateLayer:nil];
 }
 
 - (IBAction)rotateLayer:(id)sender {
+    
+    if (sender != nil) {
+        float value = [self getFloatFromObject:sender];
+        
+        _mainTranslationControl.slider.floatValue = value;
+        _mainTranslationControl.stepper.floatValue = value;
+        _mainTranslationControl.textField.floatValue = value;
+    }
+    
+    
+    CATransform3D transform = CATransform3DMakeRotation(_mainTranslationControl.slider.floatValue, _xDeltaControl.slider.floatValue, _yDeltaControl.slider.floatValue, _zDeltaControl.slider.floatValue);
+    
+    [self updateValues:[NSValue valueWithCATransform3D:transform]];
     
 }
 
@@ -75,6 +64,17 @@
 
 - (IBAction)scaleLayer:(id)sender {
     
+}
+
+- (float)getFloatFromObject:(id)sender {
+    float value = 0.0;
+    
+    if ([sender isKindOfClass:[NSControl class]]) {
+        NSControl *control = (NSControl*)sender;
+        value = [control floatValue];
+    }
+    
+    return value;
 }
 
 @end

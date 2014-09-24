@@ -68,4 +68,15 @@
     [self updateValues:[NSNumber numberWithFloat:value]];
 }
 
+- (IBAction)enabledToggled:(NSButton *)sender {
+    if ([_checkBox state] == NSOnState) {
+        _textField.enabled = true;
+        _stepper.enabled = true;
+        _slider.enabled = true;
+    } else {
+        _textField.enabled = false;
+        _stepper.enabled = false;
+        _slider.enabled = false;
+    }
+}
 @end

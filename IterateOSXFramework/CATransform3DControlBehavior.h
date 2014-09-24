@@ -11,9 +11,9 @@
 
 @interface CATransform3DControlBehavior : EmitterConstantControlBehavior
 
-@property (weak) EmitterFloatControlBehavior *mainTranslationControl;
-@property (weak) EmitterFloatControlBehavior *xDeltaControl;
-@property (weak) EmitterFloatControlBehavior *yDeltaControl;
-@property (weak) EmitterFloatControlBehavior *zDeltaControl;
+@property (weak) IBOutlet EmitterFloatControlBehavior *mainTranslationControl;
+@property (weak) IBOutlet EmitterFloatControlBehavior *xDeltaControl;
+@property (weak) IBOutlet EmitterFloatControlBehavior *yDeltaControl;
+@property (weak) IBOutlet EmitterFloatControlBehavior *zDeltaControl;
 
 @end

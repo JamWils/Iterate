@@ -3543,19 +3543,25 @@
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
                             </box>
-                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZL-tK-WS4" userLabel="Emitter X Position View">
+                            <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZL-tK-WS4" userLabel="Transform 3D Rotate View">
                                 <rect key="frame" x="7" y="243" width="236" height="158"/>
                                 <subviews>
-                                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diq-wN-65p">
+                                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diq-wN-65p" userLabel="X Float View">
                                         <rect key="frame" x="0.0" y="69" width="236" height="32"/>
                                         <subviews>
                                             <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="md2-hJ-GuZ">
                                                 <rect key="frame" x="107" y="7" width="127" height="20"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Tm2-Sw-CMW"/>
+                                                <connections>
+                                                    <action selector="updateXValues:" target="Zij-Gw-ewJ" id="J5f-aw-uzx"/>
+                                                </connections>
                                             </slider>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkw-9I-wOv">
                                                 <rect key="frame" x="85" y="3" width="19" height="27"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="KWL-7e-vDz"/>
+                                                <connections>
+                                                    <action selector="updateXValues:" target="Zij-Gw-ewJ" id="ZHm-gk-4hd"/>
+                                                </connections>
                                             </stepper>
                                             <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1AW-Ml-u4f">
                                                 <rect key="frame" x="40" y="6" width="39" height="22"/>
@@ -3564,6 +3570,9 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="updateXValues:" target="Zij-Gw-ewJ" id="uzr-AS-vN8"/>
+                                                </connections>
                                             </textField>
                                             <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pgz-mA-0MK">
                                                 <rect key="frame" x="2" y="8" width="33" height="18"/>
@@ -3571,6 +3580,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="enabledToggled:" target="yWj-GB-CoJ" id="whS-a7-8An"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -3585,16 +3597,22 @@
                                             <constraint firstAttribute="trailing" secondItem="md2-hJ-GuZ" secondAttribute="trailing" constant="4" id="v7w-Bm-8o1"/>
                                         </constraints>
                                     </customView>
-                                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-ft-Soc">
+                                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-ft-Soc" userLabel="Y Float View">
                                         <rect key="frame" x="0.0" y="37" width="236" height="32"/>
                                         <subviews>
                                             <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csw-Fm-o89">
                                                 <rect key="frame" x="107" y="7" width="127" height="20"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="U3t-uG-rd4"/>
+                                                <connections>
+                                                    <action selector="updateYValues:" target="Zij-Gw-ewJ" id="lIZ-PR-8PW"/>
+                                                </connections>
                                             </slider>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iut-te-LgP">
                                                 <rect key="frame" x="85" y="3" width="19" height="27"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="axk-DZ-DDB"/>
+                                                <connections>
+                                                    <action selector="updateYValues:" target="Zij-Gw-ewJ" id="RG0-gv-miD"/>
+                                                </connections>
                                             </stepper>
                                             <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-5H-3ur">
                                                 <rect key="frame" x="40" y="6" width="39" height="22"/>
@@ -3603,6 +3621,9 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="updateYValues:" target="Zij-Gw-ewJ" id="jcR-mc-uRN"/>
+                                                </connections>
                                             </textField>
                                             <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fem-rv-vBi">
                                                 <rect key="frame" x="2" y="8" width="33" height="18"/>
@@ -3610,6 +3631,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="enabledToggled:" target="yKr-Yw-bQs" id="v76-Lm-Ubk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -3624,7 +3648,7 @@
                                             <constraint firstItem="RxU-5H-3ur" firstAttribute="leading" secondItem="fem-rv-vBi" secondAttribute="trailing" constant="7" id="r8i-vL-ydF"/>
                                         </constraints>
                                     </customView>
-                                    <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-4Y-Rbz" userLabel="Emitter X Position View">
+                                    <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-4Y-Rbz" userLabel="Rotation Position View">
                                         <rect key="frame" x="0.0" y="102" width="236" height="56"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Hj-UY-g74">
@@ -3639,7 +3663,7 @@
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="MKv-3k-VTk"/>
                                                 <connections>
-                                                    <action selector="xSliderUpdated:" target="yug-IC-TKZ" id="1FK-Iq-W54"/>
+                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="ZRe-gR-ajB"/>
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-16-srh">
@@ -3651,14 +3675,14 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                                 <connections>
-                                                    <action selector="xTextFieldUpdated:" target="yug-IC-TKZ" id="eJy-6q-zEj"/>
+                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="brX-Zf-fz9"/>
                                                 </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vur-iE-ZEs">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="AoF-bx-Q5I"/>
                                                 <connections>
-                                                    <action selector="xStepperUpdated:" target="yug-IC-TKZ" id="yYS-Bi-ztG"/>
+                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="GZP-Xh-01s"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -3677,16 +3701,22 @@
                                             <constraint firstItem="Q4h-Cz-W4D" firstAttribute="leading" secondItem="5Hj-UY-g74" secondAttribute="leading" id="qT3-rK-joK"/>
                                         </constraints>
                                     </customView>
-                                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVd-Fc-sLe">
+                                    <customView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVd-Fc-sLe" userLabel="Z Float View">
                                         <rect key="frame" x="0.0" y="5" width="236" height="32"/>
                                         <subviews>
                                             <slider verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKI-4c-F4s">
                                                 <rect key="frame" x="107" y="7" width="127" height="20"/>
                                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="JpN-Bs-3dg"/>
+                                                <connections>
+                                                    <action selector="updateZValues:" target="Zij-Gw-ewJ" id="bUs-Ai-SMK"/>
+                                                </connections>
                                             </slider>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHm-V9-OF9">
                                                 <rect key="frame" x="85" y="3" width="19" height="27"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="NV0-h6-3cn"/>
+                                                <connections>
+                                                    <action selector="updateZValues:" target="Zij-Gw-ewJ" id="R3r-9M-PjP"/>
+                                                </connections>
                                             </stepper>
                                             <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AMf-IY-V9D">
                                                 <rect key="frame" x="40" y="6" width="39" height="22"/>
@@ -3695,6 +3725,9 @@
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <action selector="updateZValues:" target="Zij-Gw-ewJ" id="erI-lL-hCC"/>
+                                                </connections>
                                             </textField>
                                             <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muV-5R-Gyi">
                                                 <rect key="frame" x="2" y="8" width="33" height="18"/>
@@ -3702,6 +3735,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="enabledToggled:" target="zWk-c4-26i" id="cae-Ku-3Dd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -3730,6 +3766,123 @@
                     </view>
                 </viewController>
                 <customObject id="ySO-lT-SoF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="w5H-Mz-LiR" userLabel="Rotation Float Control" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="transform"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Rotate"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="-360"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="360"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="label" destination="5Hj-UY-g74" id="DQ0-LJ-ttJ"/>
+                        <outlet property="owner" destination="EKO-bg-yw3" id="RPD-sT-X0S"/>
+                        <outlet property="slider" destination="Q4h-Cz-W4D" id="jGz-MF-150"/>
+                        <outlet property="stepper" destination="vur-iE-ZEs" id="2c2-eI-VeT"/>
+                        <outlet property="textField" destination="aSa-16-srh" id="UK4-aN-PhT"/>
+                    </connections>
+                </customObject>
+                <customObject id="yWj-GB-CoJ" userLabel="X Float Control" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="x"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="X"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                            <real key="value" value="0.050000000000000003"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="checkBox" destination="Pgz-mA-0MK" id="Oe3-zT-we5"/>
+                        <outlet property="owner" destination="EKO-bg-yw3" id="FL9-FV-tiW"/>
+                        <outlet property="slider" destination="md2-hJ-GuZ" id="QWm-KO-Ndg"/>
+                        <outlet property="stepper" destination="Wkw-9I-wOv" id="cH9-oc-lLz"/>
+                        <outlet property="textField" destination="1AW-Ml-u4f" id="opH-mu-QYD"/>
+                    </connections>
+                </customObject>
+                <customObject id="yKr-Yw-bQs" userLabel="Y Float Control" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="y"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Y"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                            <real key="value" value="0.050000000000000003"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="checkBox" destination="fem-rv-vBi" id="ZO4-N4-JOt"/>
+                        <outlet property="owner" destination="EKO-bg-yw3" id="z4o-U1-Gux"/>
+                        <outlet property="slider" destination="csw-Fm-o89" id="ZYe-jk-c6I"/>
+                        <outlet property="stepper" destination="iut-te-LgP" id="KA9-YT-U2u"/>
+                        <outlet property="textField" destination="RxU-5H-3ur" id="Aig-dK-qMa"/>
+                    </connections>
+                </customObject>
+                <customObject id="zWk-c4-26i" userLabel="Z Float Control" customClass="EmitterFloatControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="z"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Z"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="increment">
+                            <real key="value" value="0.050000000000000003"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="checkBox" destination="muV-5R-Gyi" id="KKd-fR-H7x"/>
+                        <outlet property="owner" destination="EKO-bg-yw3" id="MOc-hQ-kPp"/>
+                        <outlet property="slider" destination="bKI-4c-F4s" id="I5r-ED-6sr"/>
+                        <outlet property="stepper" destination="SHm-V9-OF9" id="rP2-pU-wV2"/>
+                        <outlet property="textField" destination="AMf-IY-V9D" id="CHz-3p-DtT"/>
+                    </connections>
+                </customObject>
+                <customObject id="Zij-Gw-ewJ" customClass="CATransform3DControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="transform"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Transform"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="mainTranslationControl" destination="w5H-Mz-LiR" id="gWe-Z6-5Re"/>
+                        <outlet property="owner" destination="EKO-bg-yw3" id="4rj-Wx-oFa"/>
+                        <outlet property="xDeltaControl" destination="yWj-GB-CoJ" id="b2I-GY-a3m"/>
+                        <outlet property="yDeltaControl" destination="yKr-Yw-bQs" id="A8x-ch-LR2"/>
+                        <outlet property="zDeltaControl" destination="zWk-c4-26i" id="UCH-Tg-Ab9"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-1369" y="1680"/>
         </scene>
@@ -4650,7 +4803,7 @@
                 </customObject>
                 <customObject id="dV5-KN-msb" userLabel="Emitter Layer Category" customClass="CategoryControlBehavior">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="CA Emiiter Layer"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="CA Emitter Layer"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultHeight">
                             <integer key="value" value="897"/>
                         </userDefinedRuntimeAttribute>
