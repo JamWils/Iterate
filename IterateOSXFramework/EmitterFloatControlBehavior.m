@@ -20,6 +20,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
     _label.stringValue = super.name;
     
     _slider.continuous = YES;

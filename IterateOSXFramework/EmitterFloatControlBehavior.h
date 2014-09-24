@@ -7,6 +7,7 @@
 //
 
 #import "EmitterControlBehavior.h"
+//@class EmitterControlBehavior;
 
 IB_DESIGNABLE
 @interface EmitterFloatControlBehavior : EmitterControlBehavior
