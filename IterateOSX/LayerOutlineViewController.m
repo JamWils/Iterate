@@ -46,7 +46,7 @@
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification {
     NSDictionary *userInfo = @{ @"Layer" : _item };
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewViewSelected" object:self userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"DidChangeSelectedViewNotification" object:self userInfo:userInfo];
 }
 
 - (void)outlineViewSelectionIsChanging:(NSNotification *)notification {

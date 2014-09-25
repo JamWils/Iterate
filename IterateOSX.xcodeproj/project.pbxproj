@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */; };
 		1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */; };
+		1A417B5019D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
+		1A417B5119D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
+		1A417B5319D4508C009DF3A2 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
+		1A417B5519D4509C009DF3A2 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A4C6B6019D23D3500CE99EE /* CATransform3DControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */; };
 		1A4C6B6119D23D3500CE99EE /* CATransform3DControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */; };
 		1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */; };
@@ -24,6 +28,7 @@
 		1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADD019CCB44300B894EC /* FlippedClipView.m */; };
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
+		1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */; };
 		1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A96FED319CF99BE00A4627D /* EmitterColorControlBehavior.h */; };
 		1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A96FED419CF99BE00A4627D /* EmitterColorControlBehavior.m */; };
 		1A96FED919D010A300A4627D /* AlphaColorWell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A96FED719D010A300A4627D /* AlphaColorWell.h */; };
@@ -90,6 +95,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1A417B5219D45064009DF3A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				1A417B5319D4508C009DF3A2 /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A417B5419D45094009DF3A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				1A417B5519D4509C009DF3A2 /* OCMock.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AD94D6B19BBC4B1001A2015 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +131,7 @@
 /* Begin PBXFileReference section */
 		1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryControlBehavior.h; sourceTree = "<group>"; };
 		1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryControlBehavior.m; sourceTree = "<group>"; };
+		1A417B4F19D44B17009DF3A2 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DControlBehavior.h; sourceTree = "<group>"; };
 		1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DControlBehavior.m; sourceTree = "<group>"; };
 		1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehaviorTests.m; sourceTree = "<group>"; };
@@ -121,6 +147,7 @@
 		1A74ADD019CCB44300B894EC /* FlippedClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedClipView.m; sourceTree = "<group>"; };
 		1A76654919C49E7800FD1F29 /* CustomBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBehaviors.h; sourceTree = "<group>"; };
 		1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehaviors.m; sourceTree = "<group>"; };
+		1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManagerTests.m; sourceTree = "<group>"; };
 		1A96FED319CF99BE00A4627D /* EmitterColorControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterColorControlBehavior.h; sourceTree = "<group>"; };
 		1A96FED419CF99BE00A4627D /* EmitterColorControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterColorControlBehavior.m; sourceTree = "<group>"; };
 		1A96FED719D010A300A4627D /* AlphaColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaColorWell.h; sourceTree = "<group>"; };
@@ -178,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A417B5019D44B17009DF3A2 /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A417B5119D44B17009DF3A2 /* OCMock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +291,7 @@
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
+				1A417B4F19D44B17009DF3A2 /* OCMock.framework */,
 				1AD94CF519BBA3AF001A2015 /* IterateOSX */,
 				1AD94D0C19BBA3AF001A2015 /* IterateOSXTests */,
 				1AD94D5119BBC4B1001A2015 /* IterateOSXFramework */,
@@ -313,6 +343,7 @@
 			children = (
 				1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */,
 				1AD94D0D19BBA3AF001A2015 /* Supporting Files */,
+				1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */,
 			);
 			path = IterateOSXTests;
 			sourceTree = "<group>";
@@ -426,6 +457,7 @@
 				1AD94D0519BBA3AF001A2015 /* Sources */,
 				1AD94D0619BBA3AF001A2015 /* Frameworks */,
 				1AD94D0719BBA3AF001A2015 /* Resources */,
+				1A417B5219D45064009DF3A2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -462,6 +494,7 @@
 				1AD94D5619BBC4B1001A2015 /* Sources */,
 				1AD94D5719BBC4B1001A2015 /* Frameworks */,
 				1AD94D5819BBC4B1001A2015 /* Resources */,
+				1A417B5419D45094009DF3A2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -570,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
 				1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +794,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -781,6 +816,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = IterateOSXTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -840,6 +876,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -847,6 +884,7 @@
 				);
 				INFOPLIST_FILE = IterateOSXFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IterateOSX.app/Contents/MacOS/IterateOSX";
 			};
@@ -859,9 +897,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = IterateOSXFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IterateOSX.app/Contents/MacOS/IterateOSX";
 			};

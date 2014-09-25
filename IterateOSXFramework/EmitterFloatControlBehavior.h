@@ -24,4 +24,6 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable float increment;
 @property (nonatomic) IBInspectable BOOL convertToRadians;
 
+- (void)updateControls:(NSNotification*)notification;
+
 @end

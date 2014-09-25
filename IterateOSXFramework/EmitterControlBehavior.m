@@ -47,4 +47,8 @@
     }
 }
 
+- (void)updateControls:(NSNotification*)notification {
+    
+}
+
 @end

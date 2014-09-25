@@ -8,20 +8,27 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+#import <QuartzCore/QuartzCore.h>
 
-//#import "EmitterFloatControlBehavior.h"
-//#import "IterateOSXFramework.h"
 #import <IterateOSXFramework/IterateOSXFramework.h>
 
 @interface EmitterFloatControlBehaviorTests : XCTestCase
 
 @property (strong) EmitterFloatControlBehavior *emitterBehavior;
 
-@property (strong) NSSlider *slider;
-@property (strong) NSStepper *stepper;
-@property (strong) NSTextField *label;
-@property (strong) NSTextField *textField;
+@property (strong) id mockSlider;
+@property (strong) id mockStepper;
+@property (strong) id mockLabel;
+@property (strong) id mockTextField;
 @property (strong) NSNumberFormatter *numberFormatter;
+
+@property (strong) CAEmitterCell *emitterCell;
+
+@property (strong) NSNotificationCenter *notificationCenter;
+@property (strong) NSString *selectedViewNotification;
+@property (strong) id observerMock;
+
 
 @end
 
@@ -30,29 +37,132 @@
 - (void)setUp {
     [super setUp];
     _emitterBehavior = [[EmitterFloatControlBehavior alloc] init];
-    _label = [[NSTextField alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0,0,0,0))];
-    _emitterBehavior.label = _label;
     
-//    [_emitterBehavior awakeFromNib];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    _mockLabel = [OCMockObject mockForClass:[NSTextField class]];
+    [_emitterBehavior setValue:_mockLabel forKey:@"label"];
+    
+    _mockTextField = [OCMockObject mockForClass:[NSTextField class]];
+    _mockSlider = [OCMockObject mockForClass:[NSSlider class]];
+    _mockStepper = [OCMockObject mockForClass:[NSStepper class]];
+    
+    self.emitterCell = [[CAEmitterCell alloc] init];
+    self.notificationCenter = [[NSNotificationCenter alloc] init];
+    self.selectedViewNotification = @"DidChangeSelectedViewNotification";
+    self.observerMock = [OCMockObject observerMock];
 }
 
 - (void)tearDown {
-    _slider = nil;
-    _stepper = nil;
-    _label = nil;
-    _textField = nil;
+    _observerMock = nil;
+    _selectedViewNotification = nil;
+    _observerMock = nil;
+    
+    _emitterCell = nil;
+    _mockSlider = nil;
+    _mockStepper = nil;
+    _mockLabel = nil;
+    _mockTextField = nil;
     _numberFormatter = nil;
     
     _emitterBehavior = nil;
     [super tearDown];
 }
 
-- (void)testLabelStringValueEqualsBehaviorsNameProperty {
-    _emitterBehavior.name = @"Test";
+- (void)testLabelIsNotNull {
+    XCTAssertNotNil(self.emitterBehavior.label);
+}
+
+- (void)testLabelStringIsSet {
+    [[self.mockLabel expect] setStringValue:OCMOCK_ANY];
     [_emitterBehavior awakeFromNib];
     
-    XCTAssertTrue([_emitterBehavior.stringValue isEqualToString:@"Test"], @"The Label string value should match the behavior name property");
+    XCTAssertNoThrow([self.mockLabel verify], @"The Label string value should be set with a value");
 }
+
+- (void)testLabelStringValueEqualsBehaviorsNameProperty {
+    _emitterBehavior.name = @"Test";
+
+    [[self.mockLabel expect] setStringValue:@"Test"];
+    [_emitterBehavior awakeFromNib];
+    
+    XCTAssertNoThrow([self.mockLabel verify], @"The Label string value should match the behavior name property");
+}
+
+- (void)testTextFieldIsNotNull {
+    [_emitterBehavior setValue:_mockTextField forKey:@"textField"];
+    XCTAssertNotNil(self.emitterBehavior.textField);
+}
+
+- (void)testSliderIsNotNull {
+    [_emitterBehavior setValue:_mockSlider forKey:@"slider"];
+    XCTAssertNotNil(self.emitterBehavior.slider);
+}
+
+- (void)testStepperIsNotNull {
+    [_emitterBehavior setValue:_mockStepper forKey:@"stepper"];
+    XCTAssertNotNil(self.emitterBehavior.stepper);
+}
+
+- (void)testTextFieldIsUpdatedWhenSelectedViewNotificationIsFired {
+    _emitterBehavior.defaultValue = 0;
+    _emitterBehavior.emitterProperty = @"spin";
+    _emitterCell.spin = 500;
+    
+    [[self.mockTextField expect] setFloatValue:_emitterCell.spin];
+    [_emitterBehavior setValue:_mockTextField forKey:@"textField"];
+    
+    NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
+    NSNotification *notification = [[NSNotification alloc] initWithName:self.selectedViewNotification
+                                                                 object:nil
+                                                               userInfo:userInfo];
+
+    [_emitterBehavior updateControls:notification];
+    
+    [self.mockTextField verify];
+}
+
+- (void)testSliderIsUpdatedWhenSelectedViewNotificationIsFired {
+    _emitterBehavior.defaultValue = 0;
+    _emitterBehavior.emitterProperty = @"spin";
+    _emitterCell.spin = 500;
+    
+    [[self.mockSlider expect] setFloatValue:_emitterCell.spin];
+    [_emitterBehavior setValue:_mockSlider forKey:@"slider"];
+    
+    NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
+    NSNotification *notification = [[NSNotification alloc] initWithName:self.selectedViewNotification
+                                                                 object:nil
+                                                               userInfo:userInfo];
+    
+    [_emitterBehavior updateControls:notification];
+    
+    [self.mockSlider verify];
+}
+
+- (void)testStepperIsUpdatedWhenSelectingViewNotificationIsFired {
+    _emitterBehavior.defaultValue = 0;
+    _emitterBehavior.emitterProperty = @"spin";
+    _emitterCell.spin = 500;
+    
+    [[self.mockStepper expect] setFloatValue:_emitterCell.spin];
+    [_emitterBehavior setValue:_mockStepper forKey:@"stepper"];
+    
+    NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
+    NSNotification *notification = [[NSNotification alloc] initWithName:self.selectedViewNotification
+                                                                 object:nil
+                                                               userInfo:userInfo];
+    
+    [_emitterBehavior updateControls:notification];
+    
+    [self.mockStepper verify];
+}
+
+//This would be for checking whether a notification is fired from a certain area of the application
+//- (void)testNewViewSelectedObservationTest {
+//    [self.notificationCenter addMockObserver:self.observerMock name:self.testNotificationOne object:nil];
+//    [[self.observerMock expect] notificationWithName:self.testNotificationOne object:[OCMArg any]];
+//    [self.notificationCenter postNotificationName:self.testNotificationOne object:self];
+//    XCTAssertNoThrow([self.observerMock verify], @"An unexpected exception was thrown");
+//}
+
 
 @end

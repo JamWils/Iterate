@@ -42,10 +42,7 @@
 
     _stepper.increment = _increment == 0 ? 1.0 : _increment;
     
-    
-    
-    
-    [self updateInternalValues:_defaultValue];
+//    [self updateInternalValues:_defaultValue];
 }
 
 - (IBAction)sliderValueChanged:(NSSlider*)sender {
@@ -79,4 +76,17 @@
         _slider.enabled = false;
     }
 }
+
+- (void)updateControls:(NSNotification*)notification {
+    
+    id item = [notification.userInfo[@"EmitterCell"] valueForKey:self.emitterProperty];
+    
+    if (item) {
+        _textField.floatValue = [item floatValue];
+        _slider.floatValue = [item floatValue];
+        _stepper.floatValue = [item floatValue];
+    }
+}
+
+
 @end
