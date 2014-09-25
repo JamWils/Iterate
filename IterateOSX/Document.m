@@ -7,13 +7,20 @@
 //
 
 #import "Document.h"
+#import <QuartzCore/QuartzCore.h>
+#import "ViewController.h"
+#import "LayerOutlineViewController.h"
+
+@interface Document () <NSWindowDelegate>
+
+@end
 
 @implementation Document
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        _layers = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -21,6 +28,8 @@
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    
+    NSLog(@"%@", aController.contentViewController);
 }
 
 + (BOOL)autosavesInPlace {
@@ -29,7 +38,23 @@
 
 - (void)makeWindowControllers {
     // Override to return the Storyboard file name of the document.
-    [self addWindowController:[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"]];
+    NSWindowController *windowController = (NSWindowController*)[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"];
+    [self addWindowController:windowController];
+    
+    NSLog(@"%@", windowController.window.contentViewController);
+    [self testData];
+    
+    NSSplitViewController *splitViewController = (NSSplitViewController*)windowController.window.contentViewController;
+    //Send layer array to outline view
+    NSSplitViewController *leftSplitViewController = (NSSplitViewController*)splitViewController.childViewControllers[0];
+    LayerOutlineViewController *outlineViewController = leftSplitViewController.childViewControllers[0];
+    outlineViewController.layers = self.layers;
+    
+    //Send layer array to content view
+    
+    ViewController *viewController = (ViewController*)splitViewController.childViewControllers[1];
+    viewController.layers = self.layers;
+    
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
@@ -51,6 +76,52 @@
     }
     _layers = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     return YES;
+}
+
+- (void)testData {
+//    NSView *view = self.view;
+    int multiplier = 1;
+    
+    CALayer *viewLayer = [CALayer layer];
+    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
+    
+    CAEmitterLayer *emitter = [CAEmitterLayer layer];
+    //    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
+    emitter.emitterPosition = CGPointMake(500, 300);
+    emitter.emitterMode = kCAEmitterLayerOutline;
+    emitter.emitterShape = kCAEmitterLayerCuboid;
+    emitter.renderMode = kCAEmitterLayerAdditive;
+    emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
+    emitter.name = @"moonLayer";
+    
+    //Create the emitter cell
+    CAEmitterCell* particle = [CAEmitterCell emitterCell];
+    particle.emissionLongitude = M_PI;
+    particle.birthRate = 20;
+    particle.lifetime = multiplier;
+    particle.lifetimeRange = multiplier * 0.35;
+    particle.velocity = 0;
+    particle.velocityRange = 130;
+    particle.emissionRange = 1.1;
+    particle.scaleSpeed = 0.3;
+    CGColorRef color = CGColorCreateGenericRGB(0.3, 0.4, 0.9, 0.10);
+    particle.color = color;
+    CGColorRelease(color);
+    particle.contents = (id) [self CGImageNamed:@"Moon"];
+    emitter.emitterCells = @[particle];
+    particle.name = @"moonParticle";
+    
+    [self.layers addObject:emitter];
+}
+
+-(CGImageRef)CGImageNamed:(NSString*)name {
+    NSImage *testImage = [NSImage imageNamed:@"Moon"];
+    
+    CGImageSourceRef source;
+    
+    source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
+    CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
+    return maskRef;
 }
 
 @end

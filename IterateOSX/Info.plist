@@ -62,5 +62,25 @@
 		<string>com.noesisingenuity.emitter.liveEditing</string>
 		<string>com.noesisingenuity.emitter.transfer</string>
 	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Iterate Doc</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.noesisingenuity.IterateDoc</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>iterate</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -6,31 +6,19 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "OutlineViewController.h"
+#import "OutlineViewDataSourceManager.h"
 #import <QuartzCore/QuartzCore.h>
 
-@implementation OutlineViewController
+@implementation OutlineViewDataSourceManager
 
 - (instancetype)init {
+    return nil;
+}
+
+- (instancetype)initWithLayers:(NSMutableArray*)layers {
     self = [super init];
     if (self) {
-        _layers = [[NSMutableArray alloc] init];
-        CAEmitterLayer *mainLayer = [[CAEmitterLayer alloc] init];
-        mainLayer.name = @"Main Layer";
-        
-        CAEmitterCell *cellOne = [[CAEmitterCell alloc] init];
-        cellOne.name = @"Cell One";
-        
-        CAEmitterCell *cellTwo = [[CAEmitterCell alloc] init];
-        cellTwo.name = @"Cell Two";
-        
-        mainLayer.emitterCells = @[cellOne, cellTwo];
-        CAEmitterCell *cellA = [[CAEmitterCell alloc] init];
-        cellTwo.name = @"Cell A";
-        [mainLayer.emitterCells[0] setEmitterCells:@[cellA]];
-        
-        [_layers addObject:mainLayer];
-        
+        _layers = layers;
     }
     
     return self;

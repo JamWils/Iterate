@@ -41,7 +41,7 @@
 		1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */; };
 		1ABAC6C519D1F2CD0040DB01 /* EmitterShapesControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */; };
 		1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* Document.m */; };
-		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewController.m */; };
+		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */; };
 		1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
@@ -55,6 +55,7 @@
 		1AD94D6519BBC4B1001A2015 /* IterateOSXFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */; };
 		1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */; };
+		1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,8 +139,8 @@
 		1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterShapesControlBehavior.m; sourceTree = "<group>"; };
 		1AC0C6BB19D16EF6001FFC85 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		1AC0C6BC19D16EF6001FFC85 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
-		1AC85C7919D1B1F6003EA1F1 /* OutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewController.h; sourceTree = "<group>"; };
-		1AC85C7A19D1B1F6003EA1F1 /* OutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewController.m; sourceTree = "<group>"; };
+		1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewDataSourceManager.h; sourceTree = "<group>"; };
+		1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManager.m; sourceTree = "<group>"; };
 		1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterFloatControlBehavior.h; sourceTree = "<group>"; };
 		1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehavior.m; sourceTree = "<group>"; };
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +161,8 @@
 		1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateOSXFrameworkTests.m; sourceTree = "<group>"; };
 		1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerLayoutView.h; sourceTree = "<group>"; };
 		1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLayoutView.m; sourceTree = "<group>"; };
+		1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerOutlineViewController.h; sourceTree = "<group>"; };
+		1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,8 +291,10 @@
 				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
 				1AC0C6BB19D16EF6001FFC85 /* Document.h */,
 				1AC0C6BC19D16EF6001FFC85 /* Document.m */,
-				1AC85C7919D1B1F6003EA1F1 /* OutlineViewController.h */,
-				1AC85C7A19D1B1F6003EA1F1 /* OutlineViewController.m */,
+				1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */,
+				1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */,
+				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
+				1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */,
 			);
 			path = IterateOSX;
 			sourceTree = "<group>";
@@ -554,7 +559,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */,
-				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewController.m in Sources */,
+				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
+				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */,
 				1AD94CF919BBA3AF001A2015 /* main.m in Sources */,
 			);

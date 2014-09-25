@@ -12,8 +12,6 @@
 
 @interface ViewController () <NSUserActivityDelegate, NSStreamDelegate>
 
-@property (strong) CAEmitterLayer *moon;
-
 @property (strong, nonatomic) NSInputStream *inputStream;
 @property (strong, nonatomic) NSOutputStream *outputStream;
 
@@ -33,43 +31,12 @@
     self.userActivity.supportsContinuationStreams = YES;
     [self.userActivity becomeCurrent];
     self.userActivity.needsSave = YES;
-                                    
-    NSView *view = self.view;
-    int multiplier = 1;
     
+    NSView *view = self.view;
     CALayer *viewLayer = [CALayer layer];
     [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
     [view setWantsLayer:YES]; // view's backing store is using a Core Animation Layer
     [view setLayer:viewLayer];
-    
-    CAEmitterLayer *emitter = [CAEmitterLayer layer];
-//    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
-    emitter.emitterPosition = CGPointMake(500, 300);
-    emitter.emitterMode = kCAEmitterLayerOutline;
-    emitter.emitterShape = kCAEmitterLayerCuboid;
-    emitter.renderMode = kCAEmitterLayerAdditive;
-    emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
-    emitter.name = @"moonLayer";
-    _moon = emitter;
-
-    [view.layer addSublayer:_moon];
-    
-    //Create the emitter cell
-    CAEmitterCell* particle = [CAEmitterCell emitterCell];
-    particle.emissionLongitude = M_PI;
-    particle.birthRate = 0;
-    particle.lifetime = multiplier;
-    particle.lifetimeRange = multiplier * 0.35;
-    particle.velocity = 0;
-    particle.velocityRange = 130;
-    particle.emissionRange = 1.1;
-    particle.scaleSpeed = 0.3;
-    CGColorRef color = CGColorCreateGenericRGB(0.3, 0.4, 0.9, 0.10);
-    particle.color = color;
-    CGColorRelease(color);
-    particle.contents = (id) [self CGImageNamed:@"Moon"];
-    emitter.emitterCells = @[particle];
-    particle.name = @"moonParticle";
     
     [self initializeOutputStream];
     //When your info is stale:
@@ -81,6 +48,38 @@
     [super viewWillAppear];
     
     
+//    int multiplier = 1;
+    
+    
+    
+//    CAEmitterLayer *emitter = [CAEmitterLayer layer];
+//    //    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
+//    emitter.emitterPosition = CGPointMake(500, 300);
+//    emitter.emitterMode = kCAEmitterLayerOutline;
+//    emitter.emitterShape = kCAEmitterLayerCuboid;
+//    emitter.renderMode = kCAEmitterLayerAdditive;
+//    emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
+//    emitter.name = @"moonLayer";
+//    _moon = emitter;
+    
+//    [self.view.layer addSublayer:_moon];
+    
+    //Create the emitter cell
+//    CAEmitterCell* particle = [CAEmitterCell emitterCell];
+//    particle.emissionLongitude = M_PI;
+//    particle.birthRate = 20;
+//    particle.lifetime = multiplier;
+//    particle.lifetimeRange = multiplier * 0.35;
+//    particle.velocity = 0;
+//    particle.velocityRange = 130;
+//    particle.emissionRange = 1.1;
+//    particle.scaleSpeed = 0.3;
+//    CGColorRef color = CGColorCreateGenericRGB(0.3, 0.4, 0.9, 0.10);
+//    particle.color = color;
+//    CGColorRelease(color);
+//    particle.contents = (id) [self CGImageNamed:@"Moon"];
+//    emitter.emitterCells = @[particle];
+//    particle.name = @"moonParticle";
 }
 
 - (void)viewDidAppear {
@@ -131,11 +130,11 @@
 
 - (void)updateUserActivityState:(NSUserActivity *)userActivity {
     [super updateUserActivityState:userActivity];
-    [userActivity addUserInfoEntriesFromDictionary:@{
-                                                     @"imageName" : @"Moon",
-                                                     @"velocity" : [_moon valueForKeyPath:@"emitterCells.moonParticle.velocity"],
-                                                     @"birthRate" : [_moon valueForKeyPath:@"emitterCells.moonParticle.birthRate"]
-                                                     }];
+//    [userActivity addUserInfoEntriesFromDictionary:@{
+//                                                     @"imageName" : @"Moon",
+//                                                     @"velocity" : [_moon valueForKeyPath:@"emitterCells.moonParticle.velocity"],
+//                                                     @"birthRate" : [_moon valueForKeyPath:@"emitterCells.moonParticle.birthRate"]
+//                                                     }];
 }
 
 - (void)userActivity:(NSUserActivity *)userActivity didReceiveInputStream:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream {
@@ -182,6 +181,16 @@
         } break;
     }
 
+}
+
+- (void)setLayers:(NSArray *)layers {
+    //Send a notification that layers were loaded
+    _layers = layers;
+    
+    for (CALayer *layer in _layers) {
+        [self.view.layer addSublayer:layer];
+    }
+    [self.view setNeedsDisplay:YES];
 }
 
 @end

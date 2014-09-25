@@ -10,6 +10,9 @@
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSScrollView *scrollView;
+@property (strong, nonatomic) NSArray *layers;
+
 - (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value;
 
 @end
