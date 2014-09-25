@@ -7,6 +7,8 @@
 //
 
 #import "EmitterColorControlBehavior.h"
+#import <QuartzCore/QuartzCore.h>
+#import "AlphaColorWell.h"
 
 @implementation EmitterColorControlBehavior
 
@@ -14,5 +16,12 @@
     [self updateValues:(id)[sender color].CGColor];
 }
 
+- (void)updateControls:(NSNotification*)notification {
+    id item = [notification.userInfo[@"Layer"] valueForKey:self.emitterProperty];
+    
+    if (item) {
+        _colorWell.color = [NSColor colorWithCGColor:(__bridge CGColorRef)(item)];
+    }
+}
 
 @end

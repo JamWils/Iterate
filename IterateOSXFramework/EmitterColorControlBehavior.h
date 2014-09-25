@@ -7,7 +7,10 @@
 //
 
 #import "EmitterControlBehavior.h"
+@class AlphaColorWell;
 
 @interface EmitterColorControlBehavior : EmitterControlBehavior
+
+@property (weak) IBOutlet AlphaColorWell *colorWell;
 
 @end

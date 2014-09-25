@@ -9,5 +9,6 @@
 #import "EmitterControlBehavior.h"
 
 @interface EmitterImageControlBehavior : EmitterControlBehavior
+@property (weak) IBOutlet NSImageView *imageView;
 
 @end

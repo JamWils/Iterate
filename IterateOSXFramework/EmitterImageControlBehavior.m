@@ -15,6 +15,14 @@
     [self updateValues:(__bridge id)image];
 }
 
+- (void)updateControls:(NSNotification*)notification {
+    id item = [notification.userInfo[@"Layer"] valueForKey:self.emitterProperty];
+    
+    if (item) {
+        _imageView.image = [[NSImage alloc] initWithCGImage:(__bridge CGImageRef)item size:NSSizeFromCGSize(CGSizeMake(100.0, 100.0))];
+    }
+}
+
 -(CGImageRef)CGImageNamed:(NSString*)name {
     NSImage *testImage = [NSImage imageNamed:@"Moon"];
     

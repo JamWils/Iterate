@@ -40,11 +40,17 @@
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
-//    _item = item;
-//    NSLog(@"%ld", (long)self.layerOutlineView.selectedRow);
-//    [self allProperties];
-    
+    _item = item;
     return YES;
+}
+
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification {
+    NSDictionary *userInfo = @{ @"Layer" : _item };
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewViewSelected" object:self userInfo:userInfo];
+}
+
+- (void)outlineViewSelectionIsChanging:(NSNotification *)notification {
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

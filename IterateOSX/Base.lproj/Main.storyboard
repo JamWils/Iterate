@@ -889,11 +889,11 @@
                                     <rect key="frame" x="1" y="1" width="166" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMg-Fm-wBj">
-                                            <rect key="frame" x="0.0" y="-42" width="250" height="1341"/>
+                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="rMg-Fm-wBj">
+                                            <rect key="frame" x="0.0" y="-2" width="248" height="1341"/>
                                             <subviews>
                                                 <containerView translatesAutoresizingMaskIntoConstraints="NO" id="TV4-Xs-kOM" customClass="ContainerLayoutView">
-                                                    <rect key="frame" x="0.0" y="444" width="250" height="897"/>
+                                                    <rect key="frame" x="0.0" y="444" width="248" height="897"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="897" id="Zig-A5-Wn7"/>
                                                     </constraints>
@@ -904,7 +904,7 @@
                                                     </connections>
                                                 </containerView>
                                                 <containerView translatesAutoresizingMaskIntoConstraints="NO" id="rgI-jV-lCt" customClass="ContainerLayoutView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="444"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="444"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="444" id="cwA-Bd-7LM"/>
                                                     </constraints>
@@ -925,14 +925,11 @@
                                         </customView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="rMg-Fm-wBj" secondAttribute="trailing" id="eoT-Jg-5jj"/>
+                                        <constraint firstAttribute="trailing" secondItem="rMg-Fm-wBj" secondAttribute="trailing" constant="2" id="eoT-Jg-5jj"/>
                                         <constraint firstItem="rMg-Fm-wBj" firstAttribute="leading" secondItem="VSM-P1-9iM" secondAttribute="leading" id="fBG-hJ-JFT"/>
                                         <constraint firstItem="rMg-Fm-wBj" firstAttribute="top" secondItem="VSM-P1-9iM" secondAttribute="top" id="woo-vb-Oe4"/>
                                     </constraints>
                                 </clipView>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="252" id="je1-EB-73S"/>
-                                </constraints>
                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="z0c-qI-Vdo">
                                     <rect key="frame" x="1" y="80" width="166" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -941,6 +938,10 @@
                                     <rect key="frame" x="167" y="1" width="15" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasHorizontalScroller" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="translatesAutoresizingMaskIntoConstraints" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <constraints>
@@ -962,7 +963,7 @@
                     <splitViewItems>
                         <splitViewItem id="tRf-BY-HV0"/>
                         <splitViewItem id="CHW-WG-liJ"/>
-                        <splitViewItem canCollapse="YES" id="NPG-XP-T6i"/>
+                        <splitViewItem id="NPG-XP-T6i"/>
                     </splitViewItems>
                     <connections>
                         <segue destination="e4S-td-WgY" kind="relationship" relationship="splitItems" id="Kl8-Zv-bQz"/>
@@ -1189,6 +1190,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="imageView" destination="pZl-3p-XDG" id="9A1-sx-XBH"/>
                         <outlet property="owner" destination="Qja-cU-DDN" id="tr9-oF-Ymb"/>
                     </connections>
                 </customObject>
@@ -1678,6 +1680,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="color"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="colorWell" destination="SKc-wB-QUU" id="tuI-81-ldi"/>
                         <outlet property="owner" destination="Ydt-gB-E7j" id="c0c-kk-AUC"/>
                     </connections>
                 </customObject>
@@ -4004,7 +4007,6 @@
                                             <constraint firstAttribute="centerY" secondItem="QgD-ld-zbr" secondAttribute="centerY" constant="0.5" id="MCO-J3-rEC"/>
                                             <constraint firstItem="QgD-ld-zbr" firstAttribute="leading" secondItem="Xz6-M4-ZgU" secondAttribute="trailing" constant="8" id="PNH-rk-1Co"/>
                                             <constraint firstAttribute="height" constant="28" id="WTu-MS-0gn"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="bzO-Ru-U2e"/>
                                             <constraint firstItem="QgD-ld-zbr" firstAttribute="centerY" secondItem="Xz6-M4-ZgU" secondAttribute="centerY" constant="-0.5" id="jcU-Ay-1gK"/>
                                             <constraint firstAttribute="trailing" secondItem="QgD-ld-zbr" secondAttribute="trailing" constant="4" id="n7b-tZ-oY8"/>
                                             <constraint firstItem="Xz6-M4-ZgU" firstAttribute="leading" secondItem="Ztg-nh-HKS" secondAttribute="leading" constant="4" id="ymh-ci-wWz"/>
@@ -4410,7 +4412,6 @@
                                             </popUpButton>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="3zG-fs-zfw"/>
                                             <constraint firstAttribute="centerY" secondItem="FqN-wa-Nva" secondAttribute="centerY" constant="0.5" id="A89-6x-J7a"/>
                                             <constraint firstItem="FqN-wa-Nva" firstAttribute="centerY" secondItem="YKO-B3-1HU" secondAttribute="centerY" constant="-0.5" id="LJ3-Zw-ftc"/>
                                             <constraint firstAttribute="trailing" secondItem="FqN-wa-Nva" secondAttribute="trailing" constant="4" id="ZNi-kC-wKF"/>
@@ -4814,7 +4815,7 @@
                                     <constraint firstItem="Ztg-nh-HKS" firstAttribute="top" secondItem="JP6-g0-1HL" secondAttribute="top" constant="47" id="SAW-sE-beI"/>
                                     <constraint firstItem="Ztg-nh-HKS" firstAttribute="leading" secondItem="JP6-g0-1HL" secondAttribute="leading" constant="7" id="Sph-Uf-qCW"/>
                                     <constraint firstItem="RZ2-pd-MMo" firstAttribute="top" secondItem="ZOd-zR-9i2" secondAttribute="bottom" constant="1" id="V2u-DD-A77"/>
-                                    <constraint firstItem="jhW-jI-ni9" firstAttribute="trailing" secondItem="eDC-Dt-qfL" secondAttribute="trailing" constant="-137" id="V3I-RG-VMQ"/>
+                                    <constraint firstItem="eDC-Dt-qfL" firstAttribute="trailing" secondItem="jhW-jI-ni9" secondAttribute="trailing" constant="137" id="V3I-RG-VMQ"/>
                                     <constraint firstItem="epM-eZ-CP9" firstAttribute="trailing" secondItem="t42-ES-kDa" secondAttribute="trailing" id="Vla-b4-Jjb"/>
                                     <constraint firstItem="H6Y-ri-Hwk" firstAttribute="trailing" secondItem="bAc-En-Pb7" secondAttribute="trailing" constant="-6" id="VwP-LM-9Yn"/>
                                     <constraint firstAttribute="trailing" secondItem="ZOd-zR-9i2" secondAttribute="trailing" constant="7" id="Xfb-Cj-JMn"/>

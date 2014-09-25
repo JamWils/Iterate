@@ -26,6 +26,11 @@
     objc_setAssociatedObject(object, (__bridge void *)self, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
 //    [self addObserver:self forKeyPath:@"newItemSelected" options:NSKeyValueObservingOptionNew context:nil];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(updateControls:)
+     name:@"NewViewSelected"
+     object:nil ];
 }
 
 - (void)releaseLifetimeFromObject:(id)object
@@ -34,6 +39,10 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+}
+
+- (void)updateControls:(NSNotification*)notification {
     
 }
 
