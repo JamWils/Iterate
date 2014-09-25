@@ -25,15 +25,35 @@
 }
 
 -(NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
-    return !item ? [self.layers count] : [[item emitterCells] count];
+    NSUInteger number = 0;
+    
+    if (!item) {
+        number = [self.layers count];
+    } else if ([[item valueForKey:@"emitterCells"] count] > 0) {
+        number = [[item valueForKey:@"emitterCells"] count];
+    } else {
+        number = [[item valueForKey:@"sublayers"] count];
+    }
+    
+    return number;
 }
 
 -(BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    return !item ? NO : [[item emitterCells] count] != 0;
+    BOOL expand = NO;
+    
+    if (!item) {
+        expand = NO;
+    } else if ([[item valueForKey:@"emitterCells"] count] > 0) {
+        expand = [[item valueForKey:@"emitterCells"] count] != 0;
+    } else {
+        expand = [[item valueForKey:@"sublayers"] count] != 0;
+    }
+    
+    return expand;//!item ? NO : [[item valueForKey:@"emitterCells"] count] != 0;
 }
 
 -(id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {
-    return !item ? self.layers[index] : [[item emitterCells] objectAtIndex:index];
+    return !item ? self.layers[index] : [[item valueForKey:@"emitterCells"] objectAtIndex:index];
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
