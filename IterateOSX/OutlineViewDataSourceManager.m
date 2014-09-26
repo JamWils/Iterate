@@ -54,7 +54,7 @@
 
 -(id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {
     id itemToReturn;
-//    NSLog(@"Item Outline: %@, index %ld", [item valueForKey:@"name"], (long)index);
+
     if (!item) {
         itemToReturn = self.layers[index];
     } else if ([[item valueForKey:@"emitterCells"] objectAtIndex:index] != nil) {
@@ -63,7 +63,7 @@
         itemToReturn = [[item valueForKey:@"sublayers"] objectAtIndex:index];
     }
     
-    return itemToReturn;//!item ? self.layers[index] : [[item valueForKey:@"emitterCells"] objectAtIndex:index];
+    return itemToReturn;
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
