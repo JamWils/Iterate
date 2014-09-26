@@ -126,7 +126,7 @@
     emitterCellTwo.name = @"emitterCellTwo";
     
     CAEmitterCell *emitterCellSix = [[CAEmitterCell alloc] init];
-    emitterCellTwo.name = @"emitterCellSix";
+    emitterCellSix.name = @"emitterCellSix";
     emitterLayer.emitterCells = @[emitterCell, emitterCellTwo, emitterCellSix];
     
     CAEmitterCell *emitterCellA = [[CAEmitterCell alloc] init];
@@ -152,7 +152,7 @@
     emitterCellFour.name = @"emitterCellFour";
     
     CAEmitterCell *emitterCellFive = [[CAEmitterCell alloc] init];
-    emitterCellFour.name = @"emitterCellFive";
+    emitterCellFive.name = @"emitterCellFive";
     
     emitterLayerTwo.emitterCells = @[emitterCellThree, emitterCellFour, emitterCellFive];
     [layer addSublayer:emitterLayerTwo];

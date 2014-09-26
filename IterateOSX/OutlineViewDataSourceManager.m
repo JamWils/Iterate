@@ -34,7 +34,7 @@
     } else {
         number = [[item valueForKey:@"sublayers"] count];
     }
-    
+    NSLog(@"Number: %lu", (unsigned long)number);
     return number;
 }
 
@@ -49,11 +49,21 @@
         expand = [[item valueForKey:@"sublayers"] count] != 0;
     }
     
-    return expand;//!item ? NO : [[item valueForKey:@"emitterCells"] count] != 0;
+    return expand;
 }
 
 -(id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {
-    return !item ? self.layers[index] : [[item valueForKey:@"emitterCells"] objectAtIndex:index];
+    id itemToReturn;
+//    NSLog(@"Item Outline: %@, index %ld", [item valueForKey:@"name"], (long)index);
+    if (!item) {
+        itemToReturn = self.layers[index];
+    } else if ([[item valueForKey:@"emitterCells"] objectAtIndex:index] != nil) {
+        itemToReturn = [[item valueForKey:@"emitterCells"] objectAtIndex:index];
+    } else {
+        itemToReturn = [[item valueForKey:@"sublayers"] objectAtIndex:index];
+    }
+    
+    return itemToReturn;//!item ? self.layers[index] : [[item valueForKey:@"emitterCells"] objectAtIndex:index];
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
