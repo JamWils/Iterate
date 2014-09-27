@@ -795,7 +795,7 @@
         <!--Layer Outline View Controller-->
         <scene sceneID="GW5-ii-Uav">
             <objects>
-                <viewController id="W4S-s0-LDL" customClass="LayerOutlineViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LayerOutlineViewController" id="W4S-s0-LDL" customClass="LayerOutlineViewController" sceneMemberID="viewController">
                     <view key="view" id="WkG-se-AkY">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -826,7 +826,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="qME-iU-EOU">
-                                                            <rect key="frame" x="1" y="0.0" width="246.5" height="17"/>
+                                                            <rect key="frame" x="1" y="0.0" width="246" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="GYG-7v-qbn">
                                                                 <font key="font" metaFont="system"/>
@@ -889,7 +889,7 @@
                                     <rect key="frame" x="1" y="1" width="166" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="rMg-Fm-wBj">
+                                        <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMg-Fm-wBj">
                                             <rect key="frame" x="0.0" y="-2" width="248" height="1341"/>
                                             <subviews>
                                                 <containerView translatesAutoresizingMaskIntoConstraints="NO" id="TV4-Xs-kOM" customClass="ContainerLayoutView">
@@ -3604,7 +3604,7 @@
                                 </connections>
                             </button>
                             <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-iy-ECI">
-                                <rect key="frame" x="0.0" y="434" width="250" height="5"/>
+                                <rect key="frame" x="0.0" y="434" width="250" height="4"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>

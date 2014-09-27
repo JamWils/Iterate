@@ -67,6 +67,7 @@
 		1ADDAACF19D5114B004935F9 /* CAEmitterCell+Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADDAACD19D5114B004935F9 /* CAEmitterCell+Layer.h */; };
 		1ADDAAD019D5114B004935F9 /* CAEmitterCell+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDAACE19D5114B004935F9 /* CAEmitterCell+Layer.m */; };
 		1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */; };
+		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,7 @@
 		1ADDAACE19D5114B004935F9 /* CAEmitterCell+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAEmitterCell+Layer.m"; sourceTree = "<group>"; };
 		1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerOutlineViewController.h; sourceTree = "<group>"; };
 		1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewController.m; sourceTree = "<group>"; };
+		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,7 @@
 				1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */,
 				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
 				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
+				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
 			);
 			path = IterateOSXTests;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */,
 				1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */,
 				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
 				1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */,

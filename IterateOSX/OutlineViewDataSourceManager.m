@@ -34,7 +34,6 @@
     } else {
         number = [[item valueForKey:@"sublayers"] count];
     }
-    NSLog(@"Number: %lu", (unsigned long)number);
     return number;
 }
 
