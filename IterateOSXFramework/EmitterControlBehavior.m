@@ -8,8 +8,18 @@
 
 #import "EmitterControlBehavior.h"
 #import "ViewController.h"
+#import "IterateConstants.h"
 
 @implementation EmitterControlBehavior
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    if (_isCellProperty) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateEmitterCellControls:) name:kDidChangeSelectedEmitterCellNotification object:nil];
+    }
+    
+}
 
 - (void)updateValues:(id)value {
     if ([self.owner isKindOfClass:[NSViewController class]]) {
@@ -48,6 +58,10 @@
 }
 
 - (void)updateControls:(NSNotification*)notification {
+    
+}
+
+- (void)updateEmitterCellControls:(NSNotification*)notification {
     
 }
 

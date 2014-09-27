@@ -29,7 +29,6 @@
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
 		1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */; };
-		1A8A68C919D512D000273684 /* CAEmitterCell+LayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68C819D512D000273684 /* CAEmitterCell+LayerTests.m */; };
 		1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */; };
 		1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */; };
 		1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */; };
@@ -64,10 +63,11 @@
 		1AD94D6519BBC4B1001A2015 /* IterateOSXFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */; };
 		1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */; };
-		1ADDAACF19D5114B004935F9 /* CAEmitterCell+Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADDAACD19D5114B004935F9 /* CAEmitterCell+Layer.h */; };
-		1ADDAAD019D5114B004935F9 /* CAEmitterCell+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDAACE19D5114B004935F9 /* CAEmitterCell+Layer.m */; };
 		1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */; };
 		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
+		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
+		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AFB400619D7134700A5F3D3 /* IterateConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400419D7134700A5F3D3 /* IterateConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,7 +155,6 @@
 		1A76654919C49E7800FD1F29 /* CustomBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBehaviors.h; sourceTree = "<group>"; };
 		1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehaviors.m; sourceTree = "<group>"; };
 		1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManagerTests.m; sourceTree = "<group>"; };
-		1A8A68C819D512D000273684 /* CAEmitterCell+LayerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAEmitterCell+LayerTests.m"; sourceTree = "<group>"; };
 		1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewLayerDelegateManager.h; sourceTree = "<group>"; };
 		1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManager.m; sourceTree = "<group>"; };
 		1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManagerTests.m; sourceTree = "<group>"; };
@@ -201,11 +200,12 @@
 		1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateOSXFrameworkTests.m; sourceTree = "<group>"; };
 		1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerLayoutView.h; sourceTree = "<group>"; };
 		1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLayoutView.m; sourceTree = "<group>"; };
-		1ADDAACD19D5114B004935F9 /* CAEmitterCell+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAEmitterCell+Layer.h"; sourceTree = "<group>"; };
-		1ADDAACE19D5114B004935F9 /* CAEmitterCell+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAEmitterCell+Layer.m"; sourceTree = "<group>"; };
 		1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerOutlineViewController.h; sourceTree = "<group>"; };
 		1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewController.m; sourceTree = "<group>"; };
 		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
+		1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehaviorTests.m; sourceTree = "<group>"; };
+		1AFB400319D7134700A5F3D3 /* IterateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateConstants.h; sourceTree = "<group>"; };
+		1AFB400419D7134700A5F3D3 /* IterateConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,8 +390,8 @@
 				1A74ADC819CC7DFD00B894EC /* FlippedView.m */,
 				1A74ADCF19CCB44300B894EC /* FlippedClipView.h */,
 				1A74ADD019CCB44300B894EC /* FlippedClipView.m */,
-				1ADDAACD19D5114B004935F9 /* CAEmitterCell+Layer.h */,
-				1ADDAACE19D5114B004935F9 /* CAEmitterCell+Layer.m */,
+				1AFB400319D7134700A5F3D3 /* IterateConstants.h */,
+				1AFB400419D7134700A5F3D3 /* IterateConstants.m */,
 			);
 			path = IterateOSXFramework;
 			sourceTree = "<group>";
@@ -410,7 +410,7 @@
 				1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */,
 				1AD94D5E19BBC4B1001A2015 /* Supporting Files */,
 				1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */,
-				1A8A68C819D512D000273684 /* CAEmitterCell+LayerTests.m */,
+				1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */,
 			);
 			path = IterateOSXFrameworkTests;
 			sourceTree = "<group>";
@@ -437,10 +437,10 @@
 				1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */,
 				1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */,
 				1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */,
+				1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */,
 				1A96FED919D010A300A4627D /* AlphaColorWell.h in Headers */,
 				1A9DC37B19D0A21700B141E5 /* EmitterPointControlBehavior.h in Headers */,
 				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
-				1ADDAACF19D5114B004935F9 /* CAEmitterCell+Layer.h in Headers */,
 				1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */,
 				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
@@ -650,10 +650,10 @@
 				1A6F5CA219D068960000B1B2 /* EmitterImageControlBehavior.m in Sources */,
 				1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */,
 				1AAE096A19CF89CE00C95D7C /* EmitterControlBehavior.m in Sources */,
+				1AFB400619D7134700A5F3D3 /* IterateConstants.m in Sources */,
 				1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */,
 				1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */,
 				1A96FEDA19D010A300A4627D /* AlphaColorWell.m in Sources */,
-				1ADDAAD019D5114B004935F9 /* CAEmitterCell+Layer.m in Sources */,
 				1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */,
 				1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */,
 				1ABAC6C519D1F2CD0040DB01 /* EmitterShapesControlBehavior.m in Sources */,
@@ -668,8 +668,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A8A68C919D512D000273684 /* CAEmitterCell+LayerTests.m in Sources */,
 				1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */,
+				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,
 				1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,6 +730,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;

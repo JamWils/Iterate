@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char IterateOSXFrameworkVersionString[];
 
 
 #import <IterateOSXFramework/EmitterFloatControlBehavior.h>
+#import <IterateOSXFramework/IterateConstants.h>

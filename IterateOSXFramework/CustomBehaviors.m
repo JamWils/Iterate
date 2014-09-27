@@ -9,6 +9,7 @@
 #import "CustomBehaviors.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
+#import "IterateConstants.h"
 
 @implementation CustomBehaviors
 
@@ -25,7 +26,7 @@
 {
     objc_setAssociatedObject(object, (__bridge void *)self, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateControls:) name:@"DidChangeSelectedViewNotification" object:nil ];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateControls:) name:kDidChangeSelectedLayerNotification object:nil ];
 }
 
 - (void)releaseLifetimeFromObject:(id)object

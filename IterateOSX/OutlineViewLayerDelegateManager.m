@@ -7,6 +7,7 @@
 //
 
 #import "OutlineViewLayerDelegateManager.h"
+@import IterateOSXFramework;
 
 @implementation OutlineViewLayerDelegateManager {
     CAEmitterCell *_cell;
@@ -32,10 +33,10 @@
         if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
             
             [userInfo setValue:_selectedItem forKey:@"emitterCell"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"DidChangeSelectedEmitterCellNotification" object:self userInfo:userInfo];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedEmitterCellNotification object:self userInfo:userInfo];
         }
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"DidChangeSelectedLayerNotification" object:self userInfo:userInfo];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedLayerNotification object:self userInfo:userInfo];
     }
     
     

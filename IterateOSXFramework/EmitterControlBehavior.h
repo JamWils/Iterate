@@ -17,5 +17,7 @@ IB_DESIGNABLE
 
 - (void)updateValues:(id)value NS_REQUIRES_SUPER;
 
+- (void)updateEmitterCellControls:(NSNotification*)notification;
+
 
 @end
