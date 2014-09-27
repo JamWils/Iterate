@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import <QuartzCore/QuartzCore.h>
+@import IterateOSXFramework;
 
 #import <IterateOSXFramework/IterateOSXFramework.h>
 
@@ -26,7 +27,6 @@
 @property (strong) CAEmitterCell *emitterCell;
 
 @property (strong) NSNotificationCenter *notificationCenter;
-@property (strong) NSString *selectedViewNotification;
 @property (strong) id observerMock;
 
 
@@ -47,13 +47,11 @@
     
     self.emitterCell = [[CAEmitterCell alloc] init];
     self.notificationCenter = [[NSNotificationCenter alloc] init];
-    self.selectedViewNotification = @"DidChangeSelectedViewNotification";
     self.observerMock = [OCMockObject observerMock];
 }
 
 - (void)tearDown {
     _observerMock = nil;
-    _selectedViewNotification = nil;
     _observerMock = nil;
     
     _emitterCell = nil;
@@ -111,11 +109,11 @@
     [_emitterBehavior setValue:_mockTextField forKey:@"textField"];
     
     NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
-    NSNotification *notification = [[NSNotification alloc] initWithName:self.selectedViewNotification
+    NSNotification *notification = [[NSNotification alloc] initWithName:kDidChangeSelectedEmitterCellNotification
                                                                  object:nil
                                                                userInfo:userInfo];
 
-    [_emitterBehavior updateControls:notification];
+    [_emitterBehavior updateEmitterCellControls:_emitterCell];
     
     [self.mockTextField verify];
 }
@@ -129,11 +127,11 @@
     [_emitterBehavior setValue:_mockSlider forKey:@"slider"];
     
     NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
-    NSNotification *notification = [[NSNotification alloc] initWithName:self.selectedViewNotification
+    NSNotification *notification = [[NSNotification alloc] initWithName:kDidChangeSelectedEmitterCellNotification
                                                                  object:nil
                                                                userInfo:userInfo];
     
-    [_emitterBehavior updateControls:notification];
+    [_emitterBehavior updateEmitterCellControls:_emitterCell];
     
     [self.mockSlider verify];
 }
@@ -147,11 +145,11 @@
     [_emitterBehavior setValue:_mockStepper forKey:@"stepper"];
     
     NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
-    NSNotification *notification = [[NSNotification alloc] initWithName:self.selectedViewNotification
+    NSNotification *notification = [[NSNotification alloc] initWithName:kDidChangeSelectedEmitterCellNotification
                                                                  object:nil
                                                                userInfo:userInfo];
     
-    [_emitterBehavior updateControls:notification];
+    [_emitterBehavior updateEmitterCellControls:_emitterCell];
     
     [self.mockStepper verify];
 }

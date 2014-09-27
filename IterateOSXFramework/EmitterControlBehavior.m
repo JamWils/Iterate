@@ -9,6 +9,7 @@
 #import "EmitterControlBehavior.h"
 #import "ViewController.h"
 #import "IterateConstants.h"
+@import QuartzCore;
 
 @implementation EmitterControlBehavior
 
@@ -16,9 +17,9 @@
     [super awakeFromNib];
     
     if (_isCellProperty) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateEmitterCellControls:) name:kDidChangeSelectedEmitterCellNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emitterCellNotification:) name:kDidChangeSelectedEmitterCellNotification object:nil];
     }
-    
+
 }
 
 - (void)updateValues:(id)value {
@@ -57,12 +58,27 @@
     }
 }
 
+
+
 - (void)updateControls:(NSNotification*)notification {
     
 }
 
-- (void)updateEmitterCellControls:(NSNotification*)notification {
+- (void)emitterCellNotification:(NSNotification*)notification {
+    if (notification.userInfo != nil || [notification.userInfo valueForKey:@"emitterCell"]) {
+        CAEmitterCell *emitterCell = (CAEmitterCell*)[notification.userInfo valueForKey:@"emitterCell"];
+        [self updateEmitterCellControls:emitterCell];
+    }
+}
+
+- (void)updateEmitterCellControls:(CAEmitterCell*)emitterCell {
     
+}
+
+- (void)dealloc {
+    if (_isCellProperty) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kDidChangeSelectedEmitterCellNotification object:nil];
+    }
 }
 
 @end

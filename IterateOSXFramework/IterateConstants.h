@@ -12,5 +12,6 @@
 
 FOUNDATION_EXPORT NSString *const kDidChangeSelectedEmitterCellNotification;
 FOUNDATION_EXPORT NSString *const kDidChangeSelectedLayerNotification;
+FOUNDATION_EXPORT NSString *const kIterateEmitterCellKey;
 
 @end

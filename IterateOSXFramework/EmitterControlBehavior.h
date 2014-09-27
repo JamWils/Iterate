@@ -7,6 +7,7 @@
 //
 
 #import "CustomBehaviors.h"
+@class CAEmitterCell;
 
 IB_DESIGNABLE
 @interface EmitterControlBehavior : CustomBehaviors
@@ -17,7 +18,7 @@ IB_DESIGNABLE
 
 - (void)updateValues:(id)value NS_REQUIRES_SUPER;
 
-- (void)updateEmitterCellControls:(NSNotification*)notification;
+- (void)updateEmitterCellControls:(CAEmitterCell*)emitterCell;
 
 
 @end

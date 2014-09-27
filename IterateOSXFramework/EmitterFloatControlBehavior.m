@@ -7,6 +7,7 @@
 //
 
 #import "EmitterFloatControlBehavior.h"
+@import QuartzCore;
 //#import "ViewController.h"
 //@import AppKit;
 
@@ -79,13 +80,13 @@
 
 - (void)updateControls:(NSNotification*)notification {
     
-    id item = [notification.userInfo[@"EmitterCell"] valueForKey:self.emitterProperty];
     
-    if (item) {
-        _textField.floatValue = [item floatValue];
-        _slider.floatValue = [item floatValue];
-        _stepper.floatValue = [item floatValue];
-    }
+}
+
+- (void)updateEmitterCellControls:(CAEmitterCell *)emitterCell {
+    _textField.floatValue = [[emitterCell valueForKey:self.emitterProperty] floatValue];
+    _slider.floatValue = [[emitterCell valueForKey:self.emitterProperty] floatValue];
+    _stepper.floatValue = [[emitterCell valueForKey:self.emitterProperty] floatValue];
 }
 
 

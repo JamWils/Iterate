@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
+
+@import QuartzCore;
 @import IterateOSXFramework;
 
 #import "EmitterControlBehavior.h"
@@ -45,19 +47,25 @@
     [_emitterControl awakeFromNib];
     
     [[mockEmitterControl expect] updateEmitterCellControls:[OCMArg any]];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
-    XCTAssertNoThrow([mockEmitterControl verify], @"Emitter Control should respond to Selected Emitter Cell Notifications when is Cell Property is YES");
+    
+    CAEmitterCell *cell = [[CAEmitterCell alloc] init];
+    NSDictionary *userInfo = @ { @"emitterCell" : cell };
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:userInfo];
+    XCTAssertNoThrow([mockEmitterControl verify], @"Emitter Control should respond to Selected Emitter Cell Notifications when Cell Property is YES");
 }
 
 - (void)testEmitterControlBehaviorDoesNotAddObserverForCellEmitterNotification {
-    id mockEmitterControl = [OCMockObject partialMockForObject:_emitterControl];
+    id mockEmitterControl = [OCMockObject mockForClass:[EmitterControlBehavior class]];
     
-    _emitterControl.isCellProperty = NO;
-    [_emitterControl awakeFromNib];
+    [[[mockEmitterControl stub] andReturn:@(NO)] isCellProperty];
+    [[mockEmitterControl expect] awakeFromNib];
+    [mockEmitterControl awakeFromNib];
     
     [[mockEmitterControl expect] updateEmitterCellControls:[OCMArg any]];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
-    XCTAssertThrows([mockEmitterControl verify], @"Emitter Control should not add  Selected Emitter Cell Notifications when is Cell Property is NO");
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:nil];
+    XCTAssertThrows([mockEmitterControl verify], @"Emitter Control should not add  Selected Emitter Cell Notifications when Cell Property is NO");
 }
+
+
 
 @end

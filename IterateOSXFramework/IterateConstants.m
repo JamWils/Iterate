@@ -12,5 +12,6 @@
 
 NSString *const kDidChangeSelectedEmitterCellNotification = @"DidChangeSelectedEmitterCellNotification";
 NSString *const kDidChangeSelectedLayerNotification = @"DidChangeSelectedLayerNotification";
+NSString *const kIterateEmitterCellKey = @"emitterCell";
 
 @end

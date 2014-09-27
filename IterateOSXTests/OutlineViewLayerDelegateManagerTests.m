@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 @import QuartzCore;
+@import IterateOSXFramework;
 
 #import "OutlineViewEmitterTestCase.h"
 #import "OutlineViewLayerDelegateManager.h"
@@ -23,7 +24,6 @@
 
 @property (strong) NSNotificationCenter *notificationCenter;
 @property (strong) NSString *selectedViewNotification;
-@property (strong) NSString *selectedCellNotification;
 @property (strong) id observerMock;
 
 @end
@@ -41,7 +41,6 @@
     
     self.notificationCenter = [[NSNotificationCenter alloc] init];
     self.selectedViewNotification = @"DidChangeSelectedLayerNotification";
-    self.selectedCellNotification = @"DidChangeSelectedEmitterCellNotification";
     self.observerMock = [OCMockObject observerMock];
     
 }
@@ -92,8 +91,8 @@
 - (void)testDidChangeSelectedEmitterCellNotificationIsCalledWhenOutlineViewSelectionDidChangeIsCalled {
     _delegate.activeLayer = [[CALayer alloc] init];
     _delegate.selectedItem = [[CAEmitterCell alloc] init];
-    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:self.selectedCellNotification object:nil];
-    [[self.observerMock expect] notificationWithName:self.selectedCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
+    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:kDidChangeSelectedEmitterCellNotification object:nil];
+    [[self.observerMock expect] notificationWithName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
     
     [_delegate outlineViewSelectionDidChange:nil];
     
@@ -132,8 +131,8 @@
 - (void)testUserInfoContainsEmitterCellAndLayerKeyWhenSelectedCellNotificationIsFired {
     _delegate.activeLayer = [[CALayer alloc] init];
     _delegate.selectedItem = [[CAEmitterCell alloc] init];
-    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:self.selectedCellNotification object:nil];
-    [[self.observerMock expect] notificationWithName:self.selectedCellNotification object:[OCMArg any] userInfo:[OCMArg checkWithBlock:^BOOL(NSDictionary *userInfo) {
+    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:kDidChangeSelectedEmitterCellNotification object:nil];
+    [[self.observerMock expect] notificationWithName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:[OCMArg checkWithBlock:^BOOL(NSDictionary *userInfo) {
         
         id emitterCell = [userInfo objectForKey:@"emitterCell"];
         XCTAssertNotNil(emitterCell, @"User info should contain a key for emitter cell");
@@ -142,6 +141,8 @@
         id layer = [userInfo objectForKey:@"layer"];
         XCTAssertNotNil(layer, @"User info should contain a key for layer");
         XCTAssertEqualObjects(layer, _delegate.activeLayer, @"Layer property should equal active layer");
+        
+        return YES;
     }]];
     
     [_delegate outlineViewSelectionDidChange:nil];
@@ -172,8 +173,8 @@
 - (void)testCellSelectedNotificationIsNotPostedWhenSelectedItemIsNotAnEmitterCell {
     _delegate.activeLayer = [[CALayer alloc] init];
     _delegate.selectedItem = [[CALayer alloc] init];
-    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:self.selectedCellNotification object:nil];
-    [[self.observerMock expect] notificationWithName:self.selectedCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
+    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:kDidChangeSelectedEmitterCellNotification object:nil];
+    [[self.observerMock expect] notificationWithName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
     
     [_delegate outlineViewSelectionDidChange:nil];
     
