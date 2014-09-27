@@ -44,7 +44,7 @@
 
 - (void)viewWillDisappear {
     [super viewWillDisappear];
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    [[NSUserDefaults standardUserDefaults] setObject:@(_layerOutlineView.selectedRow) forKey:@"selectedOutlineViewRow"];
 }
 
 
