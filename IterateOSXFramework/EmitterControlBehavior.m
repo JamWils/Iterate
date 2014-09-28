@@ -18,6 +18,8 @@
     
     if (_isCellProperty) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emitterCellNotification:) name:kDidChangeSelectedEmitterCellNotification object:nil];
+    } else {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layerNotification:) name:kDidChangeSelectedLayerNotification object:nil];
     }
 
 }
@@ -60,14 +62,19 @@
 
 
 
-- (void)updateControls:(NSNotification*)notification {
+- (void)updateControls:(id)aObject {
     
+}
+
+- (void)layerNotification:(NSNotification*)notification {
+    id layer = [notification.userInfo valueForKey:@"layer"];
+    [self updateControls:layer];
 }
 
 - (void)emitterCellNotification:(NSNotification*)notification {
     if (notification.userInfo != nil || [notification.userInfo valueForKey:@"emitterCell"]) {
-        CAEmitterCell *emitterCell = (CAEmitterCell*)[notification.userInfo valueForKey:@"emitterCell"];
-        [self updateEmitterCellControls:emitterCell];
+        id emitterCell = [notification.userInfo valueForKey:@"emitterCell"];
+        [self updateControls:emitterCell];
     }
 }
 
@@ -78,6 +85,8 @@
 - (void)dealloc {
     if (_isCellProperty) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:kDidChangeSelectedEmitterCellNotification object:nil];
+    } else {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kDidChangeSelectedLayerNotification object:nil];
     }
 }
 

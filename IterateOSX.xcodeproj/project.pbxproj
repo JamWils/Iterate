@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */; };
 		1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */; };
+		1A2A350C19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A350B19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m */; };
+		1A2A350E19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A350D19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m */; };
+		1A2A351119D843BA001E60E5 /* EmitterTextFieldControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2A350F19D843BA001E60E5 /* EmitterTextFieldControlBehavior.h */; };
+		1A2A351219D843BA001E60E5 /* EmitterTextFieldControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A351019D843BA001E60E5 /* EmitterTextFieldControlBehavior.m */; };
+		1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */; };
 		1A417B5019D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A417B5119D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A417B5319D4508C009DF3A2 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
@@ -138,6 +143,11 @@
 /* Begin PBXFileReference section */
 		1A177C5719CB08BC00C75E39 /* CategoryControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryControlBehavior.h; sourceTree = "<group>"; };
 		1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryControlBehavior.m; sourceTree = "<group>"; };
+		1A2A350B19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterColorControlBehaviorTests.m; sourceTree = "<group>"; };
+		1A2A350D19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterImageControlBehaviorTests.m; sourceTree = "<group>"; };
+		1A2A350F19D843BA001E60E5 /* EmitterTextFieldControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterTextFieldControlBehavior.h; sourceTree = "<group>"; };
+		1A2A351019D843BA001E60E5 /* EmitterTextFieldControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterTextFieldControlBehavior.m; sourceTree = "<group>"; };
+		1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterTextFieldControlBehaviorTests.m; sourceTree = "<group>"; };
 		1A417B4F19D44B17009DF3A2 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DControlBehavior.h; sourceTree = "<group>"; };
 		1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DControlBehavior.m; sourceTree = "<group>"; };
@@ -262,6 +272,8 @@
 				1AAE096819CF89CE00C95D7C /* EmitterControlBehavior.m */,
 				1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */,
 				1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */,
+				1A2A350F19D843BA001E60E5 /* EmitterTextFieldControlBehavior.h */,
+				1A2A351019D843BA001E60E5 /* EmitterTextFieldControlBehavior.m */,
 			);
 			name = "Emitter Behaviors";
 			sourceTree = "<group>";
@@ -411,6 +423,9 @@
 				1AD94D5E19BBC4B1001A2015 /* Supporting Files */,
 				1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */,
 				1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */,
+				1A2A350B19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m */,
+				1A2A350D19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m */,
+				1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */,
 			);
 			path = IterateOSXFrameworkTests;
 			sourceTree = "<group>";
@@ -442,6 +457,7 @@
 				1A9DC37B19D0A21700B141E5 /* EmitterPointControlBehavior.h in Headers */,
 				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
 				1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */,
+				1A2A351119D843BA001E60E5 /* EmitterTextFieldControlBehavior.h in Headers */,
 				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
 				1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */,
@@ -642,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2A351219D843BA001E60E5 /* EmitterTextFieldControlBehavior.m in Sources */,
 				1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */,
 				1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */,
 				1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */,
@@ -669,7 +686,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */,
+				1A2A350E19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m in Sources */,
+				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,
+				1A2A350C19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m in Sources */,
 				1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

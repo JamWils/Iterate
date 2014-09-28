@@ -26,7 +26,7 @@
 {
     objc_setAssociatedObject(object, (__bridge void *)self, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateControls:) name:kDidChangeSelectedLayerNotification object:nil ];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateControls:) name:kDidChangeSelectedLayerNotification object:nil ];
 }
 
 - (void)releaseLifetimeFromObject:(id)object

@@ -18,6 +18,8 @@ IB_DESIGNABLE
 
 - (void)updateValues:(id)value NS_REQUIRES_SUPER;
 
+- (void)updateControls:(id)aObject;
+
 - (void)updateEmitterCellControls:(CAEmitterCell*)emitterCell;
 
 
