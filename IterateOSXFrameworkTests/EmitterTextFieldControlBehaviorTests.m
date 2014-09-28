@@ -30,6 +30,7 @@
 }
 
 - (void)tearDown {
+    _mockTextField = nil;
     _emitterControl = nil;
     [super tearDown];
 }

@@ -11,4 +11,6 @@
 @interface EmitterImageControlBehavior : EmitterControlBehavior
 @property (weak) IBOutlet NSImageView *imageView;
 
+- (IBAction)updateImage:(NSImageView*)sender;
+
 @end

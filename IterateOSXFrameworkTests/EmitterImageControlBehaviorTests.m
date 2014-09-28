@@ -8,8 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
+#import "EmitterImageControlBehavior.h"
 
 @interface EmitterImageControlBehaviorTests : XCTestCase
+
+@property (strong) id mockImageView;
+@property (strong) EmitterImageControlBehavior *emitterControl;
+@property (strong) NSImage *testImage;
 
 @end
 
@@ -17,24 +24,70 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    _emitterControl = [[EmitterImageControlBehavior alloc] init];
+    _mockImageView = [OCMockObject mockForClass:[NSImageView class]];
+    _emitterControl.imageView = _mockImageView;
+    
+    _testImage = [NSImage imageNamed:@"Moon"];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    _testImage = nil;
+    
+    _mockImageView = nil;
+    _emitterControl = nil;
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testImageViewUpdatedWhenUpdateControlsIsCalled {
+    _emitterControl.emitterProperty = @"contents";
+    CALayer *layer = [[CALayer alloc] init];
+    layer.contents = (__bridge id)([self CGImageFromNSImage:_testImage]);
+    
+    [[_mockImageView expect] setImage:[OCMArg any]];
+    [_emitterControl updateControls:layer];
+    
+    [_mockImageView verify];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testTextFieldUpdatedDoesNotThrowErrorWhenEmitterPropertyNameIsMissing {
+    [[_mockImageView expect] setStringValue:@"Test"];
+    CALayer *layer = [[CALayer alloc] init];
+    layer.name = @"Test";
+    
+    XCTAssertNoThrow([_emitterControl updateControls:layer], @"An error should not occur.");
+}
+
+- (void)testImageViewActionUpdateImageCallsUpdateValueOnControl {
+    id emitterControl = [OCMockObject partialMockForObject:[[EmitterImageControlBehavior alloc] init]];
+    [[[_mockImageView stub] andReturn:_testImage] image];
+    [[emitterControl expect] updateValues:[OCMArg any]];
+    
+    [emitterControl updateImage:_mockImageView];
+    
+    XCTAssertNoThrow([emitterControl verify], @"Update Value should be called on emitter control");
+}
+
+#pragma mark Helper Methods
+
+-(CGImageRef)CGImageNamed:(NSString*)name {
+    NSImage *testImage = [NSImage imageNamed:@"Moon"];
+
+    CGImageSourceRef source;
+
+    source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
+    CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
+    return maskRef;
+}
+
+-(CGImageRef)CGImageFromNSImage:(NSImage*)image {
+    
+    CGImageSourceRef source;
+    
+    source = CGImageSourceCreateWithData((CFDataRef)[image TIFFRepresentation], NULL);
+    CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
+    return maskRef;
 }
 
 @end

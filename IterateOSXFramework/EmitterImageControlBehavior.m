@@ -16,22 +16,14 @@
 }
 
 - (void)updateControls:(id)aObject {
-//    id item = [notification.userInfo[@"Layer"] valueForKey:self.emitterProperty];
-//    
-//    if (item) {
-//        _imageView.image = [[NSImage alloc] initWithCGImage:(__bridge CGImageRef)item size:NSSizeFromCGSize(CGSizeMake(100.0, 100.0))];
-//    }
+    id item = [aObject valueForKey:self.emitterProperty];
+    
+    if (item) {
+        _imageView.image = [[NSImage alloc] initWithCGImage:(__bridge CGImageRef)item size:NSSizeFromCGSize(CGSizeMake(100.0, 100.0))];
+    }
 }
 
--(CGImageRef)CGImageNamed:(NSString*)name {
-    NSImage *testImage = [NSImage imageNamed:@"Moon"];
-    
-    CGImageSourceRef source;
-    
-    source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
-    CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
-    return maskRef;
-}
+
 
 -(CGImageRef)CGImageFromNSImage:(NSImage*)image {
     
