@@ -14,4 +14,7 @@
 @property (nonatomic, weak) IBOutlet EmitterFloatControlBehavior *widthControl;
 @property (nonatomic, weak) IBOutlet EmitterFloatControlBehavior *heightControl;
 
+- (IBAction)widthValueUpdated:(id)sender;
+- (IBAction)heightValueUpdated:(id)sender;
+
 @end

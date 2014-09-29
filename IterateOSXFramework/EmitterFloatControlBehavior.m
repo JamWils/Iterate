@@ -80,12 +80,12 @@
 
 - (void)updateControls:(id)aObject {
     id item = [aObject valueForKey:self.emitterProperty];
-    
-    if (item) {
+    if ([item respondsToSelector:@selector(floatValue)]) {
         _textField.floatValue = [item floatValue];
         _slider.floatValue = [item floatValue];
         _stepper.floatValue = [item floatValue];
     }
+    
 }
 
 @end

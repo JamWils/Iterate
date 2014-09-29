@@ -90,6 +90,8 @@
     emitter.emitterPosition = CGPointMake(500, 300);
     emitter.emitterMode = kCAEmitterLayerOutline;
     emitter.emitterShape = kCAEmitterLayerCuboid;
+    emitter.zPosition = 140.0f;
+    emitter.emitterDepth = 20.0f;
     emitter.renderMode = kCAEmitterLayerAdditive;
     emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
     emitter.name = @"moonLayer";

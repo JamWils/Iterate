@@ -11,46 +11,56 @@
 
 @implementation EmitterSizeControlBehavior
 
--(IBAction)widthSliderUpdated:(NSSlider*)sender {
-    [self updateWidthValues:[sender floatValue]];
-}
-
--(IBAction)heightSliderUpdated:(NSSlider*)sender {
-    [self updateHeightValues:[sender floatValue]];
-}
-
--(IBAction)widthTextFieldUpdated:(NSTextField*)sender {
-    [self updateWidthValues:[sender floatValue]];
-}
-
--(IBAction)heightTextFieldUpdated:(NSTextField*)sender {
-    [self updateHeightValues:[sender floatValue]];
-}
-
--(IBAction)widthStepperUpdated:(NSStepper*)sender {
-    [self updateWidthValues:[sender floatValue]];
-}
-
--(IBAction)heightStepperUpdated:(NSStepper*)sender {
-    [self updateHeightValues:[sender floatValue]];
-}
-
-- (void)updateWidthValues:(float)value {
-    _widthControl.stepper.floatValue = value;
-    _widthControl.slider.floatValue = value;
-    _widthControl.textField.floatValue = value;
+- (IBAction)widthValueUpdated:(id)sender {
+    float floatValue = [self getFloatFromObject:sender];
     
-    CGSize size = CGSizeMake(value, _heightControl.stepper.floatValue);
+    _widthControl.stepper.floatValue = floatValue;
+    _widthControl.slider.floatValue = floatValue;
+    _widthControl.textField.floatValue = floatValue;
+    
+    CGSize size = CGSizeMake(floatValue, _heightControl.stepper.floatValue);
     [self updateValues:[NSValue valueWithSize:size]];
 }
 
-- (void)updateHeightValues:(float)value {
-    _heightControl.stepper.floatValue = value;
-    _heightControl.slider.floatValue = value;
-    _heightControl.textField.floatValue = value;
+- (IBAction)heightValueUpdated:(id)sender {
+    float floatValue = [self getFloatFromObject:sender];
     
-    CGSize size = CGSizeMake(_widthControl.stepper.floatValue, value);
+    _heightControl.stepper.floatValue = floatValue;
+    _heightControl.slider.floatValue = floatValue;
+    _heightControl.textField.floatValue = floatValue;
+    
+    CGSize size = CGSizeMake(_widthControl.stepper.floatValue, floatValue);
     [self updateValues:[NSValue valueWithSize:size]];
+}
+
+- (void)updateControls:(id)aObject {
+    id item = [aObject valueForKey:self.emitterProperty];
+    
+    if (item) {
+        if (strcmp([item objCType], @encode(CGSize)) == 0) {
+            NSValue *value = (NSValue*)item;
+            CGSize size = [value  sizeValue];
+            _widthControl.textField.floatValue = size.width;
+            _widthControl.slider.floatValue = size.width;
+            _widthControl.stepper.floatValue = size.width;
+            
+            _heightControl.textField.floatValue = size.height;
+            _heightControl.slider.floatValue = size.height;
+            _heightControl.stepper.floatValue = size.height;
+        }
+        
+    }
+}
+
+- (float)getFloatFromObject:(id)sender {
+    float value = 0.0;
+    
+    if ([sender isKindOfClass:[NSControl class]]) {
+        NSControl *control = (NSControl*)sender;
+        value = [control floatValue];
+    }
+    
+    return value;
 }
 
 @end

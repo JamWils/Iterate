@@ -3618,7 +3618,7 @@
                                 </connections>
                             </button>
                             <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-iy-ECI">
-                                <rect key="frame" x="0.0" y="434" width="250" height="4"/>
+                                <rect key="frame" x="0.0" y="434" width="250" height="5"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
@@ -3849,7 +3849,6 @@
                 <customObject id="w5H-Mz-LiR" userLabel="Rotation Float Control" customClass="EmitterFloatControlBehavior">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="transform"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="name" value="Rotate"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultValue">
                             <real key="value" value="0.0"/>
@@ -3863,6 +3862,7 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="increment">
                             <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="transform"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="label" destination="5Hj-UY-g74" id="DQ0-LJ-ttJ"/>
@@ -3956,8 +3956,6 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="name" value="Transform"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="mainTranslationControl" destination="w5H-Mz-LiR" id="gWe-Z6-5Re"/>
-                        <outlet property="owner" destination="EKO-bg-yw3" id="4rj-Wx-oFa"/>
                         <outlet property="xDeltaControl" destination="yWj-GB-CoJ" id="b2I-GY-a3m"/>
                         <outlet property="yDeltaControl" destination="yKr-Yw-bQs" id="A8x-ch-LR2"/>
                         <outlet property="zDeltaControl" destination="zWk-c4-26i" id="UCH-Tg-Ab9"/>
@@ -4041,7 +4039,7 @@
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="lAm-TE-Avh"/>
                                                 <connections>
-                                                    <action selector="xSliderUpdated:" target="yug-IC-TKZ" id="HS7-8c-nWR"/>
+                                                    <action selector="xValueUpdated:" target="yug-IC-TKZ" id="5dF-55-cBY"/>
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7he-k5-cIJ">
@@ -4053,14 +4051,14 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                                 <connections>
-                                                    <action selector="xTextFieldUpdated:" target="yug-IC-TKZ" id="IgW-0l-Spa"/>
+                                                    <action selector="xValueUpdated:" target="yug-IC-TKZ" id="tHh-vm-kpV"/>
                                                 </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-yG-ctp">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="ElA-We-vHs"/>
                                                 <connections>
-                                                    <action selector="xStepperUpdated:" target="yug-IC-TKZ" id="eBv-4W-6vD"/>
+                                                    <action selector="xValueUpdated:" target="yug-IC-TKZ" id="kDd-oi-bs1"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -4094,7 +4092,7 @@
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="dPW-p0-A3S"/>
                                                 <connections>
-                                                    <action selector="ySliderUpdated:" target="yug-IC-TKZ" id="ogM-Mu-eHc"/>
+                                                    <action selector="yValueUpdated:" target="yug-IC-TKZ" id="c4a-OH-t6y"/>
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fr7-rt-cdR">
@@ -4106,14 +4104,14 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                                 <connections>
-                                                    <action selector="yTextFieldUpdated:" target="yug-IC-TKZ" id="ymR-0x-OTj"/>
+                                                    <action selector="yValueUpdated:" target="yug-IC-TKZ" id="WMr-VK-O59"/>
                                                 </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-w1-4Vl">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="LMs-pu-ptg"/>
                                                 <connections>
-                                                    <action selector="yStepperUpdated:" target="yug-IC-TKZ" id="n7b-1D-xXl"/>
+                                                    <action selector="yValueUpdated:" target="yug-IC-TKZ" id="4Fd-CI-egg"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -4250,7 +4248,7 @@
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="VFM-hy-V5y"/>
                                                 <connections>
-                                                    <action selector="widthSliderUpdated:" target="3pO-rE-CjZ" id="rNo-aG-leJ"/>
+                                                    <action selector="widthValueUpdated:" target="3pO-rE-CjZ" id="Rff-Nz-mrU"/>
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-kp-LL1">
@@ -4262,14 +4260,14 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                                 <connections>
-                                                    <action selector="widthTextFieldUpdated:" target="3pO-rE-CjZ" id="EDu-Sv-RuT"/>
+                                                    <action selector="widthValueUpdated:" target="3pO-rE-CjZ" id="ayo-XC-2WH"/>
                                                 </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-Np-XZB">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="eg4-Tz-DDH"/>
                                                 <connections>
-                                                    <action selector="widthStepperUpdated:" target="3pO-rE-CjZ" id="f1i-N7-iwB"/>
+                                                    <action selector="widthValueUpdated:" target="3pO-rE-CjZ" id="8fq-Rb-Bub"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -4303,7 +4301,7 @@
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="Nf8-Ti-D20"/>
                                                 <connections>
-                                                    <action selector="heightSliderUpdated:" target="3pO-rE-CjZ" id="Qfa-LL-qGE"/>
+                                                    <action selector="heightValueUpdated:" target="3pO-rE-CjZ" id="pii-fE-pXV"/>
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="09W-ep-1Ah">
@@ -4315,14 +4313,14 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                                 <connections>
-                                                    <action selector="heightTextFieldUpdated:" target="3pO-rE-CjZ" id="uKw-hK-ciH"/>
+                                                    <action selector="heightValueUpdated:" target="3pO-rE-CjZ" id="OFE-9i-8vC"/>
                                                 </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="l46-rE-xtE">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="PRA-Ha-yAF"/>
                                                 <connections>
-                                                    <action selector="heightStepperUpdated:" target="3pO-rE-CjZ" id="tJT-qy-LlE"/>
+                                                    <action selector="heightValueUpdated:" target="3pO-rE-CjZ" id="tfE-Lw-cbX"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>

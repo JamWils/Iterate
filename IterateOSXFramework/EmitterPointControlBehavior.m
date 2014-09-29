@@ -12,54 +12,26 @@
 
 @implementation EmitterPointControlBehavior
 
--(IBAction)xSliderUpdated:(NSSlider*)sender {
-    [self updateWidthValues:[sender floatValue]];
-}
-
--(IBAction)ySliderUpdated:(NSSlider*)sender {
-    [self updateHeightValues:[sender floatValue]];
-}
-
--(IBAction)xTextFieldUpdated:(NSTextField*)sender {
-    [self updateWidthValues:[sender floatValue]];
-}
-
--(IBAction)yTextFieldUpdated:(NSTextField*)sender {
-    [self updateHeightValues:[sender floatValue]];
-}
-
--(IBAction)xStepperUpdated:(NSStepper*)sender {
-    [self updateWidthValues:[sender floatValue]];
-}
-
--(IBAction)yStepperUpdated:(NSStepper*)sender {
-    [self updateHeightValues:[sender floatValue]];
-}
-
 - (IBAction)xValueUpdated:(id)sender {
+    float floatValue = [self getFloatFromObject:sender];
     
-}
-
-- (IBAction)yValueUpdated:(id)sender {
+    _xControl.stepper.floatValue = floatValue;
+    _xControl.slider.floatValue = floatValue;
+    _xControl.textField.floatValue = floatValue;
     
-}
-
-
-- (void)updateWidthValues:(float)value {
-    _xControl.stepper.floatValue = value;
-    _xControl.slider.floatValue = value;
-    _xControl.textField.floatValue = value;
-    
-    CGPoint point = CGPointMake(value, _yControl.stepper.floatValue);
+    CGPoint point = CGPointMake(floatValue, _yControl.stepper.floatValue);
     [self updateValues:[NSValue valueWithPoint:point]];
 }
 
-- (void)updateHeightValues:(float)value {
-    _yControl.stepper.floatValue = value;
-    _yControl.slider.floatValue = value;
-    _yControl.textField.floatValue = value;
+- (IBAction)yValueUpdated:(id)sender {
+    float floatValue = [self getFloatFromObject:sender];
     
-    CGPoint point = CGPointMake(_xControl.stepper.floatValue, value);
+    _yControl.stepper.floatValue = floatValue;
+    _yControl.slider.floatValue = floatValue;
+    _yControl.textField.floatValue = floatValue;
+    
+
+    CGPoint point = CGPointMake(_xControl.stepper.floatValue, floatValue);
     [self updateValues:[NSValue valueWithPoint:point]];
 }
 
@@ -80,6 +52,17 @@
         }
         
     }
+}
+
+- (float)getFloatFromObject:(id)sender {
+    float value = 0.0;
+    
+    if ([sender isKindOfClass:[NSControl class]]) {
+        NSControl *control = (NSControl*)sender;
+        value = [control floatValue];
+    }
+    
+    return value;
 }
 
 @end

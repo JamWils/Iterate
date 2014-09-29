@@ -139,5 +139,26 @@
     [self.mockStepper verify];
 }
 
+- (void)testPropertyWithNoFloatValueSelectorDoesNotBreakUpdateControls {
+    _emitterBehavior.defaultValue = 0;
+    _emitterBehavior.emitterProperty = @"transform";
+    CALayer *layer = [[CALayer alloc] init];
+    
+    [[self.mockStepper expect] setFloatValue:0.0f];
+    [_emitterBehavior setValue:_mockStepper forKey:@"stepper"];
+    
+    [_emitterBehavior updateControls:layer];
+}
+
+- (void)testNilDoesNotBreakUpdateControls {
+    _emitterBehavior.defaultValue = 0;
+    _emitterBehavior.emitterProperty = @"transform";
+    
+    [[self.mockStepper expect] setFloatValue:0.0f];
+    [_emitterBehavior setValue:_mockStepper forKey:@"stepper"];
+    
+    [_emitterBehavior updateControls:nil];
+}
+
 
 @end

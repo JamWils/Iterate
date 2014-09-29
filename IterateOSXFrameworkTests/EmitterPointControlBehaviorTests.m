@@ -118,6 +118,64 @@
      forValue:_layer.position.y];
 }
 
+- (void)testXControlsStepperIsUpdatedWhenXValueUpdatedIsCalled {
+    [self testUpdateXValuesWithUIMock:_mockStepperX
+                        forControlMock:_mockControlX
+                           forSelector:NSStringFromSelector(@selector(stepper))];
+}
+
+- (void)testXControlsSliderIsUpdatedWhenXValueUpdatedIsCalled {
+    [self testUpdateXValuesWithUIMock:_mockSliderX
+                      forControlMock:_mockControlX
+                         forSelector:NSStringFromSelector(@selector(slider))];
+}
+
+- (void)testXControlsTextFieldIsUpdatedWhenXValueUpdatedIsCalled {
+    [self testUpdateXValuesWithUIMock:_mockTextFieldX
+                      forControlMock:_mockControlX
+                         forSelector:NSStringFromSelector(@selector(textField))];
+}
+
+- (void)testYControlsStepperIsUpdatedWhenXValueUpdatedIsCalled {
+    [self testUpdateYValuesWithUIMock:_mockStepperY
+                       forControlMock:_mockControlY
+                          forSelector:NSStringFromSelector(@selector(stepper))];
+}
+
+- (void)testYControlsSliderIsUpdatedWhenXValueUpdatedIsCalled {
+    [self testUpdateYValuesWithUIMock:_mockSliderY
+                       forControlMock:_mockControlY
+                          forSelector:NSStringFromSelector(@selector(slider))];
+}
+
+- (void)testYControlsTextFieldIsUpdatedWhenXValueUpdatedIsCalled {
+    [self testUpdateYValuesWithUIMock:_mockTextFieldY
+                       forControlMock:_mockControlY
+                          forSelector:NSStringFromSelector(@selector(textField))];
+}
+
+- (void)testUpdateValuesIsCalledWhenXValueUpdatedsIsCalled {
+    id partialMock = [OCMockObject partialMockForObject:_emitterBehavior];
+    
+    [[partialMock expect] updateValues:[OCMArg any]];
+    
+    [partialMock xValueUpdated:nil];
+    [partialMock verify];
+    partialMock = nil;
+}
+
+- (void)testUpdateValuesIsCalledWhenYValueUpdatedsIsCalled {
+    id partialMock = [OCMockObject partialMockForObject:_emitterBehavior];
+    
+    [[partialMock expect] updateValues:[OCMArg any]];
+    
+    [partialMock yValueUpdated:nil];
+    [partialMock verify];
+    partialMock = nil;
+}
+
+
+
 #pragma mark Helper Methods
 
 - (void)testUpdateControlsWithUIMock:(id)mockUI forControlMock:(id)mockControl forSelector:(NSString*)selector forValue:(float)value{
@@ -128,6 +186,30 @@
     [[mockUI expect] setFloatValue:value];
     
     [_emitterBehavior updateControls:_layer];
+    
+    [mockUI verify];
+}
+
+- (void)testUpdateXValuesWithUIMock:(id)mockUI forControlMock:(id)mockControl forSelector:(NSString*)selector {
+    [self testUpdateValuesWithUIMock:mockUI forControlMock:mockControl forSelector:selector completionBlock:^(id sender) {
+        [_emitterBehavior xValueUpdated:sender];
+    }];
+}
+
+- (void)testUpdateYValuesWithUIMock:(id)mockUI forControlMock:(id)mockControl forSelector:(NSString*)selector {
+    [self testUpdateValuesWithUIMock:mockUI forControlMock:mockControl forSelector:selector completionBlock:^(id sender) {
+        [_emitterBehavior yValueUpdated:sender];
+    }];
+}
+
+- (void)testUpdateValuesWithUIMock:(id)mockUI forControlMock:(id)mockControl forSelector:(NSString*)selector completionBlock:(void (^)(id))callFuncBlock {
+    int number = 200;
+    id mockSender = [OCMockObject mockForClass:[NSTextField class]];
+    [[[mockSender stub] andReturnValue:@(number)] floatValue];
+    [[[mockControl stub] andReturn:mockUI] performSelector:NSSelectorFromString(selector)];
+    [[mockUI expect] setFloatValue:number];
+    
+    callFuncBlock(mockSender);
     
     [mockUI verify];
 }
