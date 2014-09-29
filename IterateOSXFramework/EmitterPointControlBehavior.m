@@ -8,6 +8,7 @@
 
 #import "EmitterPointControlBehavior.h"
 #import "EmitterFloatControlBehavior.h"
+@import QuartzCore;
 
 @implementation EmitterPointControlBehavior
 
@@ -35,6 +36,15 @@
     [self updateHeightValues:[sender floatValue]];
 }
 
+- (IBAction)xValueUpdated:(id)sender {
+    
+}
+
+- (IBAction)yValueUpdated:(id)sender {
+    
+}
+
+
 - (void)updateWidthValues:(float)value {
     _xControl.stepper.floatValue = value;
     _xControl.slider.floatValue = value;
@@ -51,6 +61,25 @@
     
     CGPoint point = CGPointMake(_xControl.stepper.floatValue, value);
     [self updateValues:[NSValue valueWithPoint:point]];
+}
+
+- (void)updateControls:(id)aObject {
+    id item = [aObject valueForKey:self.emitterProperty];
+    
+    if (item) {
+        if (strcmp([item objCType], @encode(CGPoint)) == 0) {
+            NSValue *value = (NSValue*)item;
+            CGPoint point = [value  pointValue];
+            _xControl.textField.floatValue = point.x;
+            _xControl.slider.floatValue = point.x;
+            _xControl.stepper.floatValue = point.x;
+            
+            _yControl.textField.floatValue = point.y;
+            _yControl.slider.floatValue = point.y;
+            _yControl.stepper.floatValue = point.y;
+        }
+        
+    }
 }
 
 @end

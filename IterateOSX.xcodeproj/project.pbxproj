@@ -57,6 +57,7 @@
 		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */; };
 		1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
+		1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
 		1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ViewController.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
@@ -193,6 +194,7 @@
 		1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManager.m; sourceTree = "<group>"; };
 		1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterFloatControlBehavior.h; sourceTree = "<group>"; };
 		1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehavior.m; sourceTree = "<group>"; };
+		1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPointControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94CF719BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				1A2A350B19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m */,
 				1A2A350D19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m */,
 				1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */,
+				1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */,
 			);
 			path = IterateOSXFrameworkTests;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,
 				1A2A350C19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m in Sources */,
+				1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */,
 				1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

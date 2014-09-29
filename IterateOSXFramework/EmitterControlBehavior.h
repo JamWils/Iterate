@@ -20,7 +20,5 @@ IB_DESIGNABLE
 
 - (void)updateControls:(id)aObject;
 
-- (void)updateEmitterCellControls:(CAEmitterCell*)emitterCell;
-
 
 @end

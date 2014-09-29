@@ -107,13 +107,8 @@
     
     [[self.mockTextField expect] setFloatValue:_emitterCell.spin];
     [_emitterBehavior setValue:_mockTextField forKey:@"textField"];
-    
-    NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
-    NSNotification *notification = [[NSNotification alloc] initWithName:kDidChangeSelectedEmitterCellNotification
-                                                                 object:nil
-                                                               userInfo:userInfo];
 
-    [_emitterBehavior updateEmitterCellControls:_emitterCell];
+    [_emitterBehavior updateControls:_emitterCell];
     
     [self.mockTextField verify];
 }
@@ -126,12 +121,7 @@
     [[self.mockSlider expect] setFloatValue:_emitterCell.spin];
     [_emitterBehavior setValue:_mockSlider forKey:@"slider"];
     
-    NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
-    NSNotification *notification = [[NSNotification alloc] initWithName:kDidChangeSelectedEmitterCellNotification
-                                                                 object:nil
-                                                               userInfo:userInfo];
-    
-    [_emitterBehavior updateEmitterCellControls:_emitterCell];
+    [_emitterBehavior updateControls:_emitterCell];
     
     [self.mockSlider verify];
 }
@@ -144,23 +134,10 @@
     [[self.mockStepper expect] setFloatValue:_emitterCell.spin];
     [_emitterBehavior setValue:_mockStepper forKey:@"stepper"];
     
-    NSDictionary *userInfo = @ { @"EmitterCell" : _emitterCell };
-    NSNotification *notification = [[NSNotification alloc] initWithName:kDidChangeSelectedEmitterCellNotification
-                                                                 object:nil
-                                                               userInfo:userInfo];
-    
-    [_emitterBehavior updateEmitterCellControls:_emitterCell];
+    [_emitterBehavior updateControls:_emitterCell];
     
     [self.mockStepper verify];
 }
-
-//This would be for checking whether a notification is fired from a certain area of the application
-//- (void)testNewViewSelectedObservationTest {
-//    [self.notificationCenter addMockObserver:self.observerMock name:self.testNotificationOne object:nil];
-//    [[self.observerMock expect] notificationWithName:self.testNotificationOne object:[OCMArg any]];
-//    [self.notificationCenter postNotificationName:self.testNotificationOne object:self];
-//    XCTAssertNoThrow([self.observerMock verify], @"An unexpected exception was thrown");
-//}
 
 
 @end

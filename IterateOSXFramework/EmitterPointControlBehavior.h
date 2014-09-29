@@ -14,4 +14,9 @@
 @property (nonatomic, weak) IBOutlet EmitterFloatControlBehavior *xControl;
 @property (nonatomic, weak) IBOutlet EmitterFloatControlBehavior *yControl;
 
+- (IBAction)xValueUpdated:(id)sender;
+- (IBAction)yValueUpdated:(id)sender;
+
+
+
 @end

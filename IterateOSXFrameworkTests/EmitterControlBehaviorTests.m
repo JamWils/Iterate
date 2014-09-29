@@ -61,7 +61,7 @@
     [[mockEmitterControl expect] awakeFromNib];
     [mockEmitterControl awakeFromNib];
     
-    [[mockEmitterControl expect] updateEmitterCellControls:[OCMArg any]];
+    [[mockEmitterControl expect] updateControls:[OCMArg any]];
     [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:nil];
     XCTAssertThrows([mockEmitterControl verify], @"Emitter Control should not add  Selected Emitter Cell Notifications when Cell Property is NO");
 }

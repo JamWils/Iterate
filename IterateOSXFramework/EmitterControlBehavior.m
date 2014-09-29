@@ -78,11 +78,8 @@
     }
 }
 
-- (void)updateEmitterCellControls:(CAEmitterCell*)emitterCell {
-    
-}
-
 - (void)dealloc {
+    //TODO: Write unit tests for deallocation
     if (_isCellProperty) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:kDidChangeSelectedEmitterCellNotification object:nil];
     } else {
