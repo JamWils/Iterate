@@ -21,6 +21,13 @@
 		1A4C6B6019D23D3500CE99EE /* CATransform3DControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */; };
 		1A4C6B6119D23D3500CE99EE /* CATransform3DControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */; };
 		1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */; };
+		1A66961919DA2B0B00CD65D5 /* CATransform3DControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66961819DA2B0B00CD65D5 /* CATransform3DControlBehaviorTests.m */; };
+		1A66961D19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A66961B19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h */; };
+		1A66961E19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66961C19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m */; };
+		1A66962319DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962219DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m */; };
+		1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962519DA504100CD65D5 /* IterateInsertViewController.m */; };
+		1A66962819DA508D00CD65D5 /* IterateInsertViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */; };
+		1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */; };
 		1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */; };
 		1A6F5CA219D068960000B1B2 /* EmitterImageControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */; };
 		1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */; };
@@ -156,6 +163,14 @@
 		1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DControlBehavior.h; sourceTree = "<group>"; };
 		1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DControlBehavior.m; sourceTree = "<group>"; };
 		1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehaviorTests.m; sourceTree = "<group>"; };
+		1A66961819DA2B0B00CD65D5 /* CATransform3DControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DControlBehaviorTests.m; sourceTree = "<group>"; };
+		1A66961B19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterCheckBoxControlBehavior.h; sourceTree = "<group>"; };
+		1A66961C19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCheckBoxControlBehavior.m; sourceTree = "<group>"; };
+		1A66962219DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCheckBoxControlBehaviorTests.m; sourceTree = "<group>"; };
+		1A66962419DA504100CD65D5 /* IterateInsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateInsertViewController.h; sourceTree = "<group>"; };
+		1A66962519DA504100CD65D5 /* IterateInsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertViewController.m; sourceTree = "<group>"; };
+		1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertViewControllerTests.m; sourceTree = "<group>"; };
+		1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCellMotionViewControllerTests.m; sourceTree = "<group>"; };
 		1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterImageControlBehavior.h; sourceTree = "<group>"; };
 		1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterImageControlBehavior.m; sourceTree = "<group>"; };
 		1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalValueFormatter.h; sourceTree = "<group>"; };
@@ -282,8 +297,27 @@
 				1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */,
 				1A2A350F19D843BA001E60E5 /* EmitterTextFieldControlBehavior.h */,
 				1A2A351019D843BA001E60E5 /* EmitterTextFieldControlBehavior.m */,
+				1A66961B19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h */,
+				1A66961C19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m */,
 			);
 			name = "Emitter Behaviors";
+			sourceTree = "<group>";
+		};
+		1A66961A19DA2B1100CD65D5 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				1A66961819DA2B0B00CD65D5 /* CATransform3DControlBehaviorTests.m */,
+				1A66962219DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m */,
+				1A2A350B19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m */,
+				1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */,
+				1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */,
+				1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */,
+				1A2A350D19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m */,
+				1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */,
+				1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */,
+				1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */,
+			);
+			name = Behaviors;
 			sourceTree = "<group>";
 		};
 		1A74ADC219CC71CD00B894EC /* Formatters */ = {
@@ -304,6 +338,10 @@
 				1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */,
 				1A96FED719D010A300A4627D /* AlphaColorWell.h */,
 				1A96FED819D010A300A4627D /* AlphaColorWell.m */,
+				1A74ADC719CC7DFD00B894EC /* FlippedView.h */,
+				1A74ADC819CC7DFD00B894EC /* FlippedView.m */,
+				1A74ADCF19CCB44300B894EC /* FlippedClipView.h */,
+				1A74ADD019CCB44300B894EC /* FlippedClipView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -363,6 +401,8 @@
 				1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */,
 				1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */,
 				1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */,
+				1A66962419DA504100CD65D5 /* IterateInsertViewController.h */,
+				1A66962519DA504100CD65D5 /* IterateInsertViewController.m */,
 			);
 			path = IterateOSX;
 			sourceTree = "<group>";
@@ -386,6 +426,8 @@
 				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
 				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
 				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
+				1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */,
+				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
 			);
 			path = IterateOSXTests;
 			sourceTree = "<group>";
@@ -406,10 +448,6 @@
 				1A76654819C49E4A00FD1F29 /* Behaviors */,
 				1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */,
 				1AD94D5219BBC4B1001A2015 /* Supporting Files */,
-				1A74ADC719CC7DFD00B894EC /* FlippedView.h */,
-				1A74ADC819CC7DFD00B894EC /* FlippedView.m */,
-				1A74ADCF19CCB44300B894EC /* FlippedClipView.h */,
-				1A74ADD019CCB44300B894EC /* FlippedClipView.m */,
 				1AFB400319D7134700A5F3D3 /* IterateConstants.h */,
 				1AFB400419D7134700A5F3D3 /* IterateConstants.m */,
 			);
@@ -427,16 +465,9 @@
 		1AD94D5D19BBC4B1001A2015 /* IterateOSXFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				1A66961A19DA2B1100CD65D5 /* Behaviors */,
 				1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */,
 				1AD94D5E19BBC4B1001A2015 /* Supporting Files */,
-				1A4C6B6219D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m */,
-				1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */,
-				1A2A350B19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m */,
-				1A2A350D19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m */,
-				1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */,
-				1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */,
-				1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */,
-				1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */,
 			);
 			path = IterateOSXFrameworkTests;
 			sourceTree = "<group>";
@@ -473,6 +504,7 @@
 				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
 				1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */,
+				1A66961D19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h in Headers */,
 				1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */,
 				1A4C6B6019D23D3500CE99EE /* CATransform3DControlBehavior.h in Headers */,
 				1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */,
@@ -649,6 +681,7 @@
 				1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */,
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
+				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,
 				1AD94CF919BBA3AF001A2015 /* main.m in Sources */,
@@ -662,7 +695,9 @@
 				1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */,
 				1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */,
 				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
+				1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */,
 				1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */,
+				1A66962819DA508D00CD65D5 /* IterateInsertViewControllerTests.m in Sources */,
 				1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +726,7 @@
 				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
 				1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */,
 				1A4C6B6119D23D3500CE99EE /* CATransform3DControlBehavior.m in Sources */,
+				1A66961E19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */,
+				1A66962319DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m in Sources */,
 				1A2A350E19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m in Sources */,
 				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,
@@ -707,6 +744,7 @@
 				1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */,
 				1AC63B8719D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m in Sources */,
 				1AC63B8919D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m in Sources */,
+				1A66961919DA2B0B00CD65D5 /* CATransform3DControlBehaviorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

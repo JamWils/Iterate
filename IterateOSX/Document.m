@@ -17,6 +17,8 @@
 
 @implementation Document
 
+@synthesize layers = _layers;
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -175,6 +177,21 @@
     source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
     CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
     return maskRef;
+}
+
+- (void)setLayers:(NSMutableArray *)layers {
+    _layers = layers;
+    
+    NSWindowController *windowController = (NSWindowController*)self.windowControllers[0];
+    NSSplitViewController *splitViewController = (NSSplitViewController*)windowController.window.contentViewController;
+    //Send layer array to outline view
+    NSSplitViewController *leftSplitViewController = (NSSplitViewController*)splitViewController.childViewControllers[0];
+    LayerOutlineViewController *outlineViewController = leftSplitViewController.childViewControllers[0];
+    outlineViewController.layers = self.layers;
+}
+
+- (NSMutableArray *)layers {
+    return _layers;
 }
 
 @end

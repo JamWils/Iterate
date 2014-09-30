@@ -779,13 +779,25 @@
             </objects>
             <point key="canvasLocation" x="-548" y="838"/>
         </scene>
-        <!--View Controller-->
+        <!--Iterate Insert View Controller-->
         <scene sceneID="duj-FI-iaC">
             <objects>
-                <viewController id="w0J-zn-tav" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IterateInsertViewController" id="w0J-zn-tav" customClass="IterateInsertViewController" sceneMemberID="viewController">
                     <view key="view" id="BGX-3C-cKG">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="144"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-Rg-uLl">
+                                <rect key="frame" x="14" y="104" width="197" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add Cell" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dG3-g4-arA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addCellClicked:" target="w0J-zn-tav" id="COh-Kf-dyq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="1Sd-5c-qzP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -2379,7 +2391,7 @@
         <!--Motion View Controller-->
         <scene sceneID="7PM-Gr-QAR">
             <objects>
-                <viewController id="AG8-rX-BbB" userLabel="Motion View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmitterCellMotionViewController" id="AG8-rX-BbB" userLabel="Motion View Controller" customClass="SideMenuViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="hiX-67-Bel">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2748,6 +2760,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="label" destination="0Po-5b-gQx" id="N8f-6z-IBq"/>
+                        <outlet property="owner" destination="AG8-rX-BbB" id="5hp-AL-qL7"/>
                         <outlet property="slider" destination="zGU-Qv-Y7p" id="FQh-V6-qXJ"/>
                         <outlet property="stepper" destination="Mi0-a3-riR" id="AJS-yK-y3a"/>
                         <outlet property="textField" destination="r8q-bh-vs1" id="iki-7K-T0u"/>
@@ -3618,7 +3631,7 @@
                                 </connections>
                             </button>
                             <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-iy-ECI">
-                                <rect key="frame" x="0.0" y="434" width="250" height="4"/>
+                                <rect key="frame" x="0.0" y="434" width="250" height="5"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>
@@ -3743,7 +3756,7 @@
                                                 <rect key="frame" x="2" y="3" width="232" height="20"/>
                                                 <sliderCell key="cell" alignment="left" maxValue="1000" doubleValue="487.67021648044692" tickMarkPosition="above" sliderType="linear" id="MKv-3k-VTk"/>
                                                 <connections>
-                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="ZRe-gR-ajB"/>
+                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="Mkb-Xw-tGX"/>
                                                 </connections>
                                             </slider>
                                             <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSa-16-srh">
@@ -3755,14 +3768,14 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                                 <connections>
-                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="brX-Zf-fz9"/>
+                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="OY1-e9-7Qt"/>
                                                 </connections>
                                             </textField>
                                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vur-iE-ZEs">
                                                 <rect key="frame" x="216" y="27" width="19" height="22"/>
                                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="AoF-bx-Q5I"/>
                                                 <connections>
-                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="GZP-Xh-01s"/>
+                                                    <action selector="rotateLayer:" target="Zij-Gw-ewJ" id="eH1-Au-EFe"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -3954,8 +3967,11 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="transform"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="name" value="Transform"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="mainTranslationControl" destination="w5H-Mz-LiR" id="UmK-Ab-Yy8"/>
+                        <outlet property="owner" destination="EKO-bg-yw3" id="Ndb-63-RIv"/>
                         <outlet property="xDeltaControl" destination="yWj-GB-CoJ" id="b2I-GY-a3m"/>
                         <outlet property="yDeltaControl" destination="yKr-Yw-bQs" id="A8x-ch-LR2"/>
                         <outlet property="zDeltaControl" destination="zWk-c4-26i" id="UCH-Tg-Ab9"/>
@@ -4441,6 +4457,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="checkBoxToggled:" target="qLT-FZ-gjt" id="30A-WC-0DW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -4875,6 +4894,17 @@
                         <outlet property="label" destination="Xz6-M4-ZgU" id="C7L-WC-11S"/>
                         <outlet property="owner" destination="FoU-4q-nG8" id="1AP-3P-cyJ"/>
                         <outlet property="popUpButton" destination="QgD-ld-zbr" id="MiW-Sd-J0e"/>
+                    </connections>
+                </customObject>
+                <customObject id="qLT-FZ-gjt" userLabel="Preserves Depth Layer Control" customClass="EmitterCheckBoxControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCellProperty" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="emitterProperty" value="preservesDepth"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="name" value="Preserves Depth"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="checkBox" destination="H6Y-ri-Hwk" id="ojw-CX-YAm"/>
+                        <outlet property="owner" destination="FoU-4q-nG8" id="9Ub-C8-Iu4"/>
                     </connections>
                 </customObject>
                 <customObject id="dV5-KN-msb" userLabel="Emitter Layer Category" customClass="CategoryControlBehavior">

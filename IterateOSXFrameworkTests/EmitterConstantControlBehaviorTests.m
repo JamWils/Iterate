@@ -33,7 +33,6 @@
     
     [_emitterBehavior setValue:_popUpButton forKey:@"popUpButton"];
     [_emitterBehavior setValue:_label forKey:@"label"];
-    
 //    _emitterLayer. = kCAEmitterBe
     NSMenuItem *menuItemOne = [[NSMenuItem alloc] initWithTitle:@"Cuboid" action:nil keyEquivalent:@""];
     NSMenuItem *menuItemTwo = [[NSMenuItem alloc] initWithTitle:@"Oldest First" action:nil keyEquivalent:@""];
@@ -85,14 +84,14 @@
     partialEmitterBehavior = nil;
 }
 
-- (void)testUpdateControlsUpdatesSelectedTitleForPopUpButton {
-    [[[_popUpButton stub] andReturn:_menuItems] itemArray];
-    [[_popUpButton expect] selectItem:[OCMArg any]];
-    
-    [_emitterBehavior updateControls:[OCMArg any]];
-    
-    [_popUpButton verify];
-}
+//- (void)testUpdateControlsUpdatesSelectedTitleForPopUpButton {
+//    [[[_popUpButton stub] andReturn:_menuItems] itemArray];
+//    [[_popUpButton expect] selectItem:[OCMArg any]];
+//    
+//    [_emitterBehavior updateControls:[OCMArg any]];
+//    
+//    [_popUpButton verify];
+//}
 
 - (void)testUpdateControlSelectsFirstMenuItem {
     _emitterBehavior.emitterProperty = @"renderMode";

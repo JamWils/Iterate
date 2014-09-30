@@ -26,6 +26,8 @@
     id value = [_layers count] > 0 ? @(0) : nil;
     [[NSUserDefaults standardUserDefaults] setObject:value forKey:@"selectedOutlineViewRow"];
     
+    [self addObserver:self.layers forKeyPath:@"layers" options:NSKeyValueObservingOptionNew context:nil];
+    
 }
 
 - (void)viewWillAppear {
@@ -52,4 +54,16 @@
     
 }
 
+- (void)setLayers:(NSMutableArray *)layers {
+    _layers = layers;
+    [_layerSourceManager setValue:_layers forKey:@"layers"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_layerOutlineView reloadData];
+    });
+    
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+}
 @end

@@ -25,21 +25,11 @@
 - (void)bindLifetimeToObject:(id)object
 {
     objc_setAssociatedObject(object, (__bridge void *)self, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateControls:) name:kDidChangeSelectedLayerNotification object:nil ];
 }
 
 - (void)releaseLifetimeFromObject:(id)object
 {
     objc_setAssociatedObject(object, (__bridge void *)self, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
-}
-
-- (void)updateControls:(NSNotification*)notification {
-    
 }
 
 @end
