@@ -17,5 +17,6 @@ IB_DESIGNABLE
 @property (weak) IBOutlet NSLayoutConstraint *specialViewHeight;
 @property (weak) IBOutlet CategoryControlBehavior *categoryBehavior;
 
+- (IBAction)updateSelected:(NSPopUpButton *)sender;
 
 @end

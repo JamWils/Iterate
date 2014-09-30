@@ -20,19 +20,7 @@
 }
 
 - (IBAction)updateSelected:(NSPopUpButton *)sender {
-    NSString *newValue = [sender titleOfSelectedItem];
-    
-
-    NSUInteger stringLength = [newValue length];
-    newValue = [newValue stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    if (stringLength == [newValue length]) {
-        newValue = [newValue lowercaseString];
-    } else {
-        newValue = [newValue stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[newValue substringToIndex:1] lowercaseString]];
-        NSLog(@"%@", newValue);
-    }
-    
+    NSString *newValue = [self stringConstantFromStringTitle:[sender titleOfSelectedItem]];
     [self updateValues:newValue];
     
     if ([[[sender titleOfSelectedItem] lowercaseString] isEqualToString:kCAFilterTrilinear]) {
@@ -40,6 +28,31 @@
     } else {
         [_categoryBehavior changeConstraint:_specialViewHeight toConstant:0.0];
     }
+}
+
+- (void)updateControls:(id)aObject {
+    for (NSMenuItem *menuItem in _popUpButton.itemArray) {
+        if ([[self stringConstantFromStringTitle:menuItem.title] isEqualToString:[aObject valueForKey:self.emitterProperty]]) {
+            [_popUpButton selectItem:menuItem];
+            break;
+        }
+    }
+    
+}
+
+- (NSString*)stringConstantFromStringTitle:(NSString*)title {
+    NSString *constant;
+    
+    NSUInteger stringLength = [title length];
+    title = [title stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    if (stringLength == [title length]) {
+        constant = [title lowercaseString];
+    } else {
+        constant = [title stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[title substringToIndex:1] lowercaseString]];
+    }
+    
+    return constant;
 }
 
 
