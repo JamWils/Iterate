@@ -9,9 +9,28 @@
 #import "OutlineViewLayerDelegateManager.h"
 @import IterateOSXFramework;
 
+@interface OutlineViewLayerDelegateManager ()
+
+@property (copy) OutlineViewParentObjectBlock parentObjectBlock;
+
+@end
+
 @implementation OutlineViewLayerDelegateManager {
     CAEmitterCell *_cell;
     id _selectedItem;
+}
+
+- (instancetype)init {
+    return nil;
+}
+
+- (instancetype)initWithParentObjectBlock:(OutlineViewParentObjectBlock)parentObjectBlock {
+    self = [super init];
+    if (self) {
+        _parentObjectBlock = [parentObjectBlock copy];
+    }
+    
+    return self;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
@@ -19,6 +38,8 @@
     if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
         CAEmitterLayer *emitterLayer = [self layerForEmitterCell:_selectedItem inOutlineView:outlineView];
         _activeLayer = emitterLayer;
+    } else {
+        _activeLayer = item;
     }
     
     return YES;
@@ -29,6 +50,7 @@
     
     if (_selectedItem != nil && _activeLayer != nil) {
         [userInfo setValue:_activeLayer forKey:@"layer"];
+        _parentObjectBlock(_activeLayer, _selectedItem);
         
         if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
             

@@ -32,7 +32,7 @@
 
 - (void)setUp {
     [super setUp];
-    _delegate = [[OutlineViewLayerDelegateManager alloc] init];
+    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:nil];
     _dataSource = [[OutlineViewDataSourceManager alloc] initWithLayers:self.layers];
     _mockOutlineView = [OCMockObject partialMockForObject:[[NSOutlineView alloc] init]];
     
@@ -56,7 +56,12 @@
     [super tearDown];
 }
 
-- (void)testDelegateIsNotNil {
+- (void)testDelegateIsNilWhenInitIsCalled {
+    OutlineViewLayerDelegateManager *delegateManager = [[OutlineViewLayerDelegateManager alloc] init];
+    XCTAssertNil(delegateManager, @"Delegate manager should be nil when init is called");
+}
+
+- (void)testDelegateIsNotNilWhenInitWithParentObjectBlockIsCalled {
     // This is an example of a functional test case.
     XCTAssertNotNil(_delegate, @"Delegate should not be nil with standard init");
 }
@@ -181,6 +186,41 @@
     XCTAssertThrows([self.observerMock verify], @"An unexpected exception was thrown");
     [[NSNotificationCenter defaultCenter] removeObserver:_observerMock];
 }
+
+- (void)testParentLayerIsSentIntoBlock {
+    __block CALayer *configuredLayer = nil;
+    __block NSString *configuredSelectedItem = nil;
+    
+    CALayer *layer = [[CALayer alloc] init];
+    
+    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem) {
+        configuredLayer = parentObject;
+        configuredSelectedItem = selectedItem;
+    }];
+    _delegate.selectedItem = @"";
+    _delegate.activeLayer = layer;
+    
+    
+    [_delegate outlineViewSelectionDidChange:nil];
+    
+    XCTAssertEqual(layer, configuredLayer, @"The parent object should be equal to the active layer");
+    XCTAssertEqualObjects(@"", configuredSelectedItem, @"The selected item should be equal to a blank string");
+}
+
+//- (void)testParentLayerIsSentIntoBlockWhenSelectedItemIsNil {
+//    __block CALayer *configuredLayer = nil;
+//    CALayer *layer = [[CALayer alloc] init];
+//    
+//    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject) {
+//        configuredLayer = parentObject;
+//    }];
+//    _delegate.selectedItem = nil;
+//    _delegate.activeLayer = layer;
+//    
+//    [_delegate outlineViewSelectionDidChange:nil];
+//    
+//    XCTAssertEqual(layer, configuredLayer, @"The parent object should be equal to the active layer");
+//}
 
 //- (void)testActiveLayerIsEqualToEmitterLayerWhenEmitterCellsParentIsAnEmitterLayer {
 //    _delegate.activeLayer = nil;

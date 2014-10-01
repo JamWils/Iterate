@@ -30,6 +30,9 @@
 		1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */; };
 		1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */; };
 		1A6F5CA219D068960000B1B2 /* EmitterImageControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */; };
+		1A736E8919DC49DD0075C61C /* LayerContentViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */; };
+		1A736E8D19DC79640075C61C /* IterateColorSystemConversions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A736E8B19DC79640075C61C /* IterateColorSystemConversions.h */; };
+		1A736E8E19DC79640075C61C /* IterateColorSystemConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A736E8C19DC79640075C61C /* IterateColorSystemConversions.m */; };
 		1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */; };
 		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
 		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; };
@@ -68,7 +71,7 @@
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
 		1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
-		1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ViewController.m */; };
+		1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
 		1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0219BBA3AF001A2015 /* Main.storyboard */; };
 		1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */; };
@@ -84,6 +87,8 @@
 		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
 		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AFB400619D7134700A5F3D3 /* IterateConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400419D7134700A5F3D3 /* IterateConstants.m */; };
+		1AFE1E1919DAFD6600337EC0 /* ContentViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */; };
+		1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +178,9 @@
 		1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCellMotionViewControllerTests.m; sourceTree = "<group>"; };
 		1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterImageControlBehavior.h; sourceTree = "<group>"; };
 		1A6F5CA019D068960000B1B2 /* EmitterImageControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterImageControlBehavior.m; sourceTree = "<group>"; };
+		1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerContentViewControllerProtocol.h; sourceTree = "<group>"; };
+		1A736E8B19DC79640075C61C /* IterateColorSystemConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateColorSystemConversions.h; sourceTree = "<group>"; };
+		1A736E8C19DC79640075C61C /* IterateColorSystemConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateColorSystemConversions.m; sourceTree = "<group>"; };
 		1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalValueFormatter.h; sourceTree = "<group>"; };
 		1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalValueFormatter.m; sourceTree = "<group>"; };
 		1A74ADC719CC7DFD00B894EC /* FlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedView.h; sourceTree = "<group>"; };
@@ -217,8 +225,8 @@
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94CF719BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1AD94CFA19BBA3AF001A2015 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1AD94CFB19BBA3AF001A2015 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		1AD94D0019BBA3AF001A2015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AD94D0319BBA3AF001A2015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AD94D0919BBA3AF001A2015 /* IterateOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +247,9 @@
 		1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AFB400319D7134700A5F3D3 /* IterateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateConstants.h; sourceTree = "<group>"; };
 		1AFB400419D7134700A5F3D3 /* IterateConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateConstants.m; sourceTree = "<group>"; };
+		1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewControllerTests.m; sourceTree = "<group>"; };
+		1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateWindowController.h; sourceTree = "<group>"; };
+		1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +331,15 @@
 			name = Behaviors;
 			sourceTree = "<group>";
 		};
+		1A736E8F19DC79C70075C61C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1A736E8B19DC79640075C61C /* IterateColorSystemConversions.h */,
+				1A736E8C19DC79640075C61C /* IterateColorSystemConversions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		1A74ADC219CC71CD00B894EC /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,8 +408,8 @@
 		1AD94CF519BBA3AF001A2015 /* IterateOSX */ = {
 			isa = PBXGroup;
 			children = (
-				1AD94CFA19BBA3AF001A2015 /* ViewController.h */,
-				1AD94CFB19BBA3AF001A2015 /* ViewController.m */,
+				1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */,
+				1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */,
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
 				1AD94D0219BBA3AF001A2015 /* Main.storyboard */,
 				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
@@ -403,6 +423,8 @@
 				1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */,
 				1A66962419DA504100CD65D5 /* IterateInsertViewController.h */,
 				1A66962519DA504100CD65D5 /* IterateInsertViewController.m */,
+				1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */,
+				1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */,
 			);
 			path = IterateOSX;
 			sourceTree = "<group>";
@@ -419,15 +441,13 @@
 		1AD94D0C19BBA3AF001A2015 /* IterateOSXTests */ = {
 			isa = PBXGroup;
 			children = (
+				1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */,
 				1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */,
 				1AD94D0D19BBA3AF001A2015 /* Supporting Files */,
 				1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */,
 				1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */,
 				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
 				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
-				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
-				1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */,
-				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
 			);
 			path = IterateOSXTests;
 			sourceTree = "<group>";
@@ -443,6 +463,7 @@
 		1AD94D5119BBC4B1001A2015 /* IterateOSXFramework */ = {
 			isa = PBXGroup;
 			children = (
+				1A736E8F19DC79C70075C61C /* Categories */,
 				1A74ADD319CD0B8900B894EC /* Views */,
 				1A74ADC219CC71CD00B894EC /* Formatters */,
 				1A76654819C49E4A00FD1F29 /* Behaviors */,
@@ -450,6 +471,7 @@
 				1AD94D5219BBC4B1001A2015 /* Supporting Files */,
 				1AFB400319D7134700A5F3D3 /* IterateConstants.h */,
 				1AFB400419D7134700A5F3D3 /* IterateConstants.m */,
+				1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */,
 			);
 			path = IterateOSXFramework;
 			sourceTree = "<group>";
@@ -481,6 +503,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */,
+				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
+				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
+				1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -504,6 +537,8 @@
 				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
 				1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */,
+				1A736E8D19DC79640075C61C /* IterateColorSystemConversions.h in Headers */,
+				1A736E8919DC49DD0075C61C /* LayerContentViewControllerProtocol.h in Headers */,
 				1A66961D19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h in Headers */,
 				1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */,
 				1A4C6B6019D23D3500CE99EE /* CATransform3DControlBehavior.h in Headers */,
@@ -682,8 +717,9 @@
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
 				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
-				1AD94CFC19BBA3AF001A2015 /* ViewController.m in Sources */,
+				1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,
+				1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */,
 				1AD94CF919BBA3AF001A2015 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +730,7 @@
 			files = (
 				1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */,
 				1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */,
+				1AFE1E1919DAFD6600337EC0 /* ContentViewControllerTests.m in Sources */,
 				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
 				1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */,
 				1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */,
@@ -725,6 +762,7 @@
 				1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */,
 				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
 				1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */,
+				1A736E8E19DC79640075C61C /* IterateColorSystemConversions.m in Sources */,
 				1A4C6B6119D23D3500CE99EE /* CATransform3DControlBehavior.m in Sources */,
 				1A66961E19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m in Sources */,
 			);

@@ -11,6 +11,9 @@
 #import <OCMock/OCMock.h>
 
 #import "LayerOutlineViewController.h"
+#import "OutlineViewDataSourceManager.h"
+#import "IterateWindowController.h"
+
 
 @interface LayerOutlineViewControllerTests : XCTestCase
 
@@ -18,6 +21,8 @@
 @property (strong, nonatomic) NSStoryboard *storyboard;
 @property (strong, nonatomic) NSString *selectedRowKey;
 @property (strong, nonatomic) id partialMockOutlineView;
+@property (strong, nonatomic) id mockWindowController;
+//@property (strong, nonatomic) id mockDataSource;
 
 @end
 
@@ -29,9 +34,12 @@
     _viewController = [_storyboard instantiateControllerWithIdentifier:@"LayerOutlineViewController"];
     _selectedRowKey = @"selectedOutlineViewRow";
     [_viewController view];
+    
+    _mockWindowController = [OCMockObject mockForClass:[IterateWindowController class]];
 }
 
 - (void)tearDown {
+    _mockWindowController = nil;
     _partialMockOutlineView = nil;
     _selectedRowKey = nil;
     _viewController = nil;
@@ -55,7 +63,7 @@
     [_viewController viewDidLoad];
     
     int result = [[[NSUserDefaults standardUserDefaults] objectForKey:_selectedRowKey] intValue];
-    XCTAssertEqual(restorationValue, result, @"The uesr default value should equal zero when ViewDidLoad is called.");
+    XCTAssertEqual(restorationValue, result, @"The user default value should equal zero when ViewDidLoad is called.");
 }
 
 - (void)testSelectedRowKeyIsNilWhenLayerCountIsZero {
@@ -102,5 +110,32 @@
     int result = [[[NSUserDefaults standardUserDefaults] objectForKey:_selectedRowKey] intValue];
     XCTAssertEqual(setValue, result, @"The uesr default value should equal the outlines view selected row when view will disappear is called.");
 }
+
+- (void)testOutlineViewsReloadDataIsCalledDuringSetLayers {
+    _partialMockOutlineView = [OCMockObject partialMockForObject:_viewController.layerOutlineView];
+    _viewController.layerOutlineView = _partialMockOutlineView;
+    [[_partialMockOutlineView expect] reloadData];
+    
+    _viewController.layers = [[NSMutableArray alloc] init];
+    
+    [_partialMockOutlineView verify];
+}
+
+
+
+//- (void)testOutlineViewsDataSourceLayersAreSetWhenViewControllersLayerIsSet {
+//    NSMutableArray *layers = [[NSMutableArray alloc] init];
+//    id mockDataSource = [OCMockObject partialMockForObject:[[OutlineViewDataSourceManager alloc] initWithLayers:[[NSMutableArray alloc] init]]];
+//    _viewController.layerOutlineView.dataSource = mockDataSource;
+//    [[mockDataSource expect] setValue:[OCMArg any] forKey:[OCMArg checkWithBlock:^BOOL(id obj) {
+//        return YES;
+//    }]];
+//    
+//    _viewController.layers = layers;
+//    
+////    XCTAssertEqual(layers, [mockDataSource valueForKey:@"layers"], @"Array objects should be equal after setting layers on view controller.");
+//    [mockDataSource verify];
+//    
+//}
 
 @end

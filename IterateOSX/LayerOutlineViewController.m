@@ -10,6 +10,8 @@
 #import "OutlineViewDataSourceManager.h"
 #import "OutlineViewLayerDelegateManager.h"
 
+#import "IterateWindowController.h"
+
 @interface LayerOutlineViewController ()
 
 @property (strong) OutlineViewDataSourceManager *layerSourceManager;
@@ -37,8 +39,24 @@
     _layerSourceManager = [[OutlineViewDataSourceManager alloc] initWithLayers:_layers];
     _layerOutlineView.dataSource = _layerSourceManager;
     
-    _layerDelegate = [[OutlineViewLayerDelegateManager alloc] init];
+    _layerDelegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem) {
+        id windowController = self.view.window.windowController;
+        if ([windowController isKindOfClass:[IterateWindowController class]]) {
+            IterateWindowController *iterateWindowController = (IterateWindowController*)windowController;
+            iterateWindowController.parentObject = parentObject;
+            iterateWindowController.selectedItem = selectedItem;
+        }
+        
+    }];
     _layerOutlineView.delegate = _layerDelegate;
+    
+    
+    
+//    [_layerDelegate outlineView:_layerOutlineView shouldSelectItem:_layerOutlineView.selectedCell];
+}
+
+- (void)viewWillLayout {
+    [super viewWillLayout];
     
     NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedOutlineViewRow"];
     [_layerOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:[number intValue]] byExtendingSelection:YES];
@@ -57,10 +75,7 @@
 - (void)setLayers:(NSMutableArray *)layers {
     _layers = layers;
     [_layerSourceManager setValue:_layers forKey:@"layers"];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_layerOutlineView reloadData];
-    });
-    
+    [_layerOutlineView reloadData];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

@@ -647,7 +647,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="Document Window Controller" id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Document Window Controller" id="B8D-0N-5wS" customClass="IterateWindowController" sceneMemberID="viewController">
                     <window key="window" title="Iterate" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
@@ -738,6 +738,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </colorWell>
+                                    <connections>
+                                        <action selector="updateCanvasColor:" target="B8D-0N-5wS" id="UXs-i4-n9v"/>
+                                    </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
@@ -2375,10 +2378,10 @@
             </objects>
             <point key="canvasLocation" x="1352" y="570"/>
         </scene>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="9dc-4E-U9G">
             <objects>
-                <viewController id="8Gf-Vd-Zpw" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewController" id="8Gf-Vd-Zpw" customClass="ContentViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="JMk-47-mzf" customClass="FlippedView">
                         <rect key="frame" x="0.0" y="0.0" width="509" height="330"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2391,7 +2394,7 @@
         <!--Motion View Controller-->
         <scene sceneID="7PM-Gr-QAR">
             <objects>
-                <viewController storyboardIdentifier="EmitterCellMotionViewController" id="AG8-rX-BbB" userLabel="Motion View Controller" customClass="SideMenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmitterCellMotionViewController" id="AG8-rX-BbB" userLabel="Motion View Controller" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="hiX-67-Bel">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>

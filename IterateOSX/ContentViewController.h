@@ -7,13 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LayerContentViewControllerProtocol.h"
 
-@interface ViewController : NSViewController
+@interface ContentViewController : NSViewController <LayerContentViewControllerProtocol>
 
 @property (weak) IBOutlet NSScrollView *scrollView;
 @property (strong, nonatomic) NSArray *layers;
+@property (strong) id activeLayer;
+@property (strong) id selectedItem;
+@property (strong) NSColor *canvasBackgroundColor;
 
-- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value;
 
 @end
 

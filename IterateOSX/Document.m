@@ -8,7 +8,7 @@
 
 #import "Document.h"
 #import <QuartzCore/QuartzCore.h>
-#import "ViewController.h"
+#import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
 
 @interface Document () <NSWindowDelegate>
@@ -54,7 +54,7 @@
     
     //Send layer array to content view
     
-    ViewController *viewController = (ViewController*)splitViewController.childViewControllers[1];
+    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
     viewController.layers = self.layers;
     
 }
@@ -188,6 +188,9 @@
     NSSplitViewController *leftSplitViewController = (NSSplitViewController*)splitViewController.childViewControllers[0];
     LayerOutlineViewController *outlineViewController = leftSplitViewController.childViewControllers[0];
     outlineViewController.layers = self.layers;
+    
+    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    viewController.layers = self.layers;
 }
 
 - (NSMutableArray *)layers {

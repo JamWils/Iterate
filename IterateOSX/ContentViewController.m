@@ -6,18 +6,21 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <QuartzCore/QuartzCore.h>
-#import <CoreGraphics/CoreGraphics.h>
+#import "ContentViewController.h"
+#import "IterateColorSystemConversions.h"
+@import QuartzCore;
+@import CoreGraphics;
 
-@interface ViewController () <NSUserActivityDelegate, NSStreamDelegate>
+@interface ContentViewController () <NSUserActivityDelegate, NSStreamDelegate>
 
 @property (strong, nonatomic) NSInputStream *inputStream;
 @property (strong, nonatomic) NSOutputStream *outputStream;
 
 @end
 
-@implementation ViewController
+@implementation ContentViewController
+
+@synthesize canvasBackgroundColor = _canvasBackgroundColor;
             
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,52 +37,17 @@
     
     NSView *view = self.view;
     CALayer *viewLayer = [CALayer layer];
-    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
-    [view setWantsLayer:YES]; // view's backing store is using a Core Animation Layer
+    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)];
+    [view setWantsLayer:YES];
     [view setLayer:viewLayer];
     
     [self initializeOutputStream];
-    //When your info is stale:
-
     
 }
 
 - (void) viewWillAppear {
     [super viewWillAppear];
-    
-    
-//    int multiplier = 1;
-    
-    
-    
-//    CAEmitterLayer *emitter = [CAEmitterLayer layer];
-//    //    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
-//    emitter.emitterPosition = CGPointMake(500, 300);
-//    emitter.emitterMode = kCAEmitterLayerOutline;
-//    emitter.emitterShape = kCAEmitterLayerCuboid;
-//    emitter.renderMode = kCAEmitterLayerAdditive;
-//    emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
-//    emitter.name = @"moonLayer";
-//    _moon = emitter;
-    
-//    [self.view.layer addSublayer:_moon];
-    
-    //Create the emitter cell
-//    CAEmitterCell* particle = [CAEmitterCell emitterCell];
-//    particle.emissionLongitude = M_PI;
-//    particle.birthRate = 20;
-//    particle.lifetime = multiplier;
-//    particle.lifetimeRange = multiplier * 0.35;
-//    particle.velocity = 0;
-//    particle.velocityRange = 130;
-//    particle.emissionRange = 1.1;
-//    particle.scaleSpeed = 0.3;
-//    CGColorRef color = CGColorCreateGenericRGB(0.3, 0.4, 0.9, 0.10);
-//    particle.color = color;
-//    CGColorRelease(color);
-//    particle.contents = (id) [self CGImageNamed:@"Moon"];
-//    emitter.emitterCells = @[particle];
-//    particle.name = @"moonParticle";
+    NSLog(@"%@", self.view.window.windowController);
 }
 
 - (void)viewDidAppear {
@@ -118,16 +86,6 @@
     [_outputStream open];
 }
 
--(CGImageRef)CGImageNamed:(NSString*)name {
-    NSImage *testImage = [NSImage imageNamed:@"Moon"];
-
-    CGImageSourceRef source;
-    
-    source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
-    CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
-    return maskRef;
-}
-
 - (void)updateUserActivityState:(NSUserActivity *)userActivity {
     [super updateUserActivityState:userActivity];
 //    [userActivity addUserInfoEntriesFromDictionary:@{
@@ -154,14 +112,24 @@
         NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
-- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value {
-    for (CALayer *layer in [self.view.layer sublayers]) {
-        if ([layer.name isEqualToString:@"moonLayer"]) {
-            CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
-            [emitterLayer setValue:value forKeyPath:propertyName];
+- (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value isCellValue:(BOOL)isCellValue {
+    if (_activeLayer) {
+        for (CALayer *layer in [self.view.layer sublayers]) {
+            if ([layer.name isEqualToString:[_activeLayer valueForKey:@"name"]]) {
+                CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
+                
+                if ([_selectedItem isKindOfClass:[CAEmitterCell class]]  && isCellValue) {
+                    NSString *keyPath = [NSString stringWithFormat:@"%@.%@.%@", @"emitterCells", [_selectedItem valueForKey:@"name"], propertyName];
+                    [emitterLayer setValue:value forKeyPath:keyPath];
+                } else {
+                    [emitterLayer setValue:value forKeyPath:propertyName];
+                }
+                
+            }
         }
+        self.userActivity.needsSave = YES;
     }
-    self.userActivity.needsSave = YES;
+    
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode {
@@ -182,15 +150,27 @@
     }
 
 }
-
+//
 - (void)setLayers:(NSArray *)layers {
     //Send a notification that layers were loaded
     _layers = layers;
     
+    [self.view setSubviews:[NSArray array]];
     for (CALayer *layer in _layers) {
         [self.view.layer addSublayer:layer];
     }
     [self.view setNeedsDisplay:YES];
+}
+
+- (void)setCanvasBackgroundColor:(NSColor *)canvasBackgroundColor {
+    _canvasBackgroundColor = canvasBackgroundColor;
+//    CGColorRef cgColor = [NSColor IterateNSColorToCGColor:canvasBackgroundColor];
+    [self.view.layer setBackgroundColor:canvasBackgroundColor.CGColor];
+//    CGColorRelease(cgColor);
+}
+
+- (NSColor *)canvasBackgroundColor {
+    return _canvasBackgroundColor;
 }
 
 @end

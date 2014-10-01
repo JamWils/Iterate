@@ -9,7 +9,11 @@
 @import AppKit;
 @import QuartzCore;
 
+typedef void (^OutlineViewParentObjectBlock)(id parentObject, id selectedItem);
+
 @interface OutlineViewLayerDelegateManager : NSObject <NSOutlineViewDelegate>
+
+- (instancetype)initWithParentObjectBlock:(OutlineViewParentObjectBlock)parentObjectBlock;
 
 @property (strong) CALayer *activeLayer;
 @property (strong) id selectedItem;
