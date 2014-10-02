@@ -7,7 +7,7 @@
 //
 
 #import "IterateInsertViewController.h"
-#import "Document.h"
+#import "IterateDocument.h"
 @import QuartzCore;
 
 @interface IterateInsertViewController ()
@@ -24,8 +24,8 @@
 - (IBAction)addCellClicked:(NSButton *)sender {
     id document = [[NSDocumentController sharedDocumentController] currentDocument];
     
-    if ([document isKindOfClass:[Document class]]) {
-        Document *layerDocument = (Document*)document;
+    if ([document isKindOfClass:[IterateDocument class]]) {
+        IterateDocument *layerDocument = (IterateDocument*)document;
         int multiplier = 1;
         CALayer *viewLayer = [CALayer layer];
         [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel

@@ -8,12 +8,16 @@
 
 #import "IterateWindowController.h"
 #import "ContentViewController.h"
+#import "LayerOutlineViewController.h"
 
 @interface IterateWindowController ()
 
 @end
 
 @implementation IterateWindowController
+
+@synthesize parentObject = _parentObject;
+@synthesize selectedItem = _selectedItem;
 
 - (void)windowDidLoad {
     [super windowDidLoad];
@@ -48,11 +52,17 @@
     viewController.selectedItem = selectedItem;
 }
 
+- (id)selectedItem {
+    return _selectedItem;
+}
+
 - (IBAction)updateCanvasColor:(id)sender {
-    NSViewController *viewController = [self retrieveContentViewControllerAtIndex:1];
-    if ([viewController isKindOfClass:[ContentViewController class]]) {
-        ContentViewController *contentViewController = (ContentViewController*)viewController;
-        contentViewController.canvasBackgroundColor = ((NSColorWell*)sender).color;
+    if (sender) {
+        _contentViewControllerProtocol.canvasBackgroundColor = ((NSColorWell*)sender).color;
+        
+    } else {
+        _contentViewControllerProtocol.canvasBackgroundColor = [NSColor whiteColor];
+        _canvasColorWell.color = [NSColor whiteColor];
     }
 }
 

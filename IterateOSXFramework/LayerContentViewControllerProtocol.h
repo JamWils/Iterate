@@ -10,6 +10,8 @@
 
 @protocol LayerContentViewControllerProtocol <NSObject>
 
+@property (strong) NSColor *canvasBackgroundColor;
+
 - (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value isCellValue:(BOOL)isCellValue;
 
 @end

@@ -647,7 +647,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="Document Window Controller" id="B8D-0N-5wS" customClass="IterateWindowController" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="IterateWindowController" id="B8D-0N-5wS" customClass="IterateWindowController" sceneMemberID="viewController">
                     <window key="window" title="Iterate" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
@@ -754,6 +754,7 @@
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="canvasColorWell" destination="oVh-Gp-X8B" id="0G9-Pt-7AD"/>
                         <segue destination="M2M-ag-2f6" kind="relationship" relationship="window.shadowedContentViewController" id="916-MW-W2U"/>
                     </connections>
                 </windowController>
@@ -3634,7 +3635,7 @@
                                 </connections>
                             </button>
                             <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-iy-ECI">
-                                <rect key="frame" x="0.0" y="434" width="250" height="5"/>
+                                <rect key="frame" x="0.0" y="434" width="250" height="4"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>

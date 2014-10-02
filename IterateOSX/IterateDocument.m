@@ -6,16 +6,17 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "Document.h"
+#import "IterateDocument.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
+#import "IterateWindowController.h"
 
-@interface Document () <NSWindowDelegate>
+@interface IterateDocument () <NSWindowDelegate>
 
 @end
 
-@implementation Document
+@implementation IterateDocument
 
 @synthesize layers = _layers;
 
@@ -23,6 +24,7 @@
     self = [super init];
     if (self) {
         _layers = [[NSMutableArray alloc] init];
+        _canvasBackgroundColor = [NSColor whiteColor];
     }
     return self;
 }
@@ -40,10 +42,10 @@
 
 - (void)makeWindowControllers {
     // Override to return the Storyboard file name of the document.
-    NSWindowController *windowController = (NSWindowController*)[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"];
+    IterateWindowController *windowController = (IterateWindowController*)[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"IterateWindowController"];
     [self addWindowController:windowController];
     
-    NSLog(@"%@", windowController.window.contentViewController);
+//    NSLog(@"%@", windowController.window.contentViewController);
     [self testData];
     
     NSSplitViewController *splitViewController = (NSSplitViewController*)windowController.window.contentViewController;
@@ -55,7 +57,10 @@
     //Send layer array to content view
     
     ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    windowController.contentViewControllerProtocol = viewController;
+    [windowController updateCanvasColor:nil];
     viewController.layers = self.layers;
+//    viewController.canvasBackgroundColor = _canvasBackgroundColor;
     
 }
 

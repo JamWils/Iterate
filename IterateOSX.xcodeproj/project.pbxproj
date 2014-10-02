@@ -33,6 +33,7 @@
 		1A736E8919DC49DD0075C61C /* LayerContentViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */; };
 		1A736E8D19DC79640075C61C /* IterateColorSystemConversions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A736E8B19DC79640075C61C /* IterateColorSystemConversions.h */; };
 		1A736E8E19DC79640075C61C /* IterateColorSystemConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A736E8C19DC79640075C61C /* IterateColorSystemConversions.m */; };
+		1A736E9119DCCA830075C61C /* IterateWindowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */; };
 		1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */; };
 		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
 		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; };
@@ -55,6 +56,7 @@
 		1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37A19D0A21700B141E5 /* EmitterPointControlBehavior.m */; };
 		1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */; };
 		1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */; };
+		1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
 		1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,7 +65,7 @@
 		1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096C19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m */; };
 		1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */; };
 		1ABAC6C519D1F2CD0040DB01 /* EmitterShapesControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */; };
-		1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* Document.m */; };
+		1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */; };
 		1AC63B8719D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */; };
 		1AC63B8919D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */; };
 		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */; };
@@ -181,6 +183,7 @@
 		1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerContentViewControllerProtocol.h; sourceTree = "<group>"; };
 		1A736E8B19DC79640075C61C /* IterateColorSystemConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateColorSystemConversions.h; sourceTree = "<group>"; };
 		1A736E8C19DC79640075C61C /* IterateColorSystemConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateColorSystemConversions.m; sourceTree = "<group>"; };
+		1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateWindowControllerTests.m; sourceTree = "<group>"; };
 		1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecimalValueFormatter.h; sourceTree = "<group>"; };
 		1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalValueFormatter.m; sourceTree = "<group>"; };
 		1A74ADC719CC7DFD00B894EC /* FlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedView.h; sourceTree = "<group>"; };
@@ -205,6 +208,7 @@
 		1A9DC37A19D0A21700B141E5 /* EmitterPointControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPointControlBehavior.m; sourceTree = "<group>"; };
 		1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSizeControlBehavior.h; sourceTree = "<group>"; };
 		1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSizeControlBehavior.m; sourceTree = "<group>"; };
+		1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocumentTests.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
 		1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -213,8 +217,8 @@
 		1AAE096C19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterConstantControlBehavior.m; sourceTree = "<group>"; };
 		1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterShapesControlBehavior.h; sourceTree = "<group>"; };
 		1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterShapesControlBehavior.m; sourceTree = "<group>"; };
-		1AC0C6BB19D16EF6001FFC85 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
-		1AC0C6BC19D16EF6001FFC85 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		1AC0C6BB19D16EF6001FFC85 /* IterateDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateDocument.h; sourceTree = "<group>"; };
+		1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocument.m; sourceTree = "<group>"; };
 		1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSizeControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterConstantControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewDataSourceManager.h; sourceTree = "<group>"; };
@@ -413,8 +417,8 @@
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
 				1AD94D0219BBA3AF001A2015 /* Main.storyboard */,
 				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
-				1AC0C6BB19D16EF6001FFC85 /* Document.h */,
-				1AC0C6BC19D16EF6001FFC85 /* Document.m */,
+				1AC0C6BB19D16EF6001FFC85 /* IterateDocument.h */,
+				1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */,
 				1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */,
 				1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */,
 				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
@@ -448,6 +452,8 @@
 				1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */,
 				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
 				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
+				1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */,
+				1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */,
 			);
 			path = IterateOSXTests;
 			sourceTree = "<group>";
@@ -713,7 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC0C6BD19D16EF6001FFC85 /* Document.m in Sources */,
+				1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */,
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
 				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
@@ -729,7 +735,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */,
+				1A736E9119DCCA830075C61C /* IterateWindowControllerTests.m in Sources */,
 				1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */,
+				1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */,
 				1AFE1E1919DAFD6600337EC0 /* ContentViewControllerTests.m in Sources */,
 				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
 				1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */,

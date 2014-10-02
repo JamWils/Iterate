@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Document : NSDocument
+@interface IterateDocument : NSDocument
 
 @property (copy) NSMutableArray *layers;
+@property (copy) NSColor *canvasBackgroundColor;
 
 @end
