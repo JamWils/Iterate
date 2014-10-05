@@ -32,10 +32,10 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    id behavior = [self controlWithPropertyName:@"spin"];
-    XCTAssertNotNil(behavior, @"Spin behavior should not be nil");
-}
+//- (void)testExample {
+//    id behavior = [self controlWithPropertyName:@"spin"];
+//    XCTAssertNotNil(behavior, @"Spin behavior should not be nil");
+//}
 
 - (EmitterControlBehavior*)controlWithPropertyName:(NSString*)propertyName {
     __block EmitterControlBehavior *returnBehavior;

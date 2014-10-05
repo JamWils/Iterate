@@ -33,6 +33,7 @@
 - (void)setUp {
     [super setUp];
     _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:nil];
+    
     _dataSource = [[OutlineViewDataSourceManager alloc] initWithLayers:self.layers];
     _mockOutlineView = [OCMockObject partialMockForObject:[[NSOutlineView alloc] init]];
     
@@ -205,6 +206,20 @@
     
     XCTAssertEqual(layer, configuredLayer, @"The parent object should be equal to the active layer");
     XCTAssertEqualObjects(@"", configuredSelectedItem, @"The selected item should be equal to a blank string");
+}
+
+- (void)testParentBlockCanBeNil {
+    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:nil];
+    
+    _delegate.activeLayer = [[CALayer alloc] init];
+    _delegate.selectedItem = [[CALayer alloc] init];
+    [[NSNotificationCenter defaultCenter] addMockObserver:self.observerMock name:kDidChangeSelectedEmitterCellNotification object:nil];
+    [[self.observerMock expect] notificationWithName:kDidChangeSelectedEmitterCellNotification object:[OCMArg any] userInfo:[OCMArg any]];
+    
+    [_delegate outlineViewSelectionDidChange:nil];
+    
+    XCTAssertThrows([self.observerMock verify], @"An unexpected exception was thrown");
+    [[NSNotificationCenter defaultCenter] removeObserver:_observerMock];
 }
 
 //- (void)testParentLayerIsSentIntoBlockWhenSelectedItemIsNil {

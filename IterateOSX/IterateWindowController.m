@@ -9,6 +9,8 @@
 #import "IterateWindowController.h"
 #import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
+#import "IterateInsertViewController.h"
+
 
 @interface IterateWindowController ()
 
@@ -58,11 +60,11 @@
 
 - (IBAction)updateCanvasColor:(id)sender {
     if (sender) {
-        _contentViewControllerProtocol.canvasBackgroundColor = ((NSColorWell*)sender).color;
+        _canvasViewController.canvasBackgroundColor = ((NSColorWell*)sender).color;
         
     } else {
-        _contentViewControllerProtocol.canvasBackgroundColor = [NSColor whiteColor];
-        _canvasColorWell.color = [NSColor whiteColor];
+        _canvasViewController.canvasBackgroundColor = [NSColor blackColor];
+        _canvasColorWell.color = [NSColor blackColor];
     }
 }
 
@@ -75,6 +77,15 @@
 //    }
     
     return viewController;
+}
+
+- (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"InsertViewControllerSegue"]) {
+        IterateInsertViewController *viewController = (IterateInsertViewController*)segue.destinationController;
+        viewController.selectedItem = _selectedItem;
+        viewController.canvasBounds = _canvasViewController.view.bounds;
+        viewController.document = self.document;
+    }
 }
 
 //- (void)setSelectedItem:(id)selectedItem {

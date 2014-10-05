@@ -53,13 +53,14 @@
     
     
 //    [_layerDelegate outlineView:_layerOutlineView shouldSelectItem:_layerOutlineView.selectedCell];
+    NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedOutlineViewRow"];
+    [_layerOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:[number intValue]] byExtendingSelection:YES];
 }
 
 - (void)viewWillLayout {
     [super viewWillLayout];
     
-    NSNumber *number = [[NSUserDefaults standardUserDefaults] objectForKey:@"selectedOutlineViewRow"];
-    [_layerOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:[number intValue]] byExtendingSelection:YES];
+    
 }
 
 - (void)viewWillDisappear {

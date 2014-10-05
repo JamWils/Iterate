@@ -10,4 +10,14 @@
 
 @interface IterateInsertViewController : NSViewController
 
+@property (strong) id document;
+@property (strong) id selectedItem;
+
+@property (weak) IBOutlet NSButton *addLayerButton;
+@property (weak) IBOutlet NSButton *addEmitterCellButton;
+@property CGRect canvasBounds;
+
+- (IBAction)addEmitterLayer:(id)sender;
+- (IBAction)addEmitterCell:(id)sender;
+
 @end

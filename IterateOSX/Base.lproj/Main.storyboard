@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="14A343f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6246"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6249"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -697,7 +697,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="w0J-zn-tav" kind="popover" popoverAnchorView="z65-3d-o8r" popoverBehavior="t" preferredEdge="maxY" id="F9p-c6-76N"/>
+                                            <segue destination="w0J-zn-tav" kind="popover" identifier="InsertViewControllerSegue" popoverAnchorView="z65-3d-o8r" popoverBehavior="t" preferredEdge="maxY" id="F9p-c6-76N"/>
                                         </connections>
                                     </button>
                                 </toolbarItem>
@@ -792,21 +792,35 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lzh-Rg-uLl">
-                                <rect key="frame" x="14" y="104" width="197" height="32"/>
-                                <buttonCell key="cell" type="push" title="Add Cell" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dG3-g4-arA">
+                                <rect key="frame" x="14" y="61" width="197" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add Emitter Cell" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dG3-g4-arA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addCellClicked:" target="w0J-zn-tav" id="COh-Kf-dyq"/>
+                                    <action selector="addEmitterCell:" target="w0J-zn-tav" id="GIv-3c-71T"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-HN-n9S">
+                                <rect key="frame" x="14" y="96" width="197" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add Emitter Layer" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nZX-pm-xSM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addEmitterLayer:" target="w0J-zn-tav" id="vdK-o2-sNr"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="addEmitterCellButton" destination="lzh-Rg-uLl" id="kwU-M1-1HX"/>
+                        <outlet property="addLayerButton" destination="WQG-HN-n9S" id="cGP-Jr-9G3"/>
+                    </connections>
                 </viewController>
                 <customObject id="1Sd-5c-qzP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-708.5" y="79"/>
+            <point key="canvasLocation" x="-778.5" y="117"/>
         </scene>
         <!--Layer Outline View Controller-->
         <scene sceneID="GW5-ii-Uav">
@@ -3635,7 +3649,7 @@
                                 </connections>
                             </button>
                             <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-iy-ECI">
-                                <rect key="frame" x="0.0" y="434" width="250" height="4"/>
+                                <rect key="frame" x="0.0" y="434" width="250" height="5"/>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <font key="titleFont" metaFont="system"/>

@@ -50,7 +50,10 @@
     
     if (_selectedItem != nil && _activeLayer != nil) {
         [userInfo setValue:_activeLayer forKey:@"layer"];
-        _parentObjectBlock(_activeLayer, _selectedItem);
+        if (_parentObjectBlock) {
+            _parentObjectBlock(_activeLayer, _selectedItem);
+        }
+        
         
         if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
             

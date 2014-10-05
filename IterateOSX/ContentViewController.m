@@ -10,6 +10,7 @@
 #import "IterateColorSystemConversions.h"
 @import QuartzCore;
 @import CoreGraphics;
+@import AppKit;
 
 @interface ContentViewController () <NSUserActivityDelegate, NSStreamDelegate>
 
@@ -42,6 +43,9 @@
     [view setLayer:viewLayer];
     
     [self initializeOutputStream];
+    
+    NSPanGestureRecognizer *gestureRecognizer = [[NSPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveView:)];
+    [self.view addGestureRecognizer:gestureRecognizer];
     
 }
 
@@ -164,13 +168,15 @@
 
 - (void)setCanvasBackgroundColor:(NSColor *)canvasBackgroundColor {
     _canvasBackgroundColor = canvasBackgroundColor;
-//    CGColorRef cgColor = [NSColor IterateNSColorToCGColor:canvasBackgroundColor];
     [self.view.layer setBackgroundColor:canvasBackgroundColor.CGColor];
-//    CGColorRelease(cgColor);
 }
 
 - (NSColor *)canvasBackgroundColor {
     return _canvasBackgroundColor;
+}
+
+- (void)moveView:(NSPanGestureRecognizer*)recognizer {
+    
 }
 
 @end

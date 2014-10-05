@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "LayerContentViewControllerProtocol.h"
+@class ContentViewController;
 @class LayerOutlineViewController;
 
 @interface IterateWindowController : NSWindowController
@@ -15,7 +15,7 @@
 @property (strong) id selectedItem;
 @property (strong) id parentObject;
 
-@property (assign) id<LayerContentViewControllerProtocol> contentViewControllerProtocol;
+@property (assign) ContentViewController *canvasViewController;
 @property (assign) LayerOutlineViewController *outlineViewController;
 
 @property (weak) IBOutlet NSColorWell *canvasColorWell;

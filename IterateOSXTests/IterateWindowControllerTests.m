@@ -31,7 +31,7 @@
     [_windowController window];
     
     _mockContentViewController = [OCMockObject mockForClass:[ContentViewController class]];
-    _windowController.contentViewControllerProtocol = _mockContentViewController;
+    _windowController.canvasViewController = _mockContentViewController;
     
     
 }
@@ -56,7 +56,7 @@
 }
 
 - (void)testCanvasBackgroundColorIsSetToWhiteWhenUpdateCanvasColorSenderIsNil {
-    [[_mockContentViewController expect] setCanvasBackgroundColor:[NSColor whiteColor]];
+    [[_mockContentViewController expect] setCanvasBackgroundColor:[NSColor blackColor]];
     
     [_windowController updateCanvasColor:nil];
     [_mockContentViewController verify];
@@ -74,16 +74,12 @@
 }
 
 - (void)testColorWellIsUpdatedWhenUpdateCanvasColorSenderIsNil {
-//    _mockCanvasColorWell = [OCMockObject mockForClass:[NSToolbarItem class]];
-    [_windowController.canvasColorWell setValue:[NSColor redColor] forKey:@"color"];
-    _windowController.canvasColorWell = _mockCanvasColorWell;
-    
-    [[_mockContentViewController expect] setCanvasBackgroundColor:[NSColor whiteColor]];
+    [[_mockContentViewController stub] setCanvasBackgroundColor:[NSColor blackColor]];
     
     [_windowController updateCanvasColor:nil];
-//    [_mockContentViewController verify];
-    NSColorSpace *colorResult = _windowController.canvasColorWell.color.colorSpace;
-    XCTAssertEqual([NSColor whiteColor].colorSpace, colorResult, @"The color well should be set to white.");
+    
+    XCTAssertEqualObjects([NSColor blackColor], _windowController.canvasColorWell.color);
+    
     
 }
 

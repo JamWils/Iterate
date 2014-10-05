@@ -57,7 +57,7 @@
     //Send layer array to content view
     
     ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
-    windowController.contentViewControllerProtocol = viewController;
+    windowController.canvasViewController = viewController;
     [windowController updateCanvasColor:nil];
     viewController.layers = self.layers;
 //    viewController.canvasBackgroundColor = _canvasBackgroundColor;
@@ -87,90 +87,40 @@
 
 - (void)testData {
 //    NSView *view = self.view;
-    int multiplier = 1;
-    
-    CALayer *viewLayer = [CALayer layer];
-    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
-    
-    CAEmitterLayer *emitter = [CAEmitterLayer layer];
-    //    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
-    emitter.emitterPosition = CGPointMake(500, 300);
-    emitter.emitterMode = kCAEmitterLayerOutline;
-    emitter.emitterShape = kCAEmitterLayerCuboid;
-    emitter.zPosition = 140.0f;
-    emitter.emitterDepth = 20.0f;
-    emitter.renderMode = kCAEmitterLayerAdditive;
-    emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
-    emitter.name = @"moonLayer";
-    
-    //Create the emitter cell
-    CAEmitterCell* particle = [CAEmitterCell emitterCell];
-    particle.emissionLongitude = M_PI;
-    particle.birthRate = 20;
-    particle.lifetime = multiplier;
-    particle.lifetimeRange = multiplier * 0.35;
-    particle.velocity = 0;
-    particle.velocityRange = 130;
-    particle.emissionRange = 1.1;
-    particle.scaleSpeed = 0.3;
-    CGColorRef color = CGColorCreateGenericRGB(0.3, 0.4, 0.9, 0.10);
-    particle.color = color;
-    CGColorRelease(color);
-    particle.contents = (id) [self CGImageNamed:@"Moon"];
-    emitter.emitterCells = @[particle];
-    particle.name = @"moonParticle";
-    
-    [self.layers addObject:emitter];
-    
-//    CALayer *layer = [[CALayer alloc] init];
-//    layer.name = @"mainLayer";
+//    int multiplier = 1;
 //    
-//    CAEmitterLayer *emitterLayer = [[CAEmitterLayer alloc] init];
-//    emitterLayer.name = @"emitterLayerOne";
+//    CALayer *viewLayer = [CALayer layer];
+//    [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
 //    
-//    CAEmitterCell *emitterCell = [[CAEmitterCell alloc] init];
-//    emitterCell.name = @"emitterCellOne";
+//    CAEmitterLayer *emitter = [CAEmitterLayer layer];
+//    //    emitter.emitterPosition = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
+//    emitter.emitterPosition = CGPointMake(500, 300);
+//    emitter.emitterMode = kCAEmitterLayerOutline;
+//    emitter.emitterShape = kCAEmitterLayerCuboid;
+//    emitter.zPosition = 140.0f;
+//    emitter.emitterDepth = 20.0f;
+//    emitter.renderMode = kCAEmitterLayerAdditive;
+//    emitter.emitterSize = CGSizeMake(30 * multiplier, 0);
+//    emitter.name = @"moonLayer";
 //    
-//    CAEmitterCell *emitterCellTwo = [[CAEmitterCell alloc] init];
-//    emitterCellTwo.name = @"emitterCellTwo";
+//    //Create the emitter cell
+//    CAEmitterCell* particle = [CAEmitterCell emitterCell];
+//    particle.emissionLongitude = M_PI;
+//    particle.birthRate = 20;
+//    particle.lifetime = multiplier;
+//    particle.lifetimeRange = multiplier * 0.35;
+//    particle.velocity = 0;
+//    particle.velocityRange = 130;
+//    particle.emissionRange = 1.1;
+//    particle.scaleSpeed = 0.3;
+//    CGColorRef color = CGColorCreateGenericRGB(0.3, 0.4, 0.9, 0.10);
+//    particle.color = color;
+//    CGColorRelease(color);
+//    particle.contents = (id) [self CGImageNamed:@"Moon"];
+//    emitter.emitterCells = @[particle];
+//    particle.name = @"moonParticle";
 //    
-//    CAEmitterCell *emitterCellSix = [[CAEmitterCell alloc] init];
-//    emitterCellSix.name = @"emitterCellSix";
-//    emitterLayer.emitterCells = @[emitterCell, emitterCellTwo, emitterCellSix];
-//    
-//    CAEmitterCell *emitterCellA = [[CAEmitterCell alloc] init];
-//    emitterCellA.name = @"emitterCellA";
-//    emitterCellTwo.emitterCells = @[emitterCellA];
-//    
-//    CAEmitterLayer *subEmitterLayer = [[CAEmitterLayer alloc] init];
-//    subEmitterLayer.name = @"subLayer";
-//    
-//    CAEmitterCell *subEmitterCell = [[CAEmitterCell alloc] init];
-//    subEmitterCell.name = @"subEmitterCell";
-//    subEmitterLayer.emitterCells = @[subEmitterCell];
-//    [emitterLayer addSublayer:subEmitterLayer];
-//    [layer addSublayer:emitterLayer];
-//    
-//    CAEmitterLayer *emitterLayerTwo = [[CAEmitterLayer alloc] init];
-//    emitterLayerTwo.name = @"emitterLayerTwo";
-//    
-//    CAEmitterCell *emitterCellThree = [[CAEmitterCell alloc] init];
-//    emitterCellThree.name = @"emitterCellThree";
-//    
-//    CAEmitterCell *emitterCellFour = [[CAEmitterCell alloc] init];
-//    emitterCellFour.name = @"emitterCellFour";
-//    
-//    CAEmitterCell *emitterCellFive = [[CAEmitterCell alloc] init];
-//    emitterCellFive.name = @"emitterCellFive";
-//    
-//    emitterLayerTwo.emitterCells = @[emitterCellThree, emitterCellFour, emitterCellFive];
-//    [layer addSublayer:emitterLayerTwo];
-//    
-//    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
-//    shapeLayer.name = @"shapeLayer";
-//    
-//    [_layers addObject:layer];
-//    [_layers addObject:shapeLayer];
+//    [self.layers addObject:emitter];
 
 }
 
