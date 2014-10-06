@@ -10,7 +10,10 @@
 
 @interface ContainerLayoutView : NSView
 
-@property (weak) IBOutlet NSLayoutConstraint *containerHeight;
-@property (weak) IBOutlet NSLayoutConstraint *scrollViewHeight;
+@property (assign) NSLayoutConstraint *containerHeight;
+@property (assign) NSLayoutConstraint *scrollViewDocumentHeight;
+
+@property (assign) NSString *testProperty;
+@property (assign) NSLayoutConstraint *testConstraint;
 
 @end

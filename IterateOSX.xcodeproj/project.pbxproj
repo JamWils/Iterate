@@ -56,6 +56,7 @@
 		1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37A19D0A21700B141E5 /* EmitterPointControlBehavior.m */; };
 		1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */; };
 		1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */; };
+		1A9F420719E216FF00877DF7 /* IteratePropertiesActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F420619E216FF00877DF7 /* IteratePropertiesActiveViewController.m */; };
 		1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
@@ -72,6 +73,7 @@
 		1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
 		1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */; };
+		1AD1117119E1A23300994125 /* EmitterCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD1117019E1A23300994125 /* EmitterCell.storyboard */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
 		1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
@@ -208,6 +210,8 @@
 		1A9DC37A19D0A21700B141E5 /* EmitterPointControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPointControlBehavior.m; sourceTree = "<group>"; };
 		1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSizeControlBehavior.h; sourceTree = "<group>"; };
 		1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSizeControlBehavior.m; sourceTree = "<group>"; };
+		1A9F420519E216FF00877DF7 /* IteratePropertiesActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IteratePropertiesActiveViewController.h; sourceTree = "<group>"; };
+		1A9F420619E216FF00877DF7 /* IteratePropertiesActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IteratePropertiesActiveViewController.m; sourceTree = "<group>"; };
 		1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocumentTests.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 		1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterFloatControlBehavior.h; sourceTree = "<group>"; };
 		1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehavior.m; sourceTree = "<group>"; };
 		1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPointControlBehaviorTests.m; sourceTree = "<group>"; };
+		1AD1117019E1A23300994125 /* EmitterCell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmitterCell.storyboard; sourceTree = "<group>"; };
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94CF719BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -386,6 +391,19 @@
 			name = Behaviors;
 			sourceTree = "<group>";
 		};
+		1A9F420819E2172000877DF7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F420519E216FF00877DF7 /* IteratePropertiesActiveViewController.h */,
+				1A9F420619E216FF00877DF7 /* IteratePropertiesActiveViewController.m */,
+				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
+				1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */,
+				1A66962419DA504100CD65D5 /* IterateInsertViewController.h */,
+				1A66962519DA504100CD65D5 /* IterateInsertViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +430,7 @@
 		1AD94CF519BBA3AF001A2015 /* IterateOSX */ = {
 			isa = PBXGroup;
 			children = (
+				1A9F420819E2172000877DF7 /* ViewControllers */,
 				1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */,
 				1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */,
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
@@ -421,14 +440,11 @@
 				1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */,
 				1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */,
 				1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */,
-				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
-				1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */,
 				1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */,
 				1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */,
-				1A66962419DA504100CD65D5 /* IterateInsertViewController.h */,
-				1A66962519DA504100CD65D5 /* IterateInsertViewController.m */,
 				1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */,
 				1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */,
+				1AD1117019E1A23300994125 /* EmitterCell.storyboard */,
 			);
 			path = IterateOSX;
 			sourceTree = "<group>";
@@ -685,6 +701,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD1117119E1A23300994125 /* EmitterCell.storyboard in Resources */,
 				1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */,
 				1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */,
 			);
@@ -722,6 +739,7 @@
 				1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */,
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
+				1A9F420719E216FF00877DF7 /* IteratePropertiesActiveViewController.m in Sources */,
 				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,

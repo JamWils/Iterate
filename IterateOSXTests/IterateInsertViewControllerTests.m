@@ -67,6 +67,20 @@
     XCTAssertTrue(_viewController.addEmitterCellButton.enabled, @"The add emitter cell button should be enabled when selected item is not nil");
 }
 
+- (void)testAddLayerButtonIsDisabledWhenSelectedItemIsEmitterCell {
+    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    [_viewController viewWillAppear];
+    
+    XCTAssertFalse(_viewController.addLayerButton.enabled, @"The add emitter cell button should be disabled when selected item is nil");
+}
+
+- (void)testAddLayerButtonIsEnabledWhenSelectedItemIsNotNil {
+    _viewController.selectedItem = nil;
+    [_viewController viewWillAppear];
+    
+    XCTAssertTrue(_viewController.addLayerButton.enabled, @"The add emitter cell button should be enabled when selected item is not nil");
+}
+
 - (void)testEmitterLayerIsAdded {
     _viewController.selectedItem = nil;
     _viewController.canvasBounds = CGRectMake(0, 0, 10, 10);
@@ -95,7 +109,7 @@
     
     CAEmitterCell *emitterCell = [layers[0] valueForKey:@"emitterCells"][0];
     XCTAssertNotNil(emitterCell, @"An emitter cell should be added to a new emitter layer.");
-    XCTAssertTrue(emitterCell.birthRate == 20, @"The default birthrate should be 20.");
+    XCTAssertTrue(emitterCell.birthRate == 5, @"The default birthrate should be 20.");
     XCTAssertTrue(emitterCell.lifetime == 1, @"The default lifetime should be 1.");
     XCTAssertTrue(emitterCell.lifetimeRange == 1, @"The default lifetime range should be 1.");
     XCTAssertTrue(emitterCell.velocity == 0, @"The default velocity should be 0.");
@@ -144,8 +158,25 @@
     
     CAEmitterCell *cellTwo = emitterCells[1];
     CAEmitterCell *cellThree = emitterCells[2];
-    XCTAssertTrue([cellTwo.name isEqualToString:@"emitterCell2"], @"The second emitter cell should be named emitterCell02");
-    XCTAssertTrue([cellThree.name isEqualToString:@"emitterCell3"], @"The second emitter cell should be named emitterCell03");
+    XCTAssertTrue([cellTwo.name isEqualToString:@"emitterCell2"], @"The second emitter cell should be named emitterCell2");
+    XCTAssertTrue([cellThree.name isEqualToString:@"emitterCell3"], @"The third emitter cell should be named emitterCell3");
+}
+
+- (void)testNewEmitterLayerNameIsDifferentFromPriorCells {
+    _viewController.selectedItem = nil;
+    NSMutableArray *layers = [[NSMutableArray alloc] init];
+    [[[_mockIterateDocument stub] andReturn:layers] layers];
+    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
+    
+    [_viewController addEmitterLayer:nil];
+    _viewController.selectedItem = layers[0];
+    [_viewController addEmitterLayer:nil];
+    [_viewController addEmitterLayer:nil];
+    
+    CAEmitterLayer *layerTwo = layers[1];
+    CAEmitterLayer *layerThree = layers[2];
+    XCTAssertTrue([layerTwo.name isEqualToString:@"emitterLayer2"], @"The second emitter layer should be named emitterLayer2");
+    XCTAssertTrue([layerThree.name isEqualToString:@"emitterLayer3"], @"The third emitter layer should be named emitterLayer3");
 }
 
 @end
