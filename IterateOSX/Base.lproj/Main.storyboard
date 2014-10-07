@@ -1018,10 +1018,10 @@
             </objects>
             <point key="canvasLocation" x="596.5" y="903"/>
         </scene>
-        <!--Iterate Properties Active View Controller-->
+        <!--Active Properties View Controller-->
         <scene sceneID="jq7-w2-PKP">
             <objects>
-                <viewController storyboardIdentifier="IteratePropertiesActiveViewController" id="H6C-2N-cz2" customClass="IteratePropertiesActiveViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivePropertiesViewController" id="H6C-2N-cz2" customClass="ActivePropertiesViewController" sceneMemberID="viewController">
                     <view key="view" id="E7l-8d-yjK">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>

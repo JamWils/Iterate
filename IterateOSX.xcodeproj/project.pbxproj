@@ -56,7 +56,7 @@
 		1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37A19D0A21700B141E5 /* EmitterPointControlBehavior.m */; };
 		1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */; };
 		1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */; };
-		1A9F420719E216FF00877DF7 /* IteratePropertiesActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F420619E216FF00877DF7 /* IteratePropertiesActiveViewController.m */; };
+		1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */; };
 		1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
@@ -70,17 +70,19 @@
 		1AC63B8719D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */; };
 		1AC63B8919D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */; };
 		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */; };
+		1AC9268919E32CF300BC1488 /* ActivePropertiesViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9268819E32CF300BC1488 /* ActivePropertiesViewControllerTests.m */; };
+		1AC9268B19E32FDF00BC1488 /* ContainerLayoutViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC9268A19E32FDF00BC1488 /* ContainerLayoutViewTests.m */; };
 		1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
 		1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */; };
-		1AD1117119E1A23300994125 /* EmitterCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD1117019E1A23300994125 /* EmitterCell.storyboard */; };
+		1ACC158E19E34D69006C702E /* CategoryInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC158D19E34D69006C702E /* CategoryInformation.m */; };
+		1ACC159019E34EE9006C702E /* CategoryInformationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC158F19E34EE9006C702E /* CategoryInformationTests.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
 		1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
 		1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0219BBA3AF001A2015 /* Main.storyboard */; };
 		1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */; };
 		1AD94D5519BBC4B1001A2015 /* IterateOSXFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */; };
 		1AD94D6419BBC4B1001A2015 /* IterateOSXFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; };
 		1AD94D6519BBC4B1001A2015 /* IterateOSXFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */; };
@@ -210,8 +212,8 @@
 		1A9DC37A19D0A21700B141E5 /* EmitterPointControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPointControlBehavior.m; sourceTree = "<group>"; };
 		1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSizeControlBehavior.h; sourceTree = "<group>"; };
 		1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSizeControlBehavior.m; sourceTree = "<group>"; };
-		1A9F420519E216FF00877DF7 /* IteratePropertiesActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IteratePropertiesActiveViewController.h; sourceTree = "<group>"; };
-		1A9F420619E216FF00877DF7 /* IteratePropertiesActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IteratePropertiesActiveViewController.m; sourceTree = "<group>"; };
+		1A9F420519E216FF00877DF7 /* ActivePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivePropertiesViewController.h; sourceTree = "<group>"; };
+		1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivePropertiesViewController.m; sourceTree = "<group>"; };
 		1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocumentTests.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
@@ -227,10 +229,14 @@
 		1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterConstantControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewDataSourceManager.h; sourceTree = "<group>"; };
 		1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManager.m; sourceTree = "<group>"; };
+		1AC9268819E32CF300BC1488 /* ActivePropertiesViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivePropertiesViewControllerTests.m; sourceTree = "<group>"; };
+		1AC9268A19E32FDF00BC1488 /* ContainerLayoutViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLayoutViewTests.m; sourceTree = "<group>"; };
 		1ACA9A6219C92479003AA564 /* EmitterFloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterFloatControlBehavior.h; sourceTree = "<group>"; };
 		1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterFloatControlBehavior.m; sourceTree = "<group>"; };
 		1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPointControlBehaviorTests.m; sourceTree = "<group>"; };
-		1AD1117019E1A23300994125 /* EmitterCell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmitterCell.storyboard; sourceTree = "<group>"; };
+		1ACC158C19E34D69006C702E /* CategoryInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryInformation.h; sourceTree = "<group>"; };
+		1ACC158D19E34D69006C702E /* CategoryInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryInformation.m; sourceTree = "<group>"; };
+		1ACC158F19E34EE9006C702E /* CategoryInformationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryInformationTests.m; sourceTree = "<group>"; };
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94CF719BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -246,7 +252,6 @@
 		1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateOSXFramework.h; sourceTree = "<group>"; };
 		1AD94D5A19BBC4B1001A2015 /* IterateOSXFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateOSXFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94D5F19BBC4B1001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateOSXFrameworkTests.m; sourceTree = "<group>"; };
 		1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerLayoutView.h; sourceTree = "<group>"; };
 		1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerLayoutView.m; sourceTree = "<group>"; };
 		1ADFEC9819D8610300CDFB6B /* Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon.png; sourceTree = "<group>"; };
@@ -394,8 +399,8 @@
 		1A9F420819E2172000877DF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1A9F420519E216FF00877DF7 /* IteratePropertiesActiveViewController.h */,
-				1A9F420619E216FF00877DF7 /* IteratePropertiesActiveViewController.m */,
+				1A9F420519E216FF00877DF7 /* ActivePropertiesViewController.h */,
+				1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */,
 				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
 				1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */,
 				1A66962419DA504100CD65D5 /* IterateInsertViewController.h */,
@@ -404,14 +409,23 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		1ACC158B19E34C3A006C702E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1ACC158C19E34D69006C702E /* CategoryInformation.h */,
+				1ACC158D19E34D69006C702E /* CategoryInformation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
-				1A417B4F19D44B17009DF3A2 /* OCMock.framework */,
 				1AD94CF519BBA3AF001A2015 /* IterateOSX */,
 				1AD94D0C19BBA3AF001A2015 /* IterateOSXTests */,
 				1AD94D5119BBC4B1001A2015 /* IterateOSXFramework */,
 				1AD94D5D19BBC4B1001A2015 /* IterateOSXFrameworkTests */,
+				1A417B4F19D44B17009DF3A2 /* OCMock.framework */,
 				1AD94CF419BBA3AF001A2015 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -430,21 +444,21 @@
 		1AD94CF519BBA3AF001A2015 /* IterateOSX */ = {
 			isa = PBXGroup;
 			children = (
-				1A9F420819E2172000877DF7 /* ViewControllers */,
 				1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */,
 				1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */,
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
-				1AD94D0219BBA3AF001A2015 /* Main.storyboard */,
-				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
 				1AC0C6BB19D16EF6001FFC85 /* IterateDocument.h */,
 				1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */,
+				1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */,
+				1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */,
+				1AD94D0219BBA3AF001A2015 /* Main.storyboard */,
+				1ACC158B19E34C3A006C702E /* Model */,
 				1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */,
 				1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */,
 				1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */,
 				1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */,
-				1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */,
-				1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */,
-				1AD1117019E1A23300994125 /* EmitterCell.storyboard */,
+				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
+				1A9F420819E2172000877DF7 /* ViewControllers */,
 			);
 			path = IterateOSX;
 			sourceTree = "<group>";
@@ -461,15 +475,16 @@
 		1AD94D0C19BBA3AF001A2015 /* IterateOSXTests */ = {
 			isa = PBXGroup;
 			children = (
-				1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */,
+				1ACC158F19E34EE9006C702E /* CategoryInformationTests.m */,
+				1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */,
 				1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */,
-				1AD94D0D19BBA3AF001A2015 /* Supporting Files */,
+				1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */,
 				1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */,
-				1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */,
 				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
 				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
-				1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */,
-				1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */,
+				1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */,
+				1AD94D0D19BBA3AF001A2015 /* Supporting Files */,
+				1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */,
 			);
 			path = IterateOSXTests;
 			sourceTree = "<group>";
@@ -510,8 +525,8 @@
 			isa = PBXGroup;
 			children = (
 				1A66961A19DA2B1100CD65D5 /* Behaviors */,
-				1AD94D6019BBC4B1001A2015 /* IterateOSXFrameworkTests.m */,
 				1AD94D5E19BBC4B1001A2015 /* Supporting Files */,
+				1AC9268A19E32FDF00BC1488 /* ContainerLayoutViewTests.m */,
 			);
 			path = IterateOSXFrameworkTests;
 			sourceTree = "<group>";
@@ -528,10 +543,11 @@
 		1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AC9268819E32CF300BC1488 /* ActivePropertiesViewControllerTests.m */,
+				1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */,
+				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
 				1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */,
 				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
-				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
-				1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -701,7 +717,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD1117119E1A23300994125 /* EmitterCell.storyboard in Resources */,
 				1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */,
 				1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */,
 			);
@@ -739,9 +754,10 @@
 				1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */,
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
-				1A9F420719E216FF00877DF7 /* IteratePropertiesActiveViewController.m in Sources */,
+				1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */,
 				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */,
+				1ACC158E19E34D69006C702E /* CategoryInformation.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,
 				1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */,
 				1AD94CF919BBA3AF001A2015 /* main.m in Sources */,
@@ -755,10 +771,12 @@
 				1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */,
 				1A736E9119DCCA830075C61C /* IterateWindowControllerTests.m in Sources */,
 				1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */,
+				1AC9268919E32CF300BC1488 /* ActivePropertiesViewControllerTests.m in Sources */,
 				1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */,
 				1AFE1E1919DAFD6600337EC0 /* ContentViewControllerTests.m in Sources */,
 				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
 				1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */,
+				1ACC159019E34EE9006C702E /* CategoryInformationTests.m in Sources */,
 				1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */,
 				1A66962819DA508D00CD65D5 /* IterateInsertViewControllerTests.m in Sources */,
 				1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */,
@@ -798,12 +816,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD94D6119BBC4B1001A2015 /* IterateOSXFrameworkTests.m in Sources */,
 				1A66962319DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m in Sources */,
 				1A2A350E19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m in Sources */,
 				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,
 				1A2A350C19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m in Sources */,
+				1AC9268B19E32FDF00BC1488 /* ContainerLayoutViewTests.m in Sources */,
 				1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */,
 				1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */,
 				1AC63B8719D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m in Sources */,
@@ -930,6 +948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -938,6 +957,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "IterateOSX/IterateOSX-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -945,6 +966,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -953,6 +975,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "IterateOSX/IterateOSX-Bridging-Header.h";
 			};
 			name = Release;
 		};

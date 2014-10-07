@@ -8,7 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface IteratePropertiesActiveViewController : NSViewController
+@interface ActivePropertiesViewController : NSViewController
+
 @property (weak) IBOutlet NSScrollView *scrollView;
+
+- (void)addChildViewControllers:(NSArray*)categoryItems;
 
 @end
