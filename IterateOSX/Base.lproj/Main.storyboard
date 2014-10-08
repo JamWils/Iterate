@@ -1022,16 +1022,13 @@
         <scene sceneID="jq7-w2-PKP">
             <objects>
                 <viewController storyboardIdentifier="ActivePropertiesViewController" id="H6C-2N-cz2" customClass="ActivePropertiesViewController" sceneMemberID="viewController">
-                    <view key="view" id="E7l-8d-yjK">
+                    <view key="view" wantsLayer="YES" id="E7l-8d-yjK">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4P-Ia-GGt">
-                                <rect key="frame" x="0.0" y="7" width="250" height="393"/>
-                            </customView>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-cv-epl">
+                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-cv-epl">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
-                                <clipView key="contentView" id="ieI-P1-WTu">
+                                <clipView key="contentView" wantsLayer="YES" id="ieI-P1-WTu">
                                     <rect key="frame" x="1" y="1" width="166" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1041,8 +1038,7 @@
                                     </subviews>
                                 </clipView>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="Pfw-gQ-50r"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="VTW-8j-YIK"/>
+                                    <constraint firstAttribute="width" constant="250" id="VTW-8j-YIK"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="As0-9x-YwF">
                                     <rect key="frame" x="1" y="80" width="166" height="15"/>
@@ -1069,10 +1065,10 @@
             </objects>
             <point key="canvasLocation" x="597" y="1378"/>
         </scene>
-        <!--View Controller-->
+        <!--Active Navigation Bar View Controller-->
         <scene sceneID="Gev-yi-IO2">
             <objects>
-                <viewController id="OrW-nB-6lb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActiveNavigationBarViewController" id="OrW-nB-6lb" customClass="ActiveNavigationBarViewController" sceneMemberID="viewController">
                     <view key="view" id="fTD-gs-98z">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1086,13 +1082,19 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="layerButtonSelected:" target="OrW-nB-6lb" id="g2x-uf-gdm"/>
+                                        </connections>
                                     </button>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-cO-bkR">
                                         <rect key="frame" x="154" y="0.0" width="40" height="28"/>
-                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CAEmitterCell Icon" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="sMu-pE-2Eg">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CAEmitterCell Icon" imagePosition="only" alignment="center" alternateImage="CAEmitterLayer Icon" imageScaling="proportionallyDown" inset="2" id="sMu-pE-2Eg">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="EmitterCellButtonSelected:" target="OrW-nB-6lb" id="COT-Yw-gIq"/>
+                                        </connections>
                                     </button>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-C5-Myy">
                                         <rect key="frame" x="106" y="0.0" width="40" height="28"/>
@@ -1100,6 +1102,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="emitterLayerButtonSelected:" target="OrW-nB-6lb" id="Lfs-un-Zfz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1115,6 +1120,11 @@
                             <constraint firstItem="QBY-On-Cbs" firstAttribute="top" secondItem="fTD-gs-98z" secondAttribute="top" id="bAg-88-5W6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emitterCellMenuButton" destination="Pz7-cO-bkR" id="7aT-yq-vtp"/>
+                        <outlet property="emitterLayerMenuButton" destination="eiQ-C5-Myy" id="Z6h-Go-gyh"/>
+                        <outlet property="layerMenuButton" destination="6BS-dN-ZPv" id="rrG-wF-cTX"/>
+                    </connections>
                 </viewController>
                 <customObject id="SZh-GT-QFe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1396,11 +1406,11 @@
         <scene sceneID="Fv4-VW-xaV">
             <objects>
                 <viewController storyboardIdentifier="EmitterCellColorViewController" id="Ydt-gB-E7j" userLabel="Color View Controller" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="tJW-sX-3Un">
+                    <view key="view" wantsLayer="YES" id="tJW-sX-3Un" customClass="ContainerLayoutView">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="366"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-2F-fGq" userLabel="Color View" customClass="ContainerLayoutView">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-2F-fGq" userLabel="Color View">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="366"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wdx-d1-diZ">
@@ -2137,12 +2147,12 @@
         <!--Visual View Controller-->
         <scene sceneID="rak-7M-j47">
             <objects>
-                <viewController id="ZSG-ys-Jkb" userLabel="Visual View Controller" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="WFY-3T-KfI">
+                <viewController storyboardIdentifier="EmitterCellVisualViewController" id="ZSG-ys-Jkb" userLabel="Visual View Controller" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="WFY-3T-KfI" customClass="ContainerLayoutView">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-Lu-0mS" userLabel="Visual View" customClass="ContainerLayoutView">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-Lu-0mS" userLabel="Visual View">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-eX-LIR">
@@ -2626,7 +2636,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="Scale and Filters"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultHeight">
-                            <integer key="value" value="284"/>
+                            <integer key="value" value="340"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -3143,7 +3153,7 @@
         <!--Temporal View Controller-->
         <scene sceneID="MO9-I5-C7m">
             <objects>
-                <viewController id="6QR-0Z-P9Z" userLabel="Temporal View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmitterCellTemporalViewController" id="6QR-0Z-P9Z" userLabel="Temporal View Controller" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="adK-vp-Jfa">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="510"/>
                         <autoresizingMask key="autoresizingMask"/>

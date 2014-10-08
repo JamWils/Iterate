@@ -159,15 +159,21 @@
             switch (topConstraintCount) {
                 case 0:
                     XCTAssertTrue(constraint.firstItem == [_viewController.childViewControllers[0] view]);
+                    XCTAssertTrue(constraint.firstAttribute == NSLayoutAttributeTop);
                     XCTAssertTrue(constraint.secondItem == _viewController.scrollView.documentView);
+                    XCTAssertTrue(constraint.secondAttribute == NSLayoutAttributeTop);
                     break;
                 case 1:
                     XCTAssertTrue(constraint.firstItem == [_viewController.childViewControllers[1] view]);
+                    XCTAssertTrue(constraint.firstAttribute == NSLayoutAttributeTop);
                     XCTAssertTrue(constraint.secondItem == [_viewController.childViewControllers[0] view]);
+                    XCTAssertTrue(constraint.secondAttribute == NSLayoutAttributeBottom);
                     break;
                 case 2:
                     XCTAssertTrue(constraint.firstItem == [_viewController.childViewControllers[2] view]);
+                    XCTAssertTrue(constraint.firstAttribute == NSLayoutAttributeTop);
                     XCTAssertTrue(constraint.secondItem == [_viewController.childViewControllers[1] view]);
+                    XCTAssertTrue(constraint.secondAttribute == NSLayoutAttributeBottom);
                     break;
                 default:
                     break;

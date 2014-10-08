@@ -33,8 +33,8 @@
     XCTAssert(_view, @"View should not be nil");
 }
 
-- (void)testTranlsatesAutoresizingMaskIntoConstraintsIsFalse {
-    XCTAssertFalse(_view.translatesAutoresizingMaskIntoConstraints, @"Translates autoresizing mask into constraints should be set to no for ContainerLayoutViews");
-}
+//- (void)testTranlsatesAutoresizingMaskIntoConstraintsIsFalse {
+//    XCTAssertFalse(_view.translatesAutoresizingMaskIntoConstraints, @"Translates autoresizing mask into constraints should be set to no for ContainerLayoutViews");
+//}
 
 @end

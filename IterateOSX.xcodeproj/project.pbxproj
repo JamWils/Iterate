@@ -64,6 +64,7 @@
 		1AAE096A19CF89CE00C95D7C /* EmitterControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096819CF89CE00C95D7C /* EmitterControlBehavior.m */; };
 		1AAE096D19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096B19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h */; };
 		1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096C19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m */; };
+		1AB6F69919E542E9003D5365 /* ActiveNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6F69819E542E9003D5365 /* ActiveNavigationBarViewController.m */; };
 		1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */; };
 		1ABAC6C519D1F2CD0040DB01 /* EmitterShapesControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */; };
 		1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */; };
@@ -221,6 +222,8 @@
 		1AAE096819CF89CE00C95D7C /* EmitterControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehavior.m; sourceTree = "<group>"; };
 		1AAE096B19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterConstantControlBehavior.h; sourceTree = "<group>"; };
 		1AAE096C19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterConstantControlBehavior.m; sourceTree = "<group>"; };
+		1AB6F69719E542E9003D5365 /* ActiveNavigationBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveNavigationBarViewController.h; sourceTree = "<group>"; };
+		1AB6F69819E542E9003D5365 /* ActiveNavigationBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveNavigationBarViewController.m; sourceTree = "<group>"; };
 		1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterShapesControlBehavior.h; sourceTree = "<group>"; };
 		1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterShapesControlBehavior.m; sourceTree = "<group>"; };
 		1AC0C6BB19D16EF6001FFC85 /* IterateDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateDocument.h; sourceTree = "<group>"; };
@@ -399,6 +402,8 @@
 		1A9F420819E2172000877DF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AB6F69719E542E9003D5365 /* ActiveNavigationBarViewController.h */,
+				1AB6F69819E542E9003D5365 /* ActiveNavigationBarViewController.m */,
 				1A9F420519E216FF00877DF7 /* ActivePropertiesViewController.h */,
 				1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */,
 				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
@@ -757,6 +762,7 @@
 				1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */,
 				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */,
+				1AB6F69919E542E9003D5365 /* ActiveNavigationBarViewController.m in Sources */,
 				1ACC158E19E34D69006C702E /* CategoryInformation.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,
 				1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */,
