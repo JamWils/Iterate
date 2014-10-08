@@ -197,6 +197,12 @@
 //    
 //    containerView.scrollViewDocumentHeight = contentViewHeight;
     
+    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeRight)] withConstant:0];
+    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeLeft)] withConstant:0];
+    
+    //If there is an issue with the layout this line could be the problem.
+    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeTop)] withConstant:0];
+    
 }
 
 - (void)viewDidLayout {
@@ -206,14 +212,36 @@
 }
 
 - (void)addChildViewControllers:(NSArray*)categoryItems {
+    __block id previousView = _scrollView.documentView;
     [categoryItems enumerateObjectsUsingBlock:^(CategoryInformation *categoryItem, NSUInteger idx, BOOL *stop) {
         NSViewController *viewController = [self.storyboard instantiateControllerWithIdentifier:categoryItem.storyboardIdentifier];
+        
         [viewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self addChildViewController:viewController];
         [_scrollView.documentView addSubview:viewController.view];
-        [self addConstraintWithView:viewController.view toView:nil withAttributes:@[@(NSLayoutAttributeHeight), @(NSLayoutAttributeNotAnAttribute)] withConstant:categoryItem.height];
-        [self addConstraintWithView:viewController.view toView:_scrollView.documentView withAttributes:@[@(NSLayoutAttributeRight)] withConstant:0];
-        [self addConstraintWithView:viewController.view toView:_scrollView.documentView withAttributes:@[@(NSLayoutAttributeLeft)] withConstant:0];
+        
+        [self addConstraintWithView:viewController.view
+                             toView:nil
+                     withAttributes:@[@(NSLayoutAttributeHeight), @(NSLayoutAttributeNotAnAttribute)]
+                       withConstant:categoryItem.height];
+        
+        [self addConstraintWithView:viewController.view
+                             toView:_scrollView.documentView
+                     withAttributes:@[@(NSLayoutAttributeRight)]
+                       withConstant:0];
+        
+        [self addConstraintWithView:viewController.view
+                             toView:_scrollView.documentView
+                     withAttributes:@[@(NSLayoutAttributeLeft)]
+                       withConstant:0];
+        
+        [self addConstraintWithView:viewController.view
+                             toView:previousView
+                            forView:_scrollView.documentView
+                     withAttributes:@[@(NSLayoutAttributeTop), @(NSLayoutAttributeBottom)]
+                       withConstant:0];
+        
+        previousView = viewController.view;
     }];
 }
 
@@ -234,7 +262,21 @@
     } else {
         [view addConstraint:constraint];
     }
+}
+
+- (void)addConstraintWithView:(NSView*)view toView:(NSView*)toView forView:(NSView*)forView withAttributes:(NSArray*)attributes withConstant:(float)constant {
     
+    NSLayoutAttribute attributeOne = [attributes[0] intValue];
+    NSLayoutAttribute attributeTwo = attributes.count == 1 ? [attributes[0] intValue] : [attributes[1] intValue];
+    
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
+                                                                  attribute:attributeOne
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:toView
+                                                                  attribute:attributeTwo
+                                                                 multiplier:1.0
+                                                                   constant:constant];
+    [forView addConstraint:constraint];
 }
 
 

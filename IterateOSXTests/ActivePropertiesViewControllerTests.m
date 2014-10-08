@@ -12,6 +12,7 @@
 
 #import "ActivePropertiesViewController.h"
 #import "CategoryInformation.h"
+#import "ContainerLayoutView.h"
 
 @interface ActivePropertiesViewControllerTests : XCTestCase
 
@@ -136,28 +137,101 @@
     __block NSUInteger rightConstraintCount = 0;
     [_viewController addChildViewControllers:_categoryItems];
     
-    [[_viewController.scrollView.documentView constraints] enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
-            NSLayoutAttribute attribute = [constraint firstAttribute];
-            if (attribute == NSLayoutAttributeRight) {
-                rightConstraintCount++;
-            }
-    }];
+    [self enumerateConstraints:[_viewController.scrollView.documentView constraints]
+                  forAttribute:NSLayoutAttributeRight
+               validationBlock:^(NSLayoutConstraint *constraint) {
+                   rightConstraintCount++;
+                   XCTAssertTrue([constraint.firstItem isKindOfClass:[NSView class]], @"The first item should be a view class.");
+                   XCTAssertEqual(_viewController.scrollView.documentView, constraint.secondItem, @"The second item should be the scroll view's document view.");
+               }];
     
     XCTAssertTrue(_viewController.childViewControllers.count == rightConstraintCount, @"The right constraint count %lu should equal the view controller child view controller count %lu.", rightConstraintCount, _viewController.childViewControllers.count);
 }
 
-- (void)testEachChildViewContainersViewHasALeftAttributeConstraint {
-    __block NSUInteger leftConstraintCount = 0;
+- (void)testChildViewContainersTopAttributeConnectToEachOther {
+    __block NSUInteger topConstraintCount = 0;
     [_viewController addChildViewControllers:_categoryItems];
     
     [[_viewController.scrollView.documentView constraints] enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
         NSLayoutAttribute attribute = [constraint firstAttribute];
-        if (attribute == NSLayoutAttributeLeft) {
-            leftConstraintCount++;
+        if (attribute == NSLayoutAttributeTop) {
+            
+            switch (topConstraintCount) {
+                case 0:
+                    XCTAssertTrue(constraint.firstItem == [_viewController.childViewControllers[0] view]);
+                    XCTAssertTrue(constraint.secondItem == _viewController.scrollView.documentView);
+                    break;
+                case 1:
+                    XCTAssertTrue(constraint.firstItem == [_viewController.childViewControllers[1] view]);
+                    XCTAssertTrue(constraint.secondItem == [_viewController.childViewControllers[0] view]);
+                    break;
+                case 2:
+                    XCTAssertTrue(constraint.firstItem == [_viewController.childViewControllers[2] view]);
+                    XCTAssertTrue(constraint.secondItem == [_viewController.childViewControllers[1] view]);
+                    break;
+                default:
+                    break;
+            }
+            
+            topConstraintCount++;
         }
     }];
     
-    XCTAssertTrue(_viewController.childViewControllers.count == leftConstraintCount, @"The left constraint count %lu should equal the view controller child view controller count %lu.", leftConstraintCount, _viewController.childViewControllers.count);
+    XCTAssertTrue(_viewController.childViewControllers.count == topConstraintCount, @"The top constraint count %lu should equal the view controller child view controller count %lu.", topConstraintCount, _viewController.childViewControllers.count);
+}
+
+- (void)testScrollViewDocumentHasALeftAttributeConstraintToContentView {
+    __block NSUInteger leftConstraintCount = 0;
+//    [_viewController addChildViewControllers:_categoryItems];
+    
+    [self enumerateConstraints:[_viewController.scrollView.contentView constraints]
+                  forAttribute:NSLayoutAttributeLeft
+               validationBlock:^(NSLayoutConstraint *constraint) {
+                   leftConstraintCount++;
+               }];
+    
+    XCTAssertTrue(1 == leftConstraintCount, @"The left constraint count %lu should be 1", leftConstraintCount);
+}
+
+- (void)testScrollViewDocumentHasARightAttributeConstraintToContentView {
+    __block NSUInteger rightConstraintCount = 0;
+//    [_viewController addChildViewControllers:_categoryItems];
+    
+    [self enumerateConstraints:[_viewController.scrollView.contentView constraints]
+                  forAttribute:NSLayoutAttributeRight
+               validationBlock:^(NSLayoutConstraint *constraint) {
+                   if (_viewController.scrollView.documentView == constraint.firstItem && _viewController.scrollView.contentView == constraint.secondItem) {
+                       rightConstraintCount++;
+                   }
+               }];
+    
+    XCTAssertTrue(1 == rightConstraintCount, @"The right constraint count %lu should be 1", rightConstraintCount);
+}
+
+- (void)testScrollViewDocumentHasATopAttributeConstraintToContentView {
+    __block NSUInteger topConstraintCount = 0;
+    //    [_viewController addChildViewControllers:_categoryItems];
+    
+    [self enumerateConstraints:[_viewController.scrollView.contentView constraints]
+                  forAttribute:NSLayoutAttributeTop
+               validationBlock:^(NSLayoutConstraint *constraint) {
+                   if (_viewController.scrollView.documentView == constraint.firstItem && _viewController.scrollView.contentView == constraint.secondItem) {
+                       topConstraintCount++;
+                   }
+               }];
+    
+    XCTAssertTrue(1 == topConstraintCount, @"The top constraint count %lu should be 1", topConstraintCount);
+}
+
+#pragma mark Helper Methods
+
+- (void)enumerateConstraints:(NSArray*)constraints forAttribute:(NSLayoutAttribute)attribute validationBlock:(void (^) (NSLayoutConstraint *constraint))validationBlock {
+    [constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint *constraint, NSUInteger idx, BOOL *stop) {
+        NSLayoutAttribute attributeConstraint = [constraint firstAttribute];
+        if (attribute == attributeConstraint) {
+            validationBlock(constraint);
+        }
+    }];
 }
 
 @end

@@ -1400,7 +1400,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="366"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-2F-fGq" userLabel="Color View">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-2F-fGq" userLabel="Color View" customClass="ContainerLayoutView">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="366"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wdx-d1-diZ">
@@ -2142,7 +2142,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-Lu-0mS" userLabel="Visual View">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfs-Lu-0mS" userLabel="Visual View" customClass="ContainerLayoutView">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Mp9-eX-LIR">
@@ -2660,7 +2660,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-gl-UGL" userLabel="Motion View">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-gl-UGL" userLabel="Motion View" customClass="ContainerLayoutView">
                                 <rect key="frame" x="0.0" y="-1" width="250" height="341"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="IEp-iI-bjB">
@@ -3148,7 +3148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="510"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7Z-lq-cbC" userLabel="Temporal View">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7Z-lq-cbC" userLabel="Temporal View" customClass="ContainerLayoutView">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="510"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="3Ce-2P-tuI">
