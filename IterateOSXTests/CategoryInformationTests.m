@@ -10,9 +10,11 @@
 #import <XCTest/XCTest.h>
 #import "CategoryInformation.h"
 
+
 @interface CategoryInformationTests : XCTestCase
 
 @property (strong) CategoryInformation *categoryInformation;
+@property (strong) NSStoryboard *mainStoryboard;
 
 @end
 
@@ -42,6 +44,14 @@
 
 - (void)testHeightIs200 {
     XCTAssertTrue(_categoryInformation.height == 200, @"The height was not set properly");
+}
+
+- (void)testArrayForEmitterCellsReturnsCountOfFive {
+    XCTAssertTrue([[CategoryInformation arrayForEmitterCells] count] == 5, @"The count should be 5.");
+}
+
+- (void)testAllEmitterCellMenuViewsAreAllContainerLayoutViews {
+    
 }
 
 @end

@@ -33,8 +33,8 @@
         
         containerLayoutView = [self retrieveContainerView];
         if (containerLayoutView != nil) {
-            containerLayoutView.containerHeight.animator.constant = 40;
-            containerLayoutView.scrollViewDocumentHeight.animator.constant -= (_defaultHeight - 40);
+            containerLayoutView.containerHeightConstraint.animator.constant = 40;
+            containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant -= (_defaultHeight - 40);
         }
         
     } else {
@@ -44,8 +44,8 @@
         
         containerLayoutView = [self retrieveContainerView];
         if (containerLayoutView != nil) {
-            containerLayoutView.containerHeight.animator.constant = _defaultHeight;
-            containerLayoutView.scrollViewDocumentHeight.animator.constant += (_defaultHeight - 40);
+            containerLayoutView.containerHeightConstraint.animator.constant = _defaultHeight;
+            containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant += (_defaultHeight - 40);
         }
     }
     
@@ -77,13 +77,13 @@
         ContainerLayoutView *containerLayoutView = [self retrieveContainerView];
         if (containerLayoutView != nil) {
             if (oldConstant < newConstant) {
-                containerLayoutView.containerHeight.animator.constant += newConstant;
-                containerLayoutView.scrollViewDocumentHeight.animator.constant += newConstant;
+                containerLayoutView.containerHeightConstraint.animator.constant += newConstant;
+                containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant += newConstant;
                 _defaultHeight += newConstant;
                 _containerHeight.animator.constant = _defaultHeight;
             } else {
-                containerLayoutView.containerHeight.animator.constant -= oldConstant;
-                containerLayoutView.scrollViewDocumentHeight.animator.constant -= oldConstant;
+                containerLayoutView.containerHeightConstraint.animator.constant -= oldConstant;
+                containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant -= oldConstant;
                 _defaultHeight -= oldConstant;
                 _containerHeight.animator.constant = _defaultHeight;
             }

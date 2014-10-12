@@ -29,13 +29,7 @@
 
 - (IBAction)EmitterCellButtonSelected:(NSButton *)sender {
 //    sender.enabled = NO;
-    NSArray *categoryItems = @[
-            [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMainViewController" height:190],
-            [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellColorViewController" height:366],
-            [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellVisualViewController" height:340],
-            [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMotionViewController" height:341],
-            [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellTemporalViewController" height:510]
-                       ];
+    NSArray *categoryItems = [CategoryInformation arrayForEmitterCells];
     
     ActivePropertiesViewController *viewController = [self.parentViewController childViewControllers][1];
     [viewController addChildViewControllers:categoryItems];

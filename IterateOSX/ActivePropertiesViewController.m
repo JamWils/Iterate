@@ -7,12 +7,13 @@
 //
 
 #import "ActivePropertiesViewController.h"
-#import "ContainerLayoutView.h"
-#import "CategoryInformation.h"
+
+@import IterateOSXFramework;
 
 @interface ActivePropertiesViewController ()
 
 @property (strong) NSViewController *mainCellViewController;
+@property (strong, nonatomic) NSLayoutConstraint *scrollViewDocumentHeightConstraint;
 
 @end
 
@@ -21,24 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-////
-//    if ([_scrollView.documentView respondsToSelector:@selector(translatesAutoresizingMaskIntoConstraints)]) {
-//        [_scrollView.documentView setValue:@(NO) forKey:@"translatesAutoresizingMaskIntoConstraints"];
-//    }
-//    
-//    if ([containerView respondsToSelector:@selector(setContainerHeight:)]) {
-//        containerView.containerHeight = mainHeight;
-//    }
+    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
 //
-//    NSArray *categoryItems = @[
-//                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMainViewController" height:190],
-//                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellColorViewController" height:366],
-//                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellVisualViewController" height:340],
-//                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMotionViewController" height:341],
-//                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellTemporalViewController" height:510]
-//                               ];
-//    [self addChildViewControllers:categoryItems];
+    if ([_scrollView.documentView respondsToSelector:@selector(translatesAutoresizingMaskIntoConstraints)]) {
+        [_scrollView.documentView setValue:@(NO) forKey:@"translatesAutoresizingMaskIntoConstraints"];
+    }
     
     NSLayoutConstraint *contentViewHeight = [NSLayoutConstraint constraintWithItem:_scrollView.documentView
                                                                          attribute:NSLayoutAttributeHeight
@@ -46,32 +34,28 @@
                                                                             toItem:nil
                                                                          attribute:NSLayoutAttributeNotAnAttribute
                                                                         multiplier:1.0
-                                                                          constant:3000];
+                                                                          constant:0];
+    _scrollViewDocumentHeightConstraint = contentViewHeight;
     [_scrollView.documentView addConstraint:contentViewHeight];
-    
-//    containerView.scrollViewDocumentHeight = contentViewHeight;
     
     [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeRight)] withConstant:0];
     [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeLeft)] withConstant:0];
     
     //If there is an issue with the layout this line could be the problem.
-    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeTop), @(NSLayoutAttributeBottom)] withConstant:0];
-    
-    
-    
+    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeTop), @(NSLayoutAttributeTop)] withConstant:0];
 }
 
 - (void)viewDidLayout {
     [super viewDidLayout];
-    
-    NSLog(@"After Main Cell container view size: %@", NSStringFromSize(self.scrollView.contentView.frame.size));
 }
 
 - (void)addChildViewControllers:(NSArray*)categoryItems {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
     __block id previousView = _scrollView.documentView;
     
+    __block float heights = 0;
+    
     for (CategoryInformation *categoryItem in categoryItems) {
+        heights += categoryItem.height;
         NSViewController *viewController = [self.storyboard instantiateControllerWithIdentifier:categoryItem.storyboardIdentifier];
         
         
@@ -111,11 +95,8 @@
         
         previousView = viewController.view;
     }
-//    [categoryItems enumerateObjectsUsingBlock:^(CategoryInformation *categoryItem, NSUInteger idx, BOOL *stop) {
-//       
-//    }];
     
-//    [self.view updateLayer];
+    _scrollViewDocumentHeightConstraint.constant = heights;
 }
 
 - (void)addConstraintWithView:(NSView*)view toView:(NSView*)toView withAttributes:(NSArray*)attributes withConstant:(float)constant {
@@ -134,6 +115,12 @@
         [toView addConstraint:constraint];
     } else {
         [view addConstraint:constraint];
+        
+        if (attributeOne == NSLayoutAttributeHeight && [view isKindOfClass:[ContainerLayoutView class]]) {
+            ContainerLayoutView *containerView = (ContainerLayoutView*)view;
+            containerView.containerHeightConstraint = constraint;
+            containerView.scrollViewDocumentHeightConstraint = _scrollViewDocumentHeightConstraint;
+        }
     }
 }
 

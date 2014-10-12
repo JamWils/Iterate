@@ -229,6 +229,62 @@
     XCTAssertTrue(1 == topConstraintCount, @"The top constraint count %lu should be 1", topConstraintCount);
 }
 
+- (void)testChildViewControllersViewsContainerHeightConstraintIsNotNil {
+    [_viewController addChildViewControllers:_categoryItems];
+    
+    [_viewController.childViewControllers enumerateObjectsUsingBlock:^(NSViewController *viewController, NSUInteger idx, BOOL *stop) {
+        ContainerLayoutView *containerView = (ContainerLayoutView*)viewController.view;
+        XCTAssertNotNil(containerView.containerHeightConstraint, @"The container height constraint should not be nil");
+        XCTAssertTrue(containerView.containerHeightConstraint.firstAttribute == NSLayoutAttributeHeight, @"This should be a height attribute.");
+        XCTAssertTrue([_categoryItems[idx] height] == containerView.containerHeightConstraint.constant, @"The category height and constraint height should match.");
+    }];
+    
+    XCTAssertTrue(_viewController.childViewControllers.count > 0, @"Child View Controller count should be greater than zero.");
+}
+
+- (void)testScrollViewDocumentHasHeightAttributeConstraintToSelf {
+    __block NSUInteger heightConstraintCount = 0;
+    
+    [self enumerateConstraints:[_viewController.scrollView.documentView constraints]
+                  forAttribute:NSLayoutAttributeHeight
+               validationBlock:^(NSLayoutConstraint *constraint) {
+                   if (_viewController.scrollView.documentView == constraint.firstItem && constraint.firstAttribute == NSLayoutAttributeHeight) {
+                       heightConstraintCount++;
+                       XCTAssertTrue(constraint.constant == 0, @"The default height for this constraint should be zero.");
+                   }
+               }];
+    
+    XCTAssertTrue(1 == heightConstraintCount, @"The height constraint count %lu should be 1", heightConstraintCount);
+}
+
+- (void)testChildViewControllersViewsScrollViewDocumentHeightConstraintIsNotNil {
+    [_viewController addChildViewControllers:_categoryItems];
+    
+    [_viewController.childViewControllers enumerateObjectsUsingBlock:^(NSViewController *viewController, NSUInteger idx, BOOL *stop) {
+        ContainerLayoutView *containerView = (ContainerLayoutView*)viewController.view;
+        XCTAssertNotNil(containerView.scrollViewDocumentHeightConstraint, @"The scroll view document height constraint should not be nil");
+        XCTAssertTrue(containerView.containerHeightConstraint.firstAttribute == NSLayoutAttributeHeight, @"This should be a height attribute.");
+    }];
+    
+    XCTAssertTrue(_viewController.childViewControllers.count > 0, @"Child View Controller count should be greater than zero.");
+}
+
+- (void)testScrollViewDocumentHeightConstraintIsTheSumOfAllHeightsInCategoryItemArray {
+    [_viewController addChildViewControllers:_categoryItems];
+    
+    __block float heights = 0;
+    [_categoryItems enumerateObjectsUsingBlock:^(CategoryInformation *info, NSUInteger idx, BOOL *stop) {
+        heights += info.height;
+    }];
+    
+    [_viewController.childViewControllers enumerateObjectsUsingBlock:^(NSViewController *viewController, NSUInteger idx, BOOL *stop) {
+        ContainerLayoutView *containerView = (ContainerLayoutView*)viewController.view;
+        XCTAssertTrue(containerView.scrollViewDocumentHeightConstraint.constant == heights, @"The scroll view document height constraint constant should equal the sum of all heights (%f) in the category information array.", heights);
+    }];
+    
+    XCTAssertTrue(_viewController.childViewControllers.count > 0, @"Child View Controller count should be greater than zero.");
+}
+
 #pragma mark Helper Methods
 
 - (void)enumerateConstraints:(NSArray*)constraints forAttribute:(NSLayoutAttribute)attribute validationBlock:(void (^) (NSLayoutConstraint *constraint))validationBlock {

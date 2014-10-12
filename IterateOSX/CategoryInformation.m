@@ -25,4 +25,16 @@
     return self;
 }
 
++ (NSArray*)arrayForEmitterCells {
+    NSArray *categoryItems = @[
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMainViewController" height:175],
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellColorViewController" height:366],
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellVisualViewController" height:340],
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMotionViewController" height:341],
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellTemporalViewController" height:510]
+                               ];
+    
+    return categoryItems;
+}
+
 @end

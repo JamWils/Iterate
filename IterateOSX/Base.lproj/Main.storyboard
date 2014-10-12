@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6249"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -1252,14 +1252,14 @@
             <objects>
                 <viewController storyboardIdentifier="EmitterCellMainViewController" id="Qja-cU-DDN" userLabel="Main Cell View Controller" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="9Gz-ar-4JZ" customClass="ContainerLayoutView">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="190"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="175"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="ByQ-HY-jUg">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="190"/>
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="175"/>
                                 <subviews>
                                     <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vUj-Yu-RvX">
-                                        <rect key="frame" x="5" y="164" width="38" height="16"/>
+                                        <rect key="frame" x="5" y="149" width="38" height="16"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="OMU-tl-9Cr">
                                             <font key="font" metaFont="systemBold" size="12"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1267,7 +1267,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mxf-vd-YLa">
-                                        <rect key="frame" x="214" y="161" width="29" height="19"/>
+                                        <rect key="frame" x="214" y="146" width="29" height="19"/>
                                         <buttonCell key="cell" type="recessed" title="Hide" bezelStyle="recessed" alignment="right" transparent="YES" imageScaling="proportionallyDown" inset="2" id="CzU-71-0eF">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
@@ -1277,7 +1277,7 @@
                                         </connections>
                                     </button>
                                     <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MU3-f3-gmE">
-                                        <rect key="frame" x="20" y="128" width="210" height="22"/>
+                                        <rect key="frame" x="20" y="113" width="210" height="22"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="BYn-aN-mlI">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1288,7 +1288,7 @@
                                         </connections>
                                     </textField>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pZl-3p-XDG" userLabel="1x Image Well">
-                                        <rect key="frame" x="16" y="45" width="69" height="69"/>
+                                        <rect key="frame" x="16" y="30" width="69" height="69"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pZl-3p-XDG" secondAttribute="height" multiplier="1:1" id="5nO-NJ-Vdk"/>
                                         </constraints>
@@ -1298,7 +1298,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TT-bN-wco" userLabel="2x Image Well">
-                                        <rect key="frame" x="91" y="45" width="69" height="69"/>
+                                        <rect key="frame" x="91" y="30" width="69" height="69"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9TT-bN-wco" secondAttribute="height" multiplier="1:1" id="3Ui-om-kvG"/>
                                         </constraints>
@@ -1308,7 +1308,7 @@
                                         </connections>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-ev-VYW" userLabel="3x Image Well">
-                                        <rect key="frame" x="164" y="45" width="69" height="69"/>
+                                        <rect key="frame" x="164" y="30" width="69" height="69"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hxk-ev-VYW" secondAttribute="height" multiplier="1:1" id="NDU-qj-RdI"/>
                                         </constraints>
@@ -1318,7 +1318,7 @@
                                         </connections>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abX-AU-48t">
-                                        <rect key="frame" x="179" y="22" width="38" height="17"/>
+                                        <rect key="frame" x="179" y="7" width="38" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3x" id="MId-ui-kvF">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1326,7 +1326,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dLb-hj-hy8">
-                                        <rect key="frame" x="106" y="22" width="38" height="17"/>
+                                        <rect key="frame" x="106" y="7" width="38" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2x" id="ZW3-Aw-my4">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1334,7 +1334,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="soP-Wl-Rvc">
-                                        <rect key="frame" x="31" y="22" width="38" height="17"/>
+                                        <rect key="frame" x="31" y="7" width="38" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1x" id="qez-aJ-FNI">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1351,7 +1351,7 @@
                                     <constraint firstItem="9TT-bN-wco" firstAttribute="width" secondItem="9TT-bN-wco" secondAttribute="height" multiplier="1:1" id="RX5-u9-hIg"/>
                                     <constraint firstItem="vUj-Yu-RvX" firstAttribute="top" secondItem="ByQ-HY-jUg" secondAttribute="top" constant="10" id="YNV-Mw-ZlM"/>
                                     <constraint firstItem="vUj-Yu-RvX" firstAttribute="leading" secondItem="ByQ-HY-jUg" secondAttribute="leading" constant="7" id="a9E-HB-1qe"/>
-                                    <constraint firstAttribute="height" constant="190" id="grN-ar-inC"/>
+                                    <constraint firstAttribute="height" constant="175" id="grN-ar-inC"/>
                                     <constraint firstItem="mxf-vd-YLa" firstAttribute="top" secondItem="vUj-Yu-RvX" secondAttribute="top" id="nTJ-Gs-CCK"/>
                                 </constraints>
                             </customView>
@@ -1379,7 +1379,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="Emitter Cell - Main"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultHeight">
-                            <integer key="value" value="190"/>
+                            <integer key="value" value="175"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -2666,11 +2666,11 @@
         <scene sceneID="7PM-Gr-QAR">
             <objects>
                 <viewController storyboardIdentifier="EmitterCellMotionViewController" id="AG8-rX-BbB" userLabel="Motion View Controller" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="hiX-67-Bel">
+                    <view key="view" wantsLayer="YES" id="hiX-67-Bel" customClass="ContainerLayoutView">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-gl-UGL" userLabel="Motion View" customClass="ContainerLayoutView">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDz-gl-UGL" userLabel="Motion View">
                                 <rect key="frame" x="0.0" y="-1" width="250" height="341"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="IEp-iI-bjB">
@@ -3154,11 +3154,11 @@
         <scene sceneID="MO9-I5-C7m">
             <objects>
                 <viewController storyboardIdentifier="EmitterCellTemporalViewController" id="6QR-0Z-P9Z" userLabel="Temporal View Controller" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="adK-vp-Jfa">
+                    <view key="view" wantsLayer="YES" id="adK-vp-Jfa" customClass="ContainerLayoutView">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="510"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7Z-lq-cbC" userLabel="Temporal View" customClass="ContainerLayoutView">
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7Z-lq-cbC" userLabel="Temporal View">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="510"/>
                                 <subviews>
                                     <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="3Ce-2P-tuI">
