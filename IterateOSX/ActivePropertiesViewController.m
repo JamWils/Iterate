@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-//
+
     if ([_scrollView.documentView respondsToSelector:@selector(translatesAutoresizingMaskIntoConstraints)]) {
         [_scrollView.documentView setValue:@(NO) forKey:@"translatesAutoresizingMaskIntoConstraints"];
     }
@@ -41,8 +41,7 @@
     [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeRight)] withConstant:0];
     [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeLeft)] withConstant:0];
     
-    //If there is an issue with the layout this line could be the problem.
-    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeTop), @(NSLayoutAttributeTop)] withConstant:0];
+    [self addConstraintWithView:_scrollView.documentView toView:_scrollView.contentView withAttributes:@[@(NSLayoutAttributeTop)] withConstant:0];
 }
 
 - (void)viewDidLayout {
@@ -54,7 +53,7 @@
     
     __block float heights = 0;
     
-    for (CategoryInformation *categoryItem in categoryItems) {
+    [categoryItems enumerateObjectsUsingBlock:^(CategoryInformation *categoryItem, NSUInteger idx, BOOL *stop) {
         heights += categoryItem.height;
         NSViewController *viewController = [self.storyboard instantiateControllerWithIdentifier:categoryItem.storyboardIdentifier];
         
@@ -90,11 +89,16 @@
                                 forView:_scrollView.documentView
                          withAttributes:@[@(NSLayoutAttributeTop), @(NSLayoutAttributeBottom)]
                            withConstant:0];
+            
         }
         
         
         previousView = viewController.view;
-    }
+    }];
+    
+//    for (CategoryInformation *categoryItem in categoryItems) {
+//        
+//    }
     
     _scrollViewDocumentHeightConstraint.constant = heights;
 }

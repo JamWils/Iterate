@@ -55,7 +55,7 @@
 		1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC819CC7DFD00B894EC /* FlippedView.m */; };
 		1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */; };
 		1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */; };
-		1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCF19CCB44300B894EC /* FlippedClipView.h */; };
+		1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCF19CCB44300B894EC /* FlippedClipView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADD019CCB44300B894EC /* FlippedClipView.m */; };
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };

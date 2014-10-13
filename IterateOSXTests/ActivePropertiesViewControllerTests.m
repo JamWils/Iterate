@@ -11,8 +11,7 @@
 #import <OCMock/OCMock.h>
 
 #import "ActivePropertiesViewController.h"
-#import "CategoryInformation.h"
-#import "ContainerLayoutView.h"
+@import IterateOSXFramework;
 
 @interface ActivePropertiesViewControllerTests : XCTestCase
 
@@ -283,6 +282,10 @@
     }];
     
     XCTAssertTrue(_viewController.childViewControllers.count > 0, @"Child View Controller count should be greater than zero.");
+}
+
+- (void)testScrollViewContentViewIsAFlippedView {
+    XCTAssertTrue([_viewController.scrollView.contentView isKindOfClass:[FlippedClipView class]], @"The content view needs to be a flipped view.");
 }
 
 #pragma mark Helper Methods

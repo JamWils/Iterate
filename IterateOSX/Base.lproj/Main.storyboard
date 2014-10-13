@@ -1028,7 +1028,7 @@
                         <subviews>
                             <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-cv-epl">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
-                                <clipView key="contentView" wantsLayer="YES" id="ieI-P1-WTu">
+                                <clipView key="contentView" wantsLayer="YES" id="ieI-P1-WTu" customClass="FlippedClipView">
                                     <rect key="frame" x="1" y="1" width="166" height="79"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1054,7 +1054,7 @@
                             <constraint firstItem="cfd-cv-epl" firstAttribute="top" secondItem="E7l-8d-yjK" secondAttribute="top" id="BDj-73-BLR"/>
                             <constraint firstAttribute="trailing" secondItem="cfd-cv-epl" secondAttribute="trailing" id="OXg-q1-hKo"/>
                             <constraint firstItem="cfd-cv-epl" firstAttribute="leading" secondItem="E7l-8d-yjK" secondAttribute="leading" id="nhS-pG-UZn"/>
-                            <constraint firstAttribute="bottom" secondItem="cfd-cv-epl" secondAttribute="bottom" id="tvV-Y6-dRE"/>
+                            <constraint firstAttribute="bottom" secondItem="cfd-cv-epl" secondAttribute="bottom" priority="750" id="tvV-Y6-dRE"/>
                         </constraints>
                     </view>
                     <connections>
