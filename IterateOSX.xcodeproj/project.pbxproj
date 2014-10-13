@@ -51,7 +51,7 @@
 		1A736E9119DCCA830075C61C /* IterateWindowControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */; };
 		1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC319CC71F600B894EC /* DecimalValueFormatter.h */; };
 		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
-		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; };
+		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC819CC7DFD00B894EC /* FlippedView.m */; };
 		1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */; };
 		1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */; };
