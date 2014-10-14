@@ -18,6 +18,7 @@
 @property (strong) NSStoryboard *mainStoryboard;
 @property (strong) ActivePropertiesViewController *viewController;
 @property (strong) NSArray *categoryItems;
+@property (strong) NSArray *categoryItemsSetTwo;
 
 @end
 
@@ -34,6 +35,11 @@
         [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellColorViewController" height:200],
         [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterCellMotionViewController" height:300]
     ];
+    
+    _categoryItemsSetTwo = @[
+                       [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterLayerMainViewController" height:500],
+                       [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterLayerMultiplierViewController" height:400]
+                       ];
     
 }
 
@@ -66,16 +72,35 @@
     XCTAssertNotNil([_mainStoryboard instantiateControllerWithIdentifier:[_categoryItems[2] storyboardIdentifier]], @"This should not return nil.");
 }
 
+- (void)testBackupTestViewControllersDoNotReturnNil {
+    XCTAssertNotNil([_mainStoryboard instantiateControllerWithIdentifier:[_categoryItemsSetTwo[0] storyboardIdentifier]], @"This should not return nil.");
+    XCTAssertNotNil([_mainStoryboard instantiateControllerWithIdentifier:[_categoryItemsSetTwo[1] storyboardIdentifier]], @"This should not return nil.");
+}
+
 - (void)testChildViewControllersEqualsCategoryInformationCountWhenAddChildViewControllersIsCalled{
     [_viewController addChildViewControllers:_categoryItems];
     
     XCTAssertTrue(_viewController.childViewControllers.count == _categoryItems.count, @"There should be the same number of view controllers as there are category items");
 }
 
+- (void)testChildViewControllersEqualsCategoryItemsSetTwoWhenAddChildViewControllersIsCalledTwice{
+    [_viewController addChildViewControllers:_categoryItems];
+    [_viewController addChildViewControllers:_categoryItemsSetTwo];
+    
+    XCTAssertTrue(_viewController.childViewControllers.count == _categoryItemsSetTwo.count, @"There should be the same number of view controllers as there are category items");
+}
+
 - (void)testDocumentViewCountContainsChildViewControllersViewsAfterAddChildViewControllerIsCalled {
     [_viewController addChildViewControllers:_categoryItems];
     
     XCTAssertTrue([_viewController.scrollView.documentView subviews].count == _categoryItems.count, @"The counts should be equal after removing existing subviews.");
+}
+
+- (void)testDocumentViewCountContainsChildViewControllersViewsCountsEqualsCategoryItemsCountTwo {
+    [_viewController addChildViewControllers:_categoryItems];
+    [_viewController addChildViewControllers:_categoryItemsSetTwo];
+    
+    XCTAssertTrue([_viewController.scrollView.documentView subviews].count == _categoryItemsSetTwo.count, @"The counts should be equal after removing existing subviews and adding category set two.");
 }
 
 - (void)testEachChildViewContainersViewTranslatesAutoresizingIsFalse {

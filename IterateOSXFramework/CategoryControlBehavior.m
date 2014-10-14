@@ -9,6 +9,8 @@
 #import "CategoryControlBehavior.h"
 #import "ContainerLayoutView.h"
 
+extern int const MIN_CONTAINER_HEIGHT = 34;
+
 @interface CategoryControlBehavior ()
 
 @property (weak) IBOutlet NSLayoutConstraint *emitterCellPropertyControlHeight;
@@ -29,12 +31,12 @@
     if ([sender.title isEqualToString:@"Hide"]) {
         sender.title = @"Show";
 //        _emitterCellPropertyControlHeight.animator.constant = 0;
-        _containerHeight.animator.constant = 40;
+        _containerHeight.animator.constant = MIN_CONTAINER_HEIGHT;
         
         containerLayoutView = [self retrieveContainerView];
         if (containerLayoutView != nil) {
-            containerLayoutView.containerHeightConstraint.animator.constant = 40;
-            containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant -= (_defaultHeight - 40);
+            containerLayoutView.containerHeightConstraint.animator.constant = MIN_CONTAINER_HEIGHT;
+            containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant -= (_defaultHeight - MIN_CONTAINER_HEIGHT);
         }
         
     } else {
@@ -45,7 +47,7 @@
         containerLayoutView = [self retrieveContainerView];
         if (containerLayoutView != nil) {
             containerLayoutView.containerHeightConstraint.animator.constant = _defaultHeight;
-            containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant += (_defaultHeight - 40);
+            containerLayoutView.scrollViewDocumentHeightConstraint.animator.constant += (_defaultHeight - MIN_CONTAINER_HEIGHT);
         }
     }
     

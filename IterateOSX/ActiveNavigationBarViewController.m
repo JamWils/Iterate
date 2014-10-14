@@ -12,19 +12,26 @@
 
 @interface ActiveNavigationBarViewController ()
 
+@property (strong, nonatomic) NSArray *buttons;
+
 @end
 
 @implementation ActiveNavigationBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+    _buttons = @[_layerMenuButton, _emitterLayerMenuButton, _emitterCellMenuButton];
 }
 
 - (IBAction)layerButtonSelected:(NSButton *)sender {
 }
 
 - (IBAction)emitterLayerButtonSelected:(NSButton *)sender {
+//    sender.enabled = NO;
+    NSArray *categoryItems = [CategoryInformation arrayForEmitterLayer];
+    
+    ActivePropertiesViewController *viewController = [self.parentViewController childViewControllers][1];
+    [viewController addChildViewControllers:categoryItems];
 }
 
 - (IBAction)EmitterCellButtonSelected:(NSButton *)sender {

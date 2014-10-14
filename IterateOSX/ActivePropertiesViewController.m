@@ -49,8 +49,16 @@
 }
 
 - (void)addChildViewControllers:(NSArray*)categoryItems {
-    __block id previousView = _scrollView.documentView;
     
+    if (self.childViewControllers.count > 0) {
+        for (NSInteger i = self.childViewControllers.count - 1; i >= 0; i--) {
+            NSViewController *childViewController = (NSViewController*)self.childViewControllers[i];
+            [childViewController.view removeFromSuperview];
+            [self removeChildViewControllerAtIndex:i];
+        }
+    }
+    
+    __block id previousView = _scrollView.documentView;
     __block float heights = 0;
     
     [categoryItems enumerateObjectsUsingBlock:^(CategoryInformation *categoryItem, NSUInteger idx, BOOL *stop) {
@@ -95,10 +103,6 @@
         
         previousView = viewController.view;
     }];
-    
-//    for (CategoryInformation *categoryItem in categoryItems) {
-//        
-//    }
     
     _scrollViewDocumentHeightConstraint.constant = heights;
 }
