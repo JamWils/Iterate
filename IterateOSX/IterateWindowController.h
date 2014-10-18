@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 @class ContentViewController;
 @class LayerOutlineViewController;
+@class ActiveNavigationBarViewController;
 
 @interface IterateWindowController : NSWindowController
 
@@ -19,7 +20,6 @@
 @property (assign) LayerOutlineViewController *outlineViewController;
 
 @property (weak) IBOutlet NSColorWell *canvasColorWell;
-
 
 - (IBAction)updateCanvasColor:(id)sender;
 

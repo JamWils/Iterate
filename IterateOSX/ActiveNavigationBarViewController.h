@@ -9,9 +9,12 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ActiveNavigationBarViewController : NSViewController
+
 @property (weak) IBOutlet NSButton *layerMenuButton;
 @property (weak) IBOutlet NSButton *emitterLayerMenuButton;
 @property (weak) IBOutlet NSButton *emitterCellMenuButton;
+
+
 
 - (IBAction)layerButtonSelected:(NSButton *)sender;
 

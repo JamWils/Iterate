@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@import IterateOSXFramework;
 
-@interface IterateDocument : NSDocument
+@interface IterateMacDocument : NSDocument <IterateDocument>
 
-@property (copy) NSMutableArray *layers;
+//@property (copy) NSMutableArray *layers;
 @property (copy) NSColor *canvasBackgroundColor;
-
+//
 @end

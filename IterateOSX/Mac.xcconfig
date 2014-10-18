@@ -1,0 +1,14 @@
+//
+//  Mac.xcconfig
+//  IterateOSX
+//
+//  Created by James Wilson on 10/16/14.
+//  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
+//
+
+#include "Common.xcconfig";
+
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+MACOSX_DEPLOYMENT_TARGET = 10.10
+VALID_ARCHS = $(ARCHS_STANDARD_64_BIT)

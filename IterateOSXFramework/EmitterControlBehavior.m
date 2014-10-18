@@ -34,20 +34,30 @@
                 id detailViewController = nil;
                 
                 NSString *keyPath = nil;
-                if (_isCellProperty) {
-                    NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
-                    detailViewController = splitViewController.childViewControllers[1];
-                    keyPath = _emitterProperty;
-                } else {
-                    NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
-                    NSViewController *leftBottomController = (NSViewController*)splitViewController.childViewControllers[1];
-                    if ([leftBottomController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
-                        NSSplitViewController *parentSplitViewController = (NSSplitViewController*)leftBottomController.parentViewController.parentViewController;
-                        detailViewController = parentSplitViewController.childViewControllers[1];
-                    }
-                    
-                    keyPath = _emitterProperty;
+                
+                NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
+                NSViewController *leftBottomController = (NSViewController*)splitViewController.childViewControllers[1];
+                if ([leftBottomController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
+                    NSSplitViewController *parentSplitViewController = (NSSplitViewController*)leftBottomController.parentViewController.parentViewController;
+                    detailViewController = parentSplitViewController.childViewControllers[1];
                 }
+                
+                keyPath = _emitterProperty;
+                
+//                if (_isCellProperty) {
+//                    NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
+//                    detailViewController = splitViewController.childViewControllers[1];
+//                    keyPath = _emitterProperty;
+//                } else {
+//                    NSSplitViewController *splitViewController = (NSSplitViewController*)containerViewController.parentViewController;
+//                    NSViewController *leftBottomController = (NSViewController*)splitViewController.childViewControllers[1];
+//                    if ([leftBottomController.parentViewController isKindOfClass:[NSSplitViewController class]]) {
+//                        NSSplitViewController *parentSplitViewController = (NSSplitViewController*)leftBottomController.parentViewController.parentViewController;
+//                        detailViewController = parentSplitViewController.childViewControllers[1];
+//                    }
+//                    
+//                    keyPath = _emitterProperty;
+//                }
                 
                 if ([detailViewController respondsToSelector:@selector(updateEmitterCellProperty:withValue:isCellValue:)]) {
                     NSMethodSignature *signature  = [detailViewController methodSignatureForSelector:@selector(updateEmitterCellProperty:withValue:isCellValue:)];

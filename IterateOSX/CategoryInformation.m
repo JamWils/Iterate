@@ -25,6 +25,16 @@
     return self;
 }
 
+//LayerTransformViewController
+
++ (NSArray*)arrayForLayer {
+    NSArray *categoryItems = @[
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerTransformViewController" height:448]
+                               ];
+    
+    return categoryItems;
+}
+
 + (NSArray*)arrayForEmitterLayer {
     NSArray *categoryItems = @[
                                [[CategoryInformation alloc] initWithStoryboardIdentifier:@"EmitterLayerMainViewController" height:452],

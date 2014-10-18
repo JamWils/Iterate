@@ -15,6 +15,7 @@
 @property (readonly, copy) NSString *storyboardIdentifier;
 @property (readonly) float height;
 
++ (NSArray*)arrayForLayer;
 + (NSArray*)arrayForEmitterLayer;
 + (NSArray*)arrayForEmitterCells;
 

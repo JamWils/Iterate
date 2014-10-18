@@ -10,6 +10,7 @@
 #import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
 #import "IterateInsertViewController.h"
+#import "ActiveNavigationBarViewController.h"
 
 
 @interface IterateWindowController ()
@@ -39,6 +40,10 @@
     ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
     viewController.activeLayer = parentObject;
 
+}
+
+- (id)parentObject {
+    return _parentObject;
 }
 
 - (void)setSelectedItem:(id)selectedItem {
@@ -72,9 +77,6 @@
     NSViewController *viewController = nil;
     NSSplitViewController *mainSplitViewController = (NSSplitViewController*)self.window.contentViewController;
     viewController = (NSViewController*)mainSplitViewController.childViewControllers[index];
-//    if (mainSplitViewController.childViewControllers.count < index) {
-//        
-//    }
     
     return viewController;
 }

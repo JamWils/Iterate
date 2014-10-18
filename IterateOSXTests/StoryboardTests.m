@@ -33,6 +33,28 @@
     XCTAssert(_mainStoryboard, @"Storyboard should not be nil");
 }
 
+- (void)testArrayForLayerViewsAreAllContainerLayoutViews {
+    NSArray *layerInformation = [CategoryInformation arrayForLayer];
+    
+    [layerInformation enumerateObjectsUsingBlock:^(CategoryInformation *categoryInfo, NSUInteger idx, BOOL *stop) {
+        NSViewController *viewController = [_mainStoryboard instantiateControllerWithIdentifier:categoryInfo.storyboardIdentifier];
+        XCTAssertTrue([viewController.view isKindOfClass:[ContainerLayoutView class]], @"%@ view controller's view should be a container layout view.", categoryInfo.storyboardIdentifier);
+    }];
+    
+    XCTAssertTrue([layerInformation count] > 0, @"The array count should be greater than zero");
+}
+
+- (void)testArrayForEmitterLayerViewsAreAllContainerLayoutViews {
+    NSArray *emitterLayerInformation = [CategoryInformation arrayForEmitterLayer];
+    
+    [emitterLayerInformation enumerateObjectsUsingBlock:^(CategoryInformation *categoryInfo, NSUInteger idx, BOOL *stop) {
+        NSViewController *viewController = [_mainStoryboard instantiateControllerWithIdentifier:categoryInfo.storyboardIdentifier];
+        XCTAssertTrue([viewController.view isKindOfClass:[ContainerLayoutView class]], @"%@ view controller's view should be a container layout view.", categoryInfo.storyboardIdentifier);
+    }];
+    
+    XCTAssertTrue([emitterLayerInformation count] > 0, @"The array count should be greater than zero");
+}
+
 - (void)testArrayForEmitterCellsViewsAreAllContainerLayoutViews {
     NSArray *emitterCellsInformation = [CategoryInformation arrayForEmitterCells];
     

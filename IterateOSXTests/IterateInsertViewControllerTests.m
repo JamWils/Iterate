@@ -12,7 +12,7 @@
 @import QuartzCore;
 
 #import "IterateInsertViewController.h"
-#import "IterateDocument.h"
+#import "IterateMacDocument.h"
 
 @interface IterateInsertViewControllerTests : XCTestCase
 
@@ -30,7 +30,7 @@
     _viewController = [storyboard instantiateControllerWithIdentifier:@"IterateInsertViewController"];
     [_viewController view];
     
-    _mockIterateDocument = [OCMockObject mockForClass:[IterateDocument class]];
+    _mockIterateDocument = [OCMockObject mockForClass:[IterateMacDocument class]];
     _viewController.document = _mockIterateDocument;
     
 }

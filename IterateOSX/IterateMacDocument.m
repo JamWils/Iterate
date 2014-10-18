@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "IterateDocument.h"
+#import "IterateMacDocument.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
 #import "IterateWindowController.h"
 
-@interface IterateDocument () <NSWindowDelegate>
+@interface IterateMacDocument () <NSWindowDelegate>
 
 @end
 
-@implementation IterateDocument
+@implementation IterateMacDocument
 
 @synthesize layers = _layers;
 

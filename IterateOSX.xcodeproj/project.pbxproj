@@ -53,13 +53,17 @@
 		1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */; };
 		1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADC719CC7DFD00B894EC /* FlippedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A74ADCA19CC7DFD00B894EC /* FlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADC819CC7DFD00B894EC /* FlippedView.m */; };
-		1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */; };
-		1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */; };
 		1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A74ADCF19CCB44300B894EC /* FlippedClipView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A74ADD019CCB44300B894EC /* FlippedClipView.m */; };
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
 		1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */; };
+		1A82E08619F09B2F00B807E9 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */; };
+		1A82E08719F09B2F00B807E9 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */; };
+		1A82E08919F09B8900B807E9 /* Mac.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */; };
+		1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A82E08C19F1032F00B807E9 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A82E08F19F10C6600B807E9 /* ActiveNavigationBarViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */; };
 		1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */; };
 		1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */; };
 		1A8A68D319D5A90800273684 /* OutlineViewEmitterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */; };
@@ -82,7 +86,7 @@
 		1AB6F69919E542E9003D5365 /* ActiveNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6F69819E542E9003D5365 /* ActiveNavigationBarViewController.m */; };
 		1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */; };
 		1ABAC6C519D1F2CD0040DB01 /* EmitterShapesControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */; };
-		1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */; };
+		1AC0C6BD19D16EF6001FFC85 /* IterateMacDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC0C6BC19D16EF6001FFC85 /* IterateMacDocument.m */; };
 		1AC63B8719D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */; };
 		1AC63B8919D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */; };
 		1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC85C7A19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m */; };
@@ -254,13 +258,15 @@
 		1A74ADC419CC71F600B894EC /* DecimalValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecimalValueFormatter.m; sourceTree = "<group>"; };
 		1A74ADC719CC7DFD00B894EC /* FlippedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedView.h; sourceTree = "<group>"; };
 		1A74ADC819CC7DFD00B894EC /* FlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedView.m; sourceTree = "<group>"; };
-		1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightResizingBehavior.h; sourceTree = "<group>"; };
-		1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightResizingBehavior.m; sourceTree = "<group>"; };
 		1A74ADCF19CCB44300B894EC /* FlippedClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippedClipView.h; sourceTree = "<group>"; };
 		1A74ADD019CCB44300B894EC /* FlippedClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlippedClipView.m; sourceTree = "<group>"; };
 		1A76654919C49E7800FD1F29 /* CustomBehaviors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBehaviors.h; sourceTree = "<group>"; };
 		1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehaviors.m; sourceTree = "<group>"; };
 		1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManagerTests.m; sourceTree = "<group>"; };
+		1A82E08519F09B2F00B807E9 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		1A82E08819F09B8400B807E9 /* Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Mac.xcconfig; sourceTree = "<group>"; };
+		1A82E08A19F1023000B807E9 /* IterateDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateDocument.h; sourceTree = "<group>"; };
+		1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveNavigationBarViewControllerTests.m; sourceTree = "<group>"; };
 		1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewLayerDelegateManager.h; sourceTree = "<group>"; };
 		1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManager.m; sourceTree = "<group>"; };
 		1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManagerTests.m; sourceTree = "<group>"; };
@@ -287,8 +293,8 @@
 		1AB6F69819E542E9003D5365 /* ActiveNavigationBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveNavigationBarViewController.m; sourceTree = "<group>"; };
 		1ABAC6C219D1F2CD0040DB01 /* EmitterShapesControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterShapesControlBehavior.h; sourceTree = "<group>"; };
 		1ABAC6C319D1F2CD0040DB01 /* EmitterShapesControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterShapesControlBehavior.m; sourceTree = "<group>"; };
-		1AC0C6BB19D16EF6001FFC85 /* IterateDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateDocument.h; sourceTree = "<group>"; };
-		1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocument.m; sourceTree = "<group>"; };
+		1AC0C6BB19D16EF6001FFC85 /* IterateMacDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateMacDocument.h; sourceTree = "<group>"; };
+		1AC0C6BC19D16EF6001FFC85 /* IterateMacDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateMacDocument.m; sourceTree = "<group>"; };
 		1AC63B8619D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSizeControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AC63B8819D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterConstantControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AC85C7919D1B1F6003EA1F1 /* OutlineViewDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewDataSourceManager.h; sourceTree = "<group>"; };
@@ -569,12 +575,19 @@
 				1A177C5819CB08BC00C75E39 /* CategoryControlBehavior.m */,
 				1A76654919C49E7800FD1F29 /* CustomBehaviors.h */,
 				1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */,
-				1A74ADCB19CCA09D00B894EC /* HeightResizingBehavior.h */,
-				1A74ADCC19CCA09D00B894EC /* HeightResizingBehavior.m */,
 				1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */,
 				1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */,
 			);
 			name = Behaviors;
+			sourceTree = "<group>";
+		};
+		1A82E08419F0996D00B807E9 /* Iterate Framework Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
+				1A82E08A19F1023000B807E9 /* IterateDocument.h */,
+			);
+			name = "Iterate Framework Common";
 			sourceTree = "<group>";
 		};
 		1A9F420819E2172000877DF7 /* ViewControllers */ = {
@@ -605,6 +618,7 @@
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
+				1A82E08419F0996D00B807E9 /* Iterate Framework Common */,
 				1A10E7A019E9FB0B003476C2 /* Iterate iOS App */,
 				1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */,
 				1AD94CF519BBA3AF001A2015 /* Iterate OSX App */,
@@ -639,8 +653,8 @@
 				1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */,
 				1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */,
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
-				1AC0C6BB19D16EF6001FFC85 /* IterateDocument.h */,
-				1AC0C6BC19D16EF6001FFC85 /* IterateDocument.m */,
+				1AC0C6BB19D16EF6001FFC85 /* IterateMacDocument.h */,
+				1AC0C6BC19D16EF6001FFC85 /* IterateMacDocument.m */,
 				1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */,
 				1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */,
 				1AD94D0219BBA3AF001A2015 /* Main.storyboard */,
@@ -650,6 +664,7 @@
 				1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */,
 				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
 				1A9F420819E2172000877DF7 /* ViewControllers */,
+				1A82E08819F09B8400B807E9 /* Mac.xcconfig */,
 			);
 			name = "Iterate OSX App";
 			path = IterateOSX;
@@ -745,6 +760,7 @@
 				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
 				1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */,
 				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
+				1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -756,6 +772,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */,
 				1A10E7CF19E9FDB1003476C2 /* IterateiOSFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,7 +795,6 @@
 				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
 				1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */,
 				1A2A351119D843BA001E60E5 /* EmitterTextFieldControlBehavior.h in Headers */,
-				1A74ADCD19CCA09D00B894EC /* HeightResizingBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
 				1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */,
 				1A736E8D19DC79640075C61C /* IterateColorSystemConversions.h in Headers */,
@@ -787,6 +803,7 @@
 				1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */,
 				1A4C6B6019D23D3500CE99EE /* CATransform3DControlBehavior.h in Headers */,
 				1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */,
+				1A82E08C19F1032F00B807E9 /* IterateDocument.h in Headers */,
 				1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */,
 				1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */,
 			);
@@ -1032,6 +1049,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A82E08619F09B2F00B807E9 /* Common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,6 +1066,7 @@
 			files = (
 				1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */,
 				1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */,
+				1A82E08919F09B8900B807E9 /* Mac.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,6 +1081,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A82E08719F09B2F00B807E9 /* Common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,7 +1133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AC0C6BD19D16EF6001FFC85 /* IterateDocument.m in Sources */,
+				1AC0C6BD19D16EF6001FFC85 /* IterateMacDocument.m in Sources */,
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
 				1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */,
@@ -1137,6 +1157,7 @@
 				1A10E7F319EA1296003476C2 /* StoryboardTests.m in Sources */,
 				1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */,
 				1AFE1E1919DAFD6600337EC0 /* ContentViewControllerTests.m in Sources */,
+				1A82E08F19F10C6600B807E9 /* ActiveNavigationBarViewControllerTests.m in Sources */,
 				1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */,
 				1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */,
 				1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */,
@@ -1151,7 +1172,6 @@
 			files = (
 				1A2A351219D843BA001E60E5 /* EmitterTextFieldControlBehavior.m in Sources */,
 				1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */,
-				1A74ADCE19CCA09D00B894EC /* HeightResizingBehavior.m in Sources */,
 				1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */,
 				1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */,
 				1A10E7E919E9FF75003476C2 /* CategoryInformation.m in Sources */,
@@ -1341,6 +1361,7 @@
 		};
 		1A10E7E419E9FDB1003476C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1370,6 +1391,7 @@
 		};
 		1A10E7E519E9FDB1003476C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1396,6 +1418,7 @@
 		};
 		1A10E7E719E9FDB1003476C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1416,6 +1439,7 @@
 		};
 		1A10E7E819E9FDB1003476C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1510,6 +1534,7 @@
 		};
 		1AD94D1419BBA3AF001A2015 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1528,6 +1553,7 @@
 		};
 		1AD94D1519BBA3AF001A2015 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1545,6 +1571,7 @@
 		};
 		1AD94D1719BBA3AF001A2015 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1567,6 +1594,7 @@
 		};
 		1AD94D1819BBA3AF001A2015 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1585,6 +1613,7 @@
 		};
 		1AD94D6919BBC4B1001A2015 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1609,6 +1638,7 @@
 		};
 		1AD94D6A19BBC4B1001A2015 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1629,6 +1659,7 @@
 		};
 		1AD94D6D19BBC4B1001A2015 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1650,6 +1681,7 @@
 		};
 		1AD94D6E19BBC4B1001A2015 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1675,6 +1707,7 @@
 				1A10E7C119E9FB0B003476C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A10E7C219E9FB0B003476C2 /* Build configuration list for PBXNativeTarget "IterateTests" */ = {
 			isa = XCConfigurationList;
@@ -1683,6 +1716,7 @@
 				1A10E7C419E9FB0B003476C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A10E7E319E9FDB1003476C2 /* Build configuration list for PBXNativeTarget "IterateiOSFramework" */ = {
 			isa = XCConfigurationList;
@@ -1691,6 +1725,7 @@
 				1A10E7E519E9FDB1003476C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A10E7E619E9FDB1003476C2 /* Build configuration list for PBXNativeTarget "IterateiOSFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -1699,6 +1734,7 @@
 				1A10E7E819E9FDB1003476C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AD94CEE19BBA3AE001A2015 /* Build configuration list for PBXProject "IterateOSX" */ = {
 			isa = XCConfigurationList;

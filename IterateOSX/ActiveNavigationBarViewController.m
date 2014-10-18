@@ -9,6 +9,7 @@
 #import "ActiveNavigationBarViewController.h"
 #import "CategoryInformation.h"
 #import "ActivePropertiesViewController.h"
+#import "IterateWindowController.h"
 
 @interface ActiveNavigationBarViewController ()
 
@@ -20,14 +21,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
     _buttons = @[_layerMenuButton, _emitterLayerMenuButton, _emitterCellMenuButton];
 }
 
 - (IBAction)layerButtonSelected:(NSButton *)sender {
+    NSArray *categoryItems = [CategoryInformation arrayForLayer];
+    
+    ActivePropertiesViewController *viewController = [self.parentViewController childViewControllers][1];
+    [viewController addChildViewControllers:categoryItems];
 }
 
 - (IBAction)emitterLayerButtonSelected:(NSButton *)sender {
-//    sender.enabled = NO;
+    
     NSArray *categoryItems = [CategoryInformation arrayForEmitterLayer];
     
     ActivePropertiesViewController *viewController = [self.parentViewController childViewControllers][1];

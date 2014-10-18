@@ -26,7 +26,7 @@
 				<string>com.noesisingenuity.iterateDoc</string>
 			</array>
 			<key>NSDocumentClass</key>
-			<string>IterateDocument</string>
+			<string>IterateMacDocument</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>

@@ -27,7 +27,7 @@
 - (void)setUp {
     [super setUp];
     _mainStoryboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
-    _viewController = (ActivePropertiesViewController*)[_mainStoryboard instantiateControllerWithIdentifier:@"ActivePropertiesViewController"];\
+    _viewController = (ActivePropertiesViewController*)[_mainStoryboard instantiateControllerWithIdentifier:@"ActivePropertiesViewController"];
     [_viewController view];
     
     _categoryItems = @[

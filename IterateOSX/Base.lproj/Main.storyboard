@@ -931,7 +931,7 @@
                         <splitViewItem id="vkt-NN-i0v"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" id="jvf-Gm-wYg">
-                        <rect key="frame" x="0.0" y="0.0" width="249" height="300"/>
+                        <rect key="frame" x="0.0" y="15" width="249" height="285"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
@@ -941,7 +941,7 @@
                 </splitViewController>
                 <customObject id="7ve-cG-tgp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435.5" y="887"/>
+            <point key="canvasLocation" x="435.5" y="894.5"/>
         </scene>
         <!--Active Properties View Controller-->
         <scene sceneID="jq7-w2-PKP">
@@ -1001,40 +1001,68 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="QBY-On-Cbs">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
                                 <subviews>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6BS-dN-ZPv">
-                                        <rect key="frame" x="58" y="0.0" width="40" height="28"/>
-                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CALayer Icon" imagePosition="overlaps" alignment="center" alternateImage="CALayerActive Icon" imageScaling="proportionallyDown" inset="2" id="kBd-3C-k9k">
-                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="layerButtonSelected:" target="OrW-nB-6lb" id="g2x-uf-gdm"/>
-                                        </connections>
-                                    </button>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-cO-bkR">
-                                        <rect key="frame" x="154" y="0.0" width="40" height="28"/>
-                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CAEmitterCell Icon" imagePosition="only" alignment="center" alternateImage="CAEmitterCellActive Icon" imageScaling="proportionallyDown" inset="2" id="sMu-pE-2Eg">
-                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="EmitterCellButtonSelected:" target="OrW-nB-6lb" id="COT-Yw-gIq"/>
-                                        </connections>
-                                    </button>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-C5-Myy">
-                                        <rect key="frame" x="106" y="0.0" width="40" height="28"/>
-                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CAEmitterLayer Icon" imagePosition="only" alignment="center" alternateImage="CAEmitterLayerActive Icon" imageScaling="proportionallyDown" inset="2" id="Hf7-ke-Gt6">
-                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="emitterLayerButtonSelected:" target="OrW-nB-6lb" id="Lfs-un-Zfz"/>
-                                        </connections>
-                                    </button>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="9y3-0s-Vr7" userLabel="Button Container View">
+                                        <rect key="frame" x="45" y="0.0" width="160" height="28"/>
+                                        <subviews>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="6BS-dN-ZPv">
+                                                <rect key="frame" x="20" y="0.0" width="40" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="ZZY-9H-I0a"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CALayer Icon" imagePosition="overlaps" alignment="center" alternateImage="CALayerActive Icon" imageScaling="proportionallyDown" inset="2" id="kBd-3C-k9k">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="layerButtonSelected:" target="OrW-nB-6lb" id="g2x-uf-gdm"/>
+                                                </connections>
+                                            </button>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-C5-Myy">
+                                                <rect key="frame" x="60" y="0.0" width="40" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Wle-Rj-PT3"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CAEmitterLayer Icon" imagePosition="only" alignment="center" alternateImage="CAEmitterLayerActive Icon" imageScaling="proportionallyDown" inset="2" id="Hf7-ke-Gt6">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="emitterLayerButtonSelected:" target="OrW-nB-6lb" id="Lfs-un-Zfz"/>
+                                                </connections>
+                                            </button>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Pz7-cO-bkR">
+                                                <rect key="frame" x="100" y="0.0" width="40" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="g8R-ZJ-gm2"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="CAEmitterCell Icon" imagePosition="only" alignment="center" alternateImage="CAEmitterCellActive Icon" imageScaling="proportionallyDown" inset="2" id="sMu-pE-2Eg">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="EmitterCellButtonSelected:" target="OrW-nB-6lb" id="COT-Yw-gIq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eiQ-C5-Myy" secondAttribute="bottom" id="3CO-P7-LWy"/>
+                                            <constraint firstAttribute="bottom" secondItem="6BS-dN-ZPv" secondAttribute="bottom" id="71c-23-sdC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pz7-cO-bkR" secondAttribute="trailing" constant="20" id="AtE-jC-gIn"/>
+                                            <constraint firstAttribute="bottom" secondItem="Pz7-cO-bkR" secondAttribute="bottom" id="Dwf-Jw-jkt"/>
+                                            <constraint firstItem="eiQ-C5-Myy" firstAttribute="top" secondItem="9y3-0s-Vr7" secondAttribute="top" id="E2A-1J-dUC"/>
+                                            <constraint firstItem="6BS-dN-ZPv" firstAttribute="leading" secondItem="9y3-0s-Vr7" secondAttribute="leading" constant="20" id="ZIO-P4-3fU"/>
+                                            <constraint firstItem="eiQ-C5-Myy" firstAttribute="leading" secondItem="6BS-dN-ZPv" secondAttribute="trailing" id="cNN-Oe-P6X"/>
+                                            <constraint firstItem="Pz7-cO-bkR" firstAttribute="top" secondItem="9y3-0s-Vr7" secondAttribute="top" id="eEy-21-dkb"/>
+                                            <constraint firstItem="Pz7-cO-bkR" firstAttribute="leading" secondItem="eiQ-C5-Myy" secondAttribute="trailing" id="lFY-ih-2uz"/>
+                                            <constraint firstItem="6BS-dN-ZPv" firstAttribute="top" secondItem="9y3-0s-Vr7" secondAttribute="top" id="m1s-RE-tkO"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="GVI-Kl-itZ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="V49-qX-VBr"/>
+                                    <constraint firstAttribute="centerX" secondItem="9y3-0s-Vr7" secondAttribute="centerX" id="f1U-eB-abI"/>
+                                    <constraint firstAttribute="centerY" secondItem="9y3-0s-Vr7" secondAttribute="centerY" id="pxS-0C-gif"/>
                                 </constraints>
                             </customView>
                         </subviews>
@@ -3691,32 +3719,11 @@
         <!--CATransform 3D View Controller-->
         <scene sceneID="phf-J8-yHF">
             <objects>
-                <viewController id="EKO-bg-yw3" userLabel="CATransform 3D View Controller" sceneMemberID="viewController">
-                    <view key="view" id="lNZ-Vg-NEy">
+                <viewController storyboardIdentifier="LayerTransformViewController" id="EKO-bg-yw3" userLabel="CATransform 3D View Controller" sceneMemberID="viewController">
+                    <view key="view" id="lNZ-Vg-NEy" customClass="ContainerLayoutView">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="448"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJe-yh-Ih4">
-                                <rect key="frame" x="5" y="413" width="38" height="16"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="RGj-RU-4B8">
-                                    <font key="font" metaFont="systemBold" size="12"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button wantsLayer="YES" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="we7-ho-qSh">
-                                <rect key="frame" x="214" y="410" width="29" height="19"/>
-                                <buttonCell key="cell" type="recessed" title="Hide" bezelStyle="recessed" alignment="right" transparent="YES" imageScaling="proportionallyDown" inset="2" id="Nwr-c7-eas">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                    <font key="font" metaFont="smallSystem"/>
-                                </buttonCell>
-                            </button>
-                            <box verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-iy-ECI">
-                                <rect key="frame" x="0.0" y="434" width="250" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
-                            </box>
                             <customView wantsLayer="YES" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZL-tK-WS4" userLabel="Transform 3D Rotate View">
                                 <rect key="frame" x="7" y="243" width="236" height="158"/>
                                 <subviews>
@@ -3928,14 +3935,51 @@
                                     </customView>
                                 </subviews>
                             </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="jUA-cP-s0V">
+                                <rect key="frame" x="0.0" y="416" width="250" height="32"/>
+                                <subviews>
+                                    <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yMr-uX-IWv">
+                                        <rect key="frame" x="4" y="7" width="38" height="16"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mP3-qM-9az">
+                                            <font key="font" metaFont="systemBold" size="12"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="5sb-G1-ntH">
+                                        <rect key="frame" x="0.0" y="29" width="250" height="5"/>
+                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <font key="titleFont" metaFont="system"/>
+                                    </box>
+                                    <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-20-7Bw">
+                                        <rect key="frame" x="214" y="4" width="29" height="19"/>
+                                        <buttonCell key="cell" type="recessed" title="Hide" bezelStyle="recessed" alignment="right" transparent="YES" imageScaling="proportionallyDown" inset="2" id="DpY-Gd-nVS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleHiddenClicked:" target="atf-Us-ra4" id="MDp-ov-2NX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gp6-20-7Bw" firstAttribute="top" secondItem="yMr-uX-IWv" secondAttribute="top" id="2Gf-t9-tVZ"/>
+                                    <constraint firstItem="yMr-uX-IWv" firstAttribute="leading" secondItem="jUA-cP-s0V" secondAttribute="leading" constant="6" id="Gob-B8-OpR"/>
+                                    <constraint firstItem="5sb-G1-ntH" firstAttribute="top" secondItem="jUA-cP-s0V" secondAttribute="top" id="IeA-uR-y9h"/>
+                                    <constraint firstAttribute="trailing" secondItem="5sb-G1-ntH" secondAttribute="trailing" id="ZdM-fJ-eug"/>
+                                    <constraint firstItem="yMr-uX-IWv" firstAttribute="top" secondItem="5sb-G1-ntH" secondAttribute="bottom" constant="8" id="cH8-kd-2Hz"/>
+                                    <constraint firstAttribute="height" constant="32" id="j78-WG-a5S"/>
+                                    <constraint firstItem="5sb-G1-ntH" firstAttribute="leading" secondItem="jUA-cP-s0V" secondAttribute="leading" id="qYs-WN-ap6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gp6-20-7Bw" secondAttribute="trailing" constant="7" id="x5F-Hg-x6p"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="we7-ho-qSh" firstAttribute="trailing" secondItem="LZL-tK-WS4" secondAttribute="trailing" id="54H-3j-Me4"/>
-                            <constraint firstItem="we7-ho-qSh" firstAttribute="top" secondItem="qJe-yh-Ih4" secondAttribute="top" id="S3J-jQ-wqH"/>
-                            <constraint firstItem="qJe-yh-Ih4" firstAttribute="leading" secondItem="LZL-tK-WS4" secondAttribute="leading" id="dUH-t4-dQ8"/>
-                            <constraint firstItem="l7d-iy-ECI" firstAttribute="top" secondItem="lNZ-Vg-NEy" secondAttribute="top" constant="11" id="kSg-0L-Vcu"/>
+                            <constraint firstAttribute="trailing" secondItem="jUA-cP-s0V" secondAttribute="trailing" id="7sA-Eo-kWF"/>
+                            <constraint firstItem="jUA-cP-s0V" firstAttribute="leading" secondItem="lNZ-Vg-NEy" secondAttribute="leading" id="gPu-i6-g1k"/>
                             <constraint firstItem="LZL-tK-WS4" firstAttribute="top" secondItem="lNZ-Vg-NEy" secondAttribute="top" constant="47" id="oWe-kW-yX8"/>
-                            <constraint firstItem="qJe-yh-Ih4" firstAttribute="top" secondItem="l7d-iy-ECI" secondAttribute="bottom" constant="8" id="rC8-Fj-Z07"/>
+                            <constraint firstItem="jUA-cP-s0V" firstAttribute="top" secondItem="lNZ-Vg-NEy" secondAttribute="top" id="stX-uU-2EY"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -4056,6 +4100,18 @@
                         <outlet property="xDeltaControl" destination="yWj-GB-CoJ" id="b2I-GY-a3m"/>
                         <outlet property="yDeltaControl" destination="yKr-Yw-bQs" id="A8x-ch-LR2"/>
                         <outlet property="zDeltaControl" destination="zWk-c4-26i" id="UCH-Tg-Ab9"/>
+                    </connections>
+                </customObject>
+                <customObject id="atf-Us-ra4" userLabel="Transform Control Behavior" customClass="CategoryControlBehavior">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="categoryName" value="Layer - 3D Transform"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultHeight">
+                            <integer key="value" value="448"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="categoryLabel" destination="yMr-uX-IWv" id="Xdn-L5-PXs"/>
+                        <outlet property="owner" destination="lNZ-Vg-NEy" id="AvC-zH-Z6y"/>
                     </connections>
                 </customObject>
             </objects>

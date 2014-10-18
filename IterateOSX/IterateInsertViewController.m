@@ -8,7 +8,7 @@
 
 #import "IterateInsertViewController.h"
 #import "IterateWindowController.h"
-#import "IterateDocument.h"
+#import "IterateMacDocument.h"
 @import QuartzCore;
 
 @interface IterateInsertViewController ()
@@ -49,8 +49,8 @@
     emitter.renderMode = kCAEmitterLayerAdditive;
     [self addCellToItem:emitter];
     
-    if ([_document isKindOfClass:[IterateDocument class]]) {
-        IterateDocument *iterateDocument = (IterateDocument*)_document;
+    if ([_document isKindOfClass:[IterateMacDocument class]]) {
+        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
         NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
         emitter.name = [self nameItem:layers withDefaultName:@"emitterLayer"];
         [layers addObject:emitter];
