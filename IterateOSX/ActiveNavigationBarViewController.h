@@ -22,4 +22,6 @@
 
 - (IBAction)EmitterCellButtonSelected:(NSButton *)sender;
 
+- (void)updateMenuWithSelectedItem:(id)sender;
+
 @end

@@ -18,6 +18,7 @@
 
 @property (assign) ContentViewController *canvasViewController;
 @property (assign) LayerOutlineViewController *outlineViewController;
+@property (assign) ActiveNavigationBarViewController *activeMenuBarController;
 
 @property (weak) IBOutlet NSColorWell *canvasColorWell;
 

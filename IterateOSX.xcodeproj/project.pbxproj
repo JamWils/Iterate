@@ -755,12 +755,12 @@
 		1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */,
 				1AC9268819E32CF300BC1488 /* ActivePropertiesViewControllerTests.m */,
 				1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */,
 				1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */,
 				1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */,
 				1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */,
-				1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

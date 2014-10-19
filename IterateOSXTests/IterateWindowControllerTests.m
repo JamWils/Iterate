@@ -12,7 +12,8 @@
 
 #import "IterateWindowController.h"
 #import "ContentViewController.h"
-
+#import "ActiveNavigationBarViewController.h"
+#import "LayerOutlineViewController.h"
 
 @interface IterateWindowControllerTests : XCTestCase
 
@@ -30,8 +31,8 @@
     _windowController = [storyboard instantiateControllerWithIdentifier:@"IterateWindowController"];
     [_windowController window];
     
-    _mockContentViewController = [OCMockObject mockForClass:[ContentViewController class]];
-    _windowController.canvasViewController = _mockContentViewController;
+//    _mockContentViewController = [OCMockObject mockForClass:[ContentViewController class]];
+//    _windowController.canvasViewController = _mockContentViewController;
     
     
 }
@@ -51,8 +52,19 @@
     XCTAssertNotNil(_windowController.canvasColorWell, @"NSColorWell should not be nil.");
 }
 
-- (void)testUpdateCanvasColorIsConnected {
-    
+- (void)testCanvasControllerIsNotNil {
+    XCTAssertNotNil(_windowController.canvasViewController, @"Canvas view controller should not be nil.");
+    XCTAssertTrue([_windowController.canvasViewController isKindOfClass:[ContentViewController class]], @"The canvas view controller should be of class type Content View Controller");
+}
+
+- (void)testActiveMenuBarControllerIsNotNil {
+    XCTAssertNotNil(_windowController.activeMenuBarController, @"Active Menu Bar Controller property should not be nil");
+    XCTAssertTrue([_windowController.activeMenuBarController isKindOfClass:[ActiveNavigationBarViewController class]], @"The active meny bar controller property is of class type Active Navigation Bar View Controller");
+}
+
+- (void)testOutlineViewControllerIsNotNil {
+    XCTAssertNotNil(_windowController.outlineViewController, @"Outline View Controller property is not nil");
+    XCTAssertTrue([_windowController.outlineViewController isKindOfClass:[LayerOutlineViewController class]], @"The outline view controller property is kind of class Layer Outline View Controller.");
 }
 
 - (void)testCanvasBackgroundColorIsSetToWhiteWhenUpdateCanvasColorSenderIsNil {

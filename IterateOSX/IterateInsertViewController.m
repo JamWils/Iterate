@@ -55,11 +55,13 @@
         emitter.name = [self nameItem:layers withDefaultName:@"emitterLayer"];
         [layers addObject:emitter];
     }
+    
+    [self dismissViewController:self];
 }
 
 - (IBAction)addEmitterCell:(id)sender {
     [self addCellToItem:_selectedItem];
-    
+    [self dismissViewController:self];
 }
 
 - (void)addCellToItem:(id)item {

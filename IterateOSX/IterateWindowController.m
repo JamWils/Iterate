@@ -25,19 +25,22 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    NSSplitViewController *coreSplitViewController = (NSSplitViewController*)self.window.contentViewController;
+    _canvasViewController = coreSplitViewController.childViewControllers[1];
+    
+    NSSplitViewController *leftSideSplitViewController = coreSplitViewController.childViewControllers[0];
+    _outlineViewController = leftSideSplitViewController.childViewControllers[0];
+    
+    NSSplitViewController *rightSideSplitViewController = coreSplitViewController.childViewControllers[2];
+    _activeMenuBarController = rightSideSplitViewController.childViewControllers[0];
 }
 
 - (void)setParentObject:(id)parentObject {
     _parentObject = parentObject;
     
     NSSplitViewController *splitViewController = (NSSplitViewController*)self.window.contentViewController;
-
-//    NSSplitViewController *leftSplitViewController = (NSSplitViewController*)splitViewController.childViewControllers[0];
-//    LayerOutlineViewController *outlineViewController = leftSplitViewController.childViewControllers[0];
-//    outlineViewController.layers = self.layers;
-    
     ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    
     viewController.activeLayer = parentObject;
 
 }
@@ -50,13 +53,10 @@
     _selectedItem = selectedItem;
     
     NSSplitViewController *splitViewController = (NSSplitViewController*)self.window.contentViewController;
-    
-    //    NSSplitViewController *leftSplitViewController = (NSSplitViewController*)splitViewController.childViewControllers[0];
-    //    LayerOutlineViewController *outlineViewController = leftSplitViewController.childViewControllers[0];
-    //    outlineViewController.layers = self.layers;
-    
     ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
     viewController.selectedItem = selectedItem;
+    
+    [_activeMenuBarController updateMenuWithSelectedItem:selectedItem];
 }
 
 - (id)selectedItem {
@@ -89,9 +89,5 @@
         viewController.document = self.document;
     }
 }
-
-//- (void)setSelectedItem:(id)selectedItem {
-//    
-//}
 
 @end
