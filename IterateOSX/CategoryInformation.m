@@ -29,6 +29,8 @@
 
 + (NSArray*)arrayForLayer {
     NSArray *categoryItems = @[
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerAppearanceViewController" height:300],
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerShadowViewController" height:373],
                                [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerTransformViewController" height:448]
                                ];
     

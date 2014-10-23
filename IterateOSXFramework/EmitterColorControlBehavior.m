@@ -16,12 +16,20 @@
     [self updateValues:(id)[sender color].CGColor];
 }
 
-- (void)updateControls:(NSNotification*)notification {
+//- (void)updateControls:(NSNotification*)notification {
 //    id item = [notification.userInfo[@"Layer"] valueForKey:self.emitterProperty];
 //    
 //    if (item) {
 //        _colorWell.color = [NSColor colorWithCGColor:(__bridge CGColorRef)(item)];
 //    }
+//}
+
+- (void)updateControls:(id)aObject {
+    id item = [aObject valueForKey:self.emitterProperty];
+    
+    if (item) {
+        _colorWell.color = [NSColor colorWithCGColor:(__bridge CGColorRef)item];
+    }
 }
 
 @end

@@ -48,6 +48,8 @@
     emitter.emitterShape = kCAEmitterLayerPoint;
     emitter.renderMode = kCAEmitterLayerAdditive;
     [self addCellToItem:emitter];
+//    CALayer *emitter = [[CALayer alloc] init];
+//    emitter.frame = CGRectMake(0, 0, 300, 300);
     
     if ([_document isKindOfClass:[IterateMacDocument class]]) {
         IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;

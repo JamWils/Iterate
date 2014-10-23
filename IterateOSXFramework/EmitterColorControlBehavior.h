@@ -12,5 +12,6 @@
 @interface EmitterColorControlBehavior : EmitterControlBehavior
 
 @property (weak) IBOutlet AlphaColorWell *colorWell;
+- (IBAction)colorSelected:(NSColorWell *)sender;
 
 @end

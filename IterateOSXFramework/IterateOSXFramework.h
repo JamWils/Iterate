@@ -26,3 +26,4 @@ FOUNDATION_EXPORT const unsigned char IterateOSXFrameworkVersionString[];
 #import <IterateOSXFramework/ContainerLayoutView.h>
 #import <IterateOSXFramework/FlippedView.h>
 #import <IterateOSXFramework/FlippedClipView.h>
+#import <IterateOSXFramework/HeaderView.h>

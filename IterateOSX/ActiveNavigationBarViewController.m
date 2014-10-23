@@ -38,6 +38,10 @@ int const DEFAULT_CONSTRAINT_WIDTH = 40;
     
     ActivePropertiesViewController *viewController = [self.parentViewController childViewControllers][1];
     [viewController addChildViewControllers:categoryItems];
+    
+    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
+    [userInfo setValue:[self.view.window.windowController parentObject] forKey:@"layer"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kDidChangeSelectedLayerNotification object:self userInfo:userInfo];
 }
 
 - (IBAction)emitterLayerButtonSelected:(NSButton *)sender {

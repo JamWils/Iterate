@@ -113,6 +113,8 @@
 		1AFB400619D7134700A5F3D3 /* IterateConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400419D7134700A5F3D3 /* IterateConstants.m */; };
 		1AFE1E1919DAFD6600337EC0 /* ContentViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */; };
 		1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */; };
+		1AFE20B919F7539C00207C8F /* HeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFE20B719F7539C00207C8F /* HeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AFE20BA19F7539C00207C8F /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE20B819F7539C00207C8F /* HeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -334,6 +336,8 @@
 		1AFE1E1819DAFD6600337EC0 /* ContentViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewControllerTests.m; sourceTree = "<group>"; };
 		1AFE1E1B19DB049A00337EC0 /* IterateWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateWindowController.h; sourceTree = "<group>"; };
 		1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateWindowController.m; sourceTree = "<group>"; };
+		1AFE20B719F7539C00207C8F /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		1AFE20B819F7539C00207C8F /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -563,6 +567,8 @@
 				1A74ADC819CC7DFD00B894EC /* FlippedView.m */,
 				1A74ADCF19CCB44300B894EC /* FlippedClipView.h */,
 				1A74ADD019CCB44300B894EC /* FlippedClipView.m */,
+				1AFE20B719F7539C00207C8F /* HeaderView.h */,
+				1AFE20B819F7539C00207C8F /* HeaderView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -797,6 +803,7 @@
 				1A2A351119D843BA001E60E5 /* EmitterTextFieldControlBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
 				1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */,
+				1AFE20B919F7539C00207C8F /* HeaderView.h in Headers */,
 				1A736E8D19DC79640075C61C /* IterateColorSystemConversions.h in Headers */,
 				1A736E8919DC49DD0075C61C /* LayerContentViewControllerProtocol.h in Headers */,
 				1A66961D19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h in Headers */,
@@ -1180,6 +1187,7 @@
 				1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */,
 				1AAE096A19CF89CE00C95D7C /* EmitterControlBehavior.m in Sources */,
 				1AFB400619D7134700A5F3D3 /* IterateConstants.m in Sources */,
+				1AFE20BA19F7539C00207C8F /* HeaderView.m in Sources */,
 				1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */,
 				1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */,
 				1A96FEDA19D010A300A4627D /* AlphaColorWell.m in Sources */,
