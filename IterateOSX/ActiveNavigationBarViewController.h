@@ -10,11 +10,13 @@
 
 @interface ActiveNavigationBarViewController : NSViewController
 
+@property (weak) IBOutlet NSButton *transformLayerMenuButton;
 @property (weak) IBOutlet NSButton *layerMenuButton;
 @property (weak) IBOutlet NSButton *emitterLayerMenuButton;
 @property (weak) IBOutlet NSButton *emitterCellMenuButton;
 
 
+- (IBAction)transformLayerButtonSelected:(id)sender;
 
 - (IBAction)layerButtonSelected:(NSButton *)sender;
 

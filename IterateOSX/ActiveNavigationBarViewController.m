@@ -28,8 +28,16 @@ int const DEFAULT_CONSTRAINT_WIDTH = 40;
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    _buttons = @[_layerMenuButton, _emitterLayerMenuButton, _emitterCellMenuButton];
+    _buttons = @[_transformLayerMenuButton, _layerMenuButton, _emitterLayerMenuButton, _emitterCellMenuButton];
     [self updateMenuWithSelectedItem:nil];
+}
+
+- (IBAction)transformLayerButtonSelected:(id)sender {
+    [self toggleButtonsOff:sender];
+    NSArray *categoryItems = [CategoryInformation arrayForTransformLayer];
+    
+    ActivePropertiesViewController *viewController = [self.parentViewController childViewControllers][1];
+    [viewController addChildViewControllers:categoryItems];
 }
 
 - (IBAction)layerButtonSelected:(NSButton *)sender {
@@ -69,6 +77,7 @@ int const DEFAULT_CONSTRAINT_WIDTH = 40;
 }
 
 - (void)updateMenuWithSelectedItem:(id)sender {
+    NSLayoutConstraint *transformLayerButtonConstraint = [_transformLayerMenuButton.constraints firstObject];
     NSLayoutConstraint *layerButtonConstraint = [_layerMenuButton.constraints firstObject];
     NSLayoutConstraint *emitterLayerButtonConstraint = [_emitterLayerMenuButton.constraints firstObject];
     NSLayoutConstraint *emitterCellButtonConstraint = [_emitterCellMenuButton.constraints firstObject];
@@ -80,6 +89,12 @@ int const DEFAULT_CONSTRAINT_WIDTH = 40;
         
         _layerMenuButton.state = NSOnState;
         [self layerButtonSelected:_layerMenuButton];
+        
+    } else if ([sender isMemberOfClass:[CATransformLayer class]]) {
+        transformLayerButtonConstraint.animator.constant = DEFAULT_CONSTRAINT_WIDTH;
+        layerButtonConstraint.animator.constant = 0;
+        emitterLayerButtonConstraint.animator.constant = 0;
+        emitterCellButtonConstraint.animator.constant = 0;
         
     } else if ([sender isMemberOfClass:[CAEmitterLayer class]]) {
         layerButtonConstraint.animator.constant = DEFAULT_CONSTRAINT_WIDTH;
@@ -97,6 +112,7 @@ int const DEFAULT_CONSTRAINT_WIDTH = 40;
         _emitterCellMenuButton.state = NSOnState;
         [self EmitterCellButtonSelected:_emitterCellMenuButton];
     } else {
+        transformLayerButtonConstraint.constant = 0;
         layerButtonConstraint.constant = 0;
         emitterLayerButtonConstraint.constant = 0;
         emitterCellButtonConstraint.constant = 0;

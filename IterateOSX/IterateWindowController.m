@@ -21,6 +21,7 @@
 
 @synthesize parentObject = _parentObject;
 @synthesize selectedItem = _selectedItem;
+@synthesize keyPathForSelectedItem = _keyPathForSelectedItem;
 
 - (void)windowDidLoad {
     [super windowDidLoad];
@@ -52,15 +53,25 @@
 - (void)setSelectedItem:(id)selectedItem {
     _selectedItem = selectedItem;
     
-    NSSplitViewController *splitViewController = (NSSplitViewController*)self.window.contentViewController;
-    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
-    viewController.selectedItem = selectedItem;
+//    NSSplitViewController *splitViewController = (NSSplitViewController*)self.window.contentViewController;
+//    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    self.canvasViewController.selectedItem = selectedItem;
+//    self.canvasViewController.keyPathForSelectedItem = _keyPathForSelectedItem;
     
     [_activeMenuBarController updateMenuWithSelectedItem:selectedItem];
 }
 
 - (id)selectedItem {
     return _selectedItem;
+}
+
+- (void)setKeyPathForSelectedItem:(NSString *)keyPathForSelectedItem {
+    _keyPathForSelectedItem = keyPathForSelectedItem;
+    self.canvasViewController.keyPathForSelectedItem = _keyPathForSelectedItem;
+}
+
+- (NSString *)keyPathForSelectedItem {
+    return _keyPathForSelectedItem;
 }
 
 - (IBAction)updateCanvasColor:(id)sender {

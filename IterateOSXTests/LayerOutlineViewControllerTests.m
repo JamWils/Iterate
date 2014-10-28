@@ -121,6 +121,9 @@
     [_partialMockOutlineView verify];
 }
 
+- (void)testWindowControllersPropertiesAreSetWhenDelegateSelectedRowIsUpdated {
+    
+}
 
 
 //- (void)testOutlineViewsDataSourceLayersAreSetWhenViewControllersLayerIsSet {

@@ -18,6 +18,7 @@
 @implementation OutlineViewLayerDelegateManager {
     CAEmitterCell *_cell;
     id _selectedItem;
+    NSMutableString *_keyPathForSelectedItem;
 }
 
 - (instancetype)init {
@@ -28,12 +29,14 @@
     self = [super init];
     if (self) {
         _parentObjectBlock = [parentObjectBlock copy];
+        _keyPathForSelectedItem = [[NSMutableString alloc] init];
     }
     
     return self;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
+    [_keyPathForSelectedItem setString:@""];
     _selectedItem = item;
     if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
         CAEmitterLayer *emitterLayer = [self layerForEmitterCell:_selectedItem inOutlineView:outlineView];
@@ -51,7 +54,7 @@
     if (_selectedItem != nil && _activeLayer != nil) {
         [userInfo setValue:_activeLayer forKey:@"layer"];
         if (_parentObjectBlock) {
-            _parentObjectBlock(_activeLayer, _selectedItem);
+            _parentObjectBlock(_activeLayer, _selectedItem, _keyPathForSelectedItem);
         }
         
         
@@ -78,9 +81,16 @@
 - (CAEmitterLayer*)layerForEmitterCell:(CAEmitterCell*)emitterCell inOutlineView:(NSOutlineView*)outlineView {
     CAEmitterLayer *emitterLayer = nil;
     
+    [_keyPathForSelectedItem insertString:[NSString stringWithFormat:@"emitterCells.%@.", emitterCell.name] atIndex:0];
+    
     id parentItem = [outlineView parentForItem:emitterCell];
     if ([parentItem isKindOfClass:[CAEmitterCell class]]) {
+        
         parentItem = [self layerForEmitterCell:parentItem inOutlineView:outlineView];
+        
+        if ([parentItem isKindOfClass:[CAEmitterLayer class]]) {
+            emitterLayer = parentItem;
+        }
     } else {
         emitterLayer = parentItem;
     }

@@ -39,12 +39,13 @@
     _layerSourceManager = [[OutlineViewDataSourceManager alloc] initWithLayers:_layers];
     _layerOutlineView.dataSource = _layerSourceManager;
     
-    _layerDelegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem) {
+    _layerDelegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem, NSString *keyPathForSelectedItem) {
         id windowController = self.view.window.windowController;
         if ([windowController isKindOfClass:[IterateWindowController class]]) {
             IterateWindowController *iterateWindowController = (IterateWindowController*)windowController;
             iterateWindowController.parentObject = parentObject;
             iterateWindowController.selectedItem = selectedItem;
+            iterateWindowController.keyPathForSelectedItem = keyPathForSelectedItem;
         }
         
     }];

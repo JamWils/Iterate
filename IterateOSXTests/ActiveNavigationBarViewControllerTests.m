@@ -37,6 +37,13 @@
     XCTAssertNotNil(_navigationBarViewController, @"The active navigation bar view controller should not be nil.");
 }
 
+- (void)testTransformLayerButtonsFirstConstraintIsAWidthConstraint {
+    NSLayoutConstraint *constraint = [_navigationBarViewController.transformLayerMenuButton.constraints firstObject];
+    
+    XCTAssertNotNil(constraint, @"The constraint should not be nil.");
+    XCTAssertTrue(constraint.firstAttribute == NSLayoutAttributeWidth, @"The first constraint should be for width.");
+}
+
 - (void)testLayerButtonsFirstConstraintIsAWidthConstraint {
     NSLayoutConstraint *constraint = [_navigationBarViewController.layerMenuButton.constraints firstObject];
     
@@ -59,13 +66,30 @@
 }
 
 - (void)testDefaultConstraintWidthForButtonsIsZero {
+    NSLayoutConstraint *transformLayerButtonConstraint = [_navigationBarViewController.transformLayerMenuButton.constraints firstObject];
     NSLayoutConstraint *layerButtonConstraint = [_navigationBarViewController.layerMenuButton.constraints firstObject];
     NSLayoutConstraint *emitterLayerButtonConstraint = [_navigationBarViewController.emitterLayerMenuButton.constraints firstObject];
     NSLayoutConstraint *emitterCellButtonConstraint = [_navigationBarViewController.emitterCellMenuButton.constraints firstObject];
     
+    XCTAssertTrue(transformLayerButtonConstraint.constant == 0);
     XCTAssertTrue(layerButtonConstraint.constant == 0);
     XCTAssertTrue(emitterLayerButtonConstraint.constant == 0);
     XCTAssertTrue(emitterCellButtonConstraint.constant == 0);
+}
+
+- (void)testButtonWidthsWhenUpdateMenuWithSelectedItemReceivedCATransformLayer {
+    [_navigationBarViewController updateMenuWithSelectedItem:[[CATransformLayer alloc] init]];
+    
+    NSLayoutConstraint *transformLayerButtonConstraint = [_navigationBarViewController.transformLayerMenuButton.constraints firstObject];
+    NSLayoutConstraint *layerButtonConstraint = [_navigationBarViewController.layerMenuButton.constraints firstObject];
+    NSLayoutConstraint *emitterLayerButtonConstraint = [_navigationBarViewController.emitterLayerMenuButton.constraints firstObject];
+    NSLayoutConstraint *emitterCellButtonConstraint = [_navigationBarViewController.emitterCellMenuButton.constraints firstObject];
+    
+    XCTAssertTrue(transformLayerButtonConstraint.animator.constant == 40);
+    XCTAssertTrue(layerButtonConstraint.animator.constant == 0);
+    XCTAssertTrue(emitterLayerButtonConstraint.animator.constant == 0);
+    XCTAssertTrue(emitterCellButtonConstraint.animator.constant == 0);
+    //TODO: Need more tests on business logic for transform layer, this includes all tests below
 }
 
 - (void)testButtonWidthsWhenUpdateMenuWithSelectedItemReceivedCALayer {

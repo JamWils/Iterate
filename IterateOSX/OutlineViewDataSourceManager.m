@@ -67,7 +67,7 @@
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
     if ([[tableColumn identifier] isEqualToString:@"name"]) {
-        NSLog(@"%@", [item name]);
+//        NSLog(@"%@", [item name]);
         return [item name];
     }
     

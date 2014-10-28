@@ -107,19 +107,49 @@
 }
 
 
-- (void)testActiveLayerIsNilWhenEmitterCellsParentIsAnEmitterCell {
+- (void)testActiveLayerIsNotNilWhenEmitterCellsParentIsAnEmitterCell {
     _delegate.activeLayer = nil;
     
     id cell = [[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0] valueForKey:@"emitterCells"] objectAtIndex:1];
-    [[[_mockOutlineView stub] andReturn:[[CAEmitterCell alloc] init]] parentForItem:cell];
+    id layer = [[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0];
+    [[[_mockOutlineView expect] andReturn:[[CAEmitterCell alloc] init]] parentForItem:cell];
+    [[[_mockOutlineView expect] andReturn:[[CAEmitterLayer alloc] init]] parentForItem:[OCMArg any]];
     XCTAssertTrue([cell isKindOfClass:[CAEmitterCell class]]);
     
     [_delegate outlineView:_mockOutlineView shouldSelectItem:cell];
     [_mockOutlineView verify];
-    XCTAssertNil(_delegate.activeLayer);
+    XCTAssertNotNil(_delegate.activeLayer);
+    XCTAssertTrue([_delegate.activeLayer isKindOfClass:[CAEmitterLayer class]], @"The active layer should be an emitter layer");
 }
 
-- (void)testActiveLayerIsNotNilWhenEmitterCellsParentIsAnEmitterCell {
+- (void)testKeyPathForEmitterCellWithinEmitterCell {
+    __block NSString *returnedKeyPathForSelectedItem = @"";
+    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem, NSString *keyPathForSelectedItem) {
+        returnedKeyPathForSelectedItem = keyPathForSelectedItem;
+    }];
+    
+    CAEmitterCell *theSelectedCell = [[CAEmitterCell alloc] init];
+    theSelectedCell.name = @"selectedCell";
+    
+    CAEmitterCell *theParentCell = [[CAEmitterCell alloc] init];
+    theParentCell.name = @"parentCell";
+    
+    NSString *expectKeyPath = [NSString stringWithFormat:@"emitterCells.parentCell.emitterCells.selectedCell."];
+    
+    _delegate.activeLayer = nil;
+    
+//    [[[_mockOutlineView expect] andReturn:theSelectedCell] parentForItem:[OCMArg any]];
+    [[[_mockOutlineView expect] andReturn:theParentCell] parentForItem:[OCMArg any]];
+    [[[_mockOutlineView expect] andReturn:[[CAEmitterLayer alloc] init]] parentForItem:[OCMArg any]];
+    
+    [_delegate outlineView:_mockOutlineView shouldSelectItem:theSelectedCell];
+    [_delegate outlineViewSelectionDidChange:nil];
+    [_mockOutlineView verify];
+
+    XCTAssertTrue([returnedKeyPathForSelectedItem isEqualToString:expectKeyPath], @"The active layer should be an emitter layer");
+}
+
+- (void)testActiveLayerIsNotNilWhenEmitterCellsParentIsAnEmitterLayer {
     _delegate.activeLayer = nil;
     
     id cell = [[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0] valueForKey:@"emitterCells"] objectAtIndex:1];
@@ -194,9 +224,10 @@
     
     CALayer *layer = [[CALayer alloc] init];
     
-    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem) {
+    _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem, NSString *keyPathForSelectedItem) {
         configuredLayer = parentObject;
         configuredSelectedItem = selectedItem;
+        keyPathForSelectedItem = @"";
     }];
     _delegate.selectedItem = @"";
     _delegate.activeLayer = layer;
@@ -221,6 +252,18 @@
     XCTAssertThrows([self.observerMock verify], @"An unexpected exception was thrown");
     [[NSNotificationCenter defaultCenter] removeObserver:_observerMock];
 }
+
+- (void)testActiveLayerIsNotNilWhenSelectedItemIsEmitterCellWithParentAsEmitterCell {
+    
+}
+
+- (void)testKeyPathForSelectedItemMatchesLayers {
+    CALayer *layer = [[CALayer alloc] init];
+    
+    NSString *expectedKeyPath = @"layer.sublayers.";
+}
+
+
 
 //- (void)testParentLayerIsSentIntoBlockWhenSelectedItemIsNil {
 //    __block CALayer *configuredLayer = nil;

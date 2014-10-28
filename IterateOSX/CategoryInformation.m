@@ -25,10 +25,15 @@
     return self;
 }
 
-//LayerTransformViewController
++ (NSArray*)arrayForTransformLayer {
+    return @[
+             [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerTransformViewController" height:448]
+             ];
+}
 
 + (NSArray*)arrayForLayer {
     NSArray *categoryItems = @[
+                               [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerGeometryViewController" height:480],
                                [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerAppearanceViewController" height:300],
                                [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerShadowViewController" height:373],
                                [[CategoryInformation alloc] initWithStoryboardIdentifier:@"LayerTransformViewController" height:448]

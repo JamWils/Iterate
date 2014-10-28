@@ -15,6 +15,7 @@
 
 @property (strong) id selectedItem;
 @property (strong) id parentObject;
+@property (copy) NSString *keyPathForSelectedItem;
 
 @property (assign) ContentViewController *canvasViewController;
 @property (assign) LayerOutlineViewController *outlineViewController;

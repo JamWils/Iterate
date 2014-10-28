@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSArray *layers;
 @property (strong) id activeLayer;
 @property (strong) id selectedItem;
+@property (copy) NSString *keyPathForSelectedItem;
 //@property (strong) NSColor *canvasBackgroundColor;
 
 

@@ -26,19 +26,66 @@
     [super viewWillAppear];
     
     _addEmitterCellButton.enabled = _selectedItem != nil;
-    _addLayerButton.enabled = ![_selectedItem isKindOfClass:[CAEmitterCell class]];
+    
+    if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
+        _addLayerButton.enabled = NO;
+        _addTransformLayerButton.enabled = NO;
+        _addEmitterLayerButton.enabled = NO;
+    }
+    
+    
 }
 
-- (IBAction)addCellClicked:(NSButton *)sender {
-//    id document = [[NSDocumentController sharedDocumentController] currentDocument];
-//    
-//    if ([document isKindOfClass:[IterateDocument class]]) {
-//        IterateDocument *layerDocument = (IterateDocument*)document;
+- (IBAction)addLayer:(id)sender {
+    CGPoint layerPoint = CGPointMake(CGRectGetMidX(_canvasBounds) - 150, CGRectGetMidY(_canvasBounds) - 150);
+    CALayer *layer = [[CALayer alloc] init];
+    layer.frame = CGRectMake(layerPoint.x, layerPoint.y, 300, 300);
+    layer.backgroundColor = [NSColor grayColor].CGColor;
+    
+    //TODO: Add Unit Tests
+    //Check naming conventions
+    //Add layers to window instead of document
+    //Have window refresh its views when changes are made to the layers property
+    //Generate a key path when an item is selected in the outline view
+    //Allow user to click anywhere in outline view to deselect all items
+    //Fix naming conventions for all layers
+    //Create NSView cell for outline view - this will have the icons that you see on the right side menu
+    // -- it will also have a hidden/show (eye) icon so the user can toggle the layers in and out of view
+    
+    
+    if ([_document isKindOfClass:[IterateMacDocument class]]) {
+        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
+        NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
+        id objectToCheck = _selectedItem == nil ? layers : [_selectedItem sublayers];
+        layer.name = [self nameItem:objectToCheck withDefaultName:@"layer"];
         
         
-//        NSMutableArray *viewLayers = [layerDocument mutableArrayValueForKey:@"layers"];
-//        [viewLayers addObject:emitter];
-//    }
+        if ([_selectedItem isKindOfClass:[CALayer class]]) {
+//            NSMutableArray *sublayers = [_selectedItem mutableArrayValueForKey:@"sublayers"];
+//            [sublayers index:layer];
+            [_selectedItem addSublayer:layer];
+        } else {
+            [layers addObject:layer];
+        }
+    }
+
+}
+
+- (IBAction)addTransformLayer:(id)sender {
+    CATransformLayer *transformLayer = [[CATransformLayer alloc] init];
+    
+    if ([_document isKindOfClass:[IterateMacDocument class]]) {
+        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
+        NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
+        transformLayer.name = [self nameItem:layers withDefaultName:@"transformLayer"];
+        //[layers addObject:transformLayer];
+        
+        if ([_selectedItem isKindOfClass:[CALayer class]]) {
+            [_selectedItem addSublayer:transformLayer];
+         } else {
+             [layers addObject:transformLayer];
+         }
+    }
 }
 
 - (void)addEmitterLayer:(id)sender {
@@ -48,8 +95,6 @@
     emitter.emitterShape = kCAEmitterLayerPoint;
     emitter.renderMode = kCAEmitterLayerAdditive;
     [self addCellToItem:emitter];
-//    CALayer *emitter = [[CALayer alloc] init];
-//    emitter.frame = CGRectMake(0, 0, 300, 300);
     
     if ([_document isKindOfClass:[IterateMacDocument class]]) {
         IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
@@ -58,12 +103,10 @@
         [layers addObject:emitter];
     }
     
-//    [self dismissViewController:self];
 }
 
 - (IBAction)addEmitterCell:(id)sender {
     [self addCellToItem:_selectedItem];
-//    [self dismissViewController:self];
 }
 
 - (void)addCellToItem:(id)item {

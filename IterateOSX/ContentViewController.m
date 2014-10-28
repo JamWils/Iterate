@@ -99,7 +99,7 @@
 //                                                     }];
 }
 
-- (void)userActivity:(NSUserActivity *)userActivity didReceiveInputStream:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream {
+/*- (void)userActivity:(NSUserActivity *)userActivity didReceiveInputStream:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     
@@ -114,23 +114,24 @@
 
 - (void)userActivityWillSave:(NSUserActivity *)userActivity {
         NSLog(@"%s", __PRETTY_FUNCTION__);
-}
+}*/
 
 - (void) updateEmitterCellProperty:(NSString*)propertyName withValue:(id)value isCellValue:(BOOL)isCellValue {
     if (_activeLayer) {
-        for (CALayer *layer in [self.view.layer sublayers]) {
-            if ([layer.name isEqualToString:[_activeLayer valueForKey:@"name"]]) {
-                CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
-                
-                if ([_selectedItem isKindOfClass:[CAEmitterCell class]]  && isCellValue) {
-                    NSString *keyPath = [NSString stringWithFormat:@"%@.%@.%@", @"emitterCells", [_selectedItem valueForKey:@"name"], propertyName];
-                    [emitterLayer setValue:value forKeyPath:keyPath];
-                } else {
-                    [emitterLayer setValue:value forKeyPath:propertyName];
-                }
-                
-            }
+        if ([_selectedItem isKindOfClass:[CAEmitterCell class]]  && isCellValue) {
+            NSString *keyPath = [NSString stringWithFormat:@"%@%@", _keyPathForSelectedItem, propertyName];
+            [_activeLayer setValue:value forKeyPath:keyPath];
+        } else {
+            [_activeLayer setValue:value forKeyPath:propertyName];
         }
+//        for (CALayer *layer in [self.view.layer sublayers]) {
+//            if ([layer.name isEqualToString:[_activeLayer valueForKey:@"name"]]) {
+//                CAEmitterLayer *emitterLayer = (CAEmitterLayer*)layer;
+//                
+//                
+//                
+//            }
+//        }
         self.userActivity.needsSave = YES;
     }
     

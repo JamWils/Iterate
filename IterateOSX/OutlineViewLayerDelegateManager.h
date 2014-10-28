@@ -9,7 +9,7 @@
 @import AppKit;
 @import QuartzCore;
 
-typedef void (^OutlineViewParentObjectBlock)(id parentObject, id selectedItem);
+typedef void (^OutlineViewParentObjectBlock)(id parentObject, id selectedItem, NSString *keyPathForSelectedItem);
 
 @interface OutlineViewLayerDelegateManager : NSObject <NSOutlineViewDelegate>
 

@@ -45,6 +45,10 @@
     XCTAssertNotNil(_viewController, @"The view controller should not be nil.");
 }
 
+- (void)testAddTransformButtonIsNotNil {
+    XCTAssertNotNil(_viewController.addTransformLayerButton, @"Add transform layer button should not be nil.");
+}
+
 - (void)testAddLayerButtonIsNotNil {
     XCTAssertNotNil(_viewController.addLayerButton, @"Add Layer button should not be nil.");
 }
@@ -71,7 +75,21 @@
     _viewController.selectedItem = [[CAEmitterCell alloc] init];
     [_viewController viewWillAppear];
     
-    XCTAssertFalse(_viewController.addLayerButton.enabled, @"The add emitter cell button should be disabled when selected item is nil");
+    XCTAssertFalse(_viewController.addLayerButton.enabled, @"The add layer button should be disabled when selected item is an emitter cell");
+}
+
+- (void)testAddTransformLayerButtonIsDisabledWhenSelectedItemIsEmitterCell {
+    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    [_viewController viewWillAppear];
+    
+    XCTAssertFalse(_viewController.addTransformLayerButton.enabled, @"The add transform layer button should be disabled when selected item is an emitter cell");
+}
+
+- (void)testAddEmitterLayerButtonIsDisabledWhenSelectedItemIsEmitterCell {
+    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    [_viewController viewWillAppear];
+    
+    XCTAssertFalse(_viewController.addEmitterLayerButton.enabled, @"The add emitter layer button should be disabled when selected item is an emitter cell");
 }
 
 - (void)testAddLayerButtonIsEnabledWhenSelectedItemIsNotNil {

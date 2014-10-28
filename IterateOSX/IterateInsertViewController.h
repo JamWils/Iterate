@@ -14,10 +14,17 @@
 @property (strong) id selectedItem;
 
 @property (weak) IBOutlet NSButton *addLayerButton;
+@property (weak) IBOutlet NSButton *addTransformLayerButton;
+@property (weak) IBOutlet NSButton *addEmitterLayerButton;
 @property (weak) IBOutlet NSButton *addEmitterCellButton;
+
 @property CGRect canvasBounds;
 
 - (IBAction)addEmitterLayer:(id)sender;
 - (IBAction)addEmitterCell:(id)sender;
+- (IBAction)addLayer:(id)sender;
+- (IBAction)addTransformLayer:(id)sender;
+
+
 
 @end
