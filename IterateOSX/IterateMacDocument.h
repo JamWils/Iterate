@@ -11,7 +11,7 @@
 
 @interface IterateMacDocument : NSDocument <IterateDocument>
 
-//@property (copy) NSMutableArray *layers;
+
 @property (copy) NSColor *canvasBackgroundColor;
-//
+
 @end

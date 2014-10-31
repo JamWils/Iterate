@@ -25,4 +25,5 @@
 
 - (IBAction)updateCanvasColor:(id)sender;
 
+- (void)distributeLayers:(NSMutableArray*)layers fromViewController:(NSViewController*)viewController;
 @end

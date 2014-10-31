@@ -29,6 +29,7 @@
 		1A2A351119D843BA001E60E5 /* EmitterTextFieldControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2A350F19D843BA001E60E5 /* EmitterTextFieldControlBehavior.h */; };
 		1A2A351219D843BA001E60E5 /* EmitterTextFieldControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A351019D843BA001E60E5 /* EmitterTextFieldControlBehavior.m */; };
 		1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */; };
+		1A2E58991A00D5F600DD94A2 /* ObservableCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE97DF61A00D525003D740B /* ObservableCALayer.m */; };
 		1A417B5019D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A417B5119D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A417B5319D4508C009DF3A2 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
@@ -107,6 +108,7 @@
 		1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */; };
 		1ADFEC9919D8610300CDFB6B /* Moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFEC9819D8610300CDFB6B /* Moon.png */; };
 		1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */; };
+		1AE97DF41A00C91C003D740B /* CGRectControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */; };
 		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
 		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
 		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -329,6 +331,10 @@
 		1ADFEC9819D8610300CDFB6B /* Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon.png; sourceTree = "<group>"; };
 		1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerOutlineViewController.h; sourceTree = "<group>"; };
 		1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewController.m; sourceTree = "<group>"; };
+		1AE97DF21A00C91C003D740B /* CGRectControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectControlBehavior.h; sourceTree = "<group>"; };
+		1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectControlBehavior.m; sourceTree = "<group>"; };
+		1AE97DF51A00D525003D740B /* ObservableCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservableCALayer.h; sourceTree = "<group>"; };
+		1AE97DF61A00D525003D740B /* ObservableCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservableCALayer.m; sourceTree = "<group>"; };
 		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
 		1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AFB400319D7134700A5F3D3 /* IterateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateConstants.h; sourceTree = "<group>"; };
@@ -583,6 +589,8 @@
 				1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */,
 				1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */,
 				1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */,
+				1AE97DF21A00C91C003D740B /* CGRectControlBehavior.h */,
+				1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */,
 			);
 			name = Behaviors;
 			sourceTree = "<group>";
@@ -724,6 +732,8 @@
 				1AFB400319D7134700A5F3D3 /* IterateConstants.h */,
 				1AFB400419D7134700A5F3D3 /* IterateConstants.m */,
 				1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */,
+				1AE97DF51A00D525003D740B /* ObservableCALayer.h */,
+				1AE97DF61A00D525003D740B /* ObservableCALayer.m */,
 			);
 			name = "Iterate OSX Framework";
 			path = IterateOSXFramework;
@@ -1110,6 +1120,7 @@
 				1A10E7AA19E9FB0B003476C2 /* ViewController.m in Sources */,
 				1A10E7A719E9FB0B003476C2 /* AppDelegate.m in Sources */,
 				1A10E7A419E9FB0B003476C2 /* main.m in Sources */,
+				1AE97DF41A00C91C003D740B /* CGRectControlBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1197,6 +1208,7 @@
 				1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */,
 				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
 				1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */,
+				1A2E58991A00D5F600DD94A2 /* ObservableCALayer.m in Sources */,
 				1A736E8E19DC79640075C61C /* IterateColorSystemConversions.m in Sources */,
 				1A4C6B6119D23D3500CE99EE /* CATransform3DControlBehavior.m in Sources */,
 				1A66961E19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m in Sources */,

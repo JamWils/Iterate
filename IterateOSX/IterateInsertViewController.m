@@ -42,17 +42,6 @@
     layer.frame = CGRectMake(layerPoint.x, layerPoint.y, 300, 300);
     layer.backgroundColor = [NSColor grayColor].CGColor;
     
-    //TODO: Add Unit Tests
-    //Check naming conventions
-    //Add layers to window instead of document
-    //Have window refresh its views when changes are made to the layers property
-    //Generate a key path when an item is selected in the outline view
-    //Allow user to click anywhere in outline view to deselect all items
-    //Fix naming conventions for all layers
-    //Create NSView cell for outline view - this will have the icons that you see on the right side menu
-    // -- it will also have a hidden/show (eye) icon so the user can toggle the layers in and out of view
-    
-    
     if ([_document isKindOfClass:[IterateMacDocument class]]) {
         IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
         NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
@@ -107,6 +96,11 @@
 
 - (IBAction)addEmitterCell:(id)sender {
     [self addCellToItem:_selectedItem];
+    
+//    if ([_document isKindOfClass:[IterateMacDocument class]]) {
+////        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
+////        [iterateDocument updateUserInterface];
+//    }
 }
 
 - (void)addCellToItem:(id)item {

@@ -12,6 +12,7 @@
 
 @property (strong) id document;
 @property (strong) id selectedItem;
+@property (strong) NSMutableArray *layers;
 
 @property (weak) IBOutlet NSButton *addLayerButton;
 @property (weak) IBOutlet NSButton *addTransformLayerButton;

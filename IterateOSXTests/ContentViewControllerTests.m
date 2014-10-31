@@ -76,6 +76,7 @@
 
 - (void)testUpdatePropertyUpdatesSelectedItemWhenIsCellValueIsYes {
     CGFloat newVelocity = 1000;
+    _viewController.keyPathForSelectedItem = @"emitterCells.Test Cell.";
     [_viewController updateEmitterCellProperty:@"velocity" withValue:@(newVelocity) isCellValue:YES];
     
     float updatedVelocity = [[_viewController.selectedItem valueForKey:@"velocity"] floatValue];

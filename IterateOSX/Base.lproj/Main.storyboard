@@ -875,15 +875,28 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="qME-iU-EOU">
-                                                            <rect key="frame" x="1" y="0.0" width="246" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="GYG-7v-qbn">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                        </textField>
+                                                        <tableCellView identifier="MainCell" id="G5X-23-E9H">
+                                                            <rect key="frame" x="1" y="0.0" width="246.5" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBK-re-VxE">
+                                                                    <rect key="frame" x="3" y="0.0" width="17" height="17"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="TlT-TP-0Cn"/>
+                                                                </imageView>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHh-Hx-AZq">
+                                                                    <rect key="frame" x="25" y="0.0" width="105" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="lKh-4M-10s">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="vBK-re-VxE" id="qVt-vX-gf3"/>
+                                                                <outlet property="textField" destination="qHh-Hx-AZq" id="5kv-WW-Pm9"/>
+                                                            </connections>
+                                                        </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
@@ -895,7 +908,7 @@
                                     <constraint firstAttribute="width" constant="250" id="hij-bu-I7S"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="sRY-3r-5vE"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="Z9s-e5-OpM">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.33333333333333331" horizontal="YES" id="Z9s-e5-OpM">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -6943,6 +6956,7 @@
         <image name="CALayerActive Icon" width="40" height="28"/>
         <image name="CATransformLayer Icon" width="40" height="28"/>
         <image name="CATransformLayerActive Icon" width="40" height="28"/>
+        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
     </resources>
 </document>

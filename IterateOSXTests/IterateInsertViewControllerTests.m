@@ -13,12 +13,15 @@
 
 #import "IterateInsertViewController.h"
 #import "IterateMacDocument.h"
+#import "IterateWindowController.h"
 
 @interface IterateInsertViewControllerTests : XCTestCase
 
 @property (strong) IterateInsertViewController *viewController;
 @property (strong) id partialMockInsertController;
 @property (strong) id mockIterateDocument;
+
+@property (strong) id mockWindowController;
 
 @end
 
@@ -31,6 +34,7 @@
     [_viewController view];
     
     _mockIterateDocument = [OCMockObject mockForClass:[IterateMacDocument class]];
+    _mockWindowController = [OCMockObject mockForClass:[IterateWindowController class]];
     _viewController.document = _mockIterateDocument;
     
 }

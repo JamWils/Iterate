@@ -10,6 +10,7 @@
 #import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
 #import "IterateInsertViewController.h"
+#import "IterateMacDocument.h"
 #import "ActiveNavigationBarViewController.h"
 
 
@@ -52,12 +53,8 @@
 
 - (void)setSelectedItem:(id)selectedItem {
     _selectedItem = selectedItem;
-    
-//    NSSplitViewController *splitViewController = (NSSplitViewController*)self.window.contentViewController;
-//    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+
     self.canvasViewController.selectedItem = selectedItem;
-//    self.canvasViewController.keyPathForSelectedItem = _keyPathForSelectedItem;
-    
     [_activeMenuBarController updateMenuWithSelectedItem:selectedItem];
 }
 
@@ -97,8 +94,19 @@
         IterateInsertViewController *viewController = (IterateInsertViewController*)segue.destinationController;
         viewController.selectedItem = _selectedItem;
         viewController.canvasBounds = _canvasViewController.view.bounds;
-        viewController.document = self.document;
+        viewController.layers = [[self.document layers] mutableCopy];
     }
+}
+
+- (void)distributeLayers:(NSMutableArray*)layers fromViewController:(NSViewController*)viewController {
+    _canvasViewController.layers = layers;
+    _outlineViewController.layers = layers;
+    
+    if ([self.document isKindOfClass:[IterateMacDocument class]]) {
+        [self.document setLayers:layers];
+    }
+    
+    [self dismissController:viewController];
 }
 
 @end

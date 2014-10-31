@@ -65,13 +65,21 @@
     return itemToReturn;
 }
 
-- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
+/*- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
+    NSTableCellView *cellView = [outlineView makeViewWithIdentifier:@"MainCell" owner:self];
     if ([[tableColumn identifier] isEqualToString:@"name"]) {
 //        NSLog(@"%@", [item name]);
-        return [item name];
+        cellView.textField.stringValue = [item name];
+        cellView.imageView.image = [NSImage imageNamed:@"CALayer Icon"];
+        //return [item name];
+//        return cellView;
     }
     
-    return @"";
-}
+    return cellView;
+}*/
+
+
+
+
 
 @end

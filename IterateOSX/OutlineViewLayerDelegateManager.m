@@ -35,6 +35,26 @@
     return self;
 }
 
+- (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item {
+    NSTableCellView *cellView = [outlineView makeViewWithIdentifier:@"MainCell" owner:self];
+    if ([[tableColumn identifier] isEqualToString:@"name"]) {
+        cellView.textField.stringValue = [item name];
+        if ([item isKindOfClass:[CAEmitterCell class]]) {
+            cellView.imageView.image = [NSImage imageNamed:@"CAEmitterCell OutlineIcon Active"];
+        }
+        else if ([item isKindOfClass:[CAEmitterLayer class]]) {
+            cellView.imageView.image = [NSImage imageNamed:@"CAEmitterLayer OutlineIcon Active"];
+        } else if ([item isKindOfClass:[CATransformLayer class]]) {
+            cellView.imageView.image = [NSImage imageNamed:@"CATransformLayer OutlineIcon Active"];
+        } else {
+            cellView.imageView.image = [NSImage imageNamed:@"CALayer OutlineIcon Active"];
+        }
+        
+    }
+    
+    return cellView;
+}
+
 - (BOOL)outlineView:(NSOutlineView *)outlineView shouldSelectItem:(id)item {
     [_keyPathForSelectedItem setString:@""];
     _selectedItem = item;
