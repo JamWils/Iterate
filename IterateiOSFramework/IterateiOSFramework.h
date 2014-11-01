@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char IterateiOSFrameworkVersionString[];
 
 
 #import <IterateiOSFramework/IterateDocument.h>
+#import <IterateiOSFramework/IterateInsertViewControllerProtocol.h>

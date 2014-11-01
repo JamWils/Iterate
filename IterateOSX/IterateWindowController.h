@@ -7,11 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MainCoordinatorProtocol.h"
 @class ContentViewController;
 @class LayerOutlineViewController;
 @class ActiveNavigationBarViewController;
 
-@interface IterateWindowController : NSWindowController
+@interface IterateWindowController : NSWindowController <MainCoordinatorProtocol>
 
 @property (strong) id selectedItem;
 @property (strong) id parentObject;
@@ -25,5 +26,5 @@
 
 - (IBAction)updateCanvasColor:(id)sender;
 
-- (void)distributeLayers:(NSMutableArray*)layers fromViewController:(NSViewController*)viewController;
+//- (void)distributeLayers:(NSMutableArray*)layers fromViewController:(NSViewController*)viewController;
 @end

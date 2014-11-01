@@ -9,7 +9,7 @@
 #import "IterateWindowController.h"
 #import "ContentViewController.h"
 #import "LayerOutlineViewController.h"
-#import "IterateInsertViewController.h"
+#import "IterateInsertViewControllerOSX.h"
 #import "IterateMacDocument.h"
 #import "ActiveNavigationBarViewController.h"
 
@@ -91,10 +91,11 @@
 
 - (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"InsertViewControllerSegue"]) {
-        IterateInsertViewController *viewController = (IterateInsertViewController*)segue.destinationController;
-        viewController.selectedItem = _selectedItem;
-        viewController.canvasBounds = _canvasViewController.view.bounds;
-        viewController.layers = [[self.document layers] mutableCopy];
+        IterateInsertViewControllerOSX *viewController = (IterateInsertViewControllerOSX*)segue.destinationController;
+        viewController.sharedViewController.selectedItem = _selectedItem;
+        viewController.sharedViewController.canvasBounds = _canvasViewController.view.bounds;
+        viewController.sharedViewController.layers = [[self.document layers] mutableCopy];
+        viewController.sharedViewController.parentWindow = self;
     }
 }
 

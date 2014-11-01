@@ -11,13 +11,13 @@
 #import <OCMock/OCMock.h>
 @import QuartzCore;
 
-#import "IterateInsertViewController.h"
+#import "IterateInsertViewControllerOSX.h"
 #import "IterateMacDocument.h"
 #import "IterateWindowController.h"
 
 @interface IterateInsertViewControllerTests : XCTestCase
 
-@property (strong) IterateInsertViewController *viewController;
+@property (strong) IterateInsertViewControllerOSX *viewController;
 @property (strong) id partialMockInsertController;
 @property (strong) id mockIterateDocument;
 
@@ -33,14 +33,16 @@
     _viewController = [storyboard instantiateControllerWithIdentifier:@"IterateInsertViewController"];
     [_viewController view];
     
-    _mockIterateDocument = [OCMockObject mockForClass:[IterateMacDocument class]];
+//    _mockIterateDocument = [OCMockObject mockForClass:[IterateMacDocument class]];
     _mockWindowController = [OCMockObject mockForClass:[IterateWindowController class]];
-    _viewController.document = _mockIterateDocument;
+    _viewController.sharedViewController.parentWindow = _mockWindowController;
+//    _viewController.document = _mockIterateDocument;
     
 }
 
 - (void)tearDown {
-    _mockIterateDocument = nil;
+    _mockWindowController = nil;
+//    _mockIterateDocument = nil;
     _viewController = nil;
     [super tearDown];
 }
@@ -62,143 +64,47 @@
 }
 
 - (void)testAddEmitterCellButtonIsDisabledWhenSelectedItemIsNil {
-    _viewController.selectedItem = nil;
+    _viewController.sharedViewController.selectedItem = nil;
     [_viewController viewWillAppear];
     
     XCTAssertFalse(_viewController.addEmitterCellButton.enabled, @"The add emitter cell button should be disabled when selected item is nil");
 }
 
 - (void)testAddEmitterCellButtonIsEnabledWhenSelectedItemIsNotNil {
-    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    _viewController.sharedViewController.selectedItem = [[CAEmitterCell alloc] init];
     [_viewController viewWillAppear];
     
     XCTAssertTrue(_viewController.addEmitterCellButton.enabled, @"The add emitter cell button should be enabled when selected item is not nil");
 }
 
 - (void)testAddLayerButtonIsDisabledWhenSelectedItemIsEmitterCell {
-    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    _viewController.sharedViewController.selectedItem = [[CAEmitterCell alloc] init];
     [_viewController viewWillAppear];
     
     XCTAssertFalse(_viewController.addLayerButton.enabled, @"The add layer button should be disabled when selected item is an emitter cell");
 }
 
 - (void)testAddTransformLayerButtonIsDisabledWhenSelectedItemIsEmitterCell {
-    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    _viewController.sharedViewController.selectedItem = [[CAEmitterCell alloc] init];
     [_viewController viewWillAppear];
     
     XCTAssertFalse(_viewController.addTransformLayerButton.enabled, @"The add transform layer button should be disabled when selected item is an emitter cell");
 }
 
 - (void)testAddEmitterLayerButtonIsDisabledWhenSelectedItemIsEmitterCell {
-    _viewController.selectedItem = [[CAEmitterCell alloc] init];
+    _viewController.sharedViewController.selectedItem = [[CAEmitterCell alloc] init];
     [_viewController viewWillAppear];
     
     XCTAssertFalse(_viewController.addEmitterLayerButton.enabled, @"The add emitter layer button should be disabled when selected item is an emitter cell");
 }
 
 - (void)testAddLayerButtonIsEnabledWhenSelectedItemIsNotNil {
-    _viewController.selectedItem = nil;
+    _viewController.sharedViewController.selectedItem = nil;
     [_viewController viewWillAppear];
     
     XCTAssertTrue(_viewController.addLayerButton.enabled, @"The add emitter cell button should be enabled when selected item is not nil");
 }
 
-- (void)testEmitterLayerIsAdded {
-    _viewController.selectedItem = nil;
-    _viewController.canvasBounds = CGRectMake(0, 0, 10, 10);
-    NSMutableArray *layers = [[NSMutableArray alloc] init];
-    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
-    
-    [_viewController addEmitterLayer:nil];
-    
-    CAEmitterLayer *layer = layers[0];
-    XCTAssertNotNil(layer, @"An emitter layer should have been added to the document.");
-    XCTAssertTrue(CGSizeEqualToSize(CGSizeMake(30, 30), layer.emitterSize), @"The default emitter size for new layer should by 30 x 30.");
-    XCTAssertTrue(layer.renderMode == kCAEmitterLayerAdditive, @"The default layer mode should be additive.");
-    XCTAssertTrue(layer.emitterShape == kCAEmitterLayerPoint, @"The default shape should be point.");
-    XCTAssertTrue(CGPointEqualToPoint(layer.emitterPosition, CGPointMake(CGRectGetMidX(_viewController.canvasBounds), CGRectGetMidY(_viewController.canvasBounds))), @"The partical should be positioned in the center of the canvas.");
-    XCTAssertTrue([layer.name isEqualToString:@"emitterLayer"], @"The first emitter layer should be named emitterLayer");
-}
 
-- (void)testNewEmitterLayerHasACellAdded {
-    _viewController.selectedItem = nil;
-    _viewController.canvasBounds = CGRectMake(0, 0, 10, 10);
-    NSMutableArray *layers = [[NSMutableArray alloc] init];
-    [[[_mockIterateDocument stub] andReturn:layers] layers];
-    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
-    
-    [_viewController addEmitterLayer:nil];
-    
-    CAEmitterCell *emitterCell = [layers[0] valueForKey:@"emitterCells"][0];
-    XCTAssertNotNil(emitterCell, @"An emitter cell should be added to a new emitter layer.");
-    XCTAssertTrue(emitterCell.birthRate == 5, @"The default birthrate should be 20.");
-    XCTAssertTrue(emitterCell.lifetime == 1, @"The default lifetime should be 1.");
-    XCTAssertTrue(emitterCell.lifetimeRange == 1, @"The default lifetime range should be 1.");
-    XCTAssertTrue(emitterCell.velocity == 0, @"The default velocity should be 0.");
-    XCTAssertTrue([emitterCell.name isEqualToString:@"emitterCell"], @"The first emitter cell should be named emitterCell.");
-}
-
-- (void)testNewEmitterCellNotAddedWhenSelectedItemEqualsNil {
-    _viewController.selectedItem = nil;
-    NSMutableArray *layers = [[NSMutableArray alloc] init];
-    [[[_mockIterateDocument stub] andReturn:layers] layers];
-    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
-    
-    [_viewController addEmitterLayer:nil];
-    [_viewController addEmitterCell:nil];
-    
-    NSArray *emitterCells = [layers[0] valueForKey:@"emitterCells"];
-    XCTAssertTrue([emitterCells count] == 1, @"A second emitter cell will not be added when selected item is nil");
-}
-
-- (void)testNewEmitterCellIsAddedToSelectedItem {
-    _viewController.selectedItem = nil;
-    NSMutableArray *layers = [[NSMutableArray alloc] init];
-    [[[_mockIterateDocument stub] andReturn:layers] layers];
-    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
-    
-    [_viewController addEmitterLayer:nil];
-    _viewController.selectedItem = layers[0];
-    [_viewController addEmitterCell:nil];
-    
-    NSArray *emitterCells = [layers[0] valueForKey:@"emitterCells"];
-    XCTAssertTrue([emitterCells count] == 2, @"A second emitter cell will be added when the selected item is an emitter layer");
-}
-
-- (void)testNewEmitterCellNameIsDifferentFromPriorCells {
-    _viewController.selectedItem = nil;
-    NSMutableArray *layers = [[NSMutableArray alloc] init];
-    [[[_mockIterateDocument stub] andReturn:layers] layers];
-    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
-    
-    [_viewController addEmitterLayer:nil];
-    _viewController.selectedItem = layers[0];
-    [_viewController addEmitterCell:nil];
-    [_viewController addEmitterCell:nil];
-    
-    NSArray *emitterCells = [layers[0] valueForKey:@"emitterCells"];
-    
-    CAEmitterCell *cellTwo = emitterCells[1];
-    CAEmitterCell *cellThree = emitterCells[2];
-    XCTAssertTrue([cellTwo.name isEqualToString:@"emitterCell2"], @"The second emitter cell should be named emitterCell2");
-    XCTAssertTrue([cellThree.name isEqualToString:@"emitterCell3"], @"The third emitter cell should be named emitterCell3");
-}
-
-- (void)testNewEmitterLayerNameIsDifferentFromPriorCells {
-    _viewController.selectedItem = nil;
-    NSMutableArray *layers = [[NSMutableArray alloc] init];
-    [[[_mockIterateDocument stub] andReturn:layers] layers];
-    [[[_mockIterateDocument stub] andReturn:layers] mutableArrayValueForKey:@"layers"];
-    
-    [_viewController addEmitterLayer:nil];
-    _viewController.selectedItem = layers[0];
-    [_viewController addEmitterLayer:nil];
-    [_viewController addEmitterLayer:nil];
-    
-    CAEmitterLayer *layerTwo = layers[1];
-    CAEmitterLayer *layerThree = layers[2];
-    XCTAssertTrue([layerTwo.name isEqualToString:@"emitterLayer2"], @"The second emitter layer should be named emitterLayer2");
-    XCTAssertTrue([layerThree.name isEqualToString:@"emitterLayer3"], @"The third emitter layer should be named emitterLayer3");
-}
 
 @end

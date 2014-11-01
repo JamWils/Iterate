@@ -253,16 +253,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:_observerMock];
 }
 
-- (void)testActiveLayerIsNotNilWhenSelectedItemIsEmitterCellWithParentAsEmitterCell {
-    
-}
-
-- (void)testKeyPathForSelectedItemMatchesLayers {
-    CALayer *layer = [[CALayer alloc] init];
-    
-    NSString *expectedKeyPath = @"layer.sublayers.";
-}
-
 
 
 //- (void)testParentLayerIsSentIntoBlockWhenSelectedItemIsNil {

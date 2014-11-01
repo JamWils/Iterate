@@ -1,48 +1,26 @@
 //
-//  IterateInsertViewController.m
+//  IterateInsertSharedViewController.m
 //  IterateOSX
 //
-//  Created by James Wilson on 9/29/14.
+//  Created by James Wilson on 10/31/14.
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "IterateInsertViewController.h"
-#import "IterateWindowController.h"
-#import "IterateMacDocument.h"
-@import QuartzCore;
+#import "IterateInsertSharedViewController.h"
 
-@interface IterateInsertViewController ()
-
-@end
-
-@implementation IterateInsertViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
-}
-
-- (void)viewWillAppear {
-    [super viewWillAppear];
-    
-    _addEmitterCellButton.enabled = _selectedItem != nil;
-    
-    if ([_selectedItem isKindOfClass:[CAEmitterCell class]]) {
-        _addLayerButton.enabled = NO;
-        _addTransformLayerButton.enabled = NO;
-        _addEmitterLayerButton.enabled = NO;
-    }
-    
-    
-}
+@implementation IterateInsertSharedViewController
 
 - (IBAction)addLayer:(id)sender {
     CGPoint layerPoint = CGPointMake(CGRectGetMidX(_canvasBounds) - 150, CGRectGetMidY(_canvasBounds) - 150);
     CALayer *layer = [[CALayer alloc] init];
     layer.frame = CGRectMake(layerPoint.x, layerPoint.y, 300, 300);
-    layer.backgroundColor = [NSColor grayColor].CGColor;
     
-    if ([_document isKindOfClass:[IterateMacDocument class]]) {
+    CGFloat components[] = {0.5, 0.5, 0.5, 1.0};
+    CGColorRef color = CGColorCreate(CGColorSpaceCreateDeviceRGB(), components);
+    layer.backgroundColor = color;
+    CGColorRelease(color);
+    
+    /*if ([_document isKindOfClass:[IterateMacDocument class]]) {
         IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
         NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
         id objectToCheck = _selectedItem == nil ? layers : [_selectedItem sublayers];
@@ -50,20 +28,20 @@
         
         
         if ([_selectedItem isKindOfClass:[CALayer class]]) {
-//            NSMutableArray *sublayers = [_selectedItem mutableArrayValueForKey:@"sublayers"];
-//            [sublayers index:layer];
+            //            NSMutableArray *sublayers = [_selectedItem mutableArrayValueForKey:@"sublayers"];
+            //            [sublayers index:layer];
             [_selectedItem addSublayer:layer];
         } else {
             [layers addObject:layer];
         }
-    }
-
+    }*/
+    
 }
 
 - (IBAction)addTransformLayer:(id)sender {
     CATransformLayer *transformLayer = [[CATransformLayer alloc] init];
     
-    if ([_document isKindOfClass:[IterateMacDocument class]]) {
+    /*if ([_document isKindOfClass:[IterateMacDocument class]]) {
         IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
         NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
         transformLayer.name = [self nameItem:layers withDefaultName:@"transformLayer"];
@@ -71,10 +49,10 @@
         
         if ([_selectedItem isKindOfClass:[CALayer class]]) {
             [_selectedItem addSublayer:transformLayer];
-         } else {
-             [layers addObject:transformLayer];
-         }
-    }
+        } else {
+            [layers addObject:transformLayer];
+        }
+    }*/
 }
 
 - (void)addEmitterLayer:(id)sender {
@@ -85,22 +63,25 @@
     emitter.renderMode = kCAEmitterLayerAdditive;
     [self addCellToItem:emitter];
     
-    if ([_document isKindOfClass:[IterateMacDocument class]]) {
-        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
-        NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
-        emitter.name = [self nameItem:layers withDefaultName:@"emitterLayer"];
-        [layers addObject:emitter];
-    }
+    emitter.name = [self nameItem:_layers withDefaultName:@"emitterLayer"];
+    [_layers addObject:emitter];
+    [_parentWindow distributeLayers:self.layers fromViewController:self];
     
+    /*if ([_parentWindow isKindOfClass:[IterateWindowController class]]) {
+        emitter.name = [self nameItem:_layers withDefaultName:@"emitterLayer"];
+        [_layers addObject:emitter];
+        
+        [_parentWindow distributeLayers:self.layers fromViewController:self];
+    }*/
 }
 
 - (IBAction)addEmitterCell:(id)sender {
     [self addCellToItem:_selectedItem];
     
-//    if ([_document isKindOfClass:[IterateMacDocument class]]) {
-////        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
-////        [iterateDocument updateUserInterface];
-//    }
+    [_parentWindow distributeLayers:self.layers fromViewController:self];
+    /*if ([_parentWindow isKindOfClass:[IterateWindowController class]]) {
+        [_parentWindow distributeLayers:self.layers fromViewController:self];
+    }*/
 }
 
 - (void)addCellToItem:(id)item {
@@ -116,7 +97,7 @@
         cell.lifetime = 1;
         cell.lifetimeRange = 1;
         cell.velocity = 0;
-        cell.contents = (id)[self CGImageNamed:@"Cell"];
+        //cell.contents = (id)[self CGImageNamed:@"Cell"];
         cell.name = [self nameItem:emitterCells withDefaultName:@"emitterCell"];
         [emitterCells addObject:cell];
         
@@ -144,13 +125,14 @@
     return newName;
 }
 
--(CGImageRef)CGImageNamed:(NSString*)name {
+/*-(CGImageRef)CGImageNamed:(NSString*)name {
     NSImage *testImage = [NSImage imageNamed:name];
     
     CGImageSourceRef source;
     source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
     CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
     return maskRef;
-}
+}*/
+
 
 @end

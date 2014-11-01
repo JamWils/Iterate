@@ -15,7 +15,7 @@
 #import "ActiveNavigationBarViewController.h"
 #import "LayerOutlineViewController.h"
 #import "IterateMacDocument.h"
-#import "IterateInsertViewController.h"
+#import "IterateInsertViewControllerOSX.h"
 
 @interface IterateWindowControllerTests : XCTestCase
 
@@ -159,7 +159,7 @@
 #pragma mark Prepare for Segue Unit Tests
 
 - (void)testThatLayersPropertyIsSetOnInsertViewControllerFromDocument {
-    IterateInsertViewController *insertViewController = [[IterateInsertViewController alloc] init];
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     NSMutableArray *layers = [self layersForTesting];
     
     _mockDocument = [OCMockObject niceMockForClass:[IterateMacDocument class]];
@@ -169,11 +169,11 @@
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"InsertViewControllerSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
-    XCTAssertEqualObjects(insertViewController.layers, layers, @"The layers should be passed to insert view controller during prepare for segue");
+    XCTAssertEqualObjects(insertViewController.sharedViewController.layers, layers, @"The layers should be passed to insert view controller during prepare for segue");
 }
 
 - (void)testThatLayersPropertyIsNotSetOnInsertViewControllerFromDocumentWithIncorrectSegueName {
-    IterateInsertViewController *insertViewController = [[IterateInsertViewController alloc] init];
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     NSMutableArray *layers = [self layersForTesting];
     
     _mockDocument = [OCMockObject niceMockForClass:[IterateMacDocument class]];
@@ -183,51 +183,69 @@
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"WrongSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
-    XCTAssertEqualObjects(insertViewController.layers, nil, @"The layers should not be passed to insert view controller during prepare for segue");
+    XCTAssertNil(insertViewController.sharedViewController.layers, @"The layers should not be passed to insert view controller during prepare for segue");
 }
 
 - (void)testThatCanvasBoundsPropertyIsSetOnInsertViewControllerFromCanvasViewController {
-    IterateInsertViewController *insertViewController = [[IterateInsertViewController alloc] init];
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     _windowController.canvasViewController.view.frame = CGRectMake(0, 0, 500, 500);
     
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"InsertViewControllerSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
-    BOOL result = CGRectEqualToRect(insertViewController.canvasBounds, _windowController.canvasViewController.view.bounds);
+    BOOL result = CGRectEqualToRect(insertViewController.sharedViewController.canvasBounds, _windowController.canvasViewController.view.bounds);
     XCTAssertTrue(result, @"The canvas bounds should equal the canvas view controller's bounds");
 }
 
 - (void)testThatCanvasPropertyIsNotSetOnInsertViewControllerFromCanvasWithIncorrectSegueName {
-    IterateInsertViewController *insertViewController = [[IterateInsertViewController alloc] init];
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     _windowController.canvasViewController.view.frame = CGRectMake(0, 0, 500, 500);
     
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"WrongSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
-    BOOL result = CGRectEqualToRect(insertViewController.canvasBounds, _windowController.canvasViewController.view.bounds);
+    BOOL result = CGRectEqualToRect(insertViewController.sharedViewController.canvasBounds, _windowController.canvasViewController.view.bounds);
     XCTAssertFalse(result, @"The canvas bounds should not equal the canvas view controller's bounds");
 }
 
 - (void)testThatSelectedItemPropertyIsSetOnInsertViewControllerFromDocument {
-    IterateInsertViewController *insertViewController = [[IterateInsertViewController alloc] init];
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     NSMutableArray *layers = [self layersForTesting];
     _windowController.selectedItem = layers[1];
     
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"InsertViewControllerSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
-    XCTAssertEqualObjects(insertViewController.selectedItem, layers[1], @"The selected item should be passed to insert view controller during prepare for segue");
+    XCTAssertEqualObjects(insertViewController.sharedViewController.selectedItem, layers[1], @"The selected item should be passed to insert view controller during prepare for segue");
 }
 
 - (void)testThatSelectedItemPropertyIsNotSetOnInsertViewControllerFromDocument {
-    IterateInsertViewController *insertViewController = [[IterateInsertViewController alloc] init];
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     NSMutableArray *layers = [self layersForTesting];
     _windowController.selectedItem = layers[1];
     
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"TestSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
-    XCTAssertEqualObjects(insertViewController.selectedItem, nil, @"The selected item should not be passed to insert view controller during prepare for segue");
+    XCTAssertNil(insertViewController.sharedViewController.selectedItem, @"The selected item should not be passed to insert view controller during prepare for segue");
+}
+
+- (void)testThatParentWindowPropertyIsSetOnInsertViewController {
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
+    
+    NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"InsertViewControllerSegue" source:_windowController destination:insertViewController];
+    [_windowController prepareForSegue:storyboardSegue sender:nil];
+    
+    XCTAssertEqual(insertViewController.sharedViewController.parentWindow, _windowController, @"The parent window should equal to the window controller");
+}
+
+- (void)testThatParentWindowPropertyIsNotSetOnInsertViewController {
+    IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
+    
+    NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"TestSegue" source:_windowController destination:insertViewController];
+    [_windowController prepareForSegue:storyboardSegue sender:nil];
+    
+    XCTAssertNil(insertViewController.sharedViewController.parentWindow, @"The parent window should not equal to the window controller");
 }
 
 #pragma mark -

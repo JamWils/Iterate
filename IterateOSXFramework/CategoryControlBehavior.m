@@ -9,7 +9,7 @@
 #import "CategoryControlBehavior.h"
 #import "ContainerLayoutView.h"
 
-extern int const MIN_CONTAINER_HEIGHT = 34;
+int const MIN_CONTAINER_HEIGHT = 34;
 
 @interface CategoryControlBehavior ()
 

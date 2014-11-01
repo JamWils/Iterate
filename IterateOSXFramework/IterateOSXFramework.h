@@ -18,6 +18,8 @@ FOUNDATION_EXPORT const unsigned char IterateOSXFrameworkVersionString[];
 
 //Protocols
 #import <IterateOSXFramework/IterateDocument.h>
+#import <IterateOSXFramework/MainCoordinatorProtocol.h>
+#import <IterateOSXFramework/IterateInsertViewControllerProtocol.h>
 
 //Classes
 #import <IterateOSXFramework/EmitterFloatControlBehavior.h>
@@ -27,3 +29,5 @@ FOUNDATION_EXPORT const unsigned char IterateOSXFrameworkVersionString[];
 #import <IterateOSXFramework/FlippedView.h>
 #import <IterateOSXFramework/FlippedClipView.h>
 #import <IterateOSXFramework/HeaderView.h>
+
+#import <IterateOSXFramework/IterateInsertSharedViewController.h>

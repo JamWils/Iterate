@@ -31,6 +31,19 @@
 		1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */; };
 		1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E589A1A03797C00DD94A2 /* Operators.swift */; };
 		1A2E589C1A03797C00DD94A2 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E589A1A03797C00DD94A2 /* Operators.swift */; };
+		1A2E58A41A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E58A21A037F7700DD94A2 /* MainCoordinatorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58A51A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E58A21A037F7700DD94A2 /* MainCoordinatorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58AA1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E58A81A045A5E00DD94A2 /* IterateInsertSharedViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58AB1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E58A81A045A5E00DD94A2 /* IterateInsertSharedViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58AC1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58A91A045A5E00DD94A2 /* IterateInsertSharedViewController.m */; };
+		1A2E58AD1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58A91A045A5E00DD94A2 /* IterateInsertSharedViewController.m */; };
+		1A2E58B21A045BF500DD94A2 /* CGRectControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE97DF21A00C91C003D740B /* CGRectControlBehavior.h */; };
+		1A2E58B31A045DFC00DD94A2 /* IterateOSXFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58B51A045F6700DD94A2 /* iOS.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A2E58B41A045F6700DD94A2 /* iOS.xcconfig */; };
+		1A2E58B81A052EA500DD94A2 /* IterateInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58B71A052EA500DD94A2 /* IterateInsertViewController.m */; };
+		1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E58BD1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58BF1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A2E58BD1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A2E58C31A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */; };
 		1A417B5019D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A417B5119D44B17009DF3A2 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
 		1A417B5319D4508C009DF3A2 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A417B4F19D44B17009DF3A2 /* OCMock.framework */; };
@@ -42,7 +55,7 @@
 		1A66961D19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A66961B19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h */; };
 		1A66961E19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66961C19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m */; };
 		1A66962319DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962219DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m */; };
-		1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962519DA504100CD65D5 /* IterateInsertViewController.m */; };
+		1A66962619DA504100CD65D5 /* IterateInsertViewControllerOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962519DA504100CD65D5 /* IterateInsertViewControllerOSX.m */; };
 		1A66962819DA508D00CD65D5 /* IterateInsertViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */; };
 		1A66962A19DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */; };
 		1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */; };
@@ -60,9 +73,6 @@
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
 		1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */; };
-		1A82E08619F09B2F00B807E9 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */; };
-		1A82E08719F09B2F00B807E9 /* Common.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A82E08519F09B2F00B807E9 /* Common.xcconfig */; };
-		1A82E08919F09B8900B807E9 /* Mac.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */; };
 		1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A82E08C19F1032F00B807E9 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A82E08F19F10C6600B807E9 /* ActiveNavigationBarViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */; };
@@ -102,14 +112,15 @@
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
 		1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0219BBA3AF001A2015 /* Main.storyboard */; };
 		1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */; };
-		1AD94D5519BBC4B1001A2015 /* IterateOSXFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD94D5419BBC4B1001A2015 /* IterateOSXFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AD94D6419BBC4B1001A2015 /* IterateOSXFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; };
 		1AD94D6519BBC4B1001A2015 /* IterateOSXFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD94D5019BBC4B1001A2015 /* IterateOSXFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADD176119CDBCC7005371B5 /* ContainerLayoutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */; };
 		1ADFEC9919D8610300CDFB6B /* Moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFEC9819D8610300CDFB6B /* Moon.png */; };
 		1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */; };
-		1AE97DF41A00C91C003D740B /* CGRectControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */; };
+		1AE7BFE71A05A131009EF687 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7BFE61A05A131009EF687 /* libOCMock.a */; };
+		1AE7BFE81A05A131009EF687 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7BFE61A05A131009EF687 /* libOCMock.a */; };
+		1AE7BFE91A05A4BC009EF687 /* IterateInsertSharedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */; };
 		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
 		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
 		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,21 +153,14 @@
 			remoteGlobalIDString = 1A10E7C919E9FDB1003476C2;
 			remoteInfo = IterateiOSFramework;
 		};
-		1A10E7EE19EA01A7003476C2 /* PBXContainerItemProxy */ = {
+		1A2E58B01A045BAC00DD94A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AD94CEB19BBA3AE001A2015 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1A10E79E19E9FB0B003476C2;
-			remoteInfo = Iterate;
+			remoteGlobalIDString = 1AD94D4F19BBC4B1001A2015;
+			remoteInfo = IterateOSXFramework;
 		};
 		1AD94D0A19BBA3AF001A2015 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1AD94CEB19BBA3AE001A2015 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1AD94CF219BBA3AF001A2015;
-			remoteInfo = IterateOSX;
-		};
-		1AD94D5B19BBC4B1001A2015 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AD94CEB19BBA3AE001A2015 /* Project object */;
 			proxyType = 1;
@@ -242,8 +246,14 @@
 		1A2A351019D843BA001E60E5 /* EmitterTextFieldControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterTextFieldControlBehavior.m; sourceTree = "<group>"; };
 		1A2A351319D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterTextFieldControlBehaviorTests.m; sourceTree = "<group>"; };
 		1A2E589A1A03797C00DD94A2 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		1A2E589D1A037B2600DD94A2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		1A2E589F1A037B2D00DD94A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1A2E58A21A037F7700DD94A2 /* MainCoordinatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCoordinatorProtocol.h; sourceTree = "<group>"; };
+		1A2E58A81A045A5E00DD94A2 /* IterateInsertSharedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateInsertSharedViewController.h; sourceTree = "<group>"; };
+		1A2E58A91A045A5E00DD94A2 /* IterateInsertSharedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertSharedViewController.m; sourceTree = "<group>"; };
+		1A2E58B41A045F6700DD94A2 /* iOS.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = iOS.xcconfig; sourceTree = "<group>"; };
+		1A2E58B61A052EA500DD94A2 /* IterateInsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateInsertViewController.h; sourceTree = "<group>"; };
+		1A2E58B71A052EA500DD94A2 /* IterateInsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertViewController.m; sourceTree = "<group>"; };
+		1A2E58BD1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateInsertViewControllerProtocol.h; sourceTree = "<group>"; };
+		1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertSharedViewControllerTests.m; sourceTree = "<group>"; };
 		1A417B4F19D44B17009DF3A2 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		1A4C6B5E19D23D3500CE99EE /* CATransform3DControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransform3DControlBehavior.h; sourceTree = "<group>"; };
 		1A4C6B5F19D23D3500CE99EE /* CATransform3DControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransform3DControlBehavior.m; sourceTree = "<group>"; };
@@ -252,8 +262,8 @@
 		1A66961B19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterCheckBoxControlBehavior.h; sourceTree = "<group>"; };
 		1A66961C19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCheckBoxControlBehavior.m; sourceTree = "<group>"; };
 		1A66962219DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCheckBoxControlBehaviorTests.m; sourceTree = "<group>"; };
-		1A66962419DA504100CD65D5 /* IterateInsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateInsertViewController.h; sourceTree = "<group>"; };
-		1A66962519DA504100CD65D5 /* IterateInsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertViewController.m; sourceTree = "<group>"; };
+		1A66962419DA504100CD65D5 /* IterateInsertViewControllerOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateInsertViewControllerOSX.h; sourceTree = "<group>"; };
+		1A66962519DA504100CD65D5 /* IterateInsertViewControllerOSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertViewControllerOSX.m; sourceTree = "<group>"; };
 		1A66962719DA508D00CD65D5 /* IterateInsertViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateInsertViewControllerTests.m; sourceTree = "<group>"; };
 		1A66962919DABB3500CD65D5 /* EmitterCellMotionViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterCellMotionViewControllerTests.m; sourceTree = "<group>"; };
 		1A6F5C9F19D068960000B1B2 /* EmitterImageControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterImageControlBehavior.h; sourceTree = "<group>"; };
@@ -335,6 +345,16 @@
 		1ADFEC9819D8610300CDFB6B /* Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon.png; sourceTree = "<group>"; };
 		1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerOutlineViewController.h; sourceTree = "<group>"; };
 		1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewController.m; sourceTree = "<group>"; };
+		1AE7BFDC1A05A131009EF687 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		1AE7BFDD1A05A131009EF687 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		1AE7BFDE1A05A131009EF687 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		1AE7BFDF1A05A131009EF687 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		1AE7BFE01A05A131009EF687 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		1AE7BFE11A05A131009EF687 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		1AE7BFE21A05A131009EF687 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		1AE7BFE31A05A131009EF687 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		1AE7BFE41A05A131009EF687 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		1AE7BFE61A05A131009EF687 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		1AE97DF21A00C91C003D740B /* CGRectControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectControlBehavior.h; sourceTree = "<group>"; };
 		1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectControlBehavior.m; sourceTree = "<group>"; };
 		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
@@ -361,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE7BFE71A05A131009EF687 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A10E7D519E9FDB1003476C2 /* IterateiOSFramework.framework in Frameworks */,
+				1AE7BFE81A05A131009EF687 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +438,7 @@
 		1A10E7A019E9FB0B003476C2 /* Iterate iOS App */ = {
 			isa = PBXGroup;
 			children = (
+				1A2E58B91A052EBB00DD94A2 /* ViewControllers */,
 				1A10E7A519E9FB0B003476C2 /* AppDelegate.h */,
 				1A10E7A619E9FB0B003476C2 /* AppDelegate.m */,
 				1A10E7A819E9FB0B003476C2 /* ViewController.h */,
@@ -424,6 +447,7 @@
 				1A10E7AE19E9FB0B003476C2 /* Images.xcassets */,
 				1A10E7B019E9FB0B003476C2 /* LaunchScreen.xib */,
 				1A10E7A119E9FB0B003476C2 /* Supporting Files */,
+				1A2E58B41A045F6700DD94A2 /* iOS.xcconfig */,
 			);
 			name = "Iterate iOS App";
 			path = Iterate;
@@ -495,9 +519,36 @@
 		1A10E7F019EA0291003476C2 /* Imported Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AE7BFD81A05A122009EF687 /* OCMock */,
 				1A417B4F19D44B17009DF3A2 /* OCMock.framework */,
 			);
 			name = "Imported Frameworks";
+			sourceTree = "<group>";
+		};
+		1A2E58B91A052EBB00DD94A2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A2E58B61A052EA500DD94A2 /* IterateInsertViewController.h */,
+				1A2E58B71A052EA500DD94A2 /* IterateInsertViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A2E58C01A05500400DD94A2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1A2E58BD1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h */,
+				1A2E58A21A037F7700DD94A2 /* MainCoordinatorProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		1A2E58C11A0597C500DD94A2 /* Iterate Framework Common Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */,
+			);
+			name = "Iterate Framework Common Tests";
 			sourceTree = "<group>";
 		};
 		1A4C6B5D19D22D7C00CE99EE /* Emitter Behaviors */ = {
@@ -600,9 +651,12 @@
 		1A82E08419F0996D00B807E9 /* Iterate Framework Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A2E58C01A05500400DD94A2 /* Protocols */,
 				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
 				1A82E08A19F1023000B807E9 /* IterateDocument.h */,
 				1A2E589A1A03797C00DD94A2 /* Operators.swift */,
+				1A2E58A81A045A5E00DD94A2 /* IterateInsertSharedViewController.h */,
+				1A2E58A91A045A5E00DD94A2 /* IterateInsertSharedViewController.m */,
 			);
 			name = "Iterate Framework Common";
 			sourceTree = "<group>";
@@ -616,8 +670,8 @@
 				1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */,
 				1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */,
 				1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */,
-				1A66962419DA504100CD65D5 /* IterateInsertViewController.h */,
-				1A66962519DA504100CD65D5 /* IterateInsertViewController.m */,
+				1A66962419DA504100CD65D5 /* IterateInsertViewControllerOSX.h */,
+				1A66962519DA504100CD65D5 /* IterateInsertViewControllerOSX.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -635,9 +689,8 @@
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
-				1A2E589F1A037B2D00DD94A2 /* QuartzCore.framework */,
-				1A2E589D1A037B2600DD94A2 /* AppKit.framework */,
 				1A82E08419F0996D00B807E9 /* Iterate Framework Common */,
+				1A2E58C11A0597C500DD94A2 /* Iterate Framework Common Tests */,
 				1A10E7A019E9FB0B003476C2 /* Iterate iOS App */,
 				1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */,
 				1AD94CF519BBA3AF001A2015 /* Iterate OSX App */,
@@ -771,6 +824,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1AE7BFD81A05A122009EF687 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7BFD91A05A131009EF687 /* usr */,
+			);
+			name = OCMock;
+			sourceTree = "<group>";
+		};
+		1AE7BFD91A05A131009EF687 /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7BFDA1A05A131009EF687 /* include */,
+				1AE7BFE51A05A131009EF687 /* lib */,
+			);
+			path = usr;
+			sourceTree = "<group>";
+		};
+		1AE7BFDA1A05A131009EF687 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7BFDB1A05A131009EF687 /* OCMock */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1AE7BFDB1A05A131009EF687 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7BFDC1A05A131009EF687 /* NSNotificationCenter+OCMAdditions.h */,
+				1AE7BFDD1A05A131009EF687 /* OCMArg.h */,
+				1AE7BFDE1A05A131009EF687 /* OCMConstraint.h */,
+				1AE7BFDF1A05A131009EF687 /* OCMLocation.h */,
+				1AE7BFE01A05A131009EF687 /* OCMMacroState.h */,
+				1AE7BFE11A05A131009EF687 /* OCMock.h */,
+				1AE7BFE21A05A131009EF687 /* OCMockObject.h */,
+				1AE7BFE31A05A131009EF687 /* OCMRecorder.h */,
+				1AE7BFE41A05A131009EF687 /* OCMStubRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		1AE7BFE51A05A131009EF687 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1AE7BFE61A05A131009EF687 /* libOCMock.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,7 +893,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2E58A41A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */,
 				1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */,
+				1A2E58AA1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
+				1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
 				1A10E7CF19E9FDB1003476C2 /* IterateiOSFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,8 +905,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD94D5519BBC4B1001A2015 /* IterateOSXFramework.h in Headers */,
 				1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */,
+				1A2E58AB1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
 				1AAE096D19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h in Headers */,
 				1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */,
 				1A10E7F419EA6D8E003476C2 /* CategoryInformation.h in Headers */,
@@ -812,11 +917,15 @@
 				1A96FED919D010A300A4627D /* AlphaColorWell.h in Headers */,
 				1A9DC37B19D0A21700B141E5 /* EmitterPointControlBehavior.h in Headers */,
 				1A74ADC919CC7DFD00B894EC /* FlippedView.h in Headers */,
+				1A2E58B31A045DFC00DD94A2 /* IterateOSXFramework.h in Headers */,
+				1A2E58BF1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
+				1A2E58A51A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */,
 				1A96FED519CF99BE00A4627D /* EmitterColorControlBehavior.h in Headers */,
 				1A2A351119D843BA001E60E5 /* EmitterTextFieldControlBehavior.h in Headers */,
 				1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */,
 				1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */,
 				1AFE20B919F7539C00207C8F /* HeaderView.h in Headers */,
+				1A2E58B21A045BF500DD94A2 /* CGRectControlBehavior.h in Headers */,
 				1A736E8D19DC79640075C61C /* IterateColorSystemConversions.h in Headers */,
 				1A736E8919DC49DD0075C61C /* LayerContentViewControllerProtocol.h in Headers */,
 				1A66961D19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.h in Headers */,
@@ -897,7 +1006,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1A10E7EF19EA01A7003476C2 /* PBXTargetDependency */,
 				1A10E7D719E9FDB1003476C2 /* PBXTargetDependency */,
 			);
 			name = IterateiOSFrameworkTests;
@@ -974,7 +1082,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1AD94D5C19BBC4B1001A2015 /* PBXTargetDependency */,
+				1A2E58B11A045BAC00DD94A2 /* PBXTargetDependency */,
 			);
 			name = IterateOSXFrameworkTests;
 			productName = IterateOSXFrameworkTests;
@@ -987,7 +1095,7 @@
 		1AD94CEB19BBA3AE001A2015 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Noesis Ingenuity LLC";
 				TargetAttributes = {
 					1A10E79E19E9FB0B003476C2 = {
@@ -1054,6 +1162,7 @@
 			files = (
 				1A10E7AD19E9FB0B003476C2 /* Main.storyboard in Resources */,
 				1A10E7B219E9FB0B003476C2 /* LaunchScreen.xib in Resources */,
+				1A2E58B51A045F6700DD94A2 /* iOS.xcconfig in Resources */,
 				1A10E7AF19E9FB0B003476C2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1069,7 +1178,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A82E08619F09B2F00B807E9 /* Common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,7 +1194,6 @@
 			files = (
 				1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */,
 				1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */,
-				1A82E08919F09B8900B807E9 /* Mac.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,7 +1208,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A82E08719F09B2F00B807E9 /* Common.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,8 +1228,8 @@
 			files = (
 				1A10E7AA19E9FB0B003476C2 /* ViewController.m in Sources */,
 				1A10E7A719E9FB0B003476C2 /* AppDelegate.m in Sources */,
+				1A2E58B81A052EA500DD94A2 /* IterateInsertViewController.m in Sources */,
 				1A10E7A419E9FB0B003476C2 /* main.m in Sources */,
-				1AE97DF41A00C91C003D740B /* CGRectControlBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1140,6 +1246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */,
+				1A2E58AC1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1148,6 +1255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A10E7DE19E9FDB1003476C2 /* IterateiOSFrameworkTests.m in Sources */,
+				1A2E58C31A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,7 +1267,7 @@
 				1AC85C7B19D1B1F6003EA1F1 /* OutlineViewDataSourceManager.m in Sources */,
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
 				1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */,
-				1A66962619DA504100CD65D5 /* IterateInsertViewController.m in Sources */,
+				1A66962619DA504100CD65D5 /* IterateInsertViewControllerOSX.m in Sources */,
 				1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */,
 				1AB6F69919E542E9003D5365 /* ActiveNavigationBarViewController.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,
@@ -1197,6 +1305,7 @@
 				1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */,
 				1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */,
 				1A10E7E919E9FF75003476C2 /* CategoryInformation.m in Sources */,
+				1A2E58AD1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
 				1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */,
 				1A6F5CA219D068960000B1B2 /* EmitterImageControlBehavior.m in Sources */,
 				1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */,
@@ -1228,6 +1337,7 @@
 				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,
 				1A2A350C19D8429A001E60E5 /* EmitterColorControlBehaviorTests.m in Sources */,
+				1AE7BFE91A05A4BC009EF687 /* IterateInsertSharedViewControllerTests.m in Sources */,
 				1AC9268B19E32FDF00BC1488 /* ContainerLayoutViewTests.m in Sources */,
 				1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */,
 				1A4C6B6319D2E4F400CE99EE /* EmitterFloatControlBehaviorTests.m in Sources */,
@@ -1256,20 +1366,15 @@
 			target = 1A10E7C919E9FDB1003476C2 /* IterateiOSFramework */;
 			targetProxy = 1A10E7EB19EA0111003476C2 /* PBXContainerItemProxy */;
 		};
-		1A10E7EF19EA01A7003476C2 /* PBXTargetDependency */ = {
+		1A2E58B11A045BAC00DD94A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1A10E79E19E9FB0B003476C2 /* Iterate */;
-			targetProxy = 1A10E7EE19EA01A7003476C2 /* PBXContainerItemProxy */;
+			target = 1AD94D4F19BBC4B1001A2015 /* IterateOSXFramework */;
+			targetProxy = 1A2E58B01A045BAC00DD94A2 /* PBXContainerItemProxy */;
 		};
 		1AD94D0B19BBA3AF001A2015 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1AD94CF219BBA3AF001A2015 /* IterateOSX */;
 			targetProxy = 1AD94D0A19BBA3AF001A2015 /* PBXContainerItemProxy */;
-		};
-		1AD94D5C19BBC4B1001A2015 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1AD94CF219BBA3AF001A2015 /* IterateOSX */;
-			targetProxy = 1AD94D5B19BBC4B1001A2015 /* PBXContainerItemProxy */;
 		};
 		1AD94D6319BBC4B1001A2015 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1359,9 +1464,25 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
 				INFOPLIST_FILE = IterateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iterate.app/Iterate";
@@ -1377,9 +1498,25 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
 				INFOPLIST_FILE = IterateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iterate.app/Iterate";
@@ -1457,14 +1594,31 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/usr/include\"",
+				);
 				INFOPLIST_FILE = IterateiOSFrameworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IterateOSX.app/Contents/MacOS/IterateOSX";
@@ -1479,10 +1633,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = IterateiOSFrameworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+					"\"$(SRCROOT)/usr/lib/libOCMock.a\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IterateOSX.app/Contents/MacOS/IterateOSX";
@@ -1610,7 +1776,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1634,7 +1799,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A82E08819F09B8400B807E9 /* Mac.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;

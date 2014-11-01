@@ -781,10 +781,10 @@
             </objects>
             <point key="canvasLocation" x="-548" y="838"/>
         </scene>
-        <!--Iterate Insert View Controller-->
+        <!--Iterate Insert View ControllerOSX-->
         <scene sceneID="duj-FI-iaC">
             <objects>
-                <viewController storyboardIdentifier="IterateInsertViewController" id="w0J-zn-tav" customClass="IterateInsertViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IterateInsertViewController" id="w0J-zn-tav" customClass="IterateInsertViewControllerOSX" sceneMemberID="viewController">
                     <view key="view" id="BGX-3C-cKG">
                         <rect key="frame" x="0.0" y="0.0" width="225" height="164"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -796,7 +796,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addEmitterCell:" target="w0J-zn-tav" id="GIv-3c-71T"/>
+                                    <action selector="addEmitterCell:" target="SJ0-3j-Vkd" id="7XX-Hl-hCM"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-mb-PyJ">
@@ -806,7 +806,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addLayer:" target="w0J-zn-tav" id="Fc2-dc-peh"/>
+                                    <action selector="addLayer:" target="SJ0-3j-Vkd" id="I3c-Az-M0q"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viS-5C-Ck2">
@@ -816,7 +816,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addTransformLayer:" target="w0J-zn-tav" id="dLH-iU-bd6"/>
+                                    <action selector="addTransformLayer:" target="SJ0-3j-Vkd" id="H3P-Qy-isr"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-HN-n9S">
@@ -826,7 +826,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="addEmitterLayer:" target="w0J-zn-tav" id="vdK-o2-sNr"/>
+                                    <action selector="addEmitterLayer:" target="SJ0-3j-Vkd" id="v0I-yS-tRi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -836,9 +836,11 @@
                         <outlet property="addEmitterLayerButton" destination="WQG-HN-n9S" id="lxb-Up-BBy"/>
                         <outlet property="addLayerButton" destination="9sc-mb-PyJ" id="mbO-UO-kfc"/>
                         <outlet property="addTransformLayerButton" destination="viS-5C-Ck2" id="zxd-Tw-HRJ"/>
+                        <outlet property="sharedViewController" destination="SJ0-3j-Vkd" id="bLD-PW-HPd"/>
                     </connections>
                 </viewController>
                 <customObject id="1Sd-5c-qzP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="SJ0-3j-Vkd" customClass="IterateInsertSharedViewController"/>
             </objects>
             <point key="canvasLocation" x="-778.5" y="127"/>
         </scene>
@@ -876,7 +878,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="MainCell" id="G5X-23-E9H">
-                                                            <rect key="frame" x="1" y="0.0" width="246.5" height="17"/>
+                                                            <rect key="frame" x="1" y="0.0" width="246" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBK-re-VxE">
@@ -908,7 +910,7 @@
                                     <constraint firstAttribute="width" constant="250" id="hij-bu-I7S"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="sRY-3r-5vE"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.33333333333333331" horizontal="YES" id="Z9s-e5-OpM">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="Z9s-e5-OpM">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import <IterateOSXFramework/IterateOSXFramework.h>
+#import "CustomBehaviors.h"
 
 @interface CGRectControlBehavior : CustomBehaviors
 
