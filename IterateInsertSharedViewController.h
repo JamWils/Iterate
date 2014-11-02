@@ -12,6 +12,8 @@
 
 @interface IterateInsertSharedViewController : NSObject
 
+- (instancetype)initWithCoordinator:(id<MainCoordinatorProtocol>)coordinator layers:(NSMutableArray*)layers selectedItem:(id)selectedItem canvasBounds:(CGRect)canvasBounds;
+
 @property (strong) id document;
 @property (strong) id selectedItem;
 @property (strong) id<MainCoordinatorProtocol> parentWindow;
@@ -23,5 +25,7 @@
 - (IBAction)addEmitterCell:(id)sender;
 - (IBAction)addLayer:(id)sender;
 - (IBAction)addTransformLayer:(id)sender;
+
+
 
 @end

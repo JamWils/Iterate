@@ -108,7 +108,7 @@
 		1ACA9A6519C92479003AA564 /* EmitterFloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACA9A6319C92479003AA564 /* EmitterFloatControlBehavior.m */; };
 		1ACB0BAE19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACB0BAD19D8CC2A00ACF53E /* EmitterPointControlBehaviorTests.m */; };
 		1AD94CF919BBA3AF001A2015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CF819BBA3AF001A2015 /* main.m */; };
-		1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */; };
+		1AD94CFC19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94CFB19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.m */; };
 		1AD94D0119BBA3AF001A2015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0019BBA3AF001A2015 /* Images.xcassets */; };
 		1AD94D0419BBA3AF001A2015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD94D0219BBA3AF001A2015 /* Main.storyboard */; };
 		1AD94D1019BBA3AF001A2015 /* IterateOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */; };
@@ -121,6 +121,17 @@
 		1AE7BFE71A05A131009EF687 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7BFE61A05A131009EF687 /* libOCMock.a */; };
 		1AE7BFE81A05A131009EF687 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7BFE61A05A131009EF687 /* libOCMock.a */; };
 		1AE7BFE91A05A4BC009EF687 /* IterateInsertSharedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */; };
+		1AE7BFED1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE7BFEB1A05AA34009EF687 /* IterateCanvasSharedViewController.h */; };
+		1AE7BFEE1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE7BFEB1A05AA34009EF687 /* IterateCanvasSharedViewController.h */; };
+		1AE7BFEF1A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFEC1A05AA34009EF687 /* IterateCanvasSharedViewController.m */; };
+		1AE7BFF01A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFEC1A05AA34009EF687 /* IterateCanvasSharedViewController.m */; };
+		1AE7BFF21A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF11A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m */; };
+		1AE7BFF31A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF11A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m */; };
+		1AE7BFF61A063BF2009EF687 /* IterateCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF51A063BF2009EF687 /* IterateCanvasViewController.m */; };
+		1AE7BFF91A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE7BFF71A0646D2009EF687 /* IterateOutlineSharedViewController.h */; };
+		1AE7BFFA1A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE7BFF71A0646D2009EF687 /* IterateOutlineSharedViewController.h */; };
+		1AE7BFFB1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */; };
+		1AE7BFFC1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */; };
 		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
 		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
 		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -328,8 +339,8 @@
 		1AD94CF319BBA3AF001A2015 /* IterateOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IterateOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD94CF719BBA3AF001A2015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AD94CF819BBA3AF001A2015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
-		1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		1AD94CFA19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateCanvasViewControllerOSX.h; sourceTree = "<group>"; };
+		1AD94CFB19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateCanvasViewControllerOSX.m; sourceTree = "<group>"; };
 		1AD94D0019BBA3AF001A2015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AD94D0319BBA3AF001A2015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AD94D0919BBA3AF001A2015 /* IterateOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +366,13 @@
 		1AE7BFE31A05A131009EF687 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
 		1AE7BFE41A05A131009EF687 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 		1AE7BFE61A05A131009EF687 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		1AE7BFEB1A05AA34009EF687 /* IterateCanvasSharedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateCanvasSharedViewController.h; sourceTree = "<group>"; };
+		1AE7BFEC1A05AA34009EF687 /* IterateCanvasSharedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateCanvasSharedViewController.m; sourceTree = "<group>"; };
+		1AE7BFF11A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateCanvasSharedViewControllerTests.m; sourceTree = "<group>"; };
+		1AE7BFF41A063BF2009EF687 /* IterateCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateCanvasViewController.h; sourceTree = "<group>"; };
+		1AE7BFF51A063BF2009EF687 /* IterateCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateCanvasViewController.m; sourceTree = "<group>"; };
+		1AE7BFF71A0646D2009EF687 /* IterateOutlineSharedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateOutlineSharedViewController.h; sourceTree = "<group>"; };
+		1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateOutlineSharedViewController.m; sourceTree = "<group>"; };
 		1AE97DF21A00C91C003D740B /* CGRectControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectControlBehavior.h; sourceTree = "<group>"; };
 		1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectControlBehavior.m; sourceTree = "<group>"; };
 		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
@@ -530,6 +548,8 @@
 			children = (
 				1A2E58B61A052EA500DD94A2 /* IterateInsertViewController.h */,
 				1A2E58B71A052EA500DD94A2 /* IterateInsertViewController.m */,
+				1AE7BFF41A063BF2009EF687 /* IterateCanvasViewController.h */,
+				1AE7BFF51A063BF2009EF687 /* IterateCanvasViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -543,12 +563,13 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		1A2E58C11A0597C500DD94A2 /* Iterate Framework Common Tests */ = {
+		1A2E58C11A0597C500DD94A2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */,
+				1AE7BFF11A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m */,
 			);
-			name = "Iterate Framework Common Tests";
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		1A4C6B5D19D22D7C00CE99EE /* Emitter Behaviors */ = {
@@ -651,12 +672,12 @@
 		1A82E08419F0996D00B807E9 /* Iterate Framework Common */ = {
 			isa = PBXGroup;
 			children = (
+				1AE7BFEA1A05A984009EF687 /* SharedViewControllers */,
 				1A2E58C01A05500400DD94A2 /* Protocols */,
 				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
 				1A82E08A19F1023000B807E9 /* IterateDocument.h */,
 				1A2E589A1A03797C00DD94A2 /* Operators.swift */,
-				1A2E58A81A045A5E00DD94A2 /* IterateInsertSharedViewController.h */,
-				1A2E58A91A045A5E00DD94A2 /* IterateInsertSharedViewController.m */,
+				1A2E58C11A0597C500DD94A2 /* Tests */,
 			);
 			name = "Iterate Framework Common";
 			sourceTree = "<group>";
@@ -664,6 +685,8 @@
 		1A9F420819E2172000877DF7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AD94CFA19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.h */,
+				1AD94CFB19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.m */,
 				1AB6F69719E542E9003D5365 /* ActiveNavigationBarViewController.h */,
 				1AB6F69819E542E9003D5365 /* ActiveNavigationBarViewController.m */,
 				1A9F420519E216FF00877DF7 /* ActivePropertiesViewController.h */,
@@ -690,7 +713,6 @@
 			isa = PBXGroup;
 			children = (
 				1A82E08419F0996D00B807E9 /* Iterate Framework Common */,
-				1A2E58C11A0597C500DD94A2 /* Iterate Framework Common Tests */,
 				1A10E7A019E9FB0B003476C2 /* Iterate iOS App */,
 				1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */,
 				1AD94CF519BBA3AF001A2015 /* Iterate OSX App */,
@@ -722,8 +744,6 @@
 		1AD94CF519BBA3AF001A2015 /* Iterate OSX App */ = {
 			isa = PBXGroup;
 			children = (
-				1AD94CFA19BBA3AF001A2015 /* ContentViewController.h */,
-				1AD94CFB19BBA3AF001A2015 /* ContentViewController.m */,
 				1AD94D0019BBA3AF001A2015 /* Images.xcassets */,
 				1AC0C6BB19D16EF6001FFC85 /* IterateMacDocument.h */,
 				1AC0C6BC19D16EF6001FFC85 /* IterateMacDocument.m */,
@@ -873,6 +893,19 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		1AE7BFEA1A05A984009EF687 /* SharedViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A2E58A81A045A5E00DD94A2 /* IterateInsertSharedViewController.h */,
+				1A2E58A91A045A5E00DD94A2 /* IterateInsertSharedViewController.m */,
+				1AE7BFEB1A05AA34009EF687 /* IterateCanvasSharedViewController.h */,
+				1AE7BFEC1A05AA34009EF687 /* IterateCanvasSharedViewController.m */,
+				1AE7BFF71A0646D2009EF687 /* IterateOutlineSharedViewController.h */,
+				1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */,
+			);
+			name = SharedViewControllers;
+			sourceTree = "<group>";
+		};
 		1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +929,8 @@
 				1A2E58A41A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */,
 				1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */,
 				1A2E58AA1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
+				1AE7BFED1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
+				1AE7BFF91A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
 				1A10E7CF19E9FDB1003476C2 /* IterateiOSFramework.h in Headers */,
 			);
@@ -908,6 +943,7 @@
 				1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */,
 				1A2E58AB1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
 				1AAE096D19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h in Headers */,
+				1AE7BFEE1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
 				1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */,
 				1A10E7F419EA6D8E003476C2 /* CategoryInformation.h in Headers */,
 				1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */,
@@ -934,6 +970,7 @@
 				1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */,
 				1A82E08C19F1032F00B807E9 /* IterateDocument.h in Headers */,
 				1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */,
+				1AE7BFFA1A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1227,6 +1264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A10E7AA19E9FB0B003476C2 /* ViewController.m in Sources */,
+				1AE7BFF61A063BF2009EF687 /* IterateCanvasViewController.m in Sources */,
 				1A10E7A719E9FB0B003476C2 /* AppDelegate.m in Sources */,
 				1A2E58B81A052EA500DD94A2 /* IterateInsertViewController.m in Sources */,
 				1A10E7A419E9FB0B003476C2 /* main.m in Sources */,
@@ -1245,8 +1283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE7BFEF1A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */,
 				1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */,
 				1A2E58AC1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
+				1AE7BFFB1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,6 +1295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A10E7DE19E9FDB1003476C2 /* IterateiOSFrameworkTests.m in Sources */,
+				1AE7BFF21A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */,
 				1A2E58C31A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,7 +1309,7 @@
 				1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */,
 				1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */,
 				1A66962619DA504100CD65D5 /* IterateInsertViewControllerOSX.m in Sources */,
-				1AD94CFC19BBA3AF001A2015 /* ContentViewController.m in Sources */,
+				1AD94CFC19BBA3AF001A2015 /* IterateCanvasViewControllerOSX.m in Sources */,
 				1AB6F69919E542E9003D5365 /* ActiveNavigationBarViewController.m in Sources */,
 				1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */,
 				1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */,
@@ -1320,8 +1361,10 @@
 				1ABAC6C519D1F2CD0040DB01 /* EmitterShapesControlBehavior.m in Sources */,
 				1A2E589C1A03797C00DD94A2 /* Operators.swift in Sources */,
 				1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */,
+				1AE7BFFC1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */,
 				1A74ADC619CC71F600B894EC /* DecimalValueFormatter.m in Sources */,
 				1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */,
+				1AE7BFF01A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */,
 				1A736E8E19DC79640075C61C /* IterateColorSystemConversions.m in Sources */,
 				1A4C6B6119D23D3500CE99EE /* CATransform3DControlBehavior.m in Sources */,
 				1A66961E19DA415800CD65D5 /* EmitterCheckBoxControlBehavior.m in Sources */,
@@ -1344,6 +1387,7 @@
 				1A10E7EA19E9FFB9003476C2 /* CategoryInformationTests.m in Sources */,
 				1AC63B8719D9F19F00C19AA6 /* EmitterSizeControlBehaviorTests.m in Sources */,
 				1AC63B8919D9FA1100C19AA6 /* EmitterConstantControlBehaviorTests.m in Sources */,
+				1AE7BFF31A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */,
 				1A66961919DA2B0B00CD65D5 /* CATransform3DControlBehaviorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

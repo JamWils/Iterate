@@ -72,27 +72,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ca1-vH-LoE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="-4" y="0.0" width="608" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Zjl-Y1-n43"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="add" id="TtI-4x-zgW">
                                         <connections>
-                                            <segue destination="xdx-zX-BGg" kind="popoverPresentation" popoverAnchorBarButtonItem="TtI-4x-zgW" id="SG5-NK-42A">
+                                            <segue destination="xdx-zX-BGg" kind="popoverPresentation" identifier="InsertViewControllerSegue" popoverAnchorBarButtonItem="TtI-4x-zgW" id="SG5-NK-42A">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npj-UR-8eO" userLabel="Canvas Container View">
+                                <rect key="frame" x="-4" y="44" width="608" height="556"/>
+                                <connections>
+                                    <segue destination="ZTM-Rq-CsD" kind="embed" id="DI3-z9-oPR"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKo-6L-v3s">
+                                <rect key="frame" x="354" y="44" width="250" height="556"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="FKJ-BL-yup"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="gRU-Eg-jOr" kind="embed" id="MlG-iT-3gp"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="npj-UR-8eO" secondAttribute="trailing" constant="-20" id="2Z3-Cq-p94"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="npj-UR-8eO" secondAttribute="bottom" id="At6-Lg-9fE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DKo-6L-v3s" secondAttribute="bottom" id="WS4-Jl-3hm"/>
+                            <constraint firstItem="DKo-6L-v3s" firstAttribute="top" secondItem="ca1-vH-LoE" secondAttribute="bottom" id="cwN-bs-DLY"/>
                             <constraint firstItem="ca1-vH-LoE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="gUQ-6f-UFn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ca1-vH-LoE" secondAttribute="trailing" constant="-16" id="hSW-sI-zRf"/>
-                            <constraint firstItem="ca1-vH-LoE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="p23-dg-28a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ca1-vH-LoE" secondAttribute="trailing" constant="-20" id="hSW-sI-zRf"/>
+                            <constraint firstItem="ca1-vH-LoE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="p23-dg-28a"/>
+                            <constraint firstItem="npj-UR-8eO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qpG-6s-L5N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DKo-6L-v3s" secondAttribute="trailing" constant="-20" id="uPB-qw-cs8"/>
+                            <constraint firstItem="npj-UR-8eO" firstAttribute="top" secondItem="ca1-vH-LoE" secondAttribute="bottom" id="vk6-D9-WGf"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="3fF-Ng-wGd" appends="YES" id="sbx-Lp-jcB"/>
@@ -102,6 +124,9 @@
                     <navigationItem key="navigationItem" title="Iterate" id="dgz-jY-yzJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="Q1V-l3-vEz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="RightMenuWidthConstraint" destination="FKJ-BL-yup" id="swU-vQ-Qzs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="2" maximumNumberOfTouches="2" id="3fF-Ng-wGd">
@@ -112,6 +137,52 @@
                 </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1167" y="355"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E2K-6D-9gz">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gRU-Eg-jOr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vEo-uI-mNv"/>
+                        <viewControllerLayoutGuide type="bottom" id="G6i-4w-T9P"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M7B-gh-SOU">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Container View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOD-Qk-4bG">
+                                <rect key="frame" x="67" y="33" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94732931389999997" green="0.94732931389999997" blue="0.94732931389999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njh-vd-Qko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="355"/>
+        </scene>
+        <!--Iterate Canvas View Controller-->
+        <scene sceneID="dar-cu-8cv">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZTM-Rq-CsD" customClass="IterateCanvasViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYl-PR-Cuu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZiH-jR-JsJ"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="D3d-sE-goW">
+                        <rect key="frame" x="0.0" y="0.0" width="608" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBp-RT-shn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="1078"/>
         </scene>
     </scenes>
 </document>

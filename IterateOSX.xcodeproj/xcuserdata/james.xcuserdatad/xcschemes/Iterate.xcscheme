@@ -52,6 +52,36 @@
                ReferencedContainer = "container:IterateOSX.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1A10E7D319E9FDB1003476C2"
+               BuildableName = "IterateiOSFrameworkTests.xctest"
+               BlueprintName = "IterateiOSFrameworkTests"
+               ReferencedContainer = "container:IterateOSX.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1AD94D5919BBC4B1001A2015"
+               BuildableName = "IterateOSXFrameworkTests.xctest"
+               BlueprintName = "IterateOSXFrameworkTests"
+               ReferencedContainer = "container:IterateOSX.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1AD94D0819BBA3AF001A2015"
+               BuildableName = "IterateOSXTests.xctest"
+               BlueprintName = "IterateOSXTests"
+               ReferencedContainer = "container:IterateOSX.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

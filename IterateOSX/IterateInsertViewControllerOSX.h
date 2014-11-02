@@ -24,8 +24,6 @@
 //- (IBAction)addLayer:(id)sender;
 //- (IBAction)addTransformLayer:(id)sender;
 
-@property (strong) IBOutlet IterateInsertSharedViewController *sharedViewController;
-
 @property (weak) IBOutlet NSButton *addLayerButton;
 @property (weak) IBOutlet NSButton *addTransformLayerButton;
 @property (weak) IBOutlet NSButton *addEmitterLayerButton;

@@ -6,20 +6,20 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import "ContentViewController.h"
+#import "IterateCanvasViewControllerOSX.h"
 #import "IterateColorSystemConversions.h"
 @import QuartzCore;
 @import CoreGraphics;
 @import AppKit;
 
-@interface ContentViewController () <NSUserActivityDelegate, NSStreamDelegate>
+@interface IterateCanvasViewControllerOSX () <NSUserActivityDelegate, NSStreamDelegate>
 
 @property (strong, nonatomic) NSInputStream *inputStream;
 @property (strong, nonatomic) NSOutputStream *outputStream;
 
 @end
 
-@implementation ContentViewController
+@implementation IterateCanvasViewControllerOSX
 
 @synthesize canvasBackgroundColor = _canvasBackgroundColor;
             

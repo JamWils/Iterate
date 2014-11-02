@@ -10,6 +10,6 @@
 
 @protocol IterateInsertViewControllerProtocol <NSObject>
 
-@property (strong) IBOutlet IterateInsertSharedViewController *sharedViewController;
+@property (strong) IterateInsertSharedViewController *sharedViewController;
 
 @end

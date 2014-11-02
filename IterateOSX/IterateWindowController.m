@@ -7,7 +7,7 @@
 //
 
 #import "IterateWindowController.h"
-#import "ContentViewController.h"
+#import "IterateCanvasViewControllerOSX.h"
 #import "LayerOutlineViewController.h"
 #import "IterateInsertViewControllerOSX.h"
 #import "IterateMacDocument.h"
@@ -41,7 +41,7 @@
     _parentObject = parentObject;
     
     NSSplitViewController *splitViewController = (NSSplitViewController*)self.window.contentViewController;
-    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    IterateCanvasViewControllerOSX *viewController = (IterateCanvasViewControllerOSX*)splitViewController.childViewControllers[1];
     
     viewController.activeLayer = parentObject;
 
@@ -92,10 +92,8 @@
 - (void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"InsertViewControllerSegue"]) {
         IterateInsertViewControllerOSX *viewController = (IterateInsertViewControllerOSX*)segue.destinationController;
-        viewController.sharedViewController.selectedItem = _selectedItem;
-        viewController.sharedViewController.canvasBounds = _canvasViewController.view.bounds;
-        viewController.sharedViewController.layers = [[self.document layers] mutableCopy];
-        viewController.sharedViewController.parentWindow = self;
+        viewController.sharedViewController = [[IterateInsertSharedViewController alloc] initWithCoordinator:self layers:[[self.document layers] mutableCopy] selectedItem:_selectedItem canvasBounds:_canvasViewController.view.bounds];
+        //viewController.sharedViewController.parentWindow = self;
     }
 }
 

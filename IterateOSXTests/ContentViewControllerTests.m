@@ -12,12 +12,12 @@
 @import QuartzCore;
 
 
-#import "ContentViewController.h"
+#import "IterateCanvasViewControllerOSX.h"
 #import "LayerContentViewControllerProtocol.h"
 
 @interface ContentViewControllerTests : XCTestCase
 
-@property (strong) ContentViewController *viewController;
+@property (strong) IterateCanvasViewControllerOSX *viewController;
 
 @end
 
@@ -26,7 +26,7 @@
 - (void)setUp {
     [super setUp];
     NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
-    _viewController = (ContentViewController*)[storyboard instantiateControllerWithIdentifier:@"ContentViewController"];
+    _viewController = (IterateCanvasViewControllerOSX*)[storyboard instantiateControllerWithIdentifier:@"ContentViewController"];
     [_viewController view];
     
     

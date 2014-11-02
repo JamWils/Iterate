@@ -8,7 +8,35 @@
 
 #import "IterateInsertSharedViewController.h"
 
+#if TARGET_OS_IPHONE
+
+@import UIKit;
+
+#elif TARGET_OS_MAC
+
+@import Cocoa;
+
+#endif
+
+
 @implementation IterateInsertSharedViewController
+
+- (instancetype)init
+{
+    return nil;
+}
+
+- (instancetype)initWithCoordinator:(id<MainCoordinatorProtocol>)coordinator layers:(NSMutableArray*)layers selectedItem:(id)selectedItem canvasBounds:(CGRect)canvasBounds {
+    self = [super init];
+    if (self) {
+        _layers = layers;
+        _parentWindow = coordinator;
+        _selectedItem = selectedItem;
+        _canvasBounds = canvasBounds;
+    }
+    
+    return self;
+}
 
 - (IBAction)addLayer:(id)sender {
     CGPoint layerPoint = CGPointMake(CGRectGetMidX(_canvasBounds) - 150, CGRectGetMidY(_canvasBounds) - 150);
@@ -66,22 +94,12 @@
     emitter.name = [self nameItem:_layers withDefaultName:@"emitterLayer"];
     [_layers addObject:emitter];
     [_parentWindow distributeLayers:self.layers fromViewController:self];
-    
-    /*if ([_parentWindow isKindOfClass:[IterateWindowController class]]) {
-        emitter.name = [self nameItem:_layers withDefaultName:@"emitterLayer"];
-        [_layers addObject:emitter];
-        
-        [_parentWindow distributeLayers:self.layers fromViewController:self];
-    }*/
 }
 
 - (IBAction)addEmitterCell:(id)sender {
     [self addCellToItem:_selectedItem];
     
     [_parentWindow distributeLayers:self.layers fromViewController:self];
-    /*if ([_parentWindow isKindOfClass:[IterateWindowController class]]) {
-        [_parentWindow distributeLayers:self.layers fromViewController:self];
-    }*/
 }
 
 - (void)addCellToItem:(id)item {
@@ -97,7 +115,7 @@
         cell.lifetime = 1;
         cell.lifetimeRange = 1;
         cell.velocity = 0;
-        //cell.contents = (id)[self CGImageNamed:@"Cell"];
+        cell.contents = (id)[self CGImageNamed:@"Cell"];
         cell.name = [self nameItem:emitterCells withDefaultName:@"emitterCell"];
         [emitterCells addObject:cell];
         
@@ -125,14 +143,24 @@
     return newName;
 }
 
-/*-(CGImageRef)CGImageNamed:(NSString*)name {
+-(CGImageRef)CGImageNamed:(NSString*)name {
+#if TARGET_OS_IPHONE
+    UIImage *testImage = [UIImage imageNamed:name];
+    return testImage.CGImage;
+    
+#elif TARGET_OS_MAC
+    
     NSImage *testImage = [NSImage imageNamed:name];
     
     CGImageSourceRef source;
     source = CGImageSourceCreateWithData((CFDataRef)[testImage TIFFRepresentation], NULL);
     CGImageRef maskRef =  CGImageSourceCreateImageAtIndex(source, 0, NULL);
     return maskRef;
-}*/
+    
+#endif
+    
+    
+}
 
 
 @end

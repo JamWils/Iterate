@@ -12,16 +12,10 @@
 @import QuartzCore;
 
 #import "IterateInsertViewControllerOSX.h"
-#import "IterateMacDocument.h"
-#import "IterateWindowController.h"
 
 @interface IterateInsertViewControllerTests : XCTestCase
 
 @property (strong) IterateInsertViewControllerOSX *viewController;
-@property (strong) id partialMockInsertController;
-@property (strong) id mockIterateDocument;
-
-@property (strong) id mockWindowController;
 
 @end
 
@@ -33,16 +27,11 @@
     _viewController = [storyboard instantiateControllerWithIdentifier:@"IterateInsertViewController"];
     [_viewController view];
     
-//    _mockIterateDocument = [OCMockObject mockForClass:[IterateMacDocument class]];
-    _mockWindowController = [OCMockObject mockForClass:[IterateWindowController class]];
-    _viewController.sharedViewController.parentWindow = _mockWindowController;
-//    _viewController.document = _mockIterateDocument;
-    
+    NSArray *layers = @[[[CAEmitterLayer alloc] init]];
+    _viewController.sharedViewController = [[IterateInsertSharedViewController alloc] initWithCoordinator:nil layers:[layers mutableCopy] selectedItem:layers[0] canvasBounds:CGRectZero];
 }
 
 - (void)tearDown {
-    _mockWindowController = nil;
-//    _mockIterateDocument = nil;
     _viewController = nil;
     [super tearDown];
 }
@@ -103,6 +92,36 @@
     [_viewController viewWillAppear];
     
     XCTAssertTrue(_viewController.addLayerButton.enabled, @"The add emitter cell button should be enabled when selected item is not nil");
+}
+
+#pragma mark Target-Action Tests
+
+- (void)testAddLayerButtonHasTargetActionWithSharedViewController {
+    [_viewController viewWillAppear];
+    
+    XCTAssertEqual(_viewController.sharedViewController, _viewController.addLayerButton.target, @"The target should equal shared view controller.");
+    XCTAssertTrue(_viewController.addLayerButton.action == @selector(addLayer:), "The action for layer button should be add layer");
+}
+
+- (void)testAddTransformLayerButtonHasTargetActionWithSharedViewController {
+    [_viewController viewWillAppear];
+    
+    XCTAssertEqual(_viewController.sharedViewController, _viewController.addTransformLayerButton.target, @"The target should equal shared view controller.");
+    XCTAssertTrue(_viewController.addTransformLayerButton.action == @selector(addTransformLayer:), "The action for transform layer button should be add layer");
+}
+
+- (void)testAddEmitterLayerButtonHasTargetActionWithSharedViewController {
+    [_viewController viewWillAppear];
+    
+    XCTAssertEqual(_viewController.sharedViewController, _viewController.addEmitterLayerButton.target, @"The target should equal shared view controller.");
+    XCTAssertTrue(_viewController.addEmitterLayerButton.action == @selector(addEmitterLayer:), "The action for emitter layer button should be add emitter layer");
+}
+
+- (void)testAddEmitterCellButtonHasTargetActionWithSharedViewController {
+    [_viewController viewWillAppear];
+    
+    XCTAssertEqual(_viewController.sharedViewController, _viewController.addEmitterCellButton.target, @"The target should equal shared view controller.");
+    XCTAssertTrue(_viewController.addEmitterCellButton.action == @selector(addEmitterCell:), "The action for emitter cell button should be add emitter cell");
 }
 
 

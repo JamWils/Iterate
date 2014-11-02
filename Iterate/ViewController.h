@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainCoordinatorProtocol.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MainCoordinatorProtocol>
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *RightMenuWidthConstraint;
 
 @end
 

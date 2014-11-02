@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "LayerContentViewControllerProtocol.h"
 
-@interface ContentViewController : NSViewController <LayerContentViewControllerProtocol>
+@interface IterateCanvasViewControllerOSX : NSViewController <LayerContentViewControllerProtocol>
 
 @property (weak) IBOutlet NSScrollView *scrollView;
 @property (strong, nonatomic) NSArray *layers;

@@ -11,7 +11,7 @@
 #import <OCMock/OCMock.h>
 
 #import "IterateWindowController.h"
-#import "ContentViewController.h"
+#import "IterateCanvasViewControllerOSX.h"
 #import "ActiveNavigationBarViewController.h"
 #import "LayerOutlineViewController.h"
 #import "IterateMacDocument.h"
@@ -54,7 +54,7 @@
 
 - (void)testCanvasControllerIsNotNil {
     XCTAssertNotNil(_windowController.canvasViewController, @"Canvas view controller should not be nil.");
-    XCTAssertTrue([_windowController.canvasViewController isKindOfClass:[ContentViewController class]], @"The canvas view controller should be of class type Content View Controller");
+    XCTAssertTrue([_windowController.canvasViewController isKindOfClass:[IterateCanvasViewControllerOSX class]], @"The canvas view controller should be of class type Content View Controller");
 }
 
 - (void)testActiveMenuBarControllerIsNotNil {
@@ -100,7 +100,7 @@
 #pragma mark Distribute Layers Unit Tests
 
 - (void)testDistributeLayersCallsSetLayersOnContentViewController {
-    _mockContentViewController = [OCMockObject mockForClass:[ContentViewController class]];
+    _mockContentViewController = [OCMockObject mockForClass:[IterateCanvasViewControllerOSX class]];
     _windowController.canvasViewController = _mockContentViewController;
 
     NSMutableArray *layers = [self layersForTesting];
@@ -158,10 +158,15 @@
 
 #pragma mark Prepare for Segue Unit Tests
 
-- (void)testThatLayersPropertyIsSetOnInsertViewControllerFromDocument {
+- (void)testPropertiesForInsertViewControllerAreSet {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
-    NSMutableArray *layers = [self layersForTesting];
     
+    //The canvas bounds that will be passed in
+    _windowController.canvasViewController.view.frame = CGRectMake(0, 0, 500, 500);
+    
+    //The layers that will be passed in
+    NSMutableArray *layers = [self layersForTesting];
+    _windowController.selectedItem = layers[1];
     _mockDocument = [OCMockObject niceMockForClass:[IterateMacDocument class]];
     [[[_mockDocument stub] andReturn:layers] layers];
     _windowController.document = _mockDocument;
@@ -170,6 +175,12 @@
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
     XCTAssertEqualObjects(insertViewController.sharedViewController.layers, layers, @"The layers should be passed to insert view controller during prepare for segue");
+    
+    BOOL canvasBoundsResult = CGRectEqualToRect(insertViewController.sharedViewController.canvasBounds, _windowController.canvasViewController.view.bounds);
+    XCTAssertTrue(canvasBoundsResult, @"The canvas bounds should equal the canvas view controller's bounds");
+    XCTAssertEqualObjects(insertViewController.sharedViewController.selectedItem, layers[1], @"The selected item should be passed to insert view controller during prepare for segue");
+    XCTAssertEqual(insertViewController.sharedViewController.parentWindow, _windowController, @"The parent window should equal to the window controller");
+    
 }
 
 - (void)testThatLayersPropertyIsNotSetOnInsertViewControllerFromDocumentWithIncorrectSegueName {
@@ -186,7 +197,7 @@
     XCTAssertNil(insertViewController.sharedViewController.layers, @"The layers should not be passed to insert view controller during prepare for segue");
 }
 
-- (void)testThatCanvasBoundsPropertyIsSetOnInsertViewControllerFromCanvasViewController {
+/*- (void)testThatCanvasBoundsPropertyIsSetOnInsertViewControllerFromCanvasViewController {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     _windowController.canvasViewController.view.frame = CGRectMake(0, 0, 500, 500);
     
@@ -195,7 +206,7 @@
     
     BOOL result = CGRectEqualToRect(insertViewController.sharedViewController.canvasBounds, _windowController.canvasViewController.view.bounds);
     XCTAssertTrue(result, @"The canvas bounds should equal the canvas view controller's bounds");
-}
+}*/
 
 - (void)testThatCanvasPropertyIsNotSetOnInsertViewControllerFromCanvasWithIncorrectSegueName {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
@@ -208,7 +219,7 @@
     XCTAssertFalse(result, @"The canvas bounds should not equal the canvas view controller's bounds");
 }
 
-- (void)testThatSelectedItemPropertyIsSetOnInsertViewControllerFromDocument {
+/*- (void)testThatSelectedItemPropertyIsSetOnInsertViewControllerFromDocument {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     NSMutableArray *layers = [self layersForTesting];
     _windowController.selectedItem = layers[1];
@@ -217,7 +228,7 @@
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
     XCTAssertEqualObjects(insertViewController.sharedViewController.selectedItem, layers[1], @"The selected item should be passed to insert view controller during prepare for segue");
-}
+}*/
 
 - (void)testThatSelectedItemPropertyIsNotSetOnInsertViewControllerFromDocument {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
@@ -230,14 +241,14 @@
     XCTAssertNil(insertViewController.sharedViewController.selectedItem, @"The selected item should not be passed to insert view controller during prepare for segue");
 }
 
-- (void)testThatParentWindowPropertyIsSetOnInsertViewController {
+/*- (void)testThatParentWindowPropertyIsSetOnInsertViewController {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];
     
     NSStoryboardSegue *storyboardSegue = [[NSStoryboardSegue alloc] initWithIdentifier:@"InsertViewControllerSegue" source:_windowController destination:insertViewController];
     [_windowController prepareForSegue:storyboardSegue sender:nil];
     
     XCTAssertEqual(insertViewController.sharedViewController.parentWindow, _windowController, @"The parent window should equal to the window controller");
-}
+}*/
 
 - (void)testThatParentWindowPropertyIsNotSetOnInsertViewController {
     IterateInsertViewControllerOSX *insertViewController = [[IterateInsertViewControllerOSX alloc] init];

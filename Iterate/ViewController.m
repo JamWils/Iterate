@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _RightMenuWidthConstraint.constant = 0;
+    
+    UIScreenEdgePanGestureRecognizer *rightEdgeGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(changeRightSizeMenuSize:)];
+    rightEdgeGestureRecognizer.edges = UIRectEdgeRight;
+    [self.view addGestureRecognizer:rightEdgeGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,20 +29,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)addClicked:(UIBarButtonItem *)sender {
-//    UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"IterateInsertViewController"];
-//    self.navigationController.modalPresentationStyle = UIModalPresentationPopover;
+- (void) changeRightSizeMenuSize:(UIScreenEdgePanGestureRecognizer*)gestureRecognizer {
+    //gestureRecognizer.
     
-//    var popoverContent = self.storyboard.instantiateViewControllerWithIdentifier("NewCategory") as UIViewController
-//    var nav = UINavigationController(rootViewController: popoverContent)
-//    nav.modalPresentationStyle = UIModalPresentationStyle.Popover
-//    var popover = nav.popoverPresentationController
-//    popoverContent.preferredContentSize = CGSizeMake(500,600)
-//    popover.delegate = self
-//    popover.sourceView = self.view
-//    popover.sourceRect = CGRectMake(100,100,0,0)
-//    
-//    self.presentViewController(nav, animated: true, completion: nil)
+    if (_RightMenuWidthConstraint.constant < 250) {
+        NSLog(@"%@", NSStringFromCGPoint([gestureRecognizer translationInView:self.view]));
+        _RightMenuWidthConstraint.constant = fabsf([gestureRecognizer translationInView:self.view].x);
+        
+    } 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"InsertViewControllerSegue"]) {
+        //InsertViewController
+    }
+}
+
+- (void)distributeLayers:(NSMutableArray *)layers fromViewController:(id)viewController {
+    
 }
 
 @end

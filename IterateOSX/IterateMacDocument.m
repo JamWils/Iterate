@@ -8,7 +8,7 @@
 
 #import "IterateMacDocument.h"
 #import <QuartzCore/QuartzCore.h>
-#import "ContentViewController.h"
+#import "IterateCanvasViewControllerOSX.h"
 #import "LayerOutlineViewController.h"
 #import "IterateWindowController.h"
 
@@ -54,7 +54,7 @@
     
     //Send layer array to content view
     
-    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    IterateCanvasViewControllerOSX *viewController = (IterateCanvasViewControllerOSX*)splitViewController.childViewControllers[1];
     windowController.canvasViewController = viewController;
     [windowController updateCanvasColor:nil];
     viewController.layers = self.layers;
@@ -104,7 +104,7 @@
     LayerOutlineViewController *outlineViewController = leftSplitViewController.childViewControllers[0];
     outlineViewController.layers = self.layers;
     
-    ContentViewController *viewController = (ContentViewController*)splitViewController.childViewControllers[1];
+    IterateCanvasViewControllerOSX *viewController = (IterateCanvasViewControllerOSX*)splitViewController.childViewControllers[1];
     viewController.layers = self.layers;
 }
 

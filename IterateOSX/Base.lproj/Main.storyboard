@@ -795,9 +795,6 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="addEmitterCell:" target="SJ0-3j-Vkd" id="7XX-Hl-hCM"/>
-                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-mb-PyJ">
                                 <rect key="frame" x="14" y="116" width="197" height="32"/>
@@ -805,9 +802,6 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="addLayer:" target="SJ0-3j-Vkd" id="I3c-Az-M0q"/>
-                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="viS-5C-Ck2">
                                 <rect key="frame" x="14" y="83" width="197" height="32"/>
@@ -815,9 +809,6 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="addTransformLayer:" target="SJ0-3j-Vkd" id="H3P-Qy-isr"/>
-                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQG-HN-n9S">
                                 <rect key="frame" x="14" y="46" width="197" height="32"/>
@@ -825,9 +816,6 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <connections>
-                                    <action selector="addEmitterLayer:" target="SJ0-3j-Vkd" id="v0I-yS-tRi"/>
-                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -836,11 +824,9 @@
                         <outlet property="addEmitterLayerButton" destination="WQG-HN-n9S" id="lxb-Up-BBy"/>
                         <outlet property="addLayerButton" destination="9sc-mb-PyJ" id="mbO-UO-kfc"/>
                         <outlet property="addTransformLayerButton" destination="viS-5C-Ck2" id="zxd-Tw-HRJ"/>
-                        <outlet property="sharedViewController" destination="SJ0-3j-Vkd" id="bLD-PW-HPd"/>
                     </connections>
                 </viewController>
                 <customObject id="1Sd-5c-qzP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="SJ0-3j-Vkd" customClass="IterateInsertSharedViewController"/>
             </objects>
             <point key="canvasLocation" x="-778.5" y="127"/>
         </scene>
@@ -2603,10 +2589,10 @@
             </objects>
             <point key="canvasLocation" x="1352" y="486.5"/>
         </scene>
-        <!--Content View Controller-->
+        <!--Iterate Canvas View ControllerOSX-->
         <scene sceneID="9dc-4E-U9G">
             <objects>
-                <viewController storyboardIdentifier="ContentViewController" id="8Gf-Vd-Zpw" customClass="ContentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentViewController" id="8Gf-Vd-Zpw" customClass="IterateCanvasViewControllerOSX" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" id="JMk-47-mzf" customClass="FlippedView">
                         <rect key="frame" x="0.0" y="0.0" width="509" height="330"/>
                         <autoresizingMask key="autoresizingMask"/>

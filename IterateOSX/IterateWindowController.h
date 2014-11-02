@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MainCoordinatorProtocol.h"
-@class ContentViewController;
+@class IterateCanvasViewControllerOSX;
 @class LayerOutlineViewController;
 @class ActiveNavigationBarViewController;
 
@@ -18,7 +18,7 @@
 @property (strong) id parentObject;
 @property (copy) NSString *keyPathForSelectedItem;
 
-@property (assign) ContentViewController *canvasViewController;
+@property (assign) IterateCanvasViewControllerOSX *canvasViewController;
 @property (assign) LayerOutlineViewController *outlineViewController;
 @property (assign) ActiveNavigationBarViewController *activeMenuBarController;
 
