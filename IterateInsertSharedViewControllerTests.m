@@ -44,6 +44,8 @@
     [super tearDown];
 }
 
+#pragma mark Initializer Unit Tests
+
 - (void)testInitReturnsNil {
     _viewController = [[IterateInsertSharedViewController alloc] init];
     XCTAssertNil(_viewController, @"Init with no parameters should return nil.");
@@ -56,8 +58,171 @@
     XCTAssertEqualObjects(_viewController.parentWindow, _mockWindowController);
 }
 
-- (void)testEmitterLayerIsAdded {
+#pragma mark Add Layer Unit Tests
+
+- (void)testLayerIsAddedToArrayWhenSelectedItemIsNil {
+    NSUInteger layersCount = _viewController.layers.count;
+    _viewController.selectedItem = nil;
+    
+    [_viewController addLayer:nil];
+    
+    XCTAssertTrue(_viewController.layers.count == (layersCount + 1), "Array count should be one higher than layers count");
+}
+
+- (void)testLayerIsAddedAsSublayerWhenSelectedItemIsALayer {
+    [_viewController.layers addObject:[[CALayer alloc] init]];
+    NSUInteger layersCount = [_viewController.layers[0] sublayers].count;
+    
+    [_viewController addLayer:nil];
+    
+    XCTAssertTrue([_selectedItem sublayers].count == (layersCount + 1), "Array count should be one higher than layer's sublayer count");
+}
+
+- (void)testLayerIsNotAddedWhenSelectedItemIsNotALayer {
+    _selectedItem = @"A String that shouldn't be here.";
+    [_viewController.layers addObject:[[CALayer alloc] init]];
+    NSUInteger layersCount = [_viewController.layers[0] sublayers].count;
+    
+    [_viewController addLayer:nil];
+    XCTAssertTrue(_viewController.layers.count == (layersCount + 1), "Array count should be one higher than layers count");
+}
+
+- (void)testAddLayerCallsDistributeLayerOnMainCoordinator {
+    [_viewController.layers addObject:[[CAEmitterLayer alloc] init]];
+    _viewController.selectedItem = _layers[0];
+    
     [[_mockWindowController expect] distributeLayers:[OCMArg any] fromViewController:[OCMArg any]];
+    
+    [_viewController addLayer:nil];
+    
+    [_mockWindowController verify];
+}
+
+- (void)testNewLayerNameIsDifferentFromPriorLayers {
+    _viewController.selectedItem = nil;
+    
+    [_viewController addLayer:nil];
+    [_viewController addLayer:nil];
+    [_viewController addLayer:nil];
+
+    XCTAssertTrue([[_layers[1] name] isEqualToString:@"layer2"], @"The second layer should be named layer2");
+    XCTAssertTrue([[_layers[2] name] isEqualToString:@"layer3"], @"The third layer should equal layer3");
+}
+
+- (void)testNewLayerNameIsDifferentFromPriorLayersOnSubLayers {
+    [_viewController addLayer:nil];
+    [_viewController addLayer:nil];
+    [_viewController addLayer:nil];
+    
+    XCTAssertTrue([[[_selectedItem sublayers][1] name] isEqualToString:@"layer2"], @"The second layer should be named layer2");
+    XCTAssertTrue([[[_selectedItem sublayers][2] name] isEqualToString:@"layer3"], @"The third layer should equal layer3");
+}
+
+#pragma mark Transform Layer Unit Tests
+
+- (void)testTransformLayerIsAddedToArrayWhenSelectedItemIsNil {
+    NSUInteger layersCount = _viewController.layers.count;
+    _viewController.selectedItem = nil;
+    
+    [_viewController addTransformLayer:nil];
+    
+    XCTAssertTrue(_viewController.layers.count == (layersCount + 1), "Array count should be one higher than layers count");
+}
+
+- (void)testTransformLayerIsAddedAsSublayerWhenSelectedItemIsALayer {
+    [_viewController.layers addObject:[[CALayer alloc] init]];
+    NSUInteger layersCount = [_viewController.layers[0] sublayers].count;
+    
+    [_viewController addTransformLayer:nil];
+    
+    XCTAssertTrue([_selectedItem sublayers].count == (layersCount + 1), "Array count should be one higher than layer's sublayer count");
+}
+
+- (void)testTransformLayerIsNotAddedWhenSelectedItemIsNotALayer {
+    _selectedItem = @"A String that shouldn't be here.";
+    [_viewController.layers addObject:[[CALayer alloc] init]];
+    NSUInteger layersCount = [_viewController.layers[0] sublayers].count;
+    
+    [_viewController addTransformLayer:nil];
+    XCTAssertTrue(_viewController.layers.count == (layersCount + 1), "Array count should be one higher than layers count");
+}
+
+- (void)testAddTransformLayerCallsDistributeLayerOnMainCoordinator {
+    [_viewController.layers addObject:[[CAEmitterLayer alloc] init]];
+    _viewController.selectedItem = _layers[0];
+    
+    [[_mockWindowController expect] distributeLayers:[OCMArg any] fromViewController:[OCMArg any]];
+    
+    [_viewController addTransformLayer:nil];
+    
+    [_mockWindowController verify];
+}
+
+- (void)testNewTransformLayerNameIsDifferentFromPriorLayers {
+    _viewController.selectedItem = nil;
+    
+    [_viewController addTransformLayer:nil];
+    [_viewController addTransformLayer:nil];
+    [_viewController addTransformLayer:nil];
+    
+    XCTAssertTrue([[_layers[1] name] isEqualToString:@"transformLayer2"], @"The second layer should be named layer2");
+    XCTAssertTrue([[_layers[2] name] isEqualToString:@"transformLayer3"], @"The third layer should equal layer3");
+}
+
+- (void)testNewTransformLayerNameIsDifferentFromPriorLayersOnSubLayers {
+    [_viewController addTransformLayer:nil];
+    [_viewController addTransformLayer:nil];
+    [_viewController addTransformLayer:nil];
+    
+    XCTAssertTrue([[[_selectedItem sublayers][1] name] isEqualToString:@"transformLayer2"], @"The second layer should be named layer2");
+    XCTAssertTrue([[[_selectedItem sublayers][2] name] isEqualToString:@"transformLayer3"], @"The third layer should equal layer3");
+}
+
+
+
+#pragma mark Emitter Layer Unit Tests
+
+- (void)testAddEmitterLayerCallsDistributeLayerOnMainCoordinator {
+    [_viewController.layers addObject:[[CAEmitterLayer alloc] init]];
+    _viewController.selectedItem = _layers[0];
+    
+    [[_mockWindowController expect] distributeLayers:[OCMArg any] fromViewController:[OCMArg any]];
+    
+    [_viewController addEmitterLayer:nil];
+    
+    [_mockWindowController verify];
+}
+
+- (void)testEmitterLayerIsAddedToArrayWhenSelectedItemIsNil {
+    NSUInteger layersCount = _viewController.layers.count;
+    _viewController.selectedItem = nil;
+
+    
+    [_viewController addEmitterLayer:nil];
+    
+    XCTAssertTrue(_viewController.layers.count == (layersCount + 1), "Array count should be one higher than layers count");
+}
+
+- (void)testEmitterLayerIsAddedAsSublayerWhenSelectedItemIsALayer {
+    [_viewController.layers addObject:[[CAEmitterLayer alloc] init]];
+    NSUInteger layersCount = [_viewController.layers[0] sublayers].count;
+    
+    [_viewController addEmitterLayer:nil];
+    
+    XCTAssertTrue([_selectedItem sublayers].count == (layersCount + 1), "Array count should be one higher than layer's sublayer count");
+}
+
+- (void)testEmitterLayerIsNotAddedWhenSelectedItemIsNotALayer {
+    _selectedItem = @"A String that shouldn't be here.";
+    [_viewController.layers addObject:[[CAEmitterLayer alloc] init]];
+    NSUInteger layersCount = [_viewController.layers[0] sublayers].count;
+    
+    [_viewController addEmitterLayer:nil];
+    XCTAssertTrue(_viewController.layers.count == (layersCount + 1), "Array count should be one higher than layers count");
+}
+
+- (void)testEmitterLayerIsAdded {
+    _viewController.selectedItem = nil;
     
     [_viewController addEmitterLayer:nil];
     
@@ -71,6 +236,7 @@
 }
 
 - (void)testNewEmitterLayerHasACellAdded {
+    _viewController.selectedItem = nil;
     [_viewController addEmitterLayer:nil];
     
     CAEmitterCell *emitterCell = [_layers[0] valueForKey:@"emitterCells"][0];
@@ -82,7 +248,31 @@
     XCTAssertTrue([emitterCell.name isEqualToString:@"emitterCell"], @"The first emitter cell should be named emitterCell.");
 }
 
+- (void)testNewEmitterLayerNameIsDifferentFromPriorLayers {
+    _viewController.selectedItem = nil;
+    [_viewController addEmitterLayer:nil];
+    [_viewController addEmitterLayer:nil];
+    [_viewController addEmitterLayer:nil];
+    
+    CAEmitterLayer *layerTwo = _layers[1];
+    CAEmitterLayer *layerThree = _layers[2];
+    XCTAssertTrue([layerTwo.name isEqualToString:@"emitterLayer2"], @"The second emitter layer should be named emitterLayer2");
+    XCTAssertTrue([layerThree.name isEqualToString:@"emitterLayer3"], @"The third emitter layer should be named emitterLayer3");
+}
+
+- (void)testNewEmitterLayerNameIsDifferentFromPriorLayersOnSubLayers {
+    [_viewController addEmitterLayer:nil];
+    [_viewController addEmitterLayer:nil];
+    [_viewController addEmitterLayer:nil];
+    
+    XCTAssertTrue([[[_selectedItem sublayers][1] name] isEqualToString:@"emitterLayer2"], @"The second layer should be named emitterLayer2");
+    XCTAssertTrue([[[_selectedItem sublayers][2] name] isEqualToString:@"emitterLayer3"], @"The third layer should equal emitterLayer3");
+}
+
+#pragma mark Add Emitter Cell Unit Tests
+
 - (void)testNewEmitterCellNotAddedWhenSelectedItemEqualsNil {
+    _viewController.selectedItem = nil;
     [_viewController addEmitterLayer:nil];
     [_viewController addEmitterCell:nil];
     
@@ -102,6 +292,7 @@
 }
 
 - (void)testNewEmitterCellIsAddedToSelectedItem {
+    _viewController.selectedItem = nil;
     [_viewController addEmitterLayer:nil];
     _viewController.selectedItem = _layers[0];
     [_viewController addEmitterCell:nil];
@@ -111,6 +302,7 @@
 }
 
 - (void)testNewEmitterCellNameIsDifferentFromPriorCells {
+    _viewController.selectedItem = nil;
     [_viewController addEmitterLayer:nil];
     _viewController.selectedItem = _layers[0];
     [_viewController addEmitterCell:nil];
@@ -122,18 +314,6 @@
     CAEmitterCell *cellThree = emitterCells[2];
     XCTAssertTrue([cellTwo.name isEqualToString:@"emitterCell2"], @"The second emitter cell should be named emitterCell2");
     XCTAssertTrue([cellThree.name isEqualToString:@"emitterCell3"], @"The third emitter cell should be named emitterCell3");
-}
-
-- (void)testNewEmitterLayerNameIsDifferentFromPriorCells {
-    [_viewController addEmitterLayer:nil];
-    _viewController.selectedItem = _layers[0];
-    [_viewController addEmitterLayer:nil];
-    [_viewController addEmitterLayer:nil];
-    
-    CAEmitterLayer *layerTwo = _layers[1];
-    CAEmitterLayer *layerThree = _layers[2];
-    XCTAssertTrue([layerTwo.name isEqualToString:@"emitterLayer2"], @"The second emitter layer should be named emitterLayer2");
-    XCTAssertTrue([layerThree.name isEqualToString:@"emitterLayer3"], @"The third emitter layer should be named emitterLayer3");
 }
 
 @end

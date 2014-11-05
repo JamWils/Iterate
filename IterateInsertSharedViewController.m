@@ -38,7 +38,7 @@
     return self;
 }
 
-- (IBAction)addLayer:(id)sender {
+- (void)addLayer:(id)sender {
     CGPoint layerPoint = CGPointMake(CGRectGetMidX(_canvasBounds) - 150, CGRectGetMidY(_canvasBounds) - 150);
     CALayer *layer = [[CALayer alloc] init];
     layer.frame = CGRectMake(layerPoint.x, layerPoint.y, 300, 300);
@@ -48,39 +48,12 @@
     layer.backgroundColor = color;
     CGColorRelease(color);
     
-    /*if ([_document isKindOfClass:[IterateMacDocument class]]) {
-        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
-        NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
-        id objectToCheck = _selectedItem == nil ? layers : [_selectedItem sublayers];
-        layer.name = [self nameItem:objectToCheck withDefaultName:@"layer"];
-        
-        
-        if ([_selectedItem isKindOfClass:[CALayer class]]) {
-            //            NSMutableArray *sublayers = [_selectedItem mutableArrayValueForKey:@"sublayers"];
-            //            [sublayers index:layer];
-            [_selectedItem addSublayer:layer];
-        } else {
-            [layers addObject:layer];
-        }
-    }*/
-    
+    [self addLayer:layer withName:@"layer"];
 }
 
-- (IBAction)addTransformLayer:(id)sender {
-    CATransformLayer *transformLayer = [[CATransformLayer alloc] init];
-    
-    /*if ([_document isKindOfClass:[IterateMacDocument class]]) {
-        IterateMacDocument *iterateDocument = (IterateMacDocument*)_document;
-        NSMutableArray *layers = [iterateDocument mutableArrayValueForKey:@"layers"];
-        transformLayer.name = [self nameItem:layers withDefaultName:@"transformLayer"];
-        //[layers addObject:transformLayer];
-        
-        if ([_selectedItem isKindOfClass:[CALayer class]]) {
-            [_selectedItem addSublayer:transformLayer];
-        } else {
-            [layers addObject:transformLayer];
-        }
-    }*/
+- (void)addTransformLayer:(id)sender {
+    CATransformLayer *layer = [[CATransformLayer alloc] init];
+    [self addLayer:layer withName:@"transformLayer"];
 }
 
 - (void)addEmitterLayer:(id)sender {
@@ -91,12 +64,10 @@
     emitter.renderMode = kCAEmitterLayerAdditive;
     [self addCellToItem:emitter];
     
-    emitter.name = [self nameItem:_layers withDefaultName:@"emitterLayer"];
-    [_layers addObject:emitter];
-    [_parentWindow distributeLayers:self.layers fromViewController:self];
+    [self addLayer:emitter withName:@"emitterLayer"];
 }
 
-- (IBAction)addEmitterCell:(id)sender {
+- (void)addEmitterCell:(id)sender {
     [self addCellToItem:_selectedItem];
     
     [_parentWindow distributeLayers:self.layers fromViewController:self];
@@ -141,6 +112,18 @@
     }];
     
     return newName;
+}
+
+- (void)addLayer:(CALayer*)layer withName:(NSString*)name {
+    if ([_selectedItem isKindOfClass:[CALayer class]]) {
+        [layer setName:[self nameItem:[_selectedItem sublayers] withDefaultName:name]];
+        [_selectedItem addSublayer:layer];
+    } else {
+        [layer setName:[self nameItem:_layers withDefaultName:name] ];
+        [_layers addObject:layer];
+    }
+    
+    [_parentWindow distributeLayers:self.layers fromViewController:self];
 }
 
 -(CGImageRef)CGImageNamed:(NSString*)name {

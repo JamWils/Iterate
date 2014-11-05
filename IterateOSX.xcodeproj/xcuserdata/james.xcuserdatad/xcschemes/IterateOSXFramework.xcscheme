@@ -28,7 +28,36 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1AD94D5919BBC4B1001A2015"
+               BuildableName = "IterateOSXFrameworkTests.xctest"
+               BlueprintName = "IterateOSXFrameworkTests"
+               ReferencedContainer = "container:IterateOSX.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1AD94D0819BBA3AF001A2015"
+               BuildableName = "IterateOSXTests.xctest"
+               BlueprintName = "IterateOSXTests"
+               ReferencedContainer = "container:IterateOSX.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1AD94D4F19BBC4B1001A2015"
+            BuildableName = "IterateOSXFramework.framework"
+            BlueprintName = "IterateOSXFramework"
+            ReferencedContainer = "container:IterateOSX.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"

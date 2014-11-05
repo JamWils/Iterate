@@ -21,10 +21,10 @@
 
 @property CGRect canvasBounds;
 
-- (IBAction)addEmitterLayer:(id)sender;
-- (IBAction)addEmitterCell:(id)sender;
-- (IBAction)addLayer:(id)sender;
-- (IBAction)addTransformLayer:(id)sender;
+- (void)addEmitterLayer:(id)sender;
+- (void)addEmitterCell:(id)sender;
+- (void)addLayer:(id)sender;
+- (void)addTransformLayer:(id)sender;
 
 
 

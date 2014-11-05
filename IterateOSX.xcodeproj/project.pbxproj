@@ -132,6 +132,10 @@
 		1AE7BFFA1A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE7BFF71A0646D2009EF687 /* IterateOutlineSharedViewController.h */; };
 		1AE7BFFB1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */; };
 		1AE7BFFC1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */; };
+		1AEBA7641A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEBA7621A09AE58009ABFA7 /* FloatControlBehavior.h */; };
+		1AEBA7651A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEBA7621A09AE58009ABFA7 /* FloatControlBehavior.h */; };
+		1AEBA7661A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */; };
+		1AEBA7671A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */; };
 		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
 		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
 		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -375,6 +379,8 @@
 		1AE7BFF81A0646D2009EF687 /* IterateOutlineSharedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateOutlineSharedViewController.m; sourceTree = "<group>"; };
 		1AE97DF21A00C91C003D740B /* CGRectControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectControlBehavior.h; sourceTree = "<group>"; };
 		1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectControlBehavior.m; sourceTree = "<group>"; };
+		1AEBA7621A09AE58009ABFA7 /* FloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatControlBehavior.h; sourceTree = "<group>"; };
+		1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatControlBehavior.m; sourceTree = "<group>"; };
 		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
 		1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AFB400319D7134700A5F3D3 /* IterateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateConstants.h; sourceTree = "<group>"; };
@@ -672,6 +678,7 @@
 		1A82E08419F0996D00B807E9 /* Iterate Framework Common */ = {
 			isa = PBXGroup;
 			children = (
+				1AEBA7611A09AE3D009ABFA7 /* CustomBehaviors */,
 				1AE7BFEA1A05A984009EF687 /* SharedViewControllers */,
 				1A2E58C01A05500400DD94A2 /* Protocols */,
 				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
@@ -906,6 +913,15 @@
 			name = SharedViewControllers;
 			sourceTree = "<group>";
 		};
+		1AEBA7611A09AE3D009ABFA7 /* CustomBehaviors */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBA7621A09AE58009ABFA7 /* FloatControlBehavior.h */,
+				1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */,
+			);
+			name = CustomBehaviors;
+			sourceTree = "<group>";
+		};
 		1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +945,7 @@
 				1A2E58A41A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */,
 				1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */,
 				1A2E58AA1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
+				1AEBA7641A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */,
 				1AE7BFED1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
 				1AE7BFF91A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
@@ -940,6 +957,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEBA7651A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */,
 				1ACA9A6419C92479003AA564 /* EmitterFloatControlBehavior.h in Headers */,
 				1A2E58AB1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
 				1AAE096D19CF8D8B00C95D7C /* EmitterConstantControlBehavior.h in Headers */,
@@ -1285,6 +1303,7 @@
 			files = (
 				1AE7BFEF1A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */,
 				1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */,
+				1AEBA7661A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */,
 				1A2E58AC1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
 				1AE7BFFB1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */,
 			);
@@ -1353,6 +1372,7 @@
 				1AAE096A19CF89CE00C95D7C /* EmitterControlBehavior.m in Sources */,
 				1AFB400619D7134700A5F3D3 /* IterateConstants.m in Sources */,
 				1AFE20BA19F7539C00207C8F /* HeaderView.m in Sources */,
+				1AEBA7671A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */,
 				1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */,
 				1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */,
 				1A96FEDA19D010A300A4627D /* AlphaColorWell.m in Sources */,
@@ -1471,7 +1491,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Iterate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1486,7 +1506,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Iterate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1588,7 +1608,7 @@
 				);
 				INFOPLIST_FILE = IterateiOSFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1617,7 +1637,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = IterateiOSFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1735,6 +1755,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1771,6 +1792,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
