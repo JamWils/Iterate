@@ -7,6 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "IterateInsertViewController.h"
+#import "IterateCanvasViewController.h"
+
+@import IterateiOSFramework;
+
+NSString *const kContentCanvasViewControllerSegue = @"ContentCanvasViewControllerSegue";
 
 @interface ViewController ()
 
@@ -14,14 +20,19 @@
 
 @implementation ViewController
 
+@synthesize selectedItem = _selectedItem;
+@synthesize keyPathForSelectedItem = _keyPathForSelectedItem;
+@synthesize parentObject = _parentObject;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _RightMenuWidthConstraint.constant = 0;
-    
-    UIScreenEdgePanGestureRecognizer *rightEdgeGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(changeRightSizeMenuSize:)];
+    IterateDocument *document = [IterateData getIterateDocument];
+    self.document = document;
+    /*UIScreenEdgePanGestureRecognizer *rightEdgeGestureRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(changeRightSizeMenuSize:)];
     rightEdgeGestureRecognizer.edges = UIRectEdgeRight;
-    [self.view addGestureRecognizer:rightEdgeGestureRecognizer];
+    [self.view addGestureRecognizer:rightEdgeGestureRecognizer];*/
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,12 +52,20 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"InsertViewControllerSegue"]) {
-        //InsertViewController
+        IterateInsertViewController *viewController = (IterateInsertViewController*)segue.destinationViewController;
+        viewController.sharedViewController = [[IterateInsertSharedViewController alloc] initWithCoordinator:self layers:[[self.document layers] mutableCopy] selectedItem:_selectedItem canvasBounds:_canvasViewController.view.bounds];
+    } else if ([segue.identifier isEqualToString:kContentCanvasViewControllerSegue]) {
+        _canvasViewController = segue.destinationViewController;
     }
 }
 
 - (void)distributeLayers:(NSMutableArray *)layers fromViewController:(id)viewController {
+    _canvasViewController.layers = layers;
+    //_outlineViewController.layers = layers;
     
+    if ([self.document isKindOfClass:[IterateDocument class]]) {
+        [self.document setLayers:layers];
+    }
 }
 
 @end

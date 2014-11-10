@@ -17,11 +17,12 @@ FOUNDATION_EXPORT const unsigned char IterateOSXFrameworkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <IterateOSXFramework/PublicHeader.h>
 
 //Protocols
-#import <IterateOSXFramework/IterateDocument.h>
+#import <IterateOSXFramework/IterateDocumentProtocol.h>
 #import <IterateOSXFramework/MainCoordinatorProtocol.h>
 #import <IterateOSXFramework/IterateInsertViewControllerProtocol.h>
 
 //Classes
+//#import <IterateOSXFramework/IterateData.h>
 #import <IterateOSXFramework/EmitterFloatControlBehavior.h>
 #import <IterateOSXFramework/IterateConstants.h>
 #import <IterateOSXFramework/CategoryInformation.h>

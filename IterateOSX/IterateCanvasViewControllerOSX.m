@@ -148,9 +148,8 @@
     }
 
 }
-//
+
 - (void)setLayers:(NSArray *)layers {
-    //Send a notification that layers were loaded
     _layers = layers;
     
     [self.view setSubviews:[NSArray array]];

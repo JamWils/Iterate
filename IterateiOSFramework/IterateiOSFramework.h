@@ -17,5 +17,8 @@ FOUNDATION_EXPORT const unsigned char IterateiOSFrameworkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <IterateiOSFramework/PublicHeader.h>
 
 
-#import <IterateiOSFramework/IterateDocument.h>
+#import <IterateiOSFramework/IterateDocumentProtocol.h>
 #import <IterateiOSFramework/IterateInsertViewControllerProtocol.h>
+
+#import <IterateiOSFramework/IterateData.h>
+#import <IterateiOSFramework/IterateDocument.h>

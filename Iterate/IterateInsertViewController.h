@@ -11,4 +11,9 @@
 
 @interface IterateInsertViewController : UIViewController <IterateInsertViewControllerProtocol>
 
+@property (weak) IBOutlet UIButton *addLayerButton;
+@property (weak) IBOutlet UIButton *addTransformLayerButton;
+@property (weak) IBOutlet UIButton *addEmitterLayerButton;
+@property (weak) IBOutlet UIButton *addEmitterCellButton;
+
 @end

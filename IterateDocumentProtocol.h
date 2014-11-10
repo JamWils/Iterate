@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-@protocol IterateDocument <NSObject>
+@protocol IterateDocumentProtocol <NSObject>
 
 @property (strong) NSMutableArray *layers;
 

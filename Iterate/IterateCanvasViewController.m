@@ -24,6 +24,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setLayers:(NSArray *)layers {
+    _layers = layers;
+    
+    //[self.view subviews:[NSArray array]];
+    NSArray *viewsToRemove = [self.view subviews];
+    for (UIView *v in viewsToRemove) {
+        [v removeFromSuperview];
+    }
+    
+    for (CALayer *layer in _layers) {
+        [self.view.layer addSublayer:layer];
+    }
+    [self.view setNeedsDisplay];
+}
 /*
 #pragma mark - Navigation
 

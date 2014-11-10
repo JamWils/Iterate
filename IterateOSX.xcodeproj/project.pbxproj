@@ -13,7 +13,6 @@
 		1A10E7AD19E9FB0B003476C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A10E7AB19E9FB0B003476C2 /* Main.storyboard */; };
 		1A10E7AF19E9FB0B003476C2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10E7AE19E9FB0B003476C2 /* Images.xcassets */; };
 		1A10E7B219E9FB0B003476C2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A10E7B019E9FB0B003476C2 /* LaunchScreen.xib */; };
-		1A10E7BE19E9FB0B003476C2 /* IterateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A10E7BD19E9FB0B003476C2 /* IterateTests.m */; };
 		1A10E7CF19E9FDB1003476C2 /* IterateiOSFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A10E7CE19E9FDB1003476C2 /* IterateiOSFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A10E7D519E9FDB1003476C2 /* IterateiOSFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A10E7CA19E9FDB1003476C2 /* IterateiOSFramework.framework */; };
 		1A10E7DE19E9FDB1003476C2 /* IterateiOSFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A10E7DD19E9FDB1003476C2 /* IterateiOSFrameworkTests.m */; };
@@ -73,8 +72,8 @@
 		1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A76654919C49E7800FD1F29 /* CustomBehaviors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A76654C19C49E7800FD1F29 /* CustomBehaviors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A76654A19C49E7800FD1F29 /* CustomBehaviors.m */; };
 		1A795D6519D48EA800631E42 /* OutlineViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */; };
-		1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A82E08C19F1032F00B807E9 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A82E08B19F1032E00B807E9 /* IterateDocumentProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocumentProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A82E08C19F1032F00B807E9 /* IterateDocumentProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A82E08A19F1023000B807E9 /* IterateDocumentProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A82E08F19F10C6600B807E9 /* ActiveNavigationBarViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */; };
 		1A8A68CC19D5A15000273684 /* OutlineViewLayerDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */; };
 		1A8A68CE19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */; };
@@ -89,6 +88,8 @@
 		1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */; };
 		1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */; };
 		1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */; };
+		1AA91D281A1042670086BB09 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA91D271A1042670086BB09 /* CloudKit.framework */; };
+		1AA91D2A1A1046870086BB09 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AA91D291A1046870086BB09 /* Settings.bundle */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
 		1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -136,6 +137,10 @@
 		1AEBA7651A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEBA7621A09AE58009ABFA7 /* FloatControlBehavior.h */; };
 		1AEBA7661A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */; };
 		1AEBA7671A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */; };
+		1AEBA7691A09B063009ABFA7 /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA7681A09B063009ABFA7 /* ViewControllerTests.m */; };
+		1AEBA76E1A09B3F4009ABFA7 /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA76D1A09B3F4009ABFA7 /* IterateDocumentTests.m */; };
+		1AEE95D91A0AF25F00A73E0D /* IterateiOSFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A10E7CA19E9FDB1003476C2 /* IterateiOSFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1AEE95DD1A0D94DE00A73E0D /* IterateMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEE95DC1A0D94DE00A73E0D /* IterateMetadata.m */; };
 		1AFB400019D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */; };
 		1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */; };
 		1AFB400519D7134700A5F3D3 /* IterateConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFB400319D7134700A5F3D3 /* IterateConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -144,6 +149,10 @@
 		1AFE1E1D19DB049A00337EC0 /* IterateWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */; };
 		1AFE20B919F7539C00207C8F /* HeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFE20B719F7539C00207C8F /* HeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AFE20BA19F7539C00207C8F /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE20B819F7539C00207C8F /* HeaderView.m */; };
+		1AFEAA5A1A0E070B00E26D76 /* IterateData.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFEAA581A0E070B00E26D76 /* IterateData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AFEAA5C1A0E070B00E26D76 /* IterateData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEAA591A0E070B00E26D76 /* IterateData.m */; };
+		1AFEAA5E1A0E0A8200E26D76 /* IterateDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBA76B1A09B352009ABFA7 /* IterateDocument.m */; };
+		1AFEAA5F1A0E0A8700E26D76 /* IterateDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AEBA76A1A09B352009ABFA7 /* IterateDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +239,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AEE95DA1A0AF25F00A73E0D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1AEE95D91A0AF25F00A73E0D /* IterateiOSFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -245,7 +265,6 @@
 		1A10E7B119E9FB0B003476C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1A10E7B719E9FB0B003476C2 /* IterateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IterateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A10E7BC19E9FB0B003476C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A10E7BD19E9FB0B003476C2 /* IterateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IterateTests.m; sourceTree = "<group>"; };
 		1A10E7CA19E9FDB1003476C2 /* IterateiOSFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IterateiOSFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A10E7CD19E9FDB1003476C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A10E7CE19E9FDB1003476C2 /* IterateiOSFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateiOSFramework.h; sourceTree = "<group>"; };
@@ -298,7 +317,7 @@
 		1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewDataSourceManagerTests.m; sourceTree = "<group>"; };
 		1A82E08519F09B2F00B807E9 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		1A82E08819F09B8400B807E9 /* Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Mac.xcconfig; sourceTree = "<group>"; };
-		1A82E08A19F1023000B807E9 /* IterateDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateDocument.h; sourceTree = "<group>"; };
+		1A82E08A19F1023000B807E9 /* IterateDocumentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IterateDocumentProtocol.h; sourceTree = "<group>"; };
 		1A82E08D19F10B6400B807E9 /* ActiveNavigationBarViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveNavigationBarViewControllerTests.m; sourceTree = "<group>"; };
 		1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewLayerDelegateManager.h; sourceTree = "<group>"; };
 		1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManager.m; sourceTree = "<group>"; };
@@ -316,6 +335,9 @@
 		1A9F420519E216FF00877DF7 /* ActivePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivePropertiesViewController.h; sourceTree = "<group>"; };
 		1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivePropertiesViewController.m; sourceTree = "<group>"; };
 		1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocumentTests.m; sourceTree = "<group>"; };
+		1AA91D241A0FF3000086BB09 /* Iterate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Iterate.entitlements; path = Iterate/Iterate.entitlements; sourceTree = "<group>"; };
+		1AA91D271A1042670086BB09 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		1AA91D291A1046870086BB09 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
 		1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -381,6 +403,12 @@
 		1AE97DF31A00C91C003D740B /* CGRectControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectControlBehavior.m; sourceTree = "<group>"; };
 		1AEBA7621A09AE58009ABFA7 /* FloatControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatControlBehavior.h; sourceTree = "<group>"; };
 		1AEBA7631A09AE58009ABFA7 /* FloatControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatControlBehavior.m; sourceTree = "<group>"; };
+		1AEBA7681A09B063009ABFA7 /* ViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTests.m; sourceTree = "<group>"; };
+		1AEBA76A1A09B352009ABFA7 /* IterateDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IterateDocument.h; path = ../Iterate/IterateDocument.h; sourceTree = "<group>"; };
+		1AEBA76B1A09B352009ABFA7 /* IterateDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IterateDocument.m; path = ../Iterate/IterateDocument.m; sourceTree = "<group>"; };
+		1AEBA76D1A09B3F4009ABFA7 /* IterateDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateDocumentTests.m; sourceTree = "<group>"; };
+		1AEE95DB1A0D94DE00A73E0D /* IterateMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateMetadata.h; sourceTree = "<group>"; };
+		1AEE95DC1A0D94DE00A73E0D /* IterateMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateMetadata.m; sourceTree = "<group>"; };
 		1AFB3FFF19D5F3FE00A5F3D3 /* LayerOutlineViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewControllerTests.m; sourceTree = "<group>"; };
 		1AFB400119D6F30000A5F3D3 /* EmitterControlBehaviorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterControlBehaviorTests.m; sourceTree = "<group>"; };
 		1AFB400319D7134700A5F3D3 /* IterateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateConstants.h; sourceTree = "<group>"; };
@@ -390,6 +418,8 @@
 		1AFE1E1C19DB049A00337EC0 /* IterateWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateWindowController.m; sourceTree = "<group>"; };
 		1AFE20B719F7539C00207C8F /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		1AFE20B819F7539C00207C8F /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		1AFEAA581A0E070B00E26D76 /* IterateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateData.h; sourceTree = "<group>"; };
+		1AFEAA591A0E070B00E26D76 /* IterateData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A10E7ED19EA0140003476C2 /* IterateiOSFramework.framework in Frameworks */,
+				1AA91D281A1042670086BB09 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +503,9 @@
 				1A10E7B019E9FB0B003476C2 /* LaunchScreen.xib */,
 				1A10E7A119E9FB0B003476C2 /* Supporting Files */,
 				1A2E58B41A045F6700DD94A2 /* iOS.xcconfig */,
+				1AEE95DB1A0D94DE00A73E0D /* IterateMetadata.h */,
+				1AEE95DC1A0D94DE00A73E0D /* IterateMetadata.m */,
+				1AA91D291A1046870086BB09 /* Settings.bundle */,
 			);
 			name = "Iterate iOS App";
 			path = Iterate;
@@ -489,8 +523,9 @@
 		1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1A10E7BD19E9FB0B003476C2 /* IterateTests.m */,
 				1A10E7BB19E9FB0B003476C2 /* Supporting Files */,
+				1AEBA7681A09B063009ABFA7 /* ViewControllerTests.m */,
+				1AEBA76D1A09B3F4009ABFA7 /* IterateDocumentTests.m */,
 			);
 			name = "Iterate iOS App Tests";
 			path = IterateTests;
@@ -507,6 +542,8 @@
 		1A10E7CB19E9FDB1003476C2 /* Iterate iOS Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1AEBA76A1A09B352009ABFA7 /* IterateDocument.h */,
+				1AEBA76B1A09B352009ABFA7 /* IterateDocument.m */,
 				1A10E7CE19E9FDB1003476C2 /* IterateiOSFramework.h */,
 				1A10E7CC19E9FDB1003476C2 /* Supporting Files */,
 			);
@@ -678,11 +715,13 @@
 		1A82E08419F0996D00B807E9 /* Iterate Framework Common */ = {
 			isa = PBXGroup;
 			children = (
+				1AFEAA581A0E070B00E26D76 /* IterateData.h */,
+				1AFEAA591A0E070B00E26D76 /* IterateData.m */,
 				1AEBA7611A09AE3D009ABFA7 /* CustomBehaviors */,
 				1AE7BFEA1A05A984009EF687 /* SharedViewControllers */,
 				1A2E58C01A05500400DD94A2 /* Protocols */,
 				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
-				1A82E08A19F1023000B807E9 /* IterateDocument.h */,
+				1A82E08A19F1023000B807E9 /* IterateDocumentProtocol.h */,
 				1A2E589A1A03797C00DD94A2 /* Operators.swift */,
 				1A2E58C11A0597C500DD94A2 /* Tests */,
 			);
@@ -719,6 +758,8 @@
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
+				1AA91D271A1042670086BB09 /* CloudKit.framework */,
+				1AA91D241A0FF3000086BB09 /* Iterate.entitlements */,
 				1A82E08419F0996D00B807E9 /* Iterate Framework Common */,
 				1A10E7A019E9FB0B003476C2 /* Iterate iOS App */,
 				1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */,
@@ -943,9 +984,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2E58A41A037F7700DD94A2 /* MainCoordinatorProtocol.h in Headers */,
-				1A82E08B19F1032E00B807E9 /* IterateDocument.h in Headers */,
+				1A82E08B19F1032E00B807E9 /* IterateDocumentProtocol.h in Headers */,
+				1AFEAA5F1A0E0A8700E26D76 /* IterateDocument.h in Headers */,
 				1A2E58AA1A045A5E00DD94A2 /* IterateInsertSharedViewController.h in Headers */,
 				1AEBA7641A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */,
+				1AFEAA5A1A0E070B00E26D76 /* IterateData.h in Headers */,
 				1AE7BFED1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
 				1AE7BFF91A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
@@ -986,7 +1029,7 @@
 				1A6F5CA119D068960000B1B2 /* EmitterImageControlBehavior.h in Headers */,
 				1A4C6B6019D23D3500CE99EE /* CATransform3DControlBehavior.h in Headers */,
 				1A74ADD119CCB44300B894EC /* FlippedClipView.h in Headers */,
-				1A82E08C19F1032F00B807E9 /* IterateDocument.h in Headers */,
+				1A82E08C19F1032F00B807E9 /* IterateDocumentProtocol.h in Headers */,
 				1ABAC6C419D1F2CD0040DB01 /* EmitterShapesControlBehavior.h in Headers */,
 				1AE7BFFA1A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A76654B19C49E7800FD1F29 /* CustomBehaviors.h in Headers */,
@@ -1003,6 +1046,7 @@
 				1A10E79B19E9FB0B003476C2 /* Sources */,
 				1A10E79C19E9FB0B003476C2 /* Frameworks */,
 				1A10E79D19E9FB0B003476C2 /* Resources */,
+				1AEE95DA1A0AF25F00A73E0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1155,6 +1199,12 @@
 				TargetAttributes = {
 					1A10E79E19E9FB0B003476C2 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = FK2T357YV2;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					1A10E7B619E9FB0B003476C2 = {
 						CreatedOnToolsVersion = 6.1;
@@ -1217,6 +1267,7 @@
 			files = (
 				1A10E7AD19E9FB0B003476C2 /* Main.storyboard in Resources */,
 				1A10E7B219E9FB0B003476C2 /* LaunchScreen.xib in Resources */,
+				1AA91D2A1A1046870086BB09 /* Settings.bundle in Resources */,
 				1A2E58B51A045F6700DD94A2 /* iOS.xcconfig in Resources */,
 				1A10E7AF19E9FB0B003476C2 /* Images.xcassets in Resources */,
 			);
@@ -1281,6 +1332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEE95DD1A0D94DE00A73E0D /* IterateMetadata.m in Sources */,
 				1A10E7AA19E9FB0B003476C2 /* ViewController.m in Sources */,
 				1AE7BFF61A063BF2009EF687 /* IterateCanvasViewController.m in Sources */,
 				1A10E7A719E9FB0B003476C2 /* AppDelegate.m in Sources */,
@@ -1293,7 +1345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A10E7BE19E9FB0B003476C2 /* IterateTests.m in Sources */,
+				1AEBA7691A09B063009ABFA7 /* ViewControllerTests.m in Sources */,
+				1AEBA76E1A09B3F4009ABFA7 /* IterateDocumentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1303,8 +1356,10 @@
 			files = (
 				1AE7BFEF1A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */,
 				1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */,
+				1AFEAA5E1A0E0A8200E26D76 /* IterateDocument.m in Sources */,
 				1AEBA7661A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */,
 				1A2E58AC1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
+				1AFEAA5C1A0E070B00E26D76 /* IterateData.m in Sources */,
 				1AE7BFFB1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1484,6 +1539,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Iterate/Iterate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1494,6 +1551,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1503,12 +1561,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Iterate/Iterate.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Iterate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

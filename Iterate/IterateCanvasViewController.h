@@ -10,4 +10,9 @@
 
 @interface IterateCanvasViewController : UIViewController
 
+@property (strong, nonatomic) NSArray *layers;
+@property (strong) id activeLayer;
+@property (strong) id selectedItem;
+@property (copy) NSString *keyPathForSelectedItem;
+
 @end

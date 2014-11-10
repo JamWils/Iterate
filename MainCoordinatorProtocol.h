@@ -10,6 +10,10 @@
 
 @protocol MainCoordinatorProtocol <NSObject>
 
+@property (strong) id selectedItem;
+@property (strong) id parentObject;
+@property (copy) NSString *keyPathForSelectedItem;
+
 - (void)distributeLayers:(NSMutableArray*)layers fromViewController:(id)viewController;
 
 @end

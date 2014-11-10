@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MainCoordinatorProtocol.h"
+@class IterateCanvasViewController;
 
 @interface ViewController : UIViewController <MainCoordinatorProtocol>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *RightMenuWidthConstraint;
+
+@property (strong, nonatomic) IterateCanvasViewController *canvasViewController;
+@property (strong, nonatomic) id document;
 
 @end
 

@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 @import IterateOSXFramework;
 
-@interface IterateMacDocument : NSDocument <IterateDocument>
+@interface IterateMacDocument : NSDocument <IterateDocumentProtocol>
 
 
 @property (copy) NSColor *canvasBackgroundColor;
