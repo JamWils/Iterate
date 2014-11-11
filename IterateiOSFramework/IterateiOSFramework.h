@@ -22,3 +22,4 @@ FOUNDATION_EXPORT const unsigned char IterateiOSFrameworkVersionString[];
 
 #import <IterateiOSFramework/IterateData.h>
 #import <IterateiOSFramework/IterateDocument.h>
+#import <IterateiOSFramework/ArrayTableViewDataSourceManager.h>

@@ -90,6 +90,9 @@
 		1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */; };
 		1AA91D281A1042670086BB09 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA91D271A1042670086BB09 /* CloudKit.framework */; };
 		1AA91D2A1A1046870086BB09 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AA91D291A1046870086BB09 /* Settings.bundle */; };
+		1AA91D2F1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA91D2D1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AA91D301A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D2E1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m */; };
+		1AA91D321A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
 		1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -338,6 +341,9 @@
 		1AA91D241A0FF3000086BB09 /* Iterate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Iterate.entitlements; path = Iterate/Iterate.entitlements; sourceTree = "<group>"; };
 		1AA91D271A1042670086BB09 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		1AA91D291A1046870086BB09 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		1AA91D2D1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayTableViewDataSourceManager.h; sourceTree = "<group>"; };
+		1AA91D2E1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTableViewDataSourceManager.m; sourceTree = "<group>"; };
+		1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTableViewDataSourceManagerTests.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
 		1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -496,8 +502,6 @@
 				1A2E58B91A052EBB00DD94A2 /* ViewControllers */,
 				1A10E7A519E9FB0B003476C2 /* AppDelegate.h */,
 				1A10E7A619E9FB0B003476C2 /* AppDelegate.m */,
-				1A10E7A819E9FB0B003476C2 /* ViewController.h */,
-				1A10E7A919E9FB0B003476C2 /* ViewController.m */,
 				1A10E7AB19E9FB0B003476C2 /* Main.storyboard */,
 				1A10E7AE19E9FB0B003476C2 /* Images.xcassets */,
 				1A10E7B019E9FB0B003476C2 /* LaunchScreen.xib */,
@@ -505,7 +509,7 @@
 				1A2E58B41A045F6700DD94A2 /* iOS.xcconfig */,
 				1AEE95DB1A0D94DE00A73E0D /* IterateMetadata.h */,
 				1AEE95DC1A0D94DE00A73E0D /* IterateMetadata.m */,
-				1AA91D291A1046870086BB09 /* Settings.bundle */,
+				1A10E7BA19E9FB0B003476C2 /* Tests */,
 			);
 			name = "Iterate iOS App";
 			path = Iterate;
@@ -514,22 +518,23 @@
 		1A10E7A119E9FB0B003476C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AA91D291A1046870086BB09 /* Settings.bundle */,
 				1A10E7A219E9FB0B003476C2 /* Info.plist */,
 				1A10E7A319E9FB0B003476C2 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */ = {
+		1A10E7BA19E9FB0B003476C2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				1A10E7BB19E9FB0B003476C2 /* Supporting Files */,
 				1AEBA7681A09B063009ABFA7 /* ViewControllerTests.m */,
 				1AEBA76D1A09B3F4009ABFA7 /* IterateDocumentTests.m */,
 			);
-			name = "Iterate iOS App Tests";
+			name = Tests;
 			path = IterateTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1A10E7BB19E9FB0B003476C2 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -542,10 +547,12 @@
 		1A10E7CB19E9FDB1003476C2 /* Iterate iOS Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1AA91D2C1A119F610086BB09 /* Managers */,
 				1AEBA76A1A09B352009ABFA7 /* IterateDocument.h */,
 				1AEBA76B1A09B352009ABFA7 /* IterateDocument.m */,
 				1A10E7CE19E9FDB1003476C2 /* IterateiOSFramework.h */,
 				1A10E7CC19E9FDB1003476C2 /* Supporting Files */,
+				1A10E7DA19E9FDB1003476C2 /* Tests */,
 			);
 			name = "Iterate iOS Framework";
 			path = IterateiOSFramework;
@@ -559,15 +566,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A10E7DA19E9FDB1003476C2 /* Iterate iOS Framework Tests */ = {
+		1A10E7DA19E9FDB1003476C2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				1A10E7DD19E9FDB1003476C2 /* IterateiOSFrameworkTests.m */,
 				1A10E7DB19E9FDB1003476C2 /* Supporting Files */,
+				1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */,
 			);
-			name = "Iterate iOS Framework Tests";
+			name = Tests;
 			path = IterateiOSFrameworkTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1A10E7DB19E9FDB1003476C2 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -580,6 +588,7 @@
 		1A10E7F019EA0291003476C2 /* Imported Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AA91D271A1042670086BB09 /* CloudKit.framework */,
 				1AE7BFD81A05A122009EF687 /* OCMock */,
 				1A417B4F19D44B17009DF3A2 /* OCMock.framework */,
 			);
@@ -589,6 +598,8 @@
 		1A2E58B91A052EBB00DD94A2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A10E7A819E9FB0B003476C2 /* ViewController.h */,
+				1A10E7A919E9FB0B003476C2 /* ViewController.m */,
 				1A2E58B61A052EA500DD94A2 /* IterateInsertViewController.h */,
 				1A2E58B71A052EA500DD94A2 /* IterateInsertViewController.m */,
 				1AE7BFF41A063BF2009EF687 /* IterateCanvasViewController.h */,
@@ -717,6 +728,7 @@
 			children = (
 				1AFEAA581A0E070B00E26D76 /* IterateData.h */,
 				1AFEAA591A0E070B00E26D76 /* IterateData.m */,
+				1AA91D2B1A119C650086BB09 /* Managers */,
 				1AEBA7611A09AE3D009ABFA7 /* CustomBehaviors */,
 				1AE7BFEA1A05A984009EF687 /* SharedViewControllers */,
 				1A2E58C01A05500400DD94A2 /* Protocols */,
@@ -745,6 +757,22 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		1AA91D2B1A119C650086BB09 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		1AA91D2C1A119F610086BB09 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1AA91D2D1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h */,
+				1AA91D2E1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		1ACC158B19E34C3A006C702E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,17 +786,12 @@
 		1AD94CEA19BBA3AE001A2015 = {
 			isa = PBXGroup;
 			children = (
-				1AA91D271A1042670086BB09 /* CloudKit.framework */,
 				1AA91D241A0FF3000086BB09 /* Iterate.entitlements */,
 				1A82E08419F0996D00B807E9 /* Iterate Framework Common */,
 				1A10E7A019E9FB0B003476C2 /* Iterate iOS App */,
-				1A10E7BA19E9FB0B003476C2 /* Iterate iOS App Tests */,
-				1AD94CF519BBA3AF001A2015 /* Iterate OSX App */,
-				1AD94D0C19BBA3AF001A2015 /* Iterate OSX App Tests */,
-				1AD94D5119BBC4B1001A2015 /* Iterate OSX Framework */,
-				1AD94D5D19BBC4B1001A2015 /* Iterate OSX Framework Tests */,
 				1A10E7CB19E9FDB1003476C2 /* Iterate iOS Framework */,
-				1A10E7DA19E9FDB1003476C2 /* Iterate iOS Framework Tests */,
+				1AD94CF519BBA3AF001A2015 /* Iterate OSX App */,
+				1AD94D5119BBC4B1001A2015 /* Iterate OSX Framework */,
 				1A10E7F019EA0291003476C2 /* Imported Frameworks */,
 				1AD94CF419BBA3AF001A2015 /* Products */,
 			);
@@ -805,6 +828,7 @@
 				1AD94CF619BBA3AF001A2015 /* Supporting Files */,
 				1A9F420819E2172000877DF7 /* ViewControllers */,
 				1A82E08819F09B8400B807E9 /* Mac.xcconfig */,
+				1AD94D0C19BBA3AF001A2015 /* Tests */,
 			);
 			name = "Iterate OSX App";
 			path = IterateOSX;
@@ -819,7 +843,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AD94D0C19BBA3AF001A2015 /* Iterate OSX App Tests */ = {
+		1AD94D0C19BBA3AF001A2015 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */,
@@ -833,9 +857,9 @@
 				1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */,
 				1A10E7F119EA122B003476C2 /* StoryboardTests.m */,
 			);
-			name = "Iterate OSX App Tests";
+			name = Tests;
 			path = IterateOSXTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1AD94D0D19BBA3AF001A2015 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -858,6 +882,7 @@
 				1AFB400319D7134700A5F3D3 /* IterateConstants.h */,
 				1AFB400419D7134700A5F3D3 /* IterateConstants.m */,
 				1A736E8719DC49DD0075C61C /* LayerContentViewControllerProtocol.h */,
+				1AD94D5D19BBC4B1001A2015 /* Tests */,
 			);
 			name = "Iterate OSX Framework";
 			path = IterateOSXFramework;
@@ -871,7 +896,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AD94D5D19BBC4B1001A2015 /* Iterate OSX Framework Tests */ = {
+		1AD94D5D19BBC4B1001A2015 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				1A66961A19DA2B1100CD65D5 /* Behaviors */,
@@ -879,9 +904,9 @@
 				1AC9268A19E32FDF00BC1488 /* ContainerLayoutViewTests.m */,
 				1ACC158F19E34EE9006C702E /* CategoryInformationTests.m */,
 			);
-			name = "Iterate OSX Framework Tests";
+			name = Tests;
 			path = IterateOSXFrameworkTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1AD94D5E19BBC4B1001A2015 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -992,6 +1017,7 @@
 				1AE7BFED1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
 				1AE7BFF91A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
+				1AA91D2F1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h in Headers */,
 				1A10E7CF19E9FDB1003476C2 /* IterateiOSFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1358,6 +1384,7 @@
 				1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */,
 				1AFEAA5E1A0E0A8200E26D76 /* IterateDocument.m in Sources */,
 				1AEBA7661A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */,
+				1AA91D301A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m in Sources */,
 				1A2E58AC1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
 				1AFEAA5C1A0E070B00E26D76 /* IterateData.m in Sources */,
 				1AE7BFFB1A0646D2009EF687 /* IterateOutlineSharedViewController.m in Sources */,
@@ -1368,6 +1395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA91D321A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m in Sources */,
 				1A10E7DE19E9FDB1003476C2 /* IterateiOSFrameworkTests.m in Sources */,
 				1AE7BFF21A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */,
 				1A2E58C31A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m in Sources */,
