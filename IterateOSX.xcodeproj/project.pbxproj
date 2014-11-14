@@ -93,6 +93,8 @@
 		1AA91D2F1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA91D2D1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1AA91D301A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D2E1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m */; };
 		1AA91D321A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */; };
+		1AA91D351A11A4EB0086BB09 /* IterateOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D341A11A4EB0086BB09 /* IterateOutlineViewController.m */; };
+		1AA91D381A12E8460086BB09 /* OutlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D371A12E8460086BB09 /* OutlineTableViewCell.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
 		1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -344,6 +346,10 @@
 		1AA91D2D1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayTableViewDataSourceManager.h; sourceTree = "<group>"; };
 		1AA91D2E1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTableViewDataSourceManager.m; sourceTree = "<group>"; };
 		1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTableViewDataSourceManagerTests.m; sourceTree = "<group>"; };
+		1AA91D331A11A4EB0086BB09 /* IterateOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IterateOutlineViewController.h; sourceTree = "<group>"; };
+		1AA91D341A11A4EB0086BB09 /* IterateOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateOutlineViewController.m; sourceTree = "<group>"; };
+		1AA91D361A12E8460086BB09 /* OutlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineTableViewCell.h; sourceTree = "<group>"; };
+		1AA91D371A12E8460086BB09 /* OutlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineTableViewCell.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
 		1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -510,6 +516,8 @@
 				1AEE95DB1A0D94DE00A73E0D /* IterateMetadata.h */,
 				1AEE95DC1A0D94DE00A73E0D /* IterateMetadata.m */,
 				1A10E7BA19E9FB0B003476C2 /* Tests */,
+				1AA91D361A12E8460086BB09 /* OutlineTableViewCell.h */,
+				1AA91D371A12E8460086BB09 /* OutlineTableViewCell.m */,
 			);
 			name = "Iterate iOS App";
 			path = Iterate;
@@ -604,6 +612,8 @@
 				1A2E58B71A052EA500DD94A2 /* IterateInsertViewController.m */,
 				1AE7BFF41A063BF2009EF687 /* IterateCanvasViewController.h */,
 				1AE7BFF51A063BF2009EF687 /* IterateCanvasViewController.m */,
+				1AA91D331A11A4EB0086BB09 /* IterateOutlineViewController.h */,
+				1AA91D341A11A4EB0086BB09 /* IterateOutlineViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1359,8 +1369,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AEE95DD1A0D94DE00A73E0D /* IterateMetadata.m in Sources */,
+				1AA91D351A11A4EB0086BB09 /* IterateOutlineViewController.m in Sources */,
 				1A10E7AA19E9FB0B003476C2 /* ViewController.m in Sources */,
 				1AE7BFF61A063BF2009EF687 /* IterateCanvasViewController.m in Sources */,
+				1AA91D381A12E8460086BB09 /* OutlineTableViewCell.m in Sources */,
 				1A10E7A719E9FB0B003476C2 /* AppDelegate.m in Sources */,
 				1A2E58B81A052EA500DD94A2 /* IterateInsertViewController.m in Sources */,
 				1A10E7A419E9FB0B003476C2 /* main.m in Sources */,
