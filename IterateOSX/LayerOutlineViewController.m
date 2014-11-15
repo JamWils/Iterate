@@ -58,29 +58,14 @@
     [_layerOutlineView selectRowIndexes:[NSIndexSet indexSetWithIndex:[number intValue]] byExtendingSelection:YES];
 }
 
-- (void)viewWillLayout {
-    [super viewWillLayout];
-    
-    
-}
-
 - (void)viewWillDisappear {
     [super viewWillDisappear];
     [[NSUserDefaults standardUserDefaults] setObject:@(_layerOutlineView.selectedRow) forKey:@"selectedOutlineViewRow"];
-}
-
-
-- (void)allProperties {
-    
 }
 
 - (void)setLayers:(NSMutableArray *)layers {
     _layers = layers;
     [_layerSourceManager setValue:_layers forKey:@"layers"];
     [_layerOutlineView reloadData];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
 }
 @end

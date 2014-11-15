@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "IterateInsertViewController.h"
 #import "IterateCanvasViewController.h"
+#import "IterateOutlineViewController.h"
 
 @import IterateiOSFramework;
 
 NSString *const kContentCanvasViewControllerSegue = @"ContentCanvasViewControllerSegue";
+NSString *const kContentOutlineViewControllerSegue = @"ContentOutlineViewControllerSegue";
 
 @interface ViewController ()
 
@@ -56,12 +58,14 @@ NSString *const kContentCanvasViewControllerSegue = @"ContentCanvasViewControlle
         viewController.sharedViewController = [[IterateInsertSharedViewController alloc] initWithCoordinator:self layers:[[self.document layers] mutableCopy] selectedItem:_selectedItem canvasBounds:_canvasViewController.view.bounds];
     } else if ([segue.identifier isEqualToString:kContentCanvasViewControllerSegue]) {
         _canvasViewController = segue.destinationViewController;
+    } else if ([segue.identifier isEqualToString:kContentOutlineViewControllerSegue]) {
+        _outlineViewController = segue.destinationViewController;
     }
 }
 
 - (void)distributeLayers:(NSMutableArray *)layers fromViewController:(id)viewController {
     _canvasViewController.layers = layers;
-    //_outlineViewController.layers = layers;
+    _outlineViewController.layers = layers;
     
     if ([self.document isKindOfClass:[IterateDocument class]]) {
         [self.document setLayers:layers];

@@ -10,4 +10,6 @@
 
 @interface IterateOutlineViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray *layers;
+
 @end

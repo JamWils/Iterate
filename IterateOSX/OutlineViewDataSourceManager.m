@@ -9,77 +9,38 @@
 #import "OutlineViewDataSourceManager.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface OutlineViewDataSourceManager ()
+
+@property (strong, nonatomic) OutlineDataManager *dataManager;
+
+@end
+
 @implementation OutlineViewDataSourceManager
 
 - (instancetype)init {
     return nil;
 }
 
-- (instancetype)initWithLayers:(NSMutableArray*)layers {
+- (instancetype)initWithDataSourceManager:(OutlineDataManager*)dataManager{
     self = [super init];
     if (self) {
-        _layers = layers;
+        _dataManager = dataManager;
     }
     
     return self;
 }
 
 -(NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
-    NSUInteger number = 0;
-    
-    if (!item) {
-        number = [self.layers count];
-    } else if ([[item valueForKey:@"emitterCells"] count] > 0) {
-        number = [[item valueForKey:@"emitterCells"] count];
-    } else {
-        number = [[item valueForKey:@"sublayers"] count];
-    }
-    return number;
+    return [_dataManager numberOfChildrenOfItem:item];
 }
 
 -(BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    BOOL expand = NO;
-    
-    if (!item) {
-        expand = NO;
-    } else if ([[item valueForKey:@"emitterCells"] count] > 0) {
-        expand = [[item valueForKey:@"emitterCells"] count] != 0;
-    } else {
-        expand = [[item valueForKey:@"sublayers"] count] != 0;
-    }
-    
-    return expand;
+    return [_dataManager isItemExpandable:item];
 }
 
 -(id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item {
-    id itemToReturn;
-
-    if (!item) {
-        itemToReturn = self.layers[index];
-    } else if ([[item valueForKey:@"emitterCells"] objectAtIndex:index] != nil) {
-        itemToReturn = [[item valueForKey:@"emitterCells"] objectAtIndex:index];
-    } else {
-        itemToReturn = [[item valueForKey:@"sublayers"] objectAtIndex:index];
-    }
-    
-    return itemToReturn;
+    return [_dataManager child:index ofItem:item];
 }
-
-/*- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
-    NSTableCellView *cellView = [outlineView makeViewWithIdentifier:@"MainCell" owner:self];
-    if ([[tableColumn identifier] isEqualToString:@"name"]) {
-//        NSLog(@"%@", [item name]);
-        cellView.textField.stringValue = [item name];
-        cellView.imageView.image = [NSImage imageNamed:@"CALayer Icon"];
-        //return [item name];
-//        return cellView;
-    }
-    
-    return cellView;
-}*/
-
-
-
 
 
 @end

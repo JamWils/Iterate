@@ -12,6 +12,7 @@
 @interface OutlineViewLayerDelegateManager ()
 
 @property (copy) OutlineViewParentObjectBlock parentObjectBlock;
+@property (nonatomic, strong) OutlineDelegateManager *outlineDelegateManager;
 
 @end
 
@@ -30,6 +31,7 @@
     if (self) {
         _parentObjectBlock = [parentObjectBlock copy];
         _keyPathForSelectedItem = [[NSMutableString alloc] init];
+        _outlineDelegateManager = [[OutlineDelegateManager alloc] initWithParentObjectBlock:_parentObjectBlock];
     }
     
     return self;
@@ -39,17 +41,7 @@
     NSTableCellView *cellView = [outlineView makeViewWithIdentifier:@"MainCell" owner:self];
     if ([[tableColumn identifier] isEqualToString:@"name"]) {
         cellView.textField.stringValue = [item name];
-        if ([item isKindOfClass:[CAEmitterCell class]]) {
-            cellView.imageView.image = [NSImage imageNamed:@"CAEmitterCell OutlineIcon Active"];
-        }
-        else if ([item isKindOfClass:[CAEmitterLayer class]]) {
-            cellView.imageView.image = [NSImage imageNamed:@"CAEmitterLayer OutlineIcon Active"];
-        } else if ([item isKindOfClass:[CATransformLayer class]]) {
-            cellView.imageView.image = [NSImage imageNamed:@"CATransformLayer OutlineIcon Active"];
-        } else {
-            cellView.imageView.image = [NSImage imageNamed:@"CALayer OutlineIcon Active"];
-        }
-        
+        cellView.imageView.image = [NSImage imageNamed:[_outlineDelegateManager imageNameForItem:item]];
     }
     
     return cellView;

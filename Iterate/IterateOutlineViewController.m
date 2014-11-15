@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *outlineTableView;
 @property (strong, nonatomic) ArrayTableViewDataSourceManager *dataSourceManager;
 
+@property (strong, nonatomic) OutlineDataManager *outlineDataManager;
+@property (strong, nonatomic) OutlineDelegateManager *outlineDelegateManager;
+
 @end
 
 @implementation IterateOutlineViewController
@@ -22,13 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    NSArray *testArray = @[@"Test 1", @"Test 2", @"Test 3"];
-    _dataSourceManager = [[ArrayTableViewDataSourceManager alloc] initWithItems:testArray cellIdentifier:@"Cell" configureCellBlock:^(OutlineTableViewCell* cell, NSString* item) {
-        cell.layerNameLabel.text = item;
-        cell.layerImageView.image = [UIImage imageNamed:@"CAEmitterLayerActive Icon"];
+    _outlineDelegateManager = [[OutlineDelegateManager alloc] initWithParentObjectBlock:nil];
+    _dataSourceManager = [[ArrayTableViewDataSourceManager alloc] initWithItems:_layers cellIdentifier:@"Cell" configureCellBlock:^(OutlineTableViewCell* cell, id item) {
+        cell.layerNameLabel.text = [item name];
+        cell.layerImageView.image = [UIImage imageNamed:[_outlineDelegateManager imageNameForItem:item]];
         cell.indentationWidth = 40.0;
-        cell.selectionStyle = UITableViewCellSeparatorStyleNone;
+//        cell.selectionStyle = UITableViewCellSeparatorStyleNone;
 //        cell.leftIndentationWidthConstraint.constant = 100;
     }];
     
@@ -47,11 +49,21 @@
     return 44;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    OutlineTableViewCell *cell = (OutlineTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-    
+//- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    //OutlineTableViewCell *cell = (OutlineTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+//    
+//
+//    return indexPath.row;
+//}
 
-    return indexPath.row;
+- (void)setLayers:(NSMutableArray *)layers {
+    _layers = layers;
+    [_dataSourceManager setValue:_layers forKey:@"items"];
+    [_outlineTableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 /*

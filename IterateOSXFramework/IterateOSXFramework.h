@@ -21,6 +21,9 @@ FOUNDATION_EXPORT const unsigned char IterateOSXFrameworkVersionString[];
 #import <IterateOSXFramework/MainCoordinatorProtocol.h>
 #import <IterateOSXFramework/IterateInsertViewControllerProtocol.h>
 
+#import <IterateOSXFramework/OutlineDataManager.h>
+#import <IterateOSXFramework/OutlineDelegateManager.h>
+
 //Classes
 //#import <IterateOSXFramework/IterateData.h>
 #import <IterateOSXFramework/EmitterFloatControlBehavior.h>

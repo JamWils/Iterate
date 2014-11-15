@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MainCoordinatorProtocol.h"
 @class IterateCanvasViewController;
+@class IterateOutlineViewController;
 
 @interface ViewController : UIViewController <MainCoordinatorProtocol>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *RightMenuWidthConstraint;
 
 @property (strong, nonatomic) IterateCanvasViewController *canvasViewController;
+@property (strong, nonatomic) IterateOutlineViewController *outlineViewController;
 @property (strong, nonatomic) id document;
 
 @end

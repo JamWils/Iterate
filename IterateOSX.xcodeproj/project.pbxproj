@@ -95,6 +95,12 @@
 		1AA91D321A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */; };
 		1AA91D351A11A4EB0086BB09 /* IterateOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D341A11A4EB0086BB09 /* IterateOutlineViewController.m */; };
 		1AA91D381A12E8460086BB09 /* OutlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D371A12E8460086BB09 /* OutlineTableViewCell.m */; };
+		1AA91D3B1A15858C0086BB09 /* OutlineDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA91D391A15858C0086BB09 /* OutlineDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AA91D3C1A15858C0086BB09 /* OutlineDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA91D391A15858C0086BB09 /* OutlineDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AA91D3D1A15858C0086BB09 /* OutlineDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D3A1A15858C0086BB09 /* OutlineDataManager.m */; };
+		1AA91D3E1A15858C0086BB09 /* OutlineDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D3A1A15858C0086BB09 /* OutlineDataManager.m */; };
+		1AA91D401A1587340086BB09 /* OutlineDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D3F1A1587340086BB09 /* OutlineDataManagerTests.m */; };
+		1AA91D411A1587340086BB09 /* OutlineDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA91D3F1A1587340086BB09 /* OutlineDataManagerTests.m */; };
 		1AAE096519CF88B300C95D7C /* EmitterPropertyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */; };
 		1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */; };
 		1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,6 +130,12 @@
 		1ADD176419CDBCC7005371B5 /* ContainerLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD176219CDBCC7005371B5 /* ContainerLayoutView.m */; };
 		1ADFEC9919D8610300CDFB6B /* Moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFEC9819D8610300CDFB6B /* Moon.png */; };
 		1AE1311019D3519D005735FD /* LayerOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */; };
+		1AE2F25F1A16D71200FC5E30 /* OutlineDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE2F25D1A16D71200FC5E30 /* OutlineDelegateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AE2F2601A16D71200FC5E30 /* OutlineDelegateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE2F25D1A16D71200FC5E30 /* OutlineDelegateManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AE2F2611A16D71200FC5E30 /* OutlineDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2F25E1A16D71200FC5E30 /* OutlineDelegateManager.m */; };
+		1AE2F2621A16D71200FC5E30 /* OutlineDelegateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2F25E1A16D71200FC5E30 /* OutlineDelegateManager.m */; };
+		1AE2F29B1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2F29A1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m */; };
+		1AE2F29C1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2F29A1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m */; };
 		1AE7BFE71A05A131009EF687 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7BFE61A05A131009EF687 /* libOCMock.a */; };
 		1AE7BFE81A05A131009EF687 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE7BFE61A05A131009EF687 /* libOCMock.a */; };
 		1AE7BFE91A05A4BC009EF687 /* IterateInsertSharedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */; };
@@ -350,6 +362,9 @@
 		1AA91D341A11A4EB0086BB09 /* IterateOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IterateOutlineViewController.m; sourceTree = "<group>"; };
 		1AA91D361A12E8460086BB09 /* OutlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineTableViewCell.h; sourceTree = "<group>"; };
 		1AA91D371A12E8460086BB09 /* OutlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineTableViewCell.m; sourceTree = "<group>"; };
+		1AA91D391A15858C0086BB09 /* OutlineDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineDataManager.h; sourceTree = "<group>"; };
+		1AA91D3A1A15858C0086BB09 /* OutlineDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineDataManager.m; sourceTree = "<group>"; };
+		1AA91D3F1A1587340086BB09 /* OutlineDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineDataManagerTests.m; sourceTree = "<group>"; };
 		1AAE096319CF88B300C95D7C /* EmitterPropertyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterPropertyView.h; sourceTree = "<group>"; };
 		1AAE096419CF88B300C95D7C /* EmitterPropertyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterPropertyView.m; sourceTree = "<group>"; };
 		1AAE096719CF89CE00C95D7C /* EmitterControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterControlBehavior.h; sourceTree = "<group>"; };
@@ -394,6 +409,9 @@
 		1ADFEC9819D8610300CDFB6B /* Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon.png; sourceTree = "<group>"; };
 		1AE1310E19D3519D005735FD /* LayerOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerOutlineViewController.h; sourceTree = "<group>"; };
 		1AE1310F19D3519D005735FD /* LayerOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerOutlineViewController.m; sourceTree = "<group>"; };
+		1AE2F25D1A16D71200FC5E30 /* OutlineDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineDelegateManager.h; sourceTree = "<group>"; };
+		1AE2F25E1A16D71200FC5E30 /* OutlineDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineDelegateManager.m; sourceTree = "<group>"; };
+		1AE2F29A1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineDelegateManagerTests.m; sourceTree = "<group>"; };
 		1AE7BFDC1A05A131009EF687 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		1AE7BFDD1A05A131009EF687 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		1AE7BFDE1A05A131009EF687 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
@@ -555,10 +573,10 @@
 		1A10E7CB19E9FDB1003476C2 /* Iterate iOS Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1A10E7CE19E9FDB1003476C2 /* IterateiOSFramework.h */,
 				1AA91D2C1A119F610086BB09 /* Managers */,
 				1AEBA76A1A09B352009ABFA7 /* IterateDocument.h */,
 				1AEBA76B1A09B352009ABFA7 /* IterateDocument.m */,
-				1A10E7CE19E9FDB1003476C2 /* IterateiOSFramework.h */,
 				1A10E7CC19E9FDB1003476C2 /* Supporting Files */,
 				1A10E7DA19E9FDB1003476C2 /* Tests */,
 			);
@@ -632,6 +650,8 @@
 			children = (
 				1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */,
 				1AE7BFF11A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m */,
+				1AA91D3F1A1587340086BB09 /* OutlineDataManagerTests.m */,
+				1AE2F29A1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -736,15 +756,15 @@
 		1A82E08419F0996D00B807E9 /* Iterate Framework Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
+				1AEBA7611A09AE3D009ABFA7 /* CustomBehaviors */,
 				1AFEAA581A0E070B00E26D76 /* IterateData.h */,
 				1AFEAA591A0E070B00E26D76 /* IterateData.m */,
-				1AA91D2B1A119C650086BB09 /* Managers */,
-				1AEBA7611A09AE3D009ABFA7 /* CustomBehaviors */,
-				1AE7BFEA1A05A984009EF687 /* SharedViewControllers */,
-				1A2E58C01A05500400DD94A2 /* Protocols */,
-				1A82E08519F09B2F00B807E9 /* Common.xcconfig */,
 				1A82E08A19F1023000B807E9 /* IterateDocumentProtocol.h */,
+				1AA91D2B1A119C650086BB09 /* Managers */,
 				1A2E589A1A03797C00DD94A2 /* Operators.swift */,
+				1A2E58C01A05500400DD94A2 /* Protocols */,
+				1AE7BFEA1A05A984009EF687 /* SharedViewControllers */,
 				1A2E58C11A0597C500DD94A2 /* Tests */,
 			);
 			name = "Iterate Framework Common";
@@ -770,6 +790,10 @@
 		1AA91D2B1A119C650086BB09 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1AA91D391A15858C0086BB09 /* OutlineDataManager.h */,
+				1AA91D3A1A15858C0086BB09 /* OutlineDataManager.m */,
+				1AE2F25D1A16D71200FC5E30 /* OutlineDelegateManager.h */,
+				1AE2F25E1A16D71200FC5E30 /* OutlineDelegateManager.m */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -1025,8 +1049,10 @@
 				1AEBA7641A09AE58009ABFA7 /* FloatControlBehavior.h in Headers */,
 				1AFEAA5A1A0E070B00E26D76 /* IterateData.h in Headers */,
 				1AE7BFED1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
+				1AA91D3B1A15858C0086BB09 /* OutlineDataManager.h in Headers */,
 				1AE7BFF91A0646D2009EF687 /* IterateOutlineSharedViewController.h in Headers */,
 				1A2E58BE1A05490F00DD94A2 /* IterateInsertViewControllerProtocol.h in Headers */,
+				1AE2F25F1A16D71200FC5E30 /* OutlineDelegateManager.h in Headers */,
 				1AA91D2F1A119F8F0086BB09 /* ArrayTableViewDataSourceManager.h in Headers */,
 				1A10E7CF19E9FDB1003476C2 /* IterateiOSFramework.h in Headers */,
 			);
@@ -1043,6 +1069,8 @@
 				1AE7BFEE1A05AA34009EF687 /* IterateCanvasSharedViewController.h in Headers */,
 				1AAE096919CF89CE00C95D7C /* EmitterControlBehavior.h in Headers */,
 				1A10E7F419EA6D8E003476C2 /* CategoryInformation.h in Headers */,
+				1AA91D3C1A15858C0086BB09 /* OutlineDataManager.h in Headers */,
+				1AE2F2601A16D71200FC5E30 /* OutlineDelegateManager.h in Headers */,
 				1A74ADC519CC71F600B894EC /* DecimalValueFormatter.h in Headers */,
 				1ADD176319CDBCC7005371B5 /* ContainerLayoutView.h in Headers */,
 				1A177C5919CB08BC00C75E39 /* CategoryControlBehavior.h in Headers */,
@@ -1394,6 +1422,8 @@
 			files = (
 				1AE7BFEF1A05AA34009EF687 /* IterateCanvasSharedViewController.m in Sources */,
 				1A2E589B1A03797C00DD94A2 /* Operators.swift in Sources */,
+				1AA91D3D1A15858C0086BB09 /* OutlineDataManager.m in Sources */,
+				1AE2F2611A16D71200FC5E30 /* OutlineDelegateManager.m in Sources */,
 				1AFEAA5E1A0E0A8200E26D76 /* IterateDocument.m in Sources */,
 				1AEBA7661A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */,
 				1AA91D301A119F8F0086BB09 /* ArrayTableViewDataSourceManager.m in Sources */,
@@ -1408,7 +1438,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA91D321A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m in Sources */,
+				1AA91D401A1587340086BB09 /* OutlineDataManagerTests.m in Sources */,
 				1A10E7DE19E9FDB1003476C2 /* IterateiOSFrameworkTests.m in Sources */,
+				1AE2F29B1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m in Sources */,
 				1AE7BFF21A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */,
 				1A2E58C31A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m in Sources */,
 			);
@@ -1458,6 +1490,7 @@
 				1A2A351219D843BA001E60E5 /* EmitterTextFieldControlBehavior.m in Sources */,
 				1A177C5A19CB08BC00C75E39 /* CategoryControlBehavior.m in Sources */,
 				1A9DC37C19D0A21700B141E5 /* EmitterPointControlBehavior.m in Sources */,
+				1AE2F2621A16D71200FC5E30 /* OutlineDelegateManager.m in Sources */,
 				1AAE096E19CF8D8B00C95D7C /* EmitterConstantControlBehavior.m in Sources */,
 				1A10E7E919E9FF75003476C2 /* CategoryInformation.m in Sources */,
 				1A2E58AD1A045A5E00DD94A2 /* IterateInsertSharedViewController.m in Sources */,
@@ -1469,6 +1502,7 @@
 				1AFE20BA19F7539C00207C8F /* HeaderView.m in Sources */,
 				1AEBA7671A09AE58009ABFA7 /* FloatControlBehavior.m in Sources */,
 				1A96FED619CF99BE00A4627D /* EmitterColorControlBehavior.m in Sources */,
+				1AA91D3E1A15858C0086BB09 /* OutlineDataManager.m in Sources */,
 				1A74ADD219CCB44300B894EC /* FlippedClipView.m in Sources */,
 				1A96FEDA19D010A300A4627D /* AlphaColorWell.m in Sources */,
 				1AAE096619CF88B300C95D7C /* EmitterPropertyView.m in Sources */,
@@ -1491,6 +1525,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A66962319DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m in Sources */,
+				1AE2F29C1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m in Sources */,
+				1AA91D411A1587340086BB09 /* OutlineDataManagerTests.m in Sources */,
 				1A2A350E19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m in Sources */,
 				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,

@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
+@import IterateOSXFramework;
 
 @interface OutlineViewDataSourceManager : NSObject <NSOutlineViewDataSource>
 
-- (instancetype)initWithLayers:(NSMutableArray*)layers;
+- (instancetype)initWithLayers:(NSMutableArray*)layers dataSourceManager:(OutlineDataManager*)dataManager;
 
 @property (copy) NSMutableArray *layers;
 
