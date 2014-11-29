@@ -32,7 +32,7 @@
 {
     XCTAssertNil([[ArrayTableViewDataSourceManager alloc] init], @"Should not be allowed.");
     
-    id obj1 = [[ArrayTableViewDataSourceManager alloc] initWithItems:@[] cellIdentifier:@"foo" configureCellBlock:^(UITableViewCell *a, id b){}];
+    id obj1 = [[ArrayTableViewDataSourceManager alloc] initWithItems:@[] cellIdentifier:@"foo" tableViewMode: UITableViewModeNormal configureCellBlock:^(UITableViewCell *a, id b){}];
     XCTAssertNotNil(obj1, @"");
 }
 
@@ -44,7 +44,7 @@
         configuredCell = a;
         configuredObject = b;
     };
-    ArrayTableViewDataSourceManager *dataSource = [[ArrayTableViewDataSourceManager alloc] initWithItems:@[@"a", @"b"] cellIdentifier:@"foo" configureCellBlock:block];
+    ArrayTableViewDataSourceManager *dataSource = [[ArrayTableViewDataSourceManager alloc] initWithItems:@[@"a", @"b"] cellIdentifier:@"foo" tableViewMode: UITableViewModeNormal configureCellBlock:block];
     
     id mockTableView = [OCMockObject mockForClass:[UITableView class]];
     
@@ -62,7 +62,7 @@
 - (void)testNumberOfRows
 {
     id mockTableView = [OCMockObject mockForClass:[UITableView class]];
-    ArrayTableViewDataSourceManager *dataSource = [[ArrayTableViewDataSourceManager alloc] initWithItems:@[@"a", @"b"] cellIdentifier:@"foo" configureCellBlock:nil];
+    ArrayTableViewDataSourceManager *dataSource = [[ArrayTableViewDataSourceManager alloc] initWithItems:@[@"a", @"b"] cellIdentifier:@"foo" tableViewMode:UITableViewModeNormal configureCellBlock:nil];
     
     [mockTableView verify];
     XCTAssertEqual([dataSource tableView:mockTableView numberOfRowsInSection:0], (NSInteger) 2, @"");

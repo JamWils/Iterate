@@ -36,6 +36,17 @@
     return number;
 }
 
+- (NSString*) keyForChildren:(id)item {
+    NSString *key;
+    
+    if ([[item valueForKey:@"emitterCells"] count] > 0) {
+        key = @"emitterCells";
+    } else {
+        key = @"sublayers";
+    }
+    return key;
+}
+
 - (BOOL) isItemExpandable:(id)item {
     BOOL expand = NO;
     
@@ -62,6 +73,24 @@
     }
     
     return itemToReturn;
+}
+
+- (NSInteger)numberOfTotalChildren:(NSMutableArray*)item {
+    __block NSInteger numberOfChildren = 0;
+    NSLog(@"Count: %li", item.count);
+    
+    [item enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        numberOfChildren++;
+        NSInteger children = [self numberOfChildrenOfItem:obj];
+        
+        if (children > 0) {
+            NSString *keyProperty = [self keyForChildren:obj];
+            numberOfChildren += [self numberOfTotalChildren:[obj valueForKey:keyProperty]];
+        }
+        
+    }];
+    
+    return numberOfChildren;
 }
 
 @end

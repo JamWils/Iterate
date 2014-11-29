@@ -12,7 +12,7 @@
 
 @interface OutlineViewDataSourceManager : NSObject <NSOutlineViewDataSource>
 
-- (instancetype)initWithLayers:(NSMutableArray*)layers dataSourceManager:(OutlineDataManager*)dataManager;
+- (instancetype)initWithDataSourceManager:(OutlineDataManager*)dataManager;
 
 @property (copy) NSMutableArray *layers;
 

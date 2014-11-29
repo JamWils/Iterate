@@ -9,8 +9,9 @@
 @import QuartzCore;
 #import <XCTest/XCTest.h>
 #import "OutlineDataManager.h"
+#import "OutlineViewEmitterTestCase.h"
 
-@interface OutlineDataManagerTests : XCTestCase
+@interface OutlineDataManagerTests : OutlineViewEmitterTestCase
 
 @property (nonatomic, strong) OutlineDataManager *dataSourceManager;
 @property (strong) NSMutableArray *layers;
@@ -134,6 +135,47 @@
                           valueForKey:@"emitterCells"] objectAtIndex:1];
     id object = [_dataSourceManager child:1 ofItem:[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]];
     XCTAssertEqualObjects(object, expectedObject, @"Expecting %@", [expectedObject valueForKey:@"name"]);
+}
+
+#pragma mark -
+#pragma mark Total Number Of Children Tests
+
+- (void)testSimpleOneLevelTotalNumberOfChildren {
+    CALayer *layer = [[CALayer alloc] init];
+    layer.sublayers = @[[[CALayer alloc] init], [[CALayer alloc] init], [[CALayer alloc] init]];
+    
+    [self assertTotalNumberOfChildrenForDataManager:[@[layer] mutableCopy] andNumberOfChildren:4];
+}
+
+- (void)testOutlineViewOfChildren {
+    CALayer *layer = [[CALayer alloc] init];
+    
+    CALayer *layer2 = [[CALayer alloc] init];
+    layer2.sublayers = @[[[CALayer alloc] init], [[CALayer alloc] init], [[CALayer alloc] init]];
+    layer.sublayers = @[[[CALayer alloc] init], [[CALayer alloc] init], [[CALayer alloc] init], layer2];
+    
+    [self assertTotalNumberOfChildrenForDataManager:[@[layer] mutableCopy] andNumberOfChildren:8];
+}
+
+- (void)testTotalNumberOfChildrenWithEmitterCellsAndLayers {
+    CALayer *layer = [[CALayer alloc] init];
+    CALayer *layer2 = [[CALayer alloc] init];
+    CAEmitterLayer *layer3 = [[CAEmitterLayer alloc] init];
+    layer3.emitterCells = @[[[CAEmitterCell alloc] init], [[CAEmitterCell alloc] init], [[CAEmitterCell alloc] init], [[CAEmitterCell alloc] init]];
+    layer2.sublayers = @[[[CALayer alloc] init], [[CALayer alloc] init], [[CALayer alloc] init]];
+    layer.sublayers = @[[[CALayer alloc] init], [[CALayer alloc] init], layer2, layer3];
+    
+    [self assertTotalNumberOfChildrenForDataManager:[@[layer] mutableCopy] andNumberOfChildren:12];
+}
+
+#pragma mark -
+#pragma mark Assertion Methods
+
+- (void)assertTotalNumberOfChildrenForDataManager:(NSMutableArray*)items andNumberOfChildren:(NSInteger)numberOfChildren {
+    _dataSourceManager = [[OutlineDataManager alloc] initWithLayers:items];
+    NSInteger totalNumberOfChildren = [_dataSourceManager numberOfTotalChildren:_dataSourceManager.layers];
+    XCTAssertTrue(totalNumberOfChildren == numberOfChildren, @"The total number was %li", (long)totalNumberOfChildren);
+
 }
 
 @end

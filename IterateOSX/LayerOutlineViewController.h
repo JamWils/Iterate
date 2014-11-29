@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-#import <AppKit/AppKit.h>
+@import Cocoa;
+@import AppKit;
 
 @interface LayerOutlineViewController : NSViewController
 

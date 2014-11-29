@@ -6,20 +6,22 @@
 //  Copyright (c) 2014 Noesis Ingenuity LLC. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
+@import QuartzCore;
+@import IterateOSXFramework;
+
 #import <XCTest/XCTest.h>
-#import <QuartzCore/QuartzCore.h>
 #import <OCMock/OCMock.h>
 
 #import "OutlineViewEmitterTestCase.h"
 #import "OutlineViewDataSourceManager.h"
 
 
-@interface OutlineViewDataSourceManagerTests : OutlineViewEmitterTestCase
+@interface OutlineViewDataSourceManagerTests : XCTestCase
 
-@property (strong) NSMutableArray *layers;
 @property (strong) OutlineViewDataSourceManager *dataSourceManager;
 @property (strong) id outlineTableView;
+@property (strong) id dataManager;
 
 @end
 
@@ -28,12 +30,13 @@
 - (void)setUp {
     [super setUp];
     
-    _dataSourceManager = [[OutlineViewDataSourceManager alloc] initWithLayers:self.layers];
+    _dataManager = [OCMockObject mockForClass:[OutlineDataManager class]];
+    _dataSourceManager = [[OutlineViewDataSourceManager alloc] initWithDataSourceManager:_dataManager];
 }
 
 - (void)tearDown {
+    _dataManager = nil;
     _dataSourceManager = nil;
-    self.layers = nil;
     
     [super tearDown];
 }
@@ -47,104 +50,25 @@
     XCTAssertNotNil(_dataSourceManager, @"The init with layers should return not nil");
 }
 
-- (void)testOutlineReturnsNumberOfRowsInArray {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    NSUInteger expectedNumberOfChildren = [self.layers count];
-    NSUInteger numberOfChildren = [_dataSourceManager outlineView:mockOutlineView numberOfChildrenOfItem:self.layers];
-    XCTAssertEqual(numberOfChildren, expectedNumberOfChildren, @"The number of rows should be %ld", expectedNumberOfChildren);
+- (void)testDataManagerIsItemExpandableIsCalled {
+    [[_dataManager expect] isItemExpandable:[OCMArg any]];
+    [_dataSourceManager outlineView:[OCMArg any] isItemExpandable:@(YES)];
+    
+    [_dataManager verify];
 }
 
-- (void)testNumberOfRowsInMainLayer {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    NSUInteger expectedNumberOfChildren = [[self.layers[0] sublayers] count];
-    NSUInteger numberOfChildren = [_dataSourceManager outlineView:mockOutlineView numberOfChildrenOfItem:self.layers[0]];
-    XCTAssertEqual(numberOfChildren, expectedNumberOfChildren, @"The number of rows should be %ld", expectedNumberOfChildren);
+- (void)testDataManagerNumberOfChildrenOfItemIsCalledInDataSourceManager {
+    [[_dataManager expect] numberOfChildrenOfItem:[OCMArg any]];
+    [_dataSourceManager outlineView:[OCMArg any] numberOfChildrenOfItem:[OCMArg any]];
+    
+    [_dataManager verify];
 }
 
-- (void)testNumberOfRowsInFirstSubLayer {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    NSUInteger expectedNumberOfChildren = [[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0] valueForKey:@"emitterCells"] count];
-    NSUInteger numberOfChildren = [_dataSourceManager outlineView:mockOutlineView numberOfChildrenOfItem:[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]];
-    XCTAssertEqual(numberOfChildren, expectedNumberOfChildren, @"The number of rows should be %ld", expectedNumberOfChildren);
-}
-
-- (void)testNumberOfSubCellsInCellAtIndexOne {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    NSUInteger expectedNumberOfChildren = [[[[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]
-                                                          valueForKey:@"emitterCells"] objectAtIndex:1]
-                                                          valueForKey:@"emitterCells"] count];
-    CAEmitterCell *cell = (CAEmitterCell*)[[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]
-                                              valueForKey:@"emitterCells"] objectAtIndex:1];
-    NSUInteger numberOfChildren = [_dataSourceManager outlineView:mockOutlineView numberOfChildrenOfItem:cell];
-    XCTAssertEqual(numberOfChildren, expectedNumberOfChildren, @"The number of rows should be %ld", expectedNumberOfChildren);
-}
-
-- (void)testNumberOfRowsInSecondMainLayer {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    NSUInteger expectedNumberOfChildren = [[self.layers[1] sublayers] count];
-    NSUInteger numberOfChildren = [_dataSourceManager outlineView:mockOutlineView numberOfChildrenOfItem:self.layers[1]];
-    XCTAssertEqual(numberOfChildren, expectedNumberOfChildren, @"The number of rows should be %ld", expectedNumberOfChildren);
-}
-
-- (void)testMainLayerShouldExpand {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    BOOL shouldExpand = [[self.layers[0] sublayers] count] > 0;
-    BOOL willExpand = [_dataSourceManager outlineView:mockOutlineView isItemExpandable:self.layers[0]];
-    XCTAssertEqual(willExpand, shouldExpand, @"This section should expand %hhd", shouldExpand);
-}
-
-- (void)testFirstSublayerShouldExpand {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    BOOL shouldExpand = [[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0] valueForKey:@"emitterCells"] count] > 0;
-    BOOL willExpand = [_dataSourceManager outlineView:mockOutlineView isItemExpandable:[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]];
-    XCTAssertEqual(willExpand, shouldExpand, @"This section should expand %hhd", shouldExpand);
-}
-
-- (void)testSubCellAtIndexOneShouldExpand {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    BOOL shouldExpand = [[[[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]
-                                              valueForKey:@"emitterCells"] objectAtIndex:1]
-                                            valueForKey:@"emitterCells"] count] > 0;
-    CAEmitterCell *cell = (CAEmitterCell*)[[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]
-                                            valueForKey:@"emitterCells"] objectAtIndex:1];
-    BOOL willExpand = [_dataSourceManager outlineView:mockOutlineView isItemExpandable:cell];
-    XCTAssertEqual(willExpand, shouldExpand, @"This section should expand %hhd", shouldExpand);
-}
-
-- (void)testSecondMainLayerShouldNotExpand {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    BOOL shouldExpand = [[self.layers[1] sublayers] count] > 0;
-    BOOL willExpand = [_dataSourceManager outlineView:mockOutlineView isItemExpandable:self.layers[1]];
-    XCTAssertEqual(willExpand, shouldExpand, @"This section should not expand %hhd", shouldExpand);
-}
-
-- (void)testMainLayerIsReturned {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    id expectedObject = self.layers[0];
-    id object = [_dataSourceManager outlineView:mockOutlineView child:0 ofItem:nil];
-    XCTAssertEqualObjects(object, expectedObject, @"Expecting %@", [expectedObject valueForKey:@"name"]);
-}
-
-- (void)testSecondMainLayerIsReturned {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    id expectedObject = self.layers[1];
-    id object = [_dataSourceManager outlineView:mockOutlineView child:1 ofItem:nil];
-    XCTAssertEqualObjects(object, expectedObject, @"Expecting %@", [expectedObject valueForKey:@"name"]);
-}
-
-- (void)testMainLayersFirstSubLayerIsReturned {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    id expectedObject = [[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0];
-    id object = [_dataSourceManager outlineView:mockOutlineView child:0 ofItem:self.layers[0]];
-    XCTAssertEqualObjects(object, expectedObject, @"Expecting %@", [expectedObject valueForKey:@"name"]);
-}
-
-- (void)testMainLayersFirstSubLayersSecondCellIsReturned {
-    id mockOutlineView = [OCMockObject mockForClass:[NSOutlineView class]];
-    id expectedObject = [[[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]
-                                       valueForKey:@"emitterCells"] objectAtIndex:1];
-    id object = [_dataSourceManager outlineView:mockOutlineView child:1 ofItem:[[self.layers[0] valueForKey:@"sublayers"] objectAtIndex:0]];
-    XCTAssertEqualObjects(object, expectedObject, @"Expecting %@", [expectedObject valueForKey:@"name"]);
+- (void) testChildOfItemIsCalledInDataSourceManager {
+    [[_dataManager expect] child:100 ofItem:[OCMArg any]];
+    [_dataSourceManager outlineView:[OCMArg any] child:100 ofItem:[OCMArg any]];
+    
+    [_dataManager verify];
 }
 
 

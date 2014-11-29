@@ -26,13 +26,16 @@
     [super viewDidLoad];
     
     _outlineDelegateManager = [[OutlineDelegateManager alloc] initWithParentObjectBlock:nil];
-    _dataSourceManager = [[ArrayTableViewDataSourceManager alloc] initWithItems:_layers cellIdentifier:@"Cell" configureCellBlock:^(OutlineTableViewCell* cell, id item) {
-        cell.layerNameLabel.text = [item name];
-        cell.layerImageView.image = [UIImage imageNamed:[_outlineDelegateManager imageNameForItem:item]];
-        cell.indentationWidth = 40.0;
-//        cell.selectionStyle = UITableViewCellSeparatorStyleNone;
-//        cell.leftIndentationWidthConstraint.constant = 100;
-    }];
+    _dataSourceManager = [[ArrayTableViewDataSourceManager alloc] initWithItems:_layers
+                                                                 cellIdentifier:@"Cell"
+                                                                  tableViewMode: UITableViewModeNormal
+                                                             configureCellBlock:^(OutlineTableViewCell* cell, id item) {
+                                                                 cell.layerNameLabel.text = [item name];
+                                                                 cell.layerImageView.image = [UIImage imageNamed:[_outlineDelegateManager imageNameForItem:item]];
+                                                                 cell.indentationWidth = 40.0;
+                                                                 //        cell.selectionStyle = UITableViewCellSeparatorStyleNone;
+                                                                 //        cell.leftIndentationWidthConstraint.constant = 100;
+                                                             }];
     
     _outlineTableView.dataSource = _dataSourceManager;
     _outlineTableView.delegate = self;

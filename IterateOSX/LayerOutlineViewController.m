@@ -10,10 +10,13 @@
 #import "OutlineViewDataSourceManager.h"
 #import "OutlineViewLayerDelegateManager.h"
 
+@import IterateOSXFramework;
+
 #import "IterateWindowController.h"
 
 @interface LayerOutlineViewController ()
 
+@property (strong) OutlineDataManager *dataManager;
 @property (strong) OutlineViewDataSourceManager *layerSourceManager;
 @property (strong) OutlineViewLayerDelegateManager *layerDelegate;
 @property (strong) id item;
@@ -36,7 +39,8 @@
     [super viewWillAppear];
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
-    _layerSourceManager = [[OutlineViewDataSourceManager alloc] initWithLayers:_layers];
+    _dataManager = [[OutlineDataManager alloc] initWithLayers:_layers];
+    _layerSourceManager = [[OutlineViewDataSourceManager alloc] initWithDataSourceManager:_dataManager];
     _layerOutlineView.dataSource = _layerSourceManager;
     
     _layerDelegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:^(id parentObject, id selectedItem, NSString *keyPathForSelectedItem) {
@@ -64,8 +68,10 @@
 }
 
 - (void)setLayers:(NSMutableArray *)layers {
+    //TODO: Add Unit Tests
+    
     _layers = layers;
-    [_layerSourceManager setValue:_layers forKey:@"layers"];
+    [_dataManager setValue:_layers forKey:@"layers"];
     [_layerOutlineView reloadData];
 }
 @end

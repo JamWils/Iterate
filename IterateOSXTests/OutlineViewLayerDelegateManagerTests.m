@@ -24,6 +24,7 @@
 
 @property (strong) NSNotificationCenter *notificationCenter;
 @property (strong) NSString *selectedViewNotification;
+@property (strong) OutlineDataManager *dataManager;
 @property (strong) id observerMock;
 
 @end
@@ -34,7 +35,8 @@
     [super setUp];
     _delegate = [[OutlineViewLayerDelegateManager alloc] initWithParentObjectBlock:nil];
     
-    _dataSource = [[OutlineViewDataSourceManager alloc] initWithLayers:self.layers];
+    _dataManager = [[OutlineDataManager alloc] initWithLayers:self.layers];
+    _dataSource = [[OutlineViewDataSourceManager alloc] initWithDataSourceManager:_dataManager];
     _mockOutlineView = [OCMockObject partialMockForObject:[[NSOutlineView alloc] init]];
     
     [[[_mockOutlineView stub] andReturn:_dataSource] dataSource];

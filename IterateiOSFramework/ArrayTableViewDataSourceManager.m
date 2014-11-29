@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, copy) NSString *cellIdentifier;
 @property (nonatomic, copy) TableViewCellConfigureBlock configureCellBlock;
+@property (nonatomic, assign) UITableViewMode tableViewMode;
 
 @end
 
@@ -24,14 +25,17 @@
 }
 
 - (instancetype)initWithItems:(NSArray *)anItems
-     cellIdentifier:(NSString *)aCellIdentifier
- configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
+               cellIdentifier:(NSString *)aCellIdentifier
+                tableViewMode:(UITableViewMode)mode
+           configureCellBlock:(TableViewCellConfigureBlock)aConfigureCellBlock
+
 {
     self = [super init];
     if (self) {
         self.items = anItems;
         self.cellIdentifier = aCellIdentifier;
         self.configureCellBlock = [aConfigureCellBlock copy];
+        self.tableViewMode = mode;
     }
     return self;
 }
@@ -46,7 +50,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.items.count;
+    NSInteger rows = 0;
+    
+    switch (self.tableViewMode) {
+        case UITableViewModeNormal:
+            rows = self.items.count;
+            break;
+        case UITableViewModeOutline:
+            break;
+        default:
+            break;
+    }
+    
+    return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

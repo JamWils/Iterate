@@ -87,6 +87,8 @@
 		1A9DC37F19D162ED00B141E5 /* EmitterSizeControlBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9DC37D19D162ED00B141E5 /* EmitterSizeControlBehavior.h */; };
 		1A9DC38019D162ED00B141E5 /* EmitterSizeControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DC37E19D162ED00B141E5 /* EmitterSizeControlBehavior.m */; };
 		1A9F420719E216FF00877DF7 /* ActivePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9F420619E216FF00877DF7 /* ActivePropertiesViewController.m */; };
+		1AA227021A1C22C8009DBD84 /* OutlineViewEmitterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */; };
+		1AA227031A1C22CA009DBD84 /* OutlineViewEmitterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */; };
 		1AA8057B19DCCFA9001ED71F /* IterateDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8057A19DCCFA9001ED71F /* IterateDocumentTests.m */; };
 		1AA91D281A1042670086BB09 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA91D271A1042670086BB09 /* CloudKit.framework */; };
 		1AA91D2A1A1046870086BB09 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1AA91D291A1046870086BB09 /* Settings.bundle */; };
@@ -339,8 +341,8 @@
 		1A8A68CA19D5A15000273684 /* OutlineViewLayerDelegateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewLayerDelegateManager.h; sourceTree = "<group>"; };
 		1A8A68CB19D5A15000273684 /* OutlineViewLayerDelegateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManager.m; sourceTree = "<group>"; };
 		1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewLayerDelegateManagerTests.m; sourceTree = "<group>"; };
-		1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutlineViewEmitterTestCase.h; sourceTree = "<group>"; };
-		1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutlineViewEmitterTestCase.m; sourceTree = "<group>"; };
+		1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OutlineViewEmitterTestCase.h; path = IterateOSXTests/OutlineViewEmitterTestCase.h; sourceTree = "<group>"; };
+		1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutlineViewEmitterTestCase.m; path = IterateOSXTests/OutlineViewEmitterTestCase.m; sourceTree = "<group>"; };
 		1A96FED319CF99BE00A4627D /* EmitterColorControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterColorControlBehavior.h; sourceTree = "<group>"; };
 		1A96FED419CF99BE00A4627D /* EmitterColorControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterColorControlBehavior.m; sourceTree = "<group>"; };
 		1A96FED719D010A300A4627D /* AlphaColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaColorWell.h; sourceTree = "<group>"; };
@@ -596,8 +598,8 @@
 			isa = PBXGroup;
 			children = (
 				1A10E7DD19E9FDB1003476C2 /* IterateiOSFrameworkTests.m */,
-				1A10E7DB19E9FDB1003476C2 /* Supporting Files */,
 				1AA91D311A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m */,
+				1A10E7DB19E9FDB1003476C2 /* Supporting Files */,
 			);
 			name = Tests;
 			path = IterateiOSFrameworkTests;
@@ -648,6 +650,7 @@
 		1A2E58C11A0597C500DD94A2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1AA226FF1A1C2270009DBD84 /* TestCase */,
 				1A2E58C21A05988700DD94A2 /* IterateInsertSharedViewControllerTests.m */,
 				1AE7BFF11A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m */,
 				1AA91D3F1A1587340086BB09 /* OutlineDataManagerTests.m */,
@@ -787,6 +790,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		1AA226FF1A1C2270009DBD84 /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
+				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
+			);
+			name = TestCase;
+			sourceTree = "<group>";
+		};
 		1AA91D2B1A119C650086BB09 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,8 +896,6 @@
 				1AD94D0F19BBA3AF001A2015 /* IterateOSXTests.m */,
 				1A736E9019DCCA830075C61C /* IterateWindowControllerTests.m */,
 				1A795D6419D48EA800631E42 /* OutlineViewDataSourceManagerTests.m */,
-				1A8A68D119D5A90800273684 /* OutlineViewEmitterTestCase.h */,
-				1A8A68D219D5A90800273684 /* OutlineViewEmitterTestCase.m */,
 				1A8A68CD19D5A6A000273684 /* OutlineViewLayerDelegateManagerTests.m */,
 				1AD94D0D19BBA3AF001A2015 /* Supporting Files */,
 				1AFE1E1A19DAFD8F00337EC0 /* ViewControllers */,
@@ -1439,6 +1449,7 @@
 			files = (
 				1AA91D321A11A0AE0086BB09 /* ArrayTableViewDataSourceManagerTests.m in Sources */,
 				1AA91D401A1587340086BB09 /* OutlineDataManagerTests.m in Sources */,
+				1AA227021A1C22C8009DBD84 /* OutlineViewEmitterTestCase.m in Sources */,
 				1A10E7DE19E9FDB1003476C2 /* IterateiOSFrameworkTests.m in Sources */,
 				1AE2F29B1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m in Sources */,
 				1AE7BFF21A05AA5B009EF687 /* IterateCanvasSharedViewControllerTests.m in Sources */,
@@ -1527,6 +1538,7 @@
 				1A66962319DA420100CD65D5 /* EmitterCheckBoxControlBehaviorTests.m in Sources */,
 				1AE2F29C1A172D1D00FC5E30 /* OutlineDelegateManagerTests.m in Sources */,
 				1AA91D411A1587340086BB09 /* OutlineDataManagerTests.m in Sources */,
+				1AA227031A1C22CA009DBD84 /* OutlineViewEmitterTestCase.m in Sources */,
 				1A2A350E19D842B1001E60E5 /* EmitterImageControlBehaviorTests.m in Sources */,
 				1A2A351419D8440D001E60E5 /* EmitterTextFieldControlBehaviorTests.m in Sources */,
 				1AFB400219D6F30000A5F3D3 /* EmitterControlBehaviorTests.m in Sources */,

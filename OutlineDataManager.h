@@ -16,6 +16,8 @@
 
 - (NSInteger) numberOfChildrenOfItem:(id)item;
 - (BOOL) isItemExpandable:(id)item;
--(id)child:(NSInteger)index ofItem:(id)item;
+- (id)child:(NSInteger)index ofItem:(id)item;
+
+- (NSInteger)numberOfTotalChildren:(id)item;
 
 @end
