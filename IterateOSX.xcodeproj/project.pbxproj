@@ -1268,6 +1268,7 @@
 		1AD94CEB19BBA3AE001A2015 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Noesis Ingenuity LLC";
 				TargetAttributes = {
